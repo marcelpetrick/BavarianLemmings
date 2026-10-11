@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "id": "fun-06",
+  "name": "level.fun-06.name",
+  "inspiredBy": "Fun 6 of the original ('A task for blockers and bombers'): a bomber blasts through the thin floor, then a blocker by the thin wall is bombed to open the way to the exit. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 640,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 10,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 4,
+    "blocker": 2,
+    "builder": 0,
+    "basher": 0,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "fire",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 100,
+      "y": 60,
+      "w": 200,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 90,
+      "y": 10,
+      "w": 10,
+      "h": 54
+    },
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 10,
+      "w": 10,
+      "h": 54
+    },
+    {
+      "shape": "rect",
+      "x": 40,
+      "y": 110,
+      "w": 600,
+      "h": 50
+    },
+    {
+      "shape": "rect",
+      "x": 40,
+      "y": 40,
+      "w": 10,
+      "h": 70
+    },
+    {
+      "shape": "rect",
+      "x": 450,
+      "y": 30,
+      "w": 5,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 620,
+      "y": 60,
+      "w": 20,
+      "h": 50
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 160,
+      "y": 30
+    },
+    {
+      "type": "exit",
+      "x": 540,
+      "y": 109
+    }
+  ]
+}

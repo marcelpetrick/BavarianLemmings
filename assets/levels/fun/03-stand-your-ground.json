@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "id": "fun-03",
+  "name": "level.fun-03.name",
+  "inspiredBy": "Fun 3 of the original ('Tailor-made for blockers'): three ledges above deadly water; a blocker on each turns the crowd until it reaches the exit. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 640,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 5,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 4,
+    "builder": 0,
+    "basher": 0,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "dirt",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 80,
+      "y": 136,
+      "w": 440,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 240,
+      "y": 40,
+      "w": 180,
+      "h": 8
+    },
+    {
+      "shape": "ellipse",
+      "x": 236,
+      "y": 36,
+      "w": 20,
+      "h": 14
+    },
+    {
+      "shape": "rect",
+      "x": 60,
+      "y": 84,
+      "w": 200,
+      "h": 8
+    },
+    {
+      "shape": "ellipse",
+      "x": 52,
+      "y": 80,
+      "w": 24,
+      "h": 14
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 300,
+      "y": 12
+    },
+    {
+      "type": "exit",
+      "x": 150,
+      "y": 135
+    },
+    {
+      "type": "water",
+      "x": 0,
+      "y": 140,
+      "w": 80,
+      "h": 20
+    },
+    {
+      "type": "water",
+      "x": 520,
+      "y": 140,
+      "w": 120,
+      "h": 20
+    }
+  ]
+}

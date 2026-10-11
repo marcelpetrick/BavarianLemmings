@@ -249,12 +249,12 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
       counts, rescue targets, time limits) as a reference table `docs/levels-reference.md` with
       sources; no original data files are downloaded.
 - [ ] M6.02 (V-07) Remaining classic terrain styles: fire, marble, pillar, crystal, with pieces.
-- [ ] M6.003 (L-01) Fun 01: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.004 (L-01) Fun 02: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.005 (L-01) Fun 03: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.006 (L-01) Fun 04: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.007 (L-01) Fun 05: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.008 (L-01) Fun 06: placeholder, name and `inspiredBy` filled in when built.
+- [x] M6.003 (L-01) Fun 01: "Just dig in!" (`fun-01`), after the original's Fun 1.
+- [x] M6.004 (L-01) Fun 02: "Umbrellas up!" (`fun-02`), after the original's Fun 2.
+- [x] M6.005 (L-01) Fun 03: "Stand your ground" (`fun-03`), after the original's Fun 3.
+- [x] M6.006 (L-01) Fun 04: "Down, then up" (`fun-04`), after the original's Fun 4.
+- [x] M6.007 (L-01) Fun 05: "Heads down, push through" (`fun-05`), after the original's Fun 5.
+- [x] M6.008 (L-01) Fun 06: "Stand still, then bang" (`fun-06`), after the original's Fun 6.
 - [ ] M6.009 (L-01) Fun 07: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.010 (L-01) Fun 08: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.011 (L-01) Fun 09: placeholder, name and `inspiredBy` filled in when built.

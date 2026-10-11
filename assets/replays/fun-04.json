@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "levelId": "fun-04",
+  "entries": [
+    {
+      "tick": 94,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "miner"
+      }
+    },
+    {
+      "tick": 170,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 183,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 236,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 289,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 342,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 4,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 395,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 5,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 448,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 6,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 501,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 7,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 554,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 8,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 607,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 9,
+        "skill": "climber"
+      }
+    }
+  ]
+}

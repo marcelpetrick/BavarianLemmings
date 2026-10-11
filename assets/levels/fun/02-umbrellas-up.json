@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "id": "fun-02",
+  "name": "level.fun-02.name",
+  "inspiredBy": "Fun 2 of the original ('Only floaters can survive this'): the lemmings start on a high pillar, and only an umbrella makes the long drop to the exit survivable. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 640,
+  "height": 160,
+  "lemmings": 10,
+  "toSave": 1,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 10,
+    "bomber": 0,
+    "blocker": 0,
+    "builder": 0,
+    "basher": 0,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "marble",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 136,
+      "w": 640,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 110,
+      "y": 46,
+      "w": 90,
+      "h": 90
+    },
+    {
+      "shape": "ellipse",
+      "x": 96,
+      "y": 36,
+      "w": 118,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 96,
+      "w": 10,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 630,
+      "y": 96,
+      "w": 10,
+      "h": 40
+    },
+    {
+      "shape": "ellipse",
+      "x": 440,
+      "y": 120,
+      "w": 80,
+      "h": 30
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 150,
+      "y": 14
+    },
+    {
+      "type": "exit",
+      "x": 580,
+      "y": 135
+    }
+  ]
+}

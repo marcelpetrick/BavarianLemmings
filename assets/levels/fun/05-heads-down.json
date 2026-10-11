@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "id": "fun-05",
+  "name": "level.fun-05.name",
+  "inspiredBy": "Fun 5 of the original ('You need bashers this time'): two thick walls and a fence in front of the exit; only bashers get through. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 800,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 10,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 0,
+    "builder": 0,
+    "basher": 6,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "pillar",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 100,
+      "w": 420,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 10,
+      "h": 100
+    },
+    {
+      "shape": "rect",
+      "x": 180,
+      "y": 20,
+      "w": 22,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 30,
+      "w": 30,
+      "h": 70
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [420, 100],
+        [520, 136],
+        [420, 160]
+      ]
+    },
+    {
+      "shape": "rect",
+      "x": 420,
+      "y": 136,
+      "w": 380,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 600,
+      "y": 70,
+      "w": 14,
+      "h": 66
+    },
+    {
+      "shape": "rect",
+      "x": 640,
+      "y": 70,
+      "w": 14,
+      "h": 66
+    },
+    {
+      "shape": "rect",
+      "x": 790,
+      "y": 60,
+      "w": 10,
+      "h": 76
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 80,
+      "y": 70
+    },
+    {
+      "type": "exit",
+      "x": 720,
+      "y": 135
+    }
+  ]
+}

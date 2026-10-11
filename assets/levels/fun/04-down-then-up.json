@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "id": "fun-04",
+  "name": "level.fun-04.name",
+  "inspiredBy": "Fun 4 of the original ('Now use miners and climbers'): a miner opens the way into the corridor below, and every lemming must climb the cliff to the exit. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 640,
+  "height": 160,
+  "lemmings": 10,
+  "toSave": 10,
+  "releaseRate": 1,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 10,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 0,
+    "builder": 0,
+    "basher": 0,
+    "miner": 2,
+    "digger": 0
+  },
+  "style": "crystal",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 136,
+      "w": 640,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 30,
+      "y": 70,
+      "w": 380,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 30,
+      "y": 0,
+      "w": 380,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 30,
+      "y": 10,
+      "w": 10,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 400,
+      "y": 10,
+      "w": 10,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 520,
+      "y": 60,
+      "w": 120,
+      "h": 76
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [520, 60],
+        [560, 50],
+        [600, 56],
+        [640, 48],
+        [640, 60]
+      ]
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 100,
+      "y": 40
+    },
+    {
+      "type": "exit",
+      "x": 590,
+      "y": 57
+    }
+  ]
+}

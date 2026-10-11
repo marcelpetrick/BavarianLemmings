@@ -98,5 +98,10 @@
   "hint.start": "Click or press Enter to start",
   "hint.audio": "Click to enable sound",
   "level.test-flat.name": "A flat test field",
-  "level.fun-01.name": "Just dig in!"
+  "level.fun-01.name": "Just dig in!",
+  "level.fun-02.name": "Umbrellas up!",
+  "level.fun-03.name": "Stand your ground",
+  "level.fun-04.name": "Down, then up",
+  "level.fun-05.name": "Heads down, push through",
+  "level.fun-06.name": "Stand still, then bang"
 }

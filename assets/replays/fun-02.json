@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "levelId": "fun-02",
+  "entries": [
+    {
+      "tick": 35,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 63,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 91,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 119,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 147,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 4,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 175,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 5,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 203,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 6,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 231,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 7,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 259,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 8,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 287,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 9,
+        "skill": "floater"
+      }
+    }
+  ]
+}
