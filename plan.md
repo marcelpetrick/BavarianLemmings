@@ -143,37 +143,37 @@ gantt
 
 ## M2: vertical slice (one level, mouse and keyboard)
 
-- [ ] M2.01 (V-01) `render/scaler.ts`: integer scale factor from the viewport, letterbox, optional
+- [x] M2.01 (V-01) `render/scaler.ts`: integer scale factor from the viewport, letterbox, optional
       4:3 stretch, `image-rendering: pixelated`.
-- [ ] M2.02 (V-07, V-02) Classic theme, first terrain style "dirt": hand-drawn pieces (ours), palette,
+- [x] M2.02 (V-07, V-02) Classic theme, first terrain style "dirt": hand-drawn pieces (ours), palette,
       a background; `theme.json` manifest and loader.
-- [ ] M2.03 (V-05) Classic lemming sprite sheet (ours): walker, faller, climber, floater, bomber,
+- [x] M2.03 (V-05) Classic lemming sprite sheet (ours): walker, faller, climber, floater, bomber,
       blocker, builder, basher, miner, digger, splat, drown, exit, oh-no, shrug; frame counts
       documented per animation with their source.
-- [ ] M2.04 (V-04) `render/playfield.ts`: terrain image with dirty-row redraw, objects, lemmings,
+- [x] M2.04 (V-04) `render/playfield.ts`: terrain image with dirty-row redraw, objects, lemmings,
       horizontal scroll, selection box, bomber countdown digits.
-- [ ] M2.05 (V-03) `render/panel/classic.ts`: 320×40 panel with release rate −/+, eight skill
+- [x] M2.05 (V-03) `render/panel/classic.ts`: 320×40 panel with release rate −/+, eight skill
       buttons with counts, pause, nuke, minimap with viewport; status line with lemming type under
       cursor, OUT, IN, TIME; bitmap font (ours).
-- [ ] M2.06 (C-01) `input/pointer.ts`: mouse to intents, crosshair cursor, box cursor over a
+- [x] M2.06 (C-01) `input/pointer.ts`: mouse to intents, crosshair cursor, box cursor over a
       lemming, click to assign, panel clicks, minimap click, edge scrolling.
 - [x] M2.07 (C-02, C-03) `input/keyboard.ts`: F1/F2 release rate (direction per verified source),
       F3–F10 skills, F11 pause, F12 nuke, arrow keys scroll.
-- [ ] M2.08 (R-03, P-04) `ui/app.ts`: rAF loop with tick accumulator, pause, visibility pause.
-- [ ] M2.09 (R-04) `window.__bavarianLemmings` test hook in dev/test builds only.
-- [ ] M2.10 (G-10) Result screen: saved vs. needed, retry or next.
+- [x] M2.08 (R-03, P-04) `ui/app.ts`: rAF loop with tick accumulator, pause, visibility pause.
+- [x] M2.09 (R-04) `window.__bavarianLemmings` test hook in dev/test builds only.
+- [x] M2.10 (G-10) Result screen: saved vs. needed, retry or next.
 - [x] M2.11 (L-01a) First recreated level, Fun 1 equivalent ("Just dig!" idea): our geometry, our
       name, a recorded solution replay as its test.
-- [ ] M2.12 (P-01) Playwright e2e in Firefox and Chrome: load the level, assign a digger by mouse,
+- [x] M2.12 (P-01) Playwright e2e in Firefox and Chrome: load the level, assign a digger by mouse,
       win; same by keyboard.
-- [ ] M2.13 (C-05) Conveniences: fast-forward 4×, restart level, frame step, zoom (2× viewport);
+- [x] M2.13 (C-05) Conveniences: fast-forward 4×, restart level, frame step, zoom (2× viewport);
       a Purist setting disables them.
 - [ ] M2.14 (Q) README screenshot captured by Playwright (`scripts/screenshot.mjs`), committed;
       milestone bump to 0.2.0.
 
 ## M3: full game loop, audio, languages, persistence
 
-- [ ] M3.01 (V-08, V-11) Title screen, level select by rating, level preview (L-04), settings screen,
+- [x] M3.01 (V-08, V-11) Title screen, level select by rating, level preview (L-04), settings screen,
       credits screen with the owner's text (see assumptions).
 - [x] M3.02 (L-02) `persist/storage.ts`: versioned keys, progress written on level completion,
       continue from the furthest level; in-memory implementation for tests; invalid stored values are
@@ -181,16 +181,16 @@ gantt
 - [x] M3.03 (I-01, I-02) `i18n/`: EN, DE, BAR locale files, `t()`, fallback to EN, language in
       settings; `scripts/check-translations.mjs` in the pipeline.
 - [ ] M3.04 (L-06) All level names and texts through i18n keys in all three languages.
-- [ ] M3.05 (A-02) `audio/engine.ts`: unlock on first gesture, master/music/sfx volume, mute,
+- [x] M3.05 (A-02) `audio/engine.ts`: unlock on first gesture, master/music/sfx volume, mute,
       settings persisted.
-- [ ] M3.06 (A-03) `audio/fm.ts`: 2-operator FM voices with envelopes; a test renders a note to a
+- [x] M3.06 (A-03) `audio/fm.ts`: 2-operator FM voices with envelopes; a test renders a note to a
       buffer and checks the spectrum peak.
-- [ ] M3.07 (A-01) Sound effects as synth recipes: hatch, let's go, oh no, explosion, splat,
+- [x] M3.07 (A-01) Sound effects as synth recipes: hatch, let's go, oh no, explosion, splat,
       drown, exit, trap, builder brick, button click; mapped from sim events.
-- [ ] M3.08 (A-05) Classic music: at least three of our own arrangements of public-domain melodies
+- [x] M3.08 (A-05) Classic music: at least three of our own arrangements of public-domain melodies
       as note data, loop points, melody sources listed in `THIRD_PARTY.md` with public-domain
       evidence.
-- [ ] M3.09 (A-01, A-06) Voice lines EN and BAR, generated by us offline (generator and licence noted
+- [x] M3.09 (A-01, A-06) Voice lines EN and BAR, generated by us offline (generator and licence noted
       in `THIRD_PARTY.md`), selected by UI language; DE falls back to EN.
 - [ ] M3.10 (P-01) e2e: settings persist across reload, language switch changes the title text,
       audio unlock does not throw.
@@ -205,9 +205,9 @@ gantt
       Bavarian hatch.
 - [ ] M4.04 (V-07) Bavarian terrain styles mapped from the classic ones (dirt → Alm, marble →
       Wirtshaus wood, pillar → maypole, fire → Hendl grill, crystal → ice).
-- [ ] M4.05 (A-04) Bavarian music: at least three of our own arrangements of traditional
+- [x] M4.05 (A-04) Bavarian music: at least three of our own arrangements of traditional
       public-domain tunes (Ländler, Zwiefacher, march), sources in `THIRD_PARTY.md`.
-- [ ] M4.06 (R-05) Theme switch in settings and a "Bayern" button on the title screen; theme
+- [x] M4.06 (R-05) Theme switch in settings and a "Bayern" button on the title screen; theme
       persisted; switching reloads assets without reloading the page.
 - [ ] M4.07 (P-01) e2e: switch to Bavarian, play the first level, screenshot for the README.
 - [ ] M4.08 (Q) Milestone bump to 0.4.0.

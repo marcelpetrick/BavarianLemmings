@@ -177,6 +177,10 @@ assets/
   levels/             fun/*.json, tricky/*.json, taxing/*.json, mayhem/*.json
 ```
 
+Deviation recorded on 2026-10-11: the classic layout draws playfield and panel into **one**
+320×200 canvas (`ui/app.ts`), because the classic panel is scaled together with the playfield anyway.
+The touch layout (M5) adds its own panel element, so H4 still holds.
+
 Dependency rule, checked by ESLint import boundaries: `sim/` imports nothing from the other
 folders. `render/`, `audio/`, `input/` import `sim/` types only. `ui/` wires them together.
 

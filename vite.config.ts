@@ -18,7 +18,15 @@ export default defineConfig({
       include: ['src/**/*.ts'],
       // src/audio/engine.ts is the thin Web Audio wrapper (no AudioContext in node); its logic lives in
       // the pure fm.ts, sfx.ts and music.ts, which are unit tested, and Playwright covers the wrapper.
-      exclude: ['src/main.ts', 'src/audio/engine.ts'],
+      // Browser-only wiring (canvas, Web Audio, DOM events) is covered by the Playwright suite in e2e/.
+      exclude: [
+        'src/main.ts',
+        'src/audio/engine.ts',
+        'src/ui/app.ts',
+        'src/render/draw.ts',
+        'src/render/playfield.ts',
+        'src/render/panel.ts',
+      ],
       thresholds: { statements: 95, branches: 95, functions: 95, lines: 95 },
     },
   },

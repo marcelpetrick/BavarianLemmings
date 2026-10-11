@@ -57,6 +57,8 @@ GitHub Actions run exactly `./localPipeline.sh --noRun` ([ci.yml](.github/workfl
 | [`localPipeline.sh`](localPipeline.sh) | Quality gate: Markdown lint, shellcheck, actionlint, version and licence checks |
 | [`scripts/bump-version.sh`](scripts/bump-version.sh) | Raise the semantic version (`patch` by default, every commit) |
 | [`scripts/commit.sh`](scripts/commit.sh) | Bump the version, run the pipeline, commit with the version in the subject, push |
+| [`scripts/generate-voices.sh`](scripts/generate-voices.sh) | Regenerate the English and Bavarian voice lines with espeak-ng |
+| [`scripts/pitch-wav.mjs`](scripts/pitch-wav.mjs) | Speed up a WAV file for the squeaky lemming voice (used by generate-voices.sh) |
 | [`scripts/install-actionlint.sh`](scripts/install-actionlint.sh) | Download the pinned actionlint into `.tools/` |
 | [`scripts/check-constants.mjs`](scripts/check-constants.mjs) | List the unverified original-game constants; fail if one lacks a status or source |
 | [`scripts/check-translations.mjs`](scripts/check-translations.mjs) | Fail if a translation key is missing in a language or used in code but undefined |
