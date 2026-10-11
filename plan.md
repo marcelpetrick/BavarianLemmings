@@ -93,7 +93,7 @@ gantt
 - [x] M0.11 (Q) Vitest with V8 coverage, threshold 95 % lines/branches/functions, in the pipeline.
 - [x] M0.12 (Q, R-02) ESLint (type-aware) with import-boundary rule for `src/sim`, Prettier, Stylelint;
       all in the pipeline.
-- [ ] M0.13 (X-01, X-03) REUSE: `REUSE.toml`, SPDX headers on every source file, `reuse lint` in the
+- [x] M0.13 (X-01, X-03) REUSE: `REUSE.toml`, SPDX headers on every source file, `reuse lint` in the
       pipeline; `THIRD_PARTY.md` created (empty table with licence columns).
 - [ ] M0.14 (Q) `scripts/check-constants.mjs`: lists every `unverified` constant (architecture 6.2).
 - [ ] M0.15 (Q) Playwright installed with Firefox and Chromium; one smoke test (page loads, canvas

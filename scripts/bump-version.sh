@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# SPDX-FileCopyrightText: 2026 Marcel Petrick
+# SPDX-FileCopyrightText: 2026 Marcel Petrick <mail@marcelpetrick.it>
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # bump-version.sh: raise the semantic version in package.json and package-lock.json.

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# SPDX-FileCopyrightText: 2026 Marcel Petrick
+# SPDX-FileCopyrightText: 2026 Marcel Petrick <mail@marcelpetrick.it>
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # localPipeline.sh: the single quality gate of BavarianLemmings.
@@ -37,6 +37,10 @@ echo "version ${version}"
 
 step "Licence file present"
 grep -q "GNU GENERAL PUBLIC LICENSE" LICENSE || fail "LICENSE is missing or not the GPL text"
+
+step "REUSE compliance (SPDX headers on every file)"
+if command -v uvx >/dev/null; then reuse_cmd=(uvx --quiet reuse); else reuse_cmd=(pipx run --quiet reuse); fi
+"${reuse_cmd[@]}" lint --quiet || { "${reuse_cmd[@]}" lint | tail -20; fail "reuse lint"; }
 
 step "Markdown lint (markdownlint-cli2)"
 npx --no-install markdownlint-cli2 || fail "markdown lint"
