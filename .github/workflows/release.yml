@@ -1,0 +1,56 @@
+# SPDX-FileCopyrightText: 2026 Marcel Petrick <mail@marcelpetrick.it>
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Creates a GitHub release for every v* tag (plan M7.04): the tag must equal the package.json
+# version, the full local pipeline must pass, and the zipped static build is attached with its
+# SHA-256 checksum.
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      # Fail early, before half an hour of tests, when the tag and the version disagree.
+      - name: Check tag matches package.json
+        run: |
+          version="$(node -p "require('./package.json').version")"
+          if [[ "${GITHUB_REF_NAME#v}" != "${version}" ]]; then
+            echo "::error::tag ${GITHUB_REF_NAME} does not match package.json version ${version}"
+            exit 1
+          fi
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+      - name: Local pipeline
+        run: ./localPipeline.sh --noRun
+
+      - name: Package static build
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          (cd dist && zip -qr "../bavarian-lemmings-${version}-web.zip" .)
+          sha256sum "bavarian-lemmings-${version}-web.zip" > "bavarian-lemmings-${version}-web.zip.sha256"
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" bavarian-lemmings-*-web.zip* \
+            --title "BavarianLemmings ${GITHUB_REF_NAME}" \
+            --generate-notes \
+            --verify-tag

@@ -382,7 +382,7 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
       `main`.
 - [x] M7.03 (P-03) `.github/workflows/pages.yml`: deploy `dist/` to GitHub Pages; "Play in
       browser" badge.
-- [ ] M7.04 (Q) `.github/workflows/release.yml`: on `v*` tags, check that the tag matches
+- [x] M7.04 (Q) `.github/workflows/release.yml`: on `v*` tags, check that the tag matches
       `package.json`, run the pipeline, attach the zipped `dist/`.
 - [x] M7.05 (P-05) Service worker for offline play after the first load; e2e: reload offline.
 - [ ] M7.06 (Q, X-04) README complete: badges (Play, CI, Pages, Docker, Release, Licence, REUSE,
