@@ -332,15 +332,23 @@ No open questions remain. New ones go into a round E table here.
 
 ## 9. Resume here
 
-- **State:** planning complete; `main` is pushed to
-  `https://github.com/marcelpetrick/BavarianLemmings.git` and CI is green. Implementation runs.
-- **Push:** `git push` after every commit; `gh run list -L 3` shows the CI state.
-- **Next (implementing agent):** read `AGENTS.md`, then start at `plan.md` task M0.10 (Vite and
-  TypeScript scaffold). Tick tasks as they finish, bump the version per commit, keep the pipeline
-  green, refresh the README at least per milestone.
-- **Pipeline:** `npm ci && ./localPipeline.sh` must be green before every commit.
-- **Check:** `git log --oneline`, `grep -c "\[ \]" plan.md` (open tasks),
-  `grep -n "verify" vision.md` (unverified facts).
+- **State (2026-10-11, v0.0.25):** toolchain complete (M0.10 to M0.16: Vite, strict TypeScript,
+  Vitest with a 95 % gate, ESLint with the sim boundary, Prettier, Stylelint, REUSE, Playwright in
+  Firefox and Chromium, plan and constants checks). The headless simulation is done (M1.01 to
+  M1.19, 100 % lines). Done as well: translations EN/DE/BAR (M3.03), storage (M3.02), the pure
+  session logic, layout, key map and status line (M2.07), and all pixel art (`src/render/`).
+- **Not yet playable:** the browser layer is missing: theme loader, canvas renderer (playfield,
+  panel, minimap, cursor), `ui/app.ts` with screens and the rAF loop, the test hook, Fun 1
+  (`assets/levels/fun/01-*.json`) with its replay test, and the e2e play tests (M2.01 to M2.14).
+- **Audio:** an agent worked on `src/audio/` on branch `worktree-agent-abb7a32fb3d503634` and was
+  stopped at the usage limit; check `git log main..worktree-agent-abb7a32fb3d503634` and
+  cherry-pick the finished commits (see how the sprite branch was taken in v0.0.23 to v0.0.25).
+- **Owner requests still open:** `/updateDependencies` after the first runnable version,
+  `/githubAbout` (apply), `/reviewBranch` later.
+- **Commit:** `scripts/commit.sh "<type>: <subject>" "<why>" [patch|minor]` (formats, bumps, runs
+  the pipeline, commits, pushes).
+- **Check:** `node scripts/check-plan.mjs --summary`, `gh run list -L 3`,
+  `node scripts/check-constants.mjs`.
 
 ## Sources (fact check 2026-10-11)
 
