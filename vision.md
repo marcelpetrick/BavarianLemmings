@@ -316,6 +316,7 @@ No open questions remain. New ones go into a round E table here.
 | 2026-10-11 | Voices localized EN and Bavarian, no German set; credits text fixed (V-11) | Owner (Q-D9, Q-D10) |
 | 2026-10-11 | Implementation is handed to another agent; this session ends with the planning documents | Owner |
 | 2026-10-11 | End-to-end tests run in Chromium only; Firefox is covered by manual play-testing (P-01 stays a requirement) | Owner: one browser is enough for automated tests, faster pipeline |
+| 2026-10-11 | No separate plain-tap option for touch (M5.05): a quick tap is already a press-aim-release without the aim, so it assigns at once to the best lemming within about 8 mm; the e2e tests on Chromium tablet emulation (landscape and portrait) won Fun 1 this way without problems | Agent, delegated by the owner (Q-D1) |
 
 ## 8. Status
 

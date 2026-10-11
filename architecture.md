@@ -152,7 +152,6 @@ src/
     sprites.ts        sprite sheet loader (per theme), animation frame lookup
     font.ts           bitmap font renderer (per theme)
   input/
-    pointer.ts        Pointer Events → game intents (select lemming, press button, scroll)
     keyboard.ts       F1–F12, scroll keys, conveniences
     touchGestures.ts  press-aim-release, two-finger scroll, pinch (vision 3.4.1)
     intents.ts        the Intent union: the only thing the sim receives from input
@@ -312,10 +311,24 @@ is missing in any language or unused in the code.
 
 ## 11. Input and the touch layout
 
-All pointer input arrives as Pointer Events in `input/pointer.ts`, which converts them into intents
-(`selectSkill`, `assign(lemmingId)`, `scroll(dx)`, `releaseRate(±)`, `pause`, `nuke`, `fastForward`).
-Mouse: click assigns. Touch: `touchGestures.ts` implements press-aim-release (vision 3.4.1, pending
-Q-D1). The panel layout is chosen by `(pointer: coarse)` with a settings override (pending Q-D3).
+All pointer input arrives as Pointer Events on the canvas and the touch buttons; `ui/app.ts` turns
+them into session commands (`selectSkill`, assign, scroll, release rate, pause, nuke, fast-forward).
+The session never sees which device sent them. Decided in M5 (2026-10-11):
+
+- **Mouse and pen:** a click assigns, as in the original.
+- **Touch** (`pointerType === 'touch'`, in either layout): `input/touchGestures.ts` holds pure state
+  machines. One finger is press-aim-release: the selection box and a 2× magnifier follow the finger,
+  lifting it assigns to the best lemming within about 8 mm (`Session.lemmingNear`), sliding out of
+  the playfield cancels. Two fingers pan the view; a pinch toggles the zoom. The nuke button fires
+  after a one-second hold (progress ring) or a double tap; release rate −/+ repeat while held.
+- **Layout:** `Settings.layout` is `auto`, `classic` or `touch`; `auto` resolves with
+  `(pointer: coarse)` (`ui/layout.ts resolveLayout`). In the touch layout the canvas holds only the
+  320×160 playfield, and `render/panel/touch.ts` adds HTML buttons (at least 48×48 CSS pixels, two
+  columns per side in landscape, two rows under the playfield in portrait) and a bar canvas with the
+  status line and a full-width minimap. `computeTouchLayout` picks the largest integer scale that
+  leaves room for the buttons.
+- **Browser:** `touch-action: none` on the game, no context menu, no text selection, no
+  pull-to-refresh, a fullscreen button, pause when the page is hidden.
 
 ## 12. Audio
 
