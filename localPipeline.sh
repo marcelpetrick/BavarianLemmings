@@ -6,11 +6,12 @@
 #
 # Every commit must pass this script, and GitHub Actions run exactly this script, so "green locally"
 # and "green in CI" mean the same thing. Steps are added as the project grows (see AGENTS.md):
-# today it checks documents, shell scripts and workflows; later the type check, unit/integration
+# today it checks documents, shell scripts, workflows, types, lint, unit/integration
 # tests with coverage >= 95 %, the build, end-to-end tests in Firefox and Chrome, and Docker.
 #
 # Usage:      ./localPipeline.sh [--noRun]
 #               --noRun  skip launching the game at the end (used by CI; nothing to launch yet)
+# Environment: BL_DOCKER=1 also builds the Docker image and smoke-tests it (CI sets it)
 # Exit codes: 0 = all steps green, 1 = a step failed (the failing step is named), 2 = bad usage
 set -euo pipefail
 
@@ -86,6 +87,14 @@ npx --no-install playwright install "${deps_flag[@]}" chromium >/dev/null || fai
 
 step "End-to-end tests in Chromium (Playwright, production build)"
 npx --no-install playwright test || fail "end-to-end tests"
+
+step "Docker image builds and serves the game (scripts/docker-smoke.sh; only with BL_DOCKER=1)"
+# The image build takes a minute, so local runs skip it unless asked; CI sets BL_DOCKER=1.
+if [[ "${BL_DOCKER:-}" == 1 ]] && command -v docker >/dev/null; then
+  scripts/docker-smoke.sh || fail "docker smoke test"
+else
+  echo "skipped (set BL_DOCKER=1 and install docker to run it)"
+fi
 
 if [[ "${no_run}" == false ]]; then
   step "Launch"

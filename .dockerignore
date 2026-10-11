@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2026 Marcel Petrick <mail@marcelpetrick.it>
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Keep the build context small: dependencies and the build output are made inside the image.
+.git
+.github
+.claude
+.tools
+node_modules
+dist
+coverage
+test-results
+playwright-report
+docs
+Dockerfile
+.dockerignore

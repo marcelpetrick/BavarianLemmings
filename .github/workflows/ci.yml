@@ -1,7 +1,8 @@
 # SPDX-FileCopyrightText: 2026 Marcel Petrick <mail@marcelpetrick.it>
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
-# CI mirrors the local quality gate: it runs exactly ./localPipeline.sh --noRun, nothing more.
+# CI mirrors the local quality gate: it runs exactly ./localPipeline.sh --noRun, nothing more
+# (with BL_DOCKER=1, so the Docker smoke test runs too).
 # The only extra is a cache for the Playwright browsers, so they are not downloaded on every run.
 name: CI
 
@@ -35,6 +36,9 @@ jobs:
           key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       - name: Local pipeline
         run: ./localPipeline.sh --noRun
+        env:
+          # Includes the Docker smoke test (scripts/docker-smoke.sh); the runner has docker.
+          BL_DOCKER: '1'
       - name: Upload Playwright results
         if: failure()
         uses: actions/upload-artifact@v4
