@@ -378,7 +378,7 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
 
 - [x] M7.01 (P-03) `Dockerfile` (node:24 build, nginx:alpine serve), `.dockerignore`,
       `scripts/docker-smoke.sh` (build, run, curl index, one Playwright check); in the pipeline.
-- [ ] M7.02 (P-03) `.github/workflows/docker.yml`: build and publish to GHCR on `v*` tags and on
+- [x] M7.02 (P-03) `.github/workflows/docker.yml`: build and publish to GHCR on `v*` tags and on
       `main`.
 - [x] M7.03 (P-03) `.github/workflows/pages.yml`: deploy `dist/` to GitHub Pages; "Play in
       browser" badge.
