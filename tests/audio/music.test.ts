@@ -3,14 +3,17 @@
 
 import { describe, expect, it } from 'vitest';
 import { INSTRUMENTS } from '../../src/audio/fm';
+import { allFinite, peakOf, rms } from './spectrum';
 import {
   accompany,
   buildSong,
   findSong,
   listSongs,
+  MUSIC_BUS_GAIN,
   parseChord,
   parseMelody,
   parseNoteName,
+  renderSong,
   scheduleNotes,
   secondsPerBeat,
   SONGS,
@@ -206,6 +209,15 @@ describe('buildSong', () => {
 });
 
 describe('song data', () => {
+  it('gives the Bavarian songs their dance meters: Ländler 3/4, Zwiefacher 3/4 and 2/4 mixed, march 4/4', () => {
+    expect(new Set(findSong('bavarian-augustin')!.barBeats)).toEqual(new Set([3]));
+    expect(new Set(findSong('bavarian-zwiefacher')!.barBeats)).toEqual(new Set([3, 2]));
+    expect(new Set(findSong('bavarian-march')!.barBeats)).toEqual(new Set([4]));
+    for (const id of listSongs('bavarian')) {
+      expect(findSong(id)!.channels.map((c) => c.instrument)).toContain('tuba');
+    }
+  });
+
   it.each(SONGS.map((song) => [song.id, song] as const))('%s is well-formed', (_id, song) => {
     expect(song.lengthBeats).toBe(song.barBeats.reduce((a, b) => a + b, 0));
     expect(song.barBeats.length).toBeGreaterThanOrEqual(16);
@@ -236,10 +248,19 @@ describe('song data', () => {
     }
   });
 
+  it.each(SONGS.map((song) => [song.id, song] as const))('%s mixes below full scale on the music bus and is audible', (_id, song) => {
+    const samples = renderSong(song, 8000, 0, song.lengthBeats);
+    expect(allFinite(samples)).toBe(true);
+    expect(peakOf(samples) * MUSIC_BUS_GAIN).toBeLessThan(1);
+    expect(rms(samples)).toBeGreaterThan(0.1);
+  });
+
   it('has unique ids and at least three songs per theme', () => {
     expect(new Set(SONGS.map((s) => s.id)).size).toBe(SONGS.length);
     expect(listSongs('classic').length).toBeGreaterThanOrEqual(3);
+    expect(listSongs('bavarian').length).toBeGreaterThanOrEqual(3);
     for (const id of listSongs('classic')) expect(findSong(id)?.theme).toBe('classic');
+    for (const id of listSongs('bavarian')) expect(findSong(id)?.theme).toBe('bavarian');
     expect(findSong('nope')).toBeUndefined();
   });
 });

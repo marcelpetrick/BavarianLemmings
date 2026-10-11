@@ -16,7 +16,7 @@
  * the original game's soundtrack or its arrangements.
  */
 
-import type { InstrumentId } from './fm';
+import { type InstrumentId, INSTRUMENTS, midiToFrequency, mixInto, renderNote } from './fm';
 
 export type MusicTheme = 'classic' | 'bavarian';
 
@@ -105,6 +105,30 @@ export function scheduleNotes(song: Song, fromBeat: number, toBeat: number): Sch
 /** Seconds per beat at the song's tempo. */
 export function secondsPerBeat(song: Song): number {
   return 60 / song.tempo;
+}
+
+/**
+ * Gain of the music bus before the user's volume. The channels of a song add up to a peak of about
+ * 1.7 (measured by the song test with renderSong); 0.5 keeps the mix below full scale.
+ */
+export const MUSIC_BUS_GAIN = 0.5;
+
+/** Render the notes starting in [fromBeat, toBeat) offline into one buffer (tests, previews). Pure. */
+export function renderSong(song: Song, sampleRate: number, fromBeat: number, toBeat: number): Float32Array {
+  const beatSeconds = secondsPerBeat(song);
+  const notes = scheduleNotes(song, fromBeat, toBeat);
+  const tailSeconds = 1; // longest release in the bank is 0.3 s; one second is safe.
+  const out = new Float32Array(Math.ceil(((toBeat - fromBeat) * beatSeconds + tailSeconds) * sampleRate));
+  for (const scheduled of notes) {
+    const samples = renderNote(
+      INSTRUMENTS[scheduled.instrument],
+      midiToFrequency(scheduled.pitch),
+      scheduled.length * beatSeconds,
+      sampleRate,
+    );
+    mixInto(out, samples, Math.round((scheduled.beat - fromBeat) * beatSeconds * sampleRate), scheduled.gain);
+  }
+  return out;
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -384,6 +408,39 @@ const LONDON_CHORDS_A = 'C | G7,C | C | G7,C';
 const ODE_A = `E5/1 E5/1 F5/1 G5/1 | G5/1 F5/1 E5/1 D5/1 | C5/1 C5/1 D5/1 E5/1 |`;
 const ODE_B = `D5/1 D5/1 E5/1 C5/1 | D5/1 E5/0.5 F5/0.5 E5/1 C5/1 | D5/1 E5/0.5 F5/0.5 E5/1 D5/1 | C5/1 D5/1 G4/2 |`;
 
+/** Bavarian theme defaults: accordion and tuba, the sound of a Blaskapelle at a village fair. */
+const BAVARIAN = {
+  theme: 'bavarian',
+  melodyInstrument: 'accordion',
+  thirdsInstrument: 'clarinet',
+  bassInstrument: 'tuba',
+  chordInstrument: 'accordion',
+  style: 'oomPah',
+  loopStartBar: 0,
+} as const;
+
+const AUGUSTIN_A1 = 'G5/1.5 A5/0.5 G5/0.5 F5/0.5 | E5/1 C5/1 C5/1 | D5/1 G4/1 G4/1 | E5/1 C5/1 C5/1 |';
+const AUGUSTIN_A2 = 'G5/1.5 A5/0.5 G5/0.5 F5/0.5 | E5/1 C5/1 C5/1 | D5/1 G4/1 B4/1 | C5/3 |';
+const AUGUSTIN_B = 'D5/1 G4/1 G4/1 | E5/1 C5/1 C5/1 | D5/1 G4/1 G4/1 | E5/1 C5/1 C5/1 |';
+const AUGUSTIN_MELODY = `${AUGUSTIN_A1} ${AUGUSTIN_A2} ${AUGUSTIN_B} ${AUGUSTIN_A2}`;
+const AUGUSTIN_CHORDS = 'C | C | G7 | C | C | C | G7 | C | G7 | C | G7 | C | C | C | G7 | C';
+
+/** Our own Zwiefacher: the bar pattern 3-3-2-2 (two waltz bars, two "Dreher" bars) four times, played twice. */
+const ZWIEFACHER_MELODY = `B4/1 D5/1 G5/1 | F#5/1 E5/1 D5/1 | E5/0.5 F#5/0.5 G5/1 | D5/1 B4/1 |
+  C5/1 E5/1 A5/1 | G5/1 F#5/1 E5/1 | D5/0.5 E5/0.5 F#5/1 | A5/1 D5/1 |
+  B4/1 D5/1 G5/1 | B5/1 A5/1 G5/1 | C6/0.5 B5/0.5 A5/1 | G5/1 E5/1 |
+  D5/1 G5/1 B5/1 | A5/1 F#5/1 D5/1 | E5/0.5 F#5/0.5 A5/0.5 F#5/0.5 | G5/2`;
+
+const ZWIEFACHER_CHORDS = 'G | D7 | G | G | C | D7 | D | D7 | G | G | C | C | G | D7 | D | G';
+
+/** Our own march: an 8-bar main strain and an 8-bar trio that the second voice joins in thirds. */
+const MARCH_MELODY = `C5/1 F5/0.5 F5/0.5 F5/1 A5/1 | G5/0.5 F5/0.5 E5/0.5 F5/0.5 G5/2 |
+  C5/1 G5/0.5 G5/0.5 G5/1 Bb5/1 | A5/0.5 G5/0.5 F#5/0.5 G5/0.5 A5/2 |
+  C6/1 A5/0.5 F5/0.5 C5/1 F5/1 | Bb5/1 G5/0.5 E5/0.5 C5/1 E5/1 |
+  G5/0.5 A5/0.5 Bb5/0.5 G5/0.5 E5/1 C5/1 | F5/2 r/1 C5/1 |
+  D5/1 F5/1 Bb5/1.5 A5/0.5 | G5/1 F5/1 D5/2 | C5/1 E5/1 G5/1.5 F5/0.5 | E5/1 D5/1 C5/2 |
+  A5/1 C6/1 A5/1 F5/1 | Bb5/1 D6/1 Bb5/1 G5/1 | A5/0.5 Bb5/0.5 C6/0.5 A5/0.5 G5/1 E5/1 | F5/2 F4/1 r/1`;
+
 const SONG_SPECS: readonly SongSpec[] = [
   {
     ...CLASSIC,
@@ -418,6 +475,52 @@ const SONG_SPECS: readonly SongSpec[] = [
     melody: `${ODE_A} E5/1.5 D5/0.5 D5/2 | ${ODE_A} D5/1.5 C5/0.5 C5/2 | ${ODE_B} ${ODE_A} D5/1.5 C5/0.5 C5/2`,
     melodyInstrument: 'flute',
     style: 'galop',
+  },
+  {
+    ...BAVARIAN,
+    id: 'bavarian-augustin',
+    title: 'Ländler: O du lieber Augustin (traditional)',
+    tempo: 152,
+    key: 0,
+    // Written in C, played in B flat, the home key of a brass band.
+    transpose: -2,
+    meter: 3,
+    chords: `${AUGUSTIN_CHORDS} | ${AUGUSTIN_CHORDS}`,
+    melody: `${AUGUSTIN_MELODY} ${AUGUSTIN_MELODY}`,
+    // First time solo, second time with the clarinet in thirds.
+    thirdsFromBar: 16,
+    drums: false,
+  },
+  {
+    ...BAVARIAN,
+    id: 'bavarian-zwiefacher',
+    title: 'Zwiefacher: Hupfauf (our own composition)',
+    tempo: 176,
+    key: 7,
+    transpose: 0,
+    meter: Array.from({ length: 32 }, (_, bar) => (bar % 4 < 2 ? 3 : 2)),
+    chords: `${ZWIEFACHER_CHORDS} | ${ZWIEFACHER_CHORDS}`,
+    melody: `${ZWIEFACHER_MELODY} | ${ZWIEFACHER_MELODY}`,
+    melodyInstrument: 'clarinet',
+    // First time the clarinet alone, second time the accordion joins in thirds.
+    thirdsFromBar: 16,
+    thirdsInstrument: 'accordion',
+    drums: false,
+  },
+  {
+    ...BAVARIAN,
+    id: 'bavarian-march',
+    title: 'Marsch: Almauftrieb (our own composition)',
+    tempo: 120,
+    key: 5,
+    transpose: 0,
+    meter: 4,
+    chords: 'F | C7 | C7 | F | F | C7 | C7 | F | Bb | Bb | C7 | C7 | F | Bb | C7 | F',
+    melody: MARCH_MELODY,
+    melodyInstrument: 'brass',
+    thirdsFromBar: 8,
+    chordInstrument: 'brass',
+    drums: true,
   },
 ];
 
