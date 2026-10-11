@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2026 Marcel Petrick
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# CI mirrors the local quality gate: it runs exactly ./localPipeline.sh, nothing more, nothing less.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Local pipeline
+        run: ./localPipeline.sh --noRun
