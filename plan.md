@@ -86,8 +86,8 @@ gantt
 - [x] M0.06 (Q) `README.md` with badges, status and the homage disclaimer.
 - [x] M0.07 (R) `architecture.md`: decision rule, four candidates, choice, module map.
 - [x] M0.08 (Q) `plan.md` (this file).
-- [ ] M0.09 (Q) First push to `github.com/marcelpetrick/BavarianLemmings` and CI green there
-      (owner pushes; the sandbox has no credentials).
+- [x] M0.09 (Q) First push to `github.com/marcelpetrick/BavarianLemmings` and CI green there
+      (pushed by the owner; CI run 38145947990 green on 2026-10-11).
 - [ ] M0.10 (Q, P-02) Vite + TypeScript strict scaffold: `index.html`, `src/main.ts`, `vite.config.ts`,
       `tsconfig.json` with `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`.
 - [ ] M0.11 (Q) Vitest with V8 coverage, threshold 95 % lines/branches/functions, in the pipeline.

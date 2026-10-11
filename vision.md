@@ -327,14 +327,14 @@ No open questions remain. New ones go into a round E table here.
 | 2026-10-11 | architecture.md: decision rule, candidates, choice, module map | done (v0.0.5) |
 | 2026-10-11 | plan.md: milestones M0 to M7, Gantt roadmap, assumptions | done (v0.0.6) |
 | 2026-10-11 | Review of the planning documents (`review_20261011.md`), AGENTS.md and README refreshed | done (v0.0.7) |
-| – | First push and CI green on GitHub | **waiting for the owner**: the sandbox has no credentials |
+| 2026-10-11 | First push and CI green on GitHub | done (CI run 38145947990) |
 | – | Implementation M0.10 onwards | handed to the implementing agent |
 
 ## 9. Resume here
 
-- **State:** planning complete. No game code yet. No open owner questions. The remote
-  `https://github.com/marcelpetrick/BavarianLemmings.git` is configured; nothing is pushed.
-- **Push (owner):** `git push -u origin main`, then check that the CI workflow is green.
+- **State:** planning complete; `main` is pushed to
+  `https://github.com/marcelpetrick/BavarianLemmings.git` and CI is green. Implementation runs.
+- **Push:** `git push` after every commit; `gh run list -L 3` shows the CI state.
 - **Next (implementing agent):** read `AGENTS.md`, then start at `plan.md` task M0.10 (Vite and
   TypeScript scaffold). Tick tasks as they finish, bump the version per commit, keep the pipeline
   green, refresh the README at least per milestone.
