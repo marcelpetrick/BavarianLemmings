@@ -233,7 +233,7 @@ gantt
 - [x] M5.02 (C-06) `input/touchGestures.ts`: press-aim-release with magnifier, two-finger scroll,
       minimap drag, pinch zoom, one-second nuke hold with progress ring, release-rate repeat.
 - [x] M5.03 (C-06) `touch-action: none`, no context menu, fullscreen button, pause on hidden page.
-- [ ] M5.04 (P-06) e2e with Playwright tablet emulation (`hasTouch`, landscape and portrait) in
+- [x] M5.04 (P-06) e2e with Playwright tablet emulation (`hasTouch`, landscape and portrait) in
       Chromium: play the first level by touch only.
 - [ ] M5.05 (C-06) Decide plain-tap option from the e2e experience; document in vision decision log.
 - [ ] M5.06 (Q) Milestone bump to 0.5.0.

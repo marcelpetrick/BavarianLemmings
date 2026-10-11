@@ -30,6 +30,22 @@ test.describe('menus and settings (V-08, V-11, I-01, R-05, L-02)', () => {
     expect(errors).toEqual([]);
   });
 
+  test('the touch layout can be chosen on a desktop and works with the mouse (C-06)', async ({ page }) => {
+    const errors = await openGame(page);
+    await clickMenu(page, 'settings');
+    await clickMenu(page, 'layout');
+    await clickMenu(page, 'layout');
+    expect((await settings(page)).layout).toBe('touch');
+    await clickMenu(page, 'back');
+    await startFirstLevel(page);
+    expect(await page.evaluate('window.__bavarianLemmings.layout()')).toBe('touch');
+    await page.locator('[data-touch-button="builder"]').click();
+    expect(await page.evaluate('window.__bavarianLemmings.state().selectedSkill')).toBe('builder');
+    await page.locator('[data-touch-button="menu"]').click();
+    expect(await screen(page)).toBe('title');
+    expect(errors).toEqual([]);
+  });
+
   test('credits show the homage notice; level select lists Fun 1', async ({ page }) => {
     const errors = await openGame(page);
     await clickMenu(page, 'credits');

@@ -21,6 +21,9 @@ export interface GameView {
   selectedSkill: string | null;
   paused: boolean;
   fastForward: boolean;
+  zoomed: boolean;
+  /** A finger aims on the playfield (touch press-aim-release). */
+  aiming: boolean;
   nuking: boolean;
   viewX: number;
   lemmings: LemmingView[];
