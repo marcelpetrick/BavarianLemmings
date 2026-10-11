@@ -5,6 +5,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 # BavarianLemmings
 
+[![Play in browser](https://img.shields.io/badge/play-in%20browser-2ea44f.svg)](https://marcelpetrick.github.io/BavarianLemmings/)
+[![Pages](https://github.com/marcelpetrick/BavarianLemmings/actions/workflows/pages.yml/badge.svg)](https://github.com/marcelpetrick/BavarianLemmings/actions/workflows/pages.yml)
 [![CI](https://github.com/marcelpetrick/BavarianLemmings/actions/workflows/ci.yml/badge.svg)](https://github.com/marcelpetrick/BavarianLemmings/actions/workflows/ci.yml)
 [![License: GPL v3 or later](https://img.shields.io/badge/License-GPLv3%2B-blue.svg)](LICENSE)
 [![Status: planning](https://img.shields.io/badge/status-planning-lightgrey.svg)](vision.md)

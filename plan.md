@@ -380,7 +380,7 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
       `scripts/docker-smoke.sh` (build, run, curl index, one Playwright check); in the pipeline.
 - [ ] M7.02 (P-03) `.github/workflows/docker.yml`: build and publish to GHCR on `v*` tags and on
       `main`.
-- [ ] M7.03 (P-03) `.github/workflows/pages.yml`: deploy `dist/` to GitHub Pages; "Play in
+- [x] M7.03 (P-03) `.github/workflows/pages.yml`: deploy `dist/` to GitHub Pages; "Play in
       browser" badge.
 - [ ] M7.04 (Q) `.github/workflows/release.yml`: on `v*` tags, check that the tag matches
       `package.json`, run the pipeline, attach the zipped `dist/`.
@@ -392,7 +392,7 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
 - [ ] M7.09 (Q) Final check against every vision.md item (`scripts/check-plan.mjs` plus a manual
       pass); pipeline green locally and in CI; Docker image runs; tree clean; everything pushed.
 - [ ] M7.10 (Q) Bump to 1.0.0 when the owner says so.
-- [ ] M7.11 (Q) After the first Pages deployment: set the repository homepage to the Pages URL.
+- [x] M7.11 (Q) After the first Pages deployment: set the repository homepage to the Pages URL.
 - [ ] M7.12 (P-01) Manual play-test in Firefox and Chrome of every rating before 1.0; findings as
       issues or plan tasks.
 
