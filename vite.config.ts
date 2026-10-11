@@ -16,7 +16,9 @@ export default defineConfig({
       reportsDirectory: 'coverage',
       // Code that needs a real browser (canvas, Web Audio, Pointer Events) is covered by Playwright in e2e/.
       include: ['src/**/*.ts'],
-      exclude: ['src/main.ts'],
+      // src/audio/engine.ts is the thin Web Audio wrapper (no AudioContext in node); its logic lives in
+      // the pure fm.ts, sfx.ts and music.ts, which are unit tested, and Playwright covers the wrapper.
+      exclude: ['src/main.ts', 'src/audio/engine.ts'],
       thresholds: { statements: 95, branches: 95, functions: 95, lines: 95 },
     },
   },

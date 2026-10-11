@@ -11,6 +11,7 @@ import {
   SFX_RECIPES,
   SIM_EVENT_TYPES,
   VOICE_FOR_EVENT,
+  voiceSetFor,
   type SfxRecipe,
 } from '../../src/audio/sfx';
 import { allFinite, peakOf, rms, spectralPeak } from './spectrum';
@@ -96,6 +97,16 @@ describe('event mapping', () => {
   it('speaks the three voice lines on their events, each with a synthesised fallback', () => {
     expect(VOICE_FOR_EVENT).toEqual({ letsGo: 'letsGo', ohNo: 'ohNo', exit: 'yippee' });
     for (const event of Object.keys(VOICE_FOR_EVENT)) expect(SFX_FOR_EVENT[event]).toBeDefined();
+  });
+
+  it('picks the voice set by UI language; German falls back to English (Q-D9)', () => {
+    expect(voiceSetFor('en')).toBe('en');
+    expect(voiceSetFor('de')).toBe('en');
+    expect(voiceSetFor('bar')).toBe('bar');
+  });
+
+  it('names every voice line like its synthesised fallback effect', () => {
+    for (const line of Object.values(VOICE_FOR_EVENT)) expect(SFX_IDS).toContain(line);
   });
 
   it('uses only instruments from the bank', () => {

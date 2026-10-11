@@ -203,6 +203,17 @@ export const VOICE_FOR_EVENT: Partial<Record<string, VoiceLine>> = {
   exit: 'yippee',
 };
 
+/** UI languages (vision I-01). */
+export type VoiceLanguage = 'en' | 'de' | 'bar';
+
+/** Recorded voice sets; the folder names under public/audio/voices/. */
+export type VoiceSet = 'en' | 'bar';
+
+/** Which voice set a UI language uses. German uses the English set (owner decision Q-D9). */
+export function voiceSetFor(language: VoiceLanguage): VoiceSet {
+  return language === 'bar' ? 'bar' : 'en';
+}
+
 function stepEnd(step: SfxStep): number {
   if (step.kind === 'tone') return step.at + step.length + INSTRUMENTS[step.instrument].carrier.envelope.release;
   return step.at + step.length;
