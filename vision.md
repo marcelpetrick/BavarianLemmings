@@ -1,7 +1,7 @@
 # BavarianLemmings: vision and specification
 
 > Living document. Phase: **requirements engineering** (no code yet).
-> Owner: Marcel Petrick. Last update: 2026-10-11 (rounds A and B answered).
+> Owner: Marcel Petrick. Last update: 2026-10-11 (rounds A to C answered).
 
 ## 1. Vision
 
@@ -69,11 +69,13 @@ IDs are stable. A removed item is struck through, never renumbered.
 
 | ID | Requirement |
 |---|---|
-| L-01 | MUST: four difficulty ratings (the names are Q-C2) with the level progression of the original. The owner wants the original layouts recreated with our own graphics. Whether that is legally safe is open (Q-C1). |
-| L-02 | MUST: level codes (passwords) to resume progress, plus local saving of progress in the browser. |
+| L-01 | MUST: four difficulty ratings with the level progression of the original. Names: classic mode **Fun / Tricky / Taxing / Mayhem**; Bavarian mode **Gmiatlich / Zach / Hundsgemein / Saupreiß** (Q-C2). |
+| L-01a | MUST: the original level layouts are **recreated by us** from memory, description and observation: our own terrain pieces, drawn by hand and placed to match the original puzzle (positions of the hatch and exit, terrain shape, skill counts, rescue target, time). No original files, graphics or extracted data are used (owner decision Q-C1, 2026-10-11; risk accepted by the owner, see section 6). |
+| L-02 | MUST: progress is saved in the browser (local storage) **after every finished level**. In the same browser, the player continues from the furthest level reached. Nothing is saved in the middle of a level (Q-C8). |
+| L-02a | MAY: level codes (passwords) as in the original (Q-D6). |
 | L-03 | MUST: the level data format is documented, human-readable (for example JSON) and versioned. |
 | L-04 | SHOULD: a level preview screen before play: name, number of lemmings, % to save, release rate, time, and a skill overview. |
-| L-05 | MAY: a level editor (Q-C4). |
+| ~~L-05~~ | Dropped: no level editor for now (Q-C4). |
 | L-06 | MUST: level names, descriptions and texts are our own and translated (I-01). |
 
 ### 3.3 Look and feel (V)
@@ -88,6 +90,7 @@ IDs are stable. A removed item is struck through, never renumbered.
 | V-06 | MUST: the original game speed. `[verify: logic tick rate of the DOS version]` |
 | V-07 | MUST: terrain styles inspired by the original (dirt, fire, marble, pillar, crystal), drawn by us as 2D pixel art. `[verify: list]` |
 | V-09 | MUST: Bavarian mode re-themes the palette (white and blue), the backgrounds (Alpine mountains), the terrain styles, the panel and the menus. Lemming behaviour and level logic stay identical. |
+| V-10 | MUST: Bavarian extras (Q-C3): lemmings in Lederhosen and Dirndl, a beer tent / Wirtshaus as the exit, a maypole as scenery, Weißwurst and Maßkrug traps, dialect voice lines ("Oh mei!", "Pfiat di!"). Sprites have the same size and frame count as in classic mode, so the logic stays identical. |
 | V-08 | SHOULD: a title screen and menus in the style of the original. |
 
 ### 3.4 Controls (C)
@@ -98,6 +101,45 @@ IDs are stable. A removed item is struck through, never renumbered.
 | C-02 | MUST: DOS keyboard shortcuts: **F1/F2** release rate, **F3 to F10** the skills in panel order, **F11** pause, **F12** nuke. `[verify: whether F1 is − or + in the retail version; the sources disagree]` |
 | C-03 | MUST: keys for scrolling the view. `[verify: original keys]` |
 | C-04 | SHOULD: when several lemmings overlap, the choice of which one gets the skill follows the original rules. `[verify]` |
+| C-05 | MUST: modern conveniences, which the DOS original lacked (Q-C7): fast-forward, restart level, frame step while paused, zoom. They are on by default. A **Purist** setting switches all of them off for the original experience. |
+| C-06 | MUST: touch play: the whole game can be played by touch alone, on a touch screen or tablet. See 3.4.1. |
+
+#### 3.4.1 Touch proposal (for review, Q-D1 to Q-D3)
+
+The problem: the original is designed for a mouse. A lemming is about 6 × 10 logical pixels. There is
+no hover on touch (the original's selection box only appears under the cursor). And the bottom panel
+of 320 × 40 pixels has buttons that are much smaller than a finger.
+
+The proposal:
+
+1. **One input layer for everything.** Pointer Events (mouse, pen, touch) go through one input
+   module. The game logic never sees whether a click came from a mouse or a finger.
+2. **Two UI layouts, one playfield.** The playfield is always the same pixel-exact 320 × 160 logical
+   image, scaled by an integer factor. Only the **controls** change:
+   - *Classic layout:* the original 320 × 40 panel underneath, scaled together with the playfield.
+   - *Touch layout:* the same buttons, but drawn independently with a minimum target size of
+     48 × 48 CSS pixels (WCAG 2.5.5 / Material guidelines). In **landscape**, the skill buttons sit in
+     two columns to the left and right of the playfield (thumbs reach them), and the minimap and the
+     status line sit above. In **portrait**, the playfield sits at the top at full width and a large
+     two-row panel sits underneath.
+   - *Auto* (the default) picks the touch layout when the primary pointer is coarse
+     (`@media (pointer: coarse)`). It can be overridden in the settings at any time.
+3. **Assigning a skill by touch: "press, aim, release".** Touching the playfield shows the selection
+   box on the best lemming within a radius of about 8 mm around the finger (the original's priority
+   rules decide). Sliding the finger moves the box. **Lifting the finger assigns the skill.** Sliding
+   out of the playfield cancels. A small magnifier above the finger (2×) shows what is under it, like
+   the text magnifier in mobile operating systems.
+4. **Scrolling and zoom.** Dragging with two fingers, or dragging on the minimap, scrolls the view.
+   Pinching zooms (a modern convenience, C-05). One finger is reserved for assigning, so scrolling
+   never assigns a skill by accident.
+5. **Panel buttons.** Release rate −/+ repeat while held. **Nuke** needs a press of one second with a
+   progress ring (or a double tap), so it cannot be triggered by accident. Pause, fast-forward and
+   restart are big buttons.
+6. **The browser stays out of the way.** `touch-action: none` on the game area, no pull-to-refresh, no
+   double-tap zoom, no text selection, no context menu on long press. A fullscreen button. The game
+   pauses automatically when the page is hidden (another app, a locked screen).
+7. **Testing.** Playwright with touch emulation (`hasTouch`, tablet viewports in both orientations) in
+   CI, plus a manual check on a real tablet before each release.
 
 ### 3.5 Audio (A)
 
@@ -106,7 +148,8 @@ IDs are stable. A removed item is struck through, never renumbered.
 | A-01 | MUST: sound effects for the original events (hatch opening, "Let's go!", "Oh no!", splat, explosion, exit, and so on). They sound similar to the original but are produced by us: synthesised in the browser with Web Audio, or pre-rendered samples that we generate (for example offline speech synthesis), never cut from the original. |
 | A-02 | MUST: background music per level with mute/volume controls. Browsers do not play audio before the user interacts with the page; this is handled cleanly. |
 | A-03 | MUST: the sound character of a period sound card (AdLib FM / Sound Blaster). Sound effects and music are synthesised by us or come from freely licensed sources. No original audio is used. |
-| A-04 | MUST: Bavarian mode switches the music to Alpine folk music: our own compositions, or traditional public-domain tunes in our own arrangement. |
+| A-04 | MUST: Bavarian mode switches the music to Alpine folk music: our own arrangements of traditional public-domain tunes (Ländler, Zwiefacher, marches) and our own compositions (Q-C6). |
+| A-05 | MUST: classic mode music: our own arrangements, with AdLib-like FM sound, of the **public-domain melodies** used by the original, plus our own compositions. Only melodies that are demonstrably in the public domain are used. Every arrangement records the source of its melody in `THIRD_PARTY.md` (Q-C5). |
 
 ### 3.6 Platform and technology (P)
 
@@ -117,7 +160,7 @@ IDs are stable. A removed item is struck through, never renumbered.
 | P-03 | MUST: no backend. The build is static files: playable on **GitHub Pages** ("Play in browser" badge) and served from a Docker image on GHCR. |
 | P-04 | MUST: steady frame rate on a mid-range laptop. Game logic is independent of the display refresh rate (60/120/144 Hz). |
 | P-05 | SHOULD: works offline after the first load. |
-| P-06 | MAY: touch/mobile support. Not a goal for 1.0. |
+| P-06 | MUST: touch screens and tablets (C-06, 3.4.1). Phones are best effort (Q-D2). |
 
 ### 3.7 Architecture (R)
 
@@ -155,6 +198,7 @@ and a real screenshot.
 
 ## 4. Out of scope (for now)
 
+- A level editor (Q-C4).
 - Two-player mode, Lemmings 2/3, Oh No! More Lemmings content, Christmas Lemmings.
 - Online features, accounts, leaderboards.
 - Console-port features (SNES, Mega Drive, and so on).
@@ -201,20 +245,35 @@ template for this project unless the owner decides otherwise.
 | – | Version 1.0 | Not fixed in advance. Semantic versioning from 0.0.x. |
 | Q-B4, Q-B5, Q-B10 | | Unanswered. Carried over to round C. |
 
-### Round C: open
+### Round C (2026-10-11): answered
+
+| # | Question | Answer |
+|---|---|---|
+| Q-C1 | Level layouts | **The original layouts, recreated by us** (no copy and paste, no extracted data). The owner knows about the legal risk and accepts it. |
+| Q-C2 | Difficulty names | Fun/Tricky/Taxing/Mayhem; Bavarian: Gmiatlich/Zach/Hundsgemein/Saupreiß. |
+| Q-C3 | Bavarian extras | All of them: Lederhosen/Dirndl, beer tent, maypole, Weißwurst/Maßkrug, "Oh mei!". |
+| Q-C4 | Level editor | No, not for now. |
+| Q-C5 | Classic music | Yes: our own arrangements of the public-domain melodies. |
+| Q-C6 | Bavarian music | Yes: our own arrangements of traditional tunes. |
+| Q-C7 | Modern conveniences | Yes: add whatever helps. |
+| Q-C8 | Progress | Save after every finished level. In the same browser, continue from where the player left off. |
+| Q-C9 | Devices | Mouse and keyboard, **and** pure touch play with a tablet layout for the UI. See the proposal in 3.4.1. |
+| Q-C10 | GitHub | Public repository, push in between. Blocked: `gh` is not logged in on this machine (see Resume here). CI for Markdown and code quality right away. |
+
+### Round D: open
 
 | # | Question | Status |
 |---|---|---|
-| Q-C1 | **Level layouts and copyright.** The level design itself (terrain shape, positions of the hatch, exit and traps, skill counts, level titles) is creative work of the original authors. Redrawn exactly in our own graphics, it is still a reproduction. Options: (a) the same puzzle idea, skills and difficulty, with our own geometry and titles *(recommended, safe)*; (b) the exact layouts, redrawn *(close to the original, legally risky)*; (c) (a) by default, with an "inspired by level N" note. | open |
-| Q-C2 | Difficulty names: original (Fun/Tricky/Taxing/Mayhem) or our own? In Bavarian mode, for example "Gmiatlich / Zach / Hundsgemein / Saupreiß"? | open |
-| Q-C3 | Bavarian extras beyond colours, mountains and music: lemmings in Lederhosen and Dirndl, a beer tent or Wirtshaus as the exit, a maypole, Weißwurst or Maßkrug traps, a "Oh mei!" voice? | open |
-| Q-C4 | Level editor: in the first public release, later, or never? | open |
-| Q-C5 | Music in classic mode: the original DOS soundtrack included arrangements of public-domain tunes (classical and folk pieces). May we make **our own** arrangements of the same public-domain melodies in AdLib-like FM sound, or only our own compositions? | open |
-| Q-C6 | Music in Bavarian mode: our own arrangements of traditional public-domain tunes (Ländler, Zwiefacher, marches), or original compositions only? | open |
-| Q-C7 | Modern conveniences that the DOS original lacked (fast-forward, restart key, frame step, zoom): offered as options, or deliberately left out? | open |
-| Q-C8 | Progress: classic level codes (passwords) like the original, browser storage, or both? | open |
-| Q-C9 | Devices: desktop only (mouse and keyboard), or also tablets/touch? | open |
-| Q-C10 | GitHub: public repository `marcelpetrick/BavarianLemmings`? When do we push: right after the plan is frozen, or with the first playable version? | open |
+| Q-D1 | Touch proposal 3.4.1: is "press, aim, release" with a magnifier right, or should a plain tap assign the skill immediately (faster, less precise)? | open |
+| Q-D2 | Touch devices: tablets only, or are phones in landscape a target too (the playfield is then only about 2× scaled)? Is Safari on iPad a target too (until now only Firefox and Chrome)? | open |
+| Q-D3 | Touch layout: may the skill buttons sit at the sides of the playfield in landscape (thumb reach), or must the original bottom panel always be kept? | open |
+| Q-D4 | Fast-forward: one speed (for example 3×), or several (2×/4×/8×)? | open |
+| Q-D5 | Bavarian mode: just a switch in the settings, or also a separate button in the main menu ("Bayern-Modus")? Does it also switch the language to Bavarian automatically? | open |
+| Q-D6 | Level codes (passwords) in addition to saving in the browser: as a nostalgic feature, or not at all? | open |
+| Q-D7 | Order of work: classic mode completely first (all 120 levels) and then Bavarian mode, or a playable vertical slice (for example 5 levels, both modes, touch) first and then content? | open |
+| Q-D8 | Recreated levels: may an AI agent recreate them from public level descriptions and screenshots (we rebuild them, we never copy), or do you want to check each level against your memory? | open |
+| Q-D9 | Lemming voice in classic mode: English as in the original ("Let's go!", "Oh no!"), and in Bavarian mode dialect? Or follow the selected UI language? | open |
+| Q-D10 | Splash and credits: a credits screen ("homage to the original from 1991, no affiliation") in the game, and should it mention your name and the year? | open |
 
 ## 7. Decision log
 
@@ -235,6 +294,11 @@ template for this project unless the owner decides otherwise.
 | 2026-10-11 | GitHub Pages and GHCR | Owner (Q-B9) |
 | 2026-10-11 | Branch `main` | Owner (Q-B9) |
 | 2026-10-11 | Versions: semantic versioning from 0.0.x, 1.0 not fixed in advance | Owner |
+| 2026-10-11 | Original level layouts, recreated by us; legal risk accepted by the owner | Owner (Q-C1) |
+| 2026-10-11 | No level editor for now | Owner (Q-C4) |
+| 2026-10-11 | Modern conveniences on, with a Purist setting | Owner (Q-C7); the Purist setting keeps the original experience available |
+| 2026-10-11 | Touch support with its own UI layout (proposal 3.4.1) | Owner (Q-C9) |
+| 2026-10-11 | CI for Markdown/documentation quality from the very first push | Owner (Q-C10) |
 
 ## 8. Status
 
@@ -244,12 +308,16 @@ template for this project unless the owner decides otherwise.
 | 2026-10-11 | AGENTS.md drafted from the owner's working style | done |
 | 2026-10-11 | Owner answers round A (Q1, Q2, Q3, Q9, 2D) | done |
 | 2026-10-11 | Owner answers round B | done |
-| – | Owner answers round C (Q-C1 to Q-C10) | waiting |
+| 2026-10-11 | Owner answers round C | done |
+| 2026-10-11 | Touch proposal written (3.4.1) | done, waiting for review |
+| – | Owner answers round D (Q-D1 to Q-D10) | waiting |
+| – | GitHub remote and first push | blocked: `gh` not logged in |
 | – | Specification frozen, implementation plan written | open |
 
 ## 9. Resume here
 
-- **State:** requirements phase. No code. Rounds A and B are answered. Waiting for round C (Q-C1 to Q-C10, section 6).
+- **State:** requirements phase. No code. Rounds A to C are answered. Waiting for round D (Q-D1 to Q-D10, section 6).
+- **Blocked:** the GitHub push. On this machine `gh` is not logged in, and the sandbox cannot read SSH keys. Restart: the owner runs `gh auth login`, then `gh repo create marcelpetrick/BavarianLemmings --public --source . --push`.
 - **Next:** put the answers into sections 3 and 7, mark the open `[verify]` items as checked or
   replaced, then write the implementation plan (milestones) into this document.
 - **Check:** `git log --oneline` and `grep -n "verify\|open" vision.md`.
