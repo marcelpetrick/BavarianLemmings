@@ -52,6 +52,9 @@ actionlint_bin="$(scripts/install-actionlint.sh)" || fail "actionlint install"
 step "Type check (tsc, strict)"
 npx --no-install tsc --noEmit || fail "type check"
 
+step "Unit and integration tests with coverage >= 95 % (vitest)"
+npx --no-install vitest run --coverage --reporter=dot || fail "tests or coverage"
+
 step "Build (vite)"
 npx --no-install vite build --logLevel warn || fail "build"
 

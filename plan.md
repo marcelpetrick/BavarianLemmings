@@ -90,7 +90,7 @@ gantt
       (pushed by the owner; CI run 38145947990 green on 2026-10-11).
 - [x] M0.10 (Q, P-02) Vite + TypeScript strict scaffold: `index.html`, `src/main.ts`, `vite.config.ts`,
       `tsconfig.json` with `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`.
-- [ ] M0.11 (Q) Vitest with V8 coverage, threshold 95 % lines/branches/functions, in the pipeline.
+- [x] M0.11 (Q) Vitest with V8 coverage, threshold 95 % lines/branches/functions, in the pipeline.
 - [ ] M0.12 (Q, R-02) ESLint (type-aware) with import-boundary rule for `src/sim`, Prettier, Stylelint;
       all in the pipeline.
 - [ ] M0.13 (X-01, X-03) REUSE: `REUSE.toml`, SPDX headers on every source file, `reuse lint` in the
