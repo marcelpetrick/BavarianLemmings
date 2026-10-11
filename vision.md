@@ -311,6 +311,7 @@ template for this project unless the owner decides otherwise.
 | 2026-10-11 | Owner answers round C | done |
 | 2026-10-11 | Touch proposal written (3.4.1) | done, waiting for review |
 | – | Owner answers round D (Q-D1 to Q-D10) | waiting |
+| 2026-10-11 | LICENSE, README, `localPipeline.sh` (Markdown, shellcheck, actionlint) and CI workflow | done, green locally (v0.0.3) |
 | – | GitHub remote and first push | blocked: `gh` not logged in |
 | – | Specification frozen, implementation plan written | open |
 
@@ -323,6 +324,7 @@ template for this project unless the owner decides otherwise.
   `gh repo create marcelpetrick/BavarianLemmings --public --source . --push`.
 - **Next:** put the answers into sections 3 and 7, mark the open `[verify]` items as checked or
   replaced, then write the implementation plan (milestones) into this document.
+- **Pipeline:** `npm ci && ./localPipeline.sh` must be green before every commit.
 - **Check:** `git log --oneline` and `grep -n "verify\|open" vision.md`.
 
 ## Sources (fact check 2026-10-11)
