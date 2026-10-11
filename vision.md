@@ -1,7 +1,7 @@
 # BavarianLemmings: vision and specification
 
 > Living document. Phase: **requirements engineering** (no code yet).
-> Owner: Marcel Petrick. Last update: 2026-10-11 (round A answered).
+> Owner: Marcel Petrick. Last update: 2026-10-11 (rounds A and B answered).
 
 ## 1. Vision
 
@@ -69,11 +69,12 @@ IDs are stable. A removed item is struck through, never renumbered.
 
 | ID | Requirement |
 |---|---|
-| L-01 | MUST: difficulty ratings **Fun, Tricky, Taxing, Mayhem** (or names of our own, see Q-B4), with level design in the spirit of the original: the same kinds of puzzles and the same difficulty curve. The levels are our own designs, not copies of the original layouts. The number of levels per rating depends on Q-B3. |
+| L-01 | MUST: four difficulty ratings (the names are Q-C2) with the level progression of the original. The owner wants the original layouts recreated with our own graphics. Whether that is legally safe is open (Q-C1). |
 | L-02 | MUST: level codes (passwords) to resume progress, plus local saving of progress in the browser. |
 | L-03 | MUST: the level data format is documented, human-readable (for example JSON) and versioned. |
 | L-04 | SHOULD: a level preview screen before play: name, number of lemmings, % to save, release rate, time, and a skill overview. |
-| L-05 | MAY: a level editor. |
+| L-05 | MAY: a level editor (Q-C4). |
+| L-06 | MUST: level names, descriptions and texts are our own and translated (I-01). |
 
 ### 3.3 Look and feel (V)
 
@@ -102,7 +103,7 @@ IDs are stable. A removed item is struck through, never renumbered.
 
 | ID | Requirement |
 |---|---|
-| A-01 | MUST: sound effects for the original events (hatch opening, "Let's go!", "Oh no!", splat, explosion, exit, and so on). |
+| A-01 | MUST: sound effects for the original events (hatch opening, "Let's go!", "Oh no!", splat, explosion, exit, and so on). They sound similar to the original but are produced by us: synthesised in the browser with Web Audio, or pre-rendered samples that we generate (for example offline speech synthesis), never cut from the original. |
 | A-02 | MUST: background music per level with mute/volume controls. Browsers do not play audio before the user interacts with the page; this is handled cleanly. |
 | A-03 | MUST: the sound character of a period sound card (AdLib FM / Sound Blaster). Sound effects and music are synthesised by us or come from freely licensed sources. No original audio is used. |
 | A-04 | MUST: Bavarian mode switches the music to Alpine folk music: our own compositions, or traditional public-domain tunes in our own arrangement. |
@@ -112,8 +113,8 @@ IDs are stable. A removed item is struck through, never renumbered.
 | ID | Requirement |
 |---|---|
 | P-01 | MUST: runs in the current stable **Firefox** and **Chrome** on desktop. Both are tested in CI (end-to-end). |
-| P-02 | MUST: native web technology: HTML5 Canvas 2D (or WebGL only for scaling), Web Audio, TypeScript. No emulator. |
-| P-03 | MUST: no backend. The build is static files that any web server can host (GitHub Pages and a Docker image, see AGENTS.md). |
+| P-02 | MUST: native web technology: **TypeScript (strict), Vite, HTML5 Canvas 2D** with nearest-neighbour pixel scaling, Web Audio. No game engine, no emulator. Tests use Vitest (unit/integration) and Playwright (end-to-end in Firefox and Chrome). Decided 2026-10-11. |
+| P-03 | MUST: no backend. The build is static files: playable on **GitHub Pages** ("Play in browser" badge) and served from a Docker image on GHCR. |
 | P-04 | MUST: steady frame rate on a mid-range laptop. Game logic is independent of the display refresh rate (60/120/144 Hz). |
 | P-05 | SHOULD: works offline after the first load. |
 | P-06 | MAY: touch/mobile support. Not a goal for 1.0. |
@@ -128,15 +129,24 @@ IDs are stable. A removed item is struck through, never renumbered.
 | R-04 | SHOULD: a test hook (`window.__bavarianLemmings` or similar) for end-to-end tests. |
 | R-05 | MUST: the mode switch (Classic/Bavarian) is a setting that loads a theme layer (palette, sprites, backgrounds, music, texts), not a fork of the code. It can be changed in the settings menu and is remembered. |
 
-### 3.8 Legal and third-party code (X)
+### 3.8 Languages (I)
+
+| ID | Requirement |
+|---|---|
+| I-01 | MUST: three UI languages: **English** (the original language and the default), **German**, **Bavarian**. They can be switched in the settings. A missing key falls back to English. |
+| I-02 | MUST: all texts live in translation files, not in the code. A pipeline check makes sure every key exists in all three languages. |
+
+### 3.9 Legal and third-party code (X)
 
 | ID | Requirement |
 |---|---|
 | X-01 | MUST: licence **GPL-3.0-or-later**, with SPDX headers in source files. |
-| X-02 | MUST: none of the original Lemmings assets (graphics, levels, sounds, music, fonts) are used, shipped or loaded. Everything is ours or freely licensed. The README states that the project is an unofficial homage. The use of the name: see Q-B1. |
+| X-02 | MUST: none of the original Lemmings assets (graphics, sounds, music, fonts, data files) are used, shipped or loaded. The game does **not** read the player's own DOS files either. Everything is ours or freely licensed, drawn and composed from memory and description. The README states that the project is an unofficial homage with no affiliation to the rights holders. |
+| X-04 | MUST: the name stays **BavarianLemmings**, and the creatures are called lemmings (owner, 2026-10-11). The README carries a disclaimer about the trademark. |
+| X-05 | MUST: community knowledge about the original mechanics (reverse-engineering notes, wikis) may be used as a **reference for behaviour**. Code from community remakes is only taken under X-03. |
 | X-03 | MUST: every piece of code or asset taken from a reference project has a checked licence, is attributed (`THIRD_PARTY.md` and a file header) and is GPL-compatible. |
 
-### 3.9 Process and quality (Q)
+### 3.10 Process and quality (Q)
 
 Details are in [AGENTS.md](AGENTS.md). In short: atomic conventional commits, semver, a green
 `localPipeline.sh` before every commit, coverage of at least 95 %, unit, integration and end-to-end
@@ -156,8 +166,9 @@ The owner will supply these. Do not take code from a project before its licence 
 | Project | URL | Licence | What we may take | Checked |
 |---|---|---|---|---|
 | AlliumAssault (owner) | https://github.com/marcelpetrick/AlliumAssault | GPL-3.0-or-later | Toolchain, CI/Pages/Release workflows, README badges, REUSE setup | 2026-10-11 (README only) |
-| myLastFmPlayer (owner) | https://github.com/marcelpetrick/myLastFmPlayer | `[check]` | README badge style | – |
-| cullendula (owner) | `~/repos/cullendula` (outside the sandbox) | `[check]` | README badge style | – |
+| myLastFmPlayer (owner) | https://github.com/marcelpetrick/myLastFmPlayer | GPL-3.0-or-later | Badges: Local Pipeline, Manual Release, Latest Release, licence, stack, coverage. `localPipeline.sh` as the gate before every commit, called by CI | 2026-10-11 (README) |
+| Cullendula (owner) | https://github.com/marcelpetrick/Cullendula | GPL-3.0-or-later | Badges: CI, licence, stack versions. `ci.yml` calls `./localPipeline.sh --noRun`. `release.yml` on version tags checks that the tag matches the version and CHANGELOG | 2026-10-11 (README) |
+| Community mechanics documentation | `[to be collected]` | per source | Behaviour reference only (X-05) | – |
 | *(more to come)* | | | | |
 
 The AlliumAssault stack is TypeScript (strict), Vite, Vitest, Playwright, ESLint, Prettier, Stylelint,
@@ -176,20 +187,34 @@ template for this project unless the owner decides otherwise.
 | Q9 | Audio? | Sounds like the original, but self-generated or freely licensed. Alpine folk music in Bavarian mode. |
 | – | Graphics | 2D only, pixel graphics as in the original. |
 
-### Round B: open
+### Round B (2026-10-11): answered
+
+| # | Question | Answer |
+|---|---|---|
+| Q-B1 | Name and trademark | Keep "BavarianLemmings". The creatures are lemmings. Avoid anything that would be a legal trap. |
+| Q-B2 | Stack | Not specified ("not too ugly, pixel graphics"). Decided: TypeScript, Vite, Canvas 2D (P-02). |
+| Q-B3 | Levels | Recreate the original layouts with our own graphics. **Legal check pending (Q-C1).** |
+| Q-B6 | Language | English, with German and Bavarian (I-01). |
+| Q-B7 | Exactness | As close as possible. Use what the community has already found out (X-05). |
+| Q-B8 | Voices | Generated (in the browser, or pre-rendered by us). Similar to the original, never the original files. |
+| Q-B9 | Branch and hosting | `main` (renamed on 2026-10-11). Push to GitHub later. GitHub Pages: yes. |
+| – | Version 1.0 | Not fixed in advance. Semantic versioning from 0.0.x. |
+| Q-B4, Q-B5, Q-B10 | | Unanswered. Carried over to round C. |
+
+### Round C: open
 
 | # | Question | Status |
 |---|---|---|
-| Q-B1 | Name and trademark: "BavarianLemmings" contains the trademark "Lemmings". Keep it with a disclaimer, or change it for the public release? Are the little creatures called "lemmings" in the game? | open |
-| Q-B2 | Stack: TypeScript, Vite, Vitest, Playwright, plain Canvas 2D, no engine (as in AlliumAssault)? | open |
-| Q-B3 | Scope of 1.0: how many levels per difficulty (for example 4 × 5 = 20 or 4 × 30 = 120)? | open |
-| Q-B4 | Difficulty names: the original ones (Fun/Tricky/Taxing/Mayhem), or our own (in Bavarian mode perhaps "Gmiatlich / Zach / Hundsgemein / Saupreiß")? | open |
-| Q-B5 | Does Bavarian mode re-theme only, or are there Bavarian extras too (lemmings in Lederhosen and Dirndl, a beer-tent exit, Weißwurst traps, dialect sound bites like "Oh mei!")? | open |
-| Q-B6 | Language of the UI: English, German, Bavarian in Bavarian mode? | open |
-| Q-B7 | How exact: pixel- and tick-exact (using community reverse-engineering documentation as a reference for the mechanics), or "feels like the original"? | open |
-| Q-B8 | Voices ("Let's go!", "Oh no!"): synthesised (speech synthesis or formant), recorded by the owner, or text bubbles only? | open |
-| Q-B9 | Branch and remote: rename `master` to `main`? GitHub repository URL? Hosting on GitHub Pages in addition to GHCR? | open |
-| Q-B10 | Level editor in 1.0, or later? | open |
+| Q-C1 | **Level layouts and copyright.** The level design itself (terrain shape, positions of the hatch, exit and traps, skill counts, level titles) is creative work of the original authors. Redrawn exactly in our own graphics, it is still a reproduction. Options: (a) the same puzzle idea, skills and difficulty, with our own geometry and titles *(recommended, safe)*; (b) the exact layouts, redrawn *(close to the original, legally risky)*; (c) (a) by default, with an "inspired by level N" note. | open |
+| Q-C2 | Difficulty names: original (Fun/Tricky/Taxing/Mayhem) or our own? In Bavarian mode, for example "Gmiatlich / Zach / Hundsgemein / Saupreiß"? | open |
+| Q-C3 | Bavarian extras beyond colours, mountains and music: lemmings in Lederhosen and Dirndl, a beer tent or Wirtshaus as the exit, a maypole, Weißwurst or Maßkrug traps, a "Oh mei!" voice? | open |
+| Q-C4 | Level editor: in the first public release, later, or never? | open |
+| Q-C5 | Music in classic mode: the original DOS soundtrack included arrangements of public-domain tunes (classical and folk pieces). May we make **our own** arrangements of the same public-domain melodies in AdLib-like FM sound, or only our own compositions? | open |
+| Q-C6 | Music in Bavarian mode: our own arrangements of traditional public-domain tunes (Ländler, Zwiefacher, marches), or original compositions only? | open |
+| Q-C7 | Modern conveniences that the DOS original lacked (fast-forward, restart key, frame step, zoom): offered as options, or deliberately left out? | open |
+| Q-C8 | Progress: classic level codes (passwords) like the original, browser storage, or both? | open |
+| Q-C9 | Devices: desktop only (mouse and keyboard), or also tablets/touch? | open |
+| Q-C10 | GitHub: public repository `marcelpetrick/BavarianLemmings`? When do we push: right after the plan is frozen, or with the first playable version? | open |
 
 ## 7. Decision log
 
@@ -203,6 +228,13 @@ template for this project unless the owner decides otherwise.
 | 2026-10-11 | Bavarian mode = a theme switch in the settings (white and blue, mountains, Alpine folk music) | Owner (Q1) |
 | 2026-10-11 | Our own levels in the spirit of the original | Owner (Q3) together with Q2 |
 | 2026-10-11 | 2D pixel graphics only | Owner |
+| 2026-10-11 | Keep the name "BavarianLemmings", with a disclaimer | Owner (Q-B1) |
+| 2026-10-11 | No loading of the player's own DOS files | Owner: that would also be an infringement |
+| 2026-10-11 | Stack: TypeScript, Vite, Canvas 2D, Vitest, Playwright | Owner left it open; matches AlliumAssault and gives pixel-exact 2D |
+| 2026-10-11 | Languages: EN (default), DE, Bavarian | Owner (Q-B6) |
+| 2026-10-11 | GitHub Pages and GHCR | Owner (Q-B9) |
+| 2026-10-11 | Branch `main` | Owner (Q-B9) |
+| 2026-10-11 | Versions: semantic versioning from 0.0.x, 1.0 not fixed in advance | Owner |
 
 ## 8. Status
 
@@ -211,12 +243,13 @@ template for this project unless the owner decides otherwise.
 | 2026-10-11 | Vision and specification list drafted | done |
 | 2026-10-11 | AGENTS.md drafted from the owner's working style | done |
 | 2026-10-11 | Owner answers round A (Q1, Q2, Q3, Q9, 2D) | done |
-| – | Owner answers round B (Q-B1 to Q-B10) | waiting |
+| 2026-10-11 | Owner answers round B | done |
+| – | Owner answers round C (Q-C1 to Q-C10) | waiting |
 | – | Specification frozen, implementation plan written | open |
 
 ## 9. Resume here
 
-- **State:** requirements phase. No code. Round A is answered. Waiting for round B (Q-B1 to Q-B10, section 6).
+- **State:** requirements phase. No code. Rounds A and B are answered. Waiting for round C (Q-C1 to Q-C10, section 6).
 - **Next:** put the answers into sections 3 and 7, mark the open `[verify]` items as checked or
   replaced, then write the implementation plan (milestones) into this document.
 - **Check:** `git log --oneline` and `grep -n "verify\|open" vision.md`.
