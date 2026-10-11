@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "id": "fun-26",
+  "name": "level.fun-26.name",
+  "inspiredBy": "Fun 26 of the original ('Nightmare on Lem street'): only two lemmings, and both must arrive: the first bridges the gaps while the second is kept busy building so it never catches up. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 720,
+  "height": 160,
+  "lemmings": 2,
+  "toSave": 2,
+  "releaseRate": 30,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 0,
+    "builder": 8,
+    "basher": 0,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "marble",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 40,
+      "y": 80,
+      "w": 120,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 182,
+      "y": 80,
+      "w": 140,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 344,
+      "y": 80,
+      "w": 140,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 506,
+      "y": 80,
+      "w": 214,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 30,
+      "y": 30,
+      "w": 10,
+      "h": 130
+    },
+    {
+      "shape": "ellipse",
+      "x": 400,
+      "y": 20,
+      "w": 60,
+      "h": 24
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 60,
+      "y": 50
+    },
+    {
+      "type": "exit",
+      "x": 640,
+      "y": 79
+    }
+  ]
+}

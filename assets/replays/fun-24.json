@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "levelId": "fun-24",
+  "entries": [
+    {
+      "tick": 124,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "miner"
+      }
+    },
+    {
+      "tick": 415,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 420,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 20,
+        "skill": "digger"
+      }
+    }
+  ]
+}

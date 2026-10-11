@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "id": "fun-25",
+  "name": "level.fun-25.name",
+  "inspiredBy": "Fun 25 of the original ('Lemmings Lemmings everywhere'): the crowd climbs a mesh by itself; mine into the hollow web from the upper left, then mine once more out of its floor to the exit. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 800,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 40,
+  "releaseRate": 99,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 0,
+    "builder": 0,
+    "basher": 2,
+    "miner": 4,
+    "digger": 0
+  },
+  "style": "pillar",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 30,
+      "y": 0,
+      "w": 10,
+      "h": 160
+    },
+    {
+      "shape": "rect",
+      "x": 40,
+      "y": 120,
+      "w": 80,
+      "h": 40
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [120, 160],
+        [120, 116],
+        [130, 116],
+        [130, 112],
+        [140, 112],
+        [140, 108],
+        [150, 108],
+        [150, 104],
+        [160, 104],
+        [160, 100],
+        [170, 100],
+        [170, 96],
+        [180, 96],
+        [180, 92],
+        [190, 92],
+        [190, 88],
+        [200, 88],
+        [200, 84],
+        [210, 84],
+        [210, 80],
+        [220, 80],
+        [220, 76],
+        [230, 76],
+        [230, 72],
+        [240, 72],
+        [240, 68],
+        [250, 68],
+        [250, 64],
+        [260, 64],
+        [260, 60],
+        [270, 60],
+        [270, 56],
+        [280, 56],
+        [280, 52],
+        [290, 52],
+        [290, 48],
+        [300, 48],
+        [300, 160]
+      ]
+    },
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 44,
+      "w": 260,
+      "h": 96
+    },
+    {
+      "shape": "ellipse",
+      "x": 330,
+      "y": 70,
+      "w": 200,
+      "h": 50,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 150,
+      "w": 300,
+      "h": 10
+    },
+    {
+      "shape": "ellipse",
+      "x": 640,
+      "y": 30,
+      "w": 90,
+      "h": 30
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 70,
+      "y": 90
+    },
+    {
+      "type": "exit",
+      "x": 520,
+      "y": 149
+    },
+    {
+      "type": "water",
+      "x": 600,
+      "y": 150,
+      "w": 200,
+      "h": 10
+    }
+  ]
+}

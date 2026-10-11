@@ -270,11 +270,11 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
 - [x] M6.021 (L-01) Fun 19: "Handle with care" (`fun-19`), after the original's Fun 19.
 - [x] M6.022 (L-01) Fun 20: "Seven poles" (`fun-20`), after the original's Fun 20.
 - [x] M6.023 (L-01) Fun 21: "Down in the caves" (`fun-21`), after the original's Fun 21.
-- [ ] M6.024 (L-01) Fun 22: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.025 (L-01) Fun 23: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.026 (L-01) Fun 24: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.027 (L-01) Fun 25: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.028 (L-01) Fun 26: placeholder, name and `inspiredBy` filled in when built.
+- [x] M6.024 (L-01) Fun 22: "Into the woods" (`fun-22`), after the original's Fun 22.
+- [x] M6.025 (L-01) Fun 23: "Hot feet" (`fun-23`), after the original's Fun 23.
+- [x] M6.026 (L-01) Fun 24: "Good evening, lemming" (`fun-24`), after the original's Fun 24.
+- [x] M6.027 (L-01) Fun 25: "Into the web" (`fun-25`), after the original's Fun 25.
+- [x] M6.028 (L-01) Fun 26: "Just the two of us" (`fun-26`), after the original's Fun 26.
 - [ ] M6.029 (L-01) Fun 27: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.030 (L-01) Fun 28: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.031 (L-01) Fun 29: placeholder, name and `inspiredBy` filled in when built.

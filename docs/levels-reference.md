@@ -176,6 +176,10 @@ simplification is listed here.
 | Fun 19 | Stats are `[verify]` (50 lemmings, 80 %, RR 50 chosen). |
 | Fun 20 | Target raised from 60 % to 90 %: our crowd waits safely between the poles, so only the raised target makes the blockers necessary. |
 | Fun 21 | Stats are `[verify]` (50 lemmings, 94 %, RR 50 chosen); the high target makes the blocker necessary. |
+| Fun 22 | 80 lemmings instead of 100 (DOS cap). The tribute graphics and music of the original are not recreated; the level is a plain forest. |
+| Fun 23 | Stats are `[verify]` (50 lemmings, 80 %, RR 50 chosen). The hidden third exit of the original is left out. |
+| Fun 25 | 80 lemmings instead of 100. The mesh is a staircase and the web a hollow block, because our lemmings walk only on solid ground. |
+| Fun 26 | The second lemming is delayed by letting it build early stairs before each gap, as the walkthrough suggests. |
 
 ## Sources
 

@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "id": "fun-24",
+  "name": "level.fun-24.name",
+  "inspiredBy": "Fun 24 of the original ('Konbanwa Lemming san'): mine down through the hill onto a thin platform, then dig straight down to the exit before the crowd walks into the trap. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 720,
+  "height": 160,
+  "lemmings": 30,
+  "toSave": 20,
+  "releaseRate": 99,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 0,
+    "builder": 0,
+    "basher": 0,
+    "miner": 3,
+    "digger": 4
+  },
+  "style": "crystal",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 40,
+      "y": 40,
+      "w": 280,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 30,
+      "y": 0,
+      "w": 10,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 200,
+      "y": 110,
+      "w": 340,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 150,
+      "w": 200,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 290,
+      "y": 120,
+      "w": 10,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 500,
+      "y": 120,
+      "w": 10,
+      "h": 40
+    },
+    {
+      "shape": "ellipse",
+      "x": 560,
+      "y": 20,
+      "w": 80,
+      "h": 30
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 100,
+      "y": 10
+    },
+    {
+      "type": "exit",
+      "x": 400,
+      "y": 149
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 470,
+      "y": 100,
+      "w": 10,
+      "h": 10
+    },
+    {
+      "type": "water",
+      "x": 0,
+      "y": 150,
+      "w": 290,
+      "h": 10
+    },
+    {
+      "type": "water",
+      "x": 510,
+      "y": 150,
+      "w": 210,
+      "h": 10
+    }
+  ]
+}

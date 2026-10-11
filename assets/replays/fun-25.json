@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "levelId": "fun-25",
+  "entries": [
+    {
+      "tick": 294,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "miner"
+      }
+    },
+    {
+      "tick": 479,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 17,
+        "skill": "miner"
+      }
+    }
+  ]
+}

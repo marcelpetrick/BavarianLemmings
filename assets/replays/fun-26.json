@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "levelId": "fun-26",
+  "entries": [
+    {
+      "tick": 141,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 142,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 484,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 490,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 827,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 838,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "builder"
+      }
+    }
+  ]
+}

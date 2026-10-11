@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "id": "fun-22",
+  "name": "level.fun-22.name",
+  "inspiredBy": "Fun 22 of the original ('A Beast of a level'): bash through the trees, block the edge behind you, then build a zig-zag up the cliff, turning at a tree trunk, and bash the last stump to the exit. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 900,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 64,
+  "releaseRate": 80,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 2,
+    "builder": 6,
+    "basher": 6,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "dirt",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 60,
+      "y": 136,
+      "w": 840,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 220,
+      "y": 50,
+      "w": 14,
+      "h": 86
+    },
+    {
+      "shape": "ellipse",
+      "x": 190,
+      "y": 20,
+      "w": 74,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 340,
+      "y": 46,
+      "w": 14,
+      "h": 90
+    },
+    {
+      "shape": "ellipse",
+      "x": 305,
+      "y": 16,
+      "w": 84,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 576,
+      "y": 40,
+      "w": 14,
+      "h": 96
+    },
+    {
+      "shape": "ellipse",
+      "x": 540,
+      "y": 10,
+      "w": 86,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 640,
+      "y": 96,
+      "w": 260,
+      "h": 64
+    },
+    {
+      "shape": "rect",
+      "x": 720,
+      "y": 70,
+      "w": 16,
+      "h": 26
+    },
+    {
+      "shape": "ellipse",
+      "x": 708,
+      "y": 56,
+      "w": 40,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 890,
+      "y": 40,
+      "w": 10,
+      "h": 56
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 120,
+      "y": 100
+    },
+    {
+      "type": "exit",
+      "x": 820,
+      "y": 95
+    },
+    {
+      "type": "water",
+      "x": 0,
+      "y": 146,
+      "w": 60,
+      "h": 14
+    }
+  ]
+}

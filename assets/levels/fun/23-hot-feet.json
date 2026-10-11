@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "id": "fun-23",
+  "name": "level.fun-23.name",
+  "inspiredBy": "Fun 23 of the original ('I've lost that Lemming feeling'): block the lava next to the hatch, hold the crowd with a second blocker, and let one lemming bash left through the rock and bridge a fiery gap. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 960,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 40,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 1,
+    "blocker": 3,
+    "builder": 4,
+    "basher": 5,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "fire",
+  "startX": 300,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 136,
+      "w": 380,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 420,
+      "y": 136,
+      "w": 340,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 800,
+      "y": 136,
+      "w": 160,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 30,
+      "w": 80,
+      "h": 106
+    },
+    {
+      "shape": "rect",
+      "x": 420,
+      "y": 30,
+      "w": 180,
+      "h": 106
+    },
+    {
+      "shape": "rect",
+      "x": 330,
+      "y": 60,
+      "w": 50,
+      "h": 76,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 480,
+      "y": 120,
+      "w": 10,
+      "h": 16,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 380,
+      "y": 50,
+      "w": 60,
+      "h": 86,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 950,
+      "y": 60,
+      "w": 10,
+      "h": 76
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 60,
+      "w": 10,
+      "h": 76
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 700,
+      "y": 100
+    },
+    {
+      "type": "exit",
+      "x": 200,
+      "y": 135
+    },
+    {
+      "type": "water",
+      "x": 760,
+      "y": 146,
+      "w": 40,
+      "h": 14
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 385,
+      "y": 140,
+      "w": 30,
+      "h": 20
+    }
+  ]
+}
