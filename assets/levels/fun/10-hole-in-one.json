@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "id": "fun-10",
+  "name": "level.fun-10.name",
+  "inspiredBy": "Fun 10 of the original ('Smile if you love lemmings'): the lemmings land on a floating block; dig in, mine out through its underside, and turn the crowd towards the exit with a blocker. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 640,
+  "height": 160,
+  "lemmings": 20,
+  "toSave": 10,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 1,
+    "bomber": 0,
+    "blocker": 1,
+    "builder": 0,
+    "basher": 0,
+    "miner": 1,
+    "digger": 1
+  },
+  "style": "marble",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 136,
+      "w": 540,
+      "h": 24
+    },
+    {
+      "shape": "ellipse",
+      "x": 190,
+      "y": 44,
+      "w": 180,
+      "h": 72
+    },
+    {
+      "shape": "rect",
+      "x": 205,
+      "y": 54,
+      "w": 150,
+      "h": 50
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 90,
+      "w": 10,
+      "h": 46
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 230,
+      "y": 20
+    },
+    {
+      "type": "exit",
+      "x": 80,
+      "y": 135
+    },
+    {
+      "type": "water",
+      "x": 540,
+      "y": 146,
+      "w": 100,
+      "h": 14
+    }
+  ]
+}

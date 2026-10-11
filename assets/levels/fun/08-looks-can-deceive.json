@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "id": "fun-08",
+  "name": "level.fun-08.name",
+  "inspiredBy": "Fun 8 of the original ('Not as complicated as it looks'): a busy-looking landscape, but one blocker next to the hatch turns the whole crowd away from the drop towards the exit. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 960,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 76,
+  "releaseRate": 88,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 2,
+    "builder": 0,
+    "basher": 0,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "crystal",
+  "startX": 320,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 380,
+      "y": 60,
+      "w": 200,
+      "h": 10
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [380, 60],
+        [330, 90],
+        [380, 70]
+      ]
+    },
+    {
+      "shape": "rect",
+      "x": 200,
+      "y": 90,
+      "w": 160,
+      "h": 10
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [200, 90],
+        [150, 120],
+        [200, 100]
+      ]
+    },
+    {
+      "shape": "rect",
+      "x": 40,
+      "y": 120,
+      "w": 140,
+      "h": 40
+    },
+    {
+      "shape": "ellipse",
+      "x": 240,
+      "y": 20,
+      "w": 40,
+      "h": 40
+    },
+    {
+      "shape": "ellipse",
+      "x": 620,
+      "y": 30,
+      "w": 50,
+      "h": 60
+    },
+    {
+      "shape": "ellipse",
+      "x": 700,
+      "y": 100,
+      "w": 120,
+      "h": 30
+    },
+    {
+      "shape": "ellipse",
+      "x": 500,
+      "y": 120,
+      "w": 60,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 60,
+      "w": 10,
+      "h": 60
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [800, 20],
+        [830, 0],
+        [860, 30],
+        [840, 60]
+      ]
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 450,
+      "y": 30
+    },
+    {
+      "type": "exit",
+      "x": 80,
+      "y": 119
+    },
+    {
+      "type": "water",
+      "x": 580,
+      "y": 150,
+      "w": 380,
+      "h": 10
+    }
+  ]
+}

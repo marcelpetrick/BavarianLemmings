@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "levelId": "fun-09",
+  "entries": [
+    {
+      "tick": 73,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 177,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "blocker"
+      }
+    }
+  ]
+}

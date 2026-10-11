@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "levelId": "fun-07",
+  "entries": [
+    {
+      "tick": 267,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 594,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 4,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 622,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 5,
+        "skill": "builder"
+      }
+    }
+  ]
+}

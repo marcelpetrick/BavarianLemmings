@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "id": "fun-07",
+  "name": "level.fun-07.name",
+  "inspiredBy": "Fun 7 of the original ('Builders will help you here'): a builder climbs onto a raised step, and more builders bridge the pit in front of the exit. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 640,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 25,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 0,
+    "builder": 8,
+    "basher": 0,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "dirt",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 136,
+      "w": 300,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 126,
+      "w": 200,
+      "h": 34
+    },
+    {
+      "shape": "rect",
+      "x": 520,
+      "y": 126,
+      "w": 120,
+      "h": 34
+    },
+    {
+      "shape": "ellipse",
+      "x": 380,
+      "y": 90,
+      "w": 60,
+      "h": 30
+    },
+    {
+      "shape": "rect",
+      "x": 630,
+      "y": 80,
+      "w": 10,
+      "h": 46
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 60,
+      "y": 104
+    },
+    {
+      "type": "exit",
+      "x": 590,
+      "y": 125
+    },
+    {
+      "type": "water",
+      "x": 500,
+      "y": 146,
+      "w": 20,
+      "h": 14
+    }
+  ]
+}

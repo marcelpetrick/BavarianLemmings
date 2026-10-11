@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "id": "fun-09",
+  "name": "level.fun-09.name",
+  "inspiredBy": "Fun 9 of the original ('As long as you try your best'): the crowd pours out fast against a thick pillar; bash through it quickly before too many walk back into the fire. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 640,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 72,
+  "releaseRate": 99,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 1,
+    "builder": 0,
+    "basher": 5,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "fire",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 100,
+      "y": 120,
+      "w": 540,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 230,
+      "y": 0,
+      "w": 50,
+      "h": 120
+    },
+    {
+      "shape": "rect",
+      "x": 630,
+      "y": 60,
+      "w": 10,
+      "h": 60
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 200,
+      "y": 90
+    },
+    {
+      "type": "exit",
+      "x": 560,
+      "y": 119
+    },
+    {
+      "type": "water",
+      "x": 0,
+      "y": 130,
+      "w": 100,
+      "h": 30
+    }
+  ]
+}

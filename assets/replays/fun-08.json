@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "levelId": "fun-08",
+  "entries": [
+    {
+      "tick": 64,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "blocker"
+      }
+    }
+  ]
+}

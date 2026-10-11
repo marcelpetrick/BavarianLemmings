@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "id": "fun-11",
+  "name": "level.fun-11.name",
+  "inspiredBy": "Fun 11 of the original ('Keep your hair on Mr. Lemming'): a one-way wall can only be bashed from the far side; a climber-floater gets over, a blocker turns the next one, and it bashes back towards the crowd. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 640,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 42,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 4,
+    "floater": 4,
+    "bomber": 2,
+    "blocker": 2,
+    "builder": 0,
+    "basher": 2,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "pillar",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 136,
+      "w": 640,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 30,
+      "w": 60,
+      "h": 106
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [300, 30],
+        [330, 20],
+        [360, 30]
+      ]
+    },
+    {
+      "shape": "rect",
+      "x": 630,
+      "y": 60,
+      "w": 10,
+      "h": 76
+    }
+  ],
+  "steel": [],
+  "oneWay": [
+    {
+      "x": 300,
+      "y": 30,
+      "w": 60,
+      "h": 106,
+      "dir": "left"
+    }
+  ],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 120,
+      "y": 100
+    },
+    {
+      "type": "exit",
+      "x": 540,
+      "y": 135
+    }
+  ]
+}

@@ -161,6 +161,12 @@ simplification is listed here.
 | --- | --- |
 | all | Skill counts are ours; the text sources do not give them. |
 | all | Lemming counts above 80 are capped at 80 (vision G-15). |
+| Fun 3 | Water below the ledge ends replaces the original's deadly drops, so that each of the three blockers is needed. |
+| Fun 5 | The wire mesh in front of the exit is two solid fence posts; our lemmings cannot walk up a mesh. |
+| Fun 6 | Our explosion removes only 4 px below the feet, so the hatch floor is 4 px thin and the wall by the exit 5 px. |
+| Fun 7 | Our builders do not stop walkers, so a few lemmings fall into the pit before the bridge is finished; the target (50 %) allows for it. |
+| Fun 9 | The fire on the left is a pool; the pillar is thick enough that bashing alone saves too few, so a blocker is needed as in the walkthrough's fallback. |
+| Fun 10 | The floater of the original is optional here: the first lemming out of the miner's tunnel can become the blocker. |
 
 ## Sources
 
