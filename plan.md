@@ -228,11 +228,11 @@ gantt
 
 ## M5: touch
 
-- [ ] M5.01 (C-06) `render/panel/touch.ts`: buttons at 48×48 CSS px minimum, landscape side
+- [x] M5.01 (C-06) `render/panel/touch.ts`: buttons at 48×48 CSS px minimum, landscape side
       columns, portrait bottom panel; `(pointer: coarse)` auto-selection with a settings override.
-- [ ] M5.02 (C-06) `input/touchGestures.ts`: press-aim-release with magnifier, two-finger scroll,
+- [x] M5.02 (C-06) `input/touchGestures.ts`: press-aim-release with magnifier, two-finger scroll,
       minimap drag, pinch zoom, one-second nuke hold with progress ring, release-rate repeat.
-- [ ] M5.03 (C-06) `touch-action: none`, no context menu, fullscreen button, pause on hidden page.
+- [x] M5.03 (C-06) `touch-action: none`, no context menu, fullscreen button, pause on hidden page.
 - [ ] M5.04 (P-06) e2e with Playwright tablet emulation (`hasTouch`, landscape and portrait) in
       Chromium: play the first level by touch only.
 - [ ] M5.05 (C-06) Decide plain-tap option from the e2e experience; document in vision decision log.

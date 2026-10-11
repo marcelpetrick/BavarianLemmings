@@ -8,6 +8,12 @@ body {
   background: #000;
   color: #fff;
   overflow: hidden;
+
+  /* Vision 3.4.1: the browser stays out of the way. No pull-to-refresh, no text selection,
+   * no long-press callout on touch screens. */
+  overscroll-behavior: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 #app {
@@ -15,8 +21,110 @@ body {
   height: 100%;
   align-items: center;
   justify-content: center;
+
+  /* No browser panning, pinch zoom or double-tap zoom on the game: the game handles every touch. */
+  touch-action: none;
 }
 
 canvas {
   image-rendering: pixelated;
+}
+
+/* ---- touch layout (vision C-06, 3.4.1); sizes come from ui/layout.ts computeTouchLayout ---- */
+
+#app.touch {
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+
+#app.touch[data-orientation='landscape'] {
+  grid-template-areas:
+    'start bar end'
+    'start field end';
+}
+
+#app.touch[data-orientation='portrait'] {
+  grid-template-areas:
+    'bar'
+    'field'
+    'start'
+    'end';
+}
+
+#app.touch > #game {
+  grid-area: field;
+}
+
+.touch-bar {
+  grid-area: bar;
+}
+
+.touch-buttons {
+  display: grid;
+  grid-auto-rows: var(--touch-button);
+  grid-template-columns: repeat(2, var(--touch-button));
+}
+
+.touch-buttons-start {
+  grid-area: start;
+}
+
+.touch-buttons-end {
+  grid-area: end;
+}
+
+#app.touch[data-orientation='portrait'] .touch-buttons {
+  grid-template-columns: repeat(8, var(--touch-button));
+}
+
+.touch-buttons[hidden],
+.touch-bar[hidden] {
+  display: none;
+}
+
+.touch-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: var(--touch-button);
+  height: var(--touch-button);
+  min-width: 48px;
+  min-height: 48px;
+  padding: 0;
+  border: 2px solid #4848a8;
+  background: #202060;
+  color: #30d830;
+  font: bold 16px monospace;
+  touch-action: none;
+}
+
+.touch-button canvas {
+  width: 50%;
+  height: 50%;
+}
+
+.touch-button.held {
+  background: #303090;
+}
+
+.touch-button.selected {
+  border-color: #f8f8f8;
+}
+
+.touch-button.disabled {
+  opacity: 0.4;
+}
+
+/* The nuke's progress ring: fills clockwise while the button is held (one second). */
+.touch-button[data-touch-button='nuke']::after {
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: conic-gradient(#e82828 calc(var(--progress, 0) * 1turn), transparent 0);
+  content: '';
+  mask: radial-gradient(circle, transparent 60%, #000 61%);
+  pointer-events: none;
 }

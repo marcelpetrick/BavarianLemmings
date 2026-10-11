@@ -5,15 +5,16 @@
  * The classic bottom panel (vision V-03, V-04): status line, release rate −/+, eight skill buttons
  * with their counters, pause, nuke, and the minimap with the visible area. Browser-only.
  */
-import { PANEL_HEIGHT, PLAYFIELD_HEIGHT, SCREEN_WIDTH } from '../sim/constants';
-import { isSkill } from '../sim/skills';
-import type { GameState } from '../sim/state';
-import type { Theme } from '../theme/themes';
-import { BUTTON_HEIGHT, BUTTON_TOP, BUTTON_WIDTH, MINIMAP, PANEL_BUTTONS, type PanelButton } from '../ui/layout';
-import type { StatusParts } from '../ui/status';
-import { SpriteCache, TextRenderer, type Context } from './draw';
-import { CLASSIC_SPRITE_PALETTE } from './palettes';
-import { ICONS, type IconName } from './sprites/icons';
+import { PANEL_HEIGHT, PLAYFIELD_HEIGHT, SCREEN_WIDTH } from '../../sim/constants';
+import { isSkill } from '../../sim/skills';
+import type { GameState } from '../../sim/state';
+import type { Theme } from '../../theme/themes';
+import { BUTTON_HEIGHT, BUTTON_TOP, BUTTON_WIDTH, MINIMAP, PANEL_BUTTONS, type PanelButton } from '../../ui/layout';
+import type { StatusParts } from '../../ui/status';
+import { SpriteCache, TextRenderer, type Context } from '../draw';
+import { CLASSIC_SPRITE_PALETTE } from '../palettes';
+import { ICONS, type IconName } from '../sprites/icons';
+import { drawMinimap } from './shared';
 
 export interface PanelState {
   readonly selectedSkill: string | null;
@@ -73,19 +74,8 @@ export class PanelRenderer {
   }
 
   private drawMinimap(ctx: Context, state: GameState, panel: PanelState, terrainImage: HTMLCanvasElement, top: number): void {
-    const x = MINIMAP.x;
-    const y = top + MINIMAP.y;
-    ctx.fillStyle = '#000000';
-    ctx.fillRect(x, y, MINIMAP.w, MINIMAP.h);
-    ctx.drawImage(terrainImage, 0, 0, terrainImage.width, terrainImage.height, x, y, MINIMAP.w, MINIMAP.h);
-    const sx = MINIMAP.w / state.level.width;
-    const sy = MINIMAP.h / state.terrain.height;
-    ctx.fillStyle = '#ffff40';
-    for (const lemming of state.lemmings) {
-      if (!lemming.removed) ctx.fillRect(x + Math.floor(lemming.x * sx), y + Math.floor((lemming.y - 4) * sy), 1, 1);
-    }
-    ctx.strokeStyle = this.theme.ui.highlight;
-    ctx.strokeRect(x + Math.floor(panel.viewX * sx) + 0.5, y + 0.5, Math.max(2, Math.floor(panel.viewWidth * sx)), MINIMAP.h - 1);
-    if (panel.fastForward) this.text.draw(ctx, '>>', x + MINIMAP.w - 12, top + 5 + 26, this.theme.ui.highlight);
+    const rect = { ...MINIMAP, y: top + MINIMAP.y };
+    drawMinimap(ctx, state, rect, terrainImage, panel, this.theme.ui.highlight);
+    if (panel.fastForward) this.text.draw(ctx, '>>', rect.x + rect.w - 12, top + 5 + 26, this.theme.ui.highlight);
   }
 }

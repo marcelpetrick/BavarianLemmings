@@ -2,27 +2,57 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 /**
- * The browser application (vision R-02, R-03, R-04): one 320×200 canvas, scaled by an integer
- * factor; the screen router; the frame loop that feeds wall-clock time to the session; mouse and
- * keyboard input; audio; and the test hook `window.__bavarianLemmings` (enabled with `?test`).
+ * The browser application (vision R-02, R-03, R-04, C-06): one 320×200 canvas, scaled by an integer
+ * factor; the screen router; the frame loop that feeds wall-clock time to the session; mouse,
+ * keyboard and touch input; the classic and the touch layout; audio; and the test hook
+ * `window.__bavarianLemmings` (enabled with `?test`).
+ *
+ * Touch: in the touch layout the canvas shows only the 320×160 playfield and the panel is made of
+ * HTML buttons (render/panel/touch.ts). A finger on the playfield never clicks: it aims, and lifting
+ * it assigns (input/touchGestures.ts), in either layout.
  */
 import type { AudioEngine } from '../audio/engine';
 import { LANGUAGES, translate, type Language } from '../i18n';
 import { ALL_LEVELS, RATINGS, levelsOf, nextLevel } from '../levels';
-import { isUnlocked, loadProgress, recordWin, saveSettings, type KeyValueStore, type Progress, type Settings } from '../persist/storage';
-import { PanelRenderer } from '../render/panel';
+import { HoldButton, PlayfieldGestures, RepeatButton, selectRadius, type GestureEffect, type Point } from '../input/touchGestures';
+import {
+  isUnlocked,
+  loadProgress,
+  recordWin,
+  saveSettings,
+  type KeyValueStore,
+  type LayoutChoice,
+  type Progress,
+  type Settings,
+} from '../persist/storage';
+import { PanelRenderer } from '../render/panel/classic';
+import { TouchPanel } from '../render/panel/touch';
 import { PlayfieldRenderer } from '../render/playfield';
 import { TextRenderer, context2d, type Context } from '../render/draw';
 import { FONT } from '../render/font';
 import { percent } from '../sim/game';
 import type { Lemming } from '../sim/lemming';
 import type { LevelData } from '../sim/level';
-import { PLAYFIELD_HEIGHT, SCREEN_HEIGHT, SCREEN_WIDTH, TICK_MS, TICKS_PER_SECOND } from '../sim/constants';
+import { LEMMING_HEIGHT, PLAYFIELD_HEIGHT, SCREEN_HEIGHT, SCREEN_WIDTH, TICK_MS, TICKS_PER_SECOND } from '../sim/constants';
 import { isSkill } from '../sim/skills';
 import type { SimEvent } from '../sim/state';
 import { themeById, type Theme } from '../theme/themes';
 import { commandForKey } from './keymap';
-import { computeScaling, hitPanel, toLogical } from './layout';
+import {
+  MAGNIFIER_ZOOM,
+  TOUCH_BAR_HEIGHT,
+  TOUCH_MINIMAP,
+  computeScaling,
+  computeTouchLayout,
+  hitPanel,
+  magnifierRect,
+  resolveLayout,
+  toLogical,
+  touchMinimapLevelX,
+  type EffectiveLayout,
+  type TouchButton,
+  type TouchLayout,
+} from './layout';
 import { cycle, itemAt, layoutMenu, moveFocus, resultCommentKey, type MenuEntry, type MenuItem, type ScreenId } from './screens';
 import { Session } from './session';
 import { statusParts } from './status';
@@ -31,6 +61,13 @@ import { statusParts } from './status';
 const EDGE_SCROLL_ZONE = 6;
 const EDGE_SCROLL_SPEED = 4;
 const VOLUME_STEPS = [0, 0.2, 0.4, 0.6, 0.8, 1];
+const LAYOUT_CHOICES: readonly LayoutChoice[] = ['auto', 'classic', 'touch'];
+
+/** Enter or leave full screen (vision 3.4.1). Browsers may refuse; the game then simply stays as it is. */
+function toggleFullscreen(): void {
+  if (document.fullscreenElement) void document.exitFullscreen().catch(() => undefined);
+  else void document.documentElement.requestFullscreen().catch(() => undefined);
+}
 
 export interface AppDeps {
   readonly root: HTMLElement;
@@ -54,7 +91,22 @@ export class App {
   private session: Session | null = null;
   private playfield: PlayfieldRenderer | null = null;
   private panel: PanelRenderer | null = null;
+  /** The mouse (or pen) position in logical pixels; touches never set it (no hover on touch). */
   private pointer: { x: number; y: number } | null = null;
+  private readonly touchPanel: TouchPanel;
+  /** The active touch layout, or null while the classic layout (or a menu) is shown. */
+  private touchLayout: TouchLayout | null = null;
+  private readonly coarsePointer: MediaQueryList;
+  private gestures = new PlayfieldGestures({ width: SCREEN_WIDTH, height: PLAYFIELD_HEIGHT });
+  /** Where a finger aims on the playfield (logical pixels), while it is down. */
+  private aim: Point | null = null;
+  /** The point a pinch zoomed in on; the mouse zoom follows the mouse instead. */
+  private zoomFocus: Point | null = null;
+  private panAnchor = 0;
+  private minimapPointer: number | null = null;
+  private readonly nukeButton = new HoldButton();
+  private readonly releaseButtons = { releaseMinus: new RepeatButton(), releasePlus: new RepeatButton() };
+  private magnifierSource: HTMLCanvasElement | null = null;
   private lastFrame = 0;
   private resultWon = false;
   private readonly events: SimEvent[] = [];
@@ -69,6 +121,23 @@ export class App {
     this.canvas.tabIndex = 0;
     deps.root.append(this.canvas);
     this.ctx = context2d(this.canvas);
+    this.touchPanel = new TouchPanel(deps.root, {
+      press: (button, time) => {
+        this.pressTouchButton(button, time);
+      },
+      release: (button, time) => {
+        this.releaseTouchButton(button, time);
+      },
+      bar: (x, y) => {
+        const session = this.session;
+        const levelX = session ? touchMinimapLevelX(x, y, session.level.width) : null;
+        if (session && levelX !== null) session.centreOn(levelX);
+      },
+    });
+    this.coarsePointer = window.matchMedia('(pointer: coarse)');
+    this.coarsePointer.addEventListener('change', () => {
+      this.resize();
+    });
     this.applyAudioSettings();
     this.resize();
     window.addEventListener('resize', () => {
@@ -80,8 +149,17 @@ export class App {
     this.canvas.addEventListener('pointerdown', (event) => {
       this.onPointerDown(event);
     });
-    this.canvas.addEventListener('pointerleave', () => (this.pointer = null));
-    this.canvas.addEventListener('contextmenu', (event) => {
+    this.canvas.addEventListener('pointerup', (event) => {
+      this.onPointerUp(event, false);
+    });
+    this.canvas.addEventListener('pointercancel', (event) => {
+      this.onPointerUp(event, true);
+    });
+    this.canvas.addEventListener('pointerleave', (event) => {
+      if (event.pointerType !== 'touch') this.pointer = null;
+    });
+    // No context menu on a right click or a long press anywhere in the game (vision 3.4.1).
+    document.addEventListener('contextmenu', (event) => {
       event.preventDefault();
     });
     window.addEventListener('keydown', (event) => {
@@ -106,10 +184,39 @@ export class App {
     return translate(this.settings.language, key, params);
   }
 
+  /** The layout in use: the setting, with "automatic" resolved by the primary pointer. */
+  private get layout(): EffectiveLayout {
+    return resolveLayout(this.settings.layout, this.coarsePointer.matches);
+  }
+
+  /** Size the canvas and the touch panel for the window, the layout and the screen. */
   private resize(): void {
-    const scaling = computeScaling(window.innerWidth, window.innerHeight, this.settings.crt);
-    this.canvas.style.width = `${scaling.cssWidth}px`;
-    this.canvas.style.height = `${scaling.cssHeight}px`;
+    const root = this.deps.root;
+    if (this.screen === 'play' && this.layout === 'touch') {
+      const layout = computeTouchLayout(window.innerWidth, window.innerHeight);
+      this.touchLayout = layout;
+      this.setCanvasHeight(PLAYFIELD_HEIGHT);
+      this.canvas.style.width = `${layout.fieldWidth}px`;
+      this.canvas.style.height = `${layout.fieldHeight}px`;
+      root.classList.add('touch');
+      root.dataset.orientation = layout.orientation;
+      root.style.setProperty('--touch-button', `${layout.button}px`);
+    } else {
+      this.touchLayout = null;
+      this.setCanvasHeight(SCREEN_HEIGHT);
+      const scaling = computeScaling(window.innerWidth, window.innerHeight, this.settings.crt);
+      this.canvas.style.width = `${scaling.cssWidth}px`;
+      this.canvas.style.height = `${scaling.cssHeight}px`;
+      root.classList.remove('touch');
+    }
+    this.touchPanel.layout(this.touchLayout);
+  }
+
+  /** The touch layout shows only the playfield on the canvas; resizing a canvas resets its context. */
+  private setCanvasHeight(height: number): void {
+    if (this.canvas.height === height) return;
+    this.canvas.height = height;
+    this.ctx.imageSmoothingEnabled = false;
   }
 
   private applyAudioSettings(): void {
@@ -136,6 +243,8 @@ export class App {
     const first = this.items.findIndex((item) => item.enabled);
     this.focus = first;
     if (screen === 'title') this.playMusic(0);
+    this.aim = null;
+    this.resize();
   }
 
   private nextUnlockedLevel(): LevelData | undefined {
@@ -201,6 +310,7 @@ export class App {
           { id: 'sfx', label: `${this.t('settings.sfx')}: ${percentOf(s.sfxVolume)}` },
           { id: 'mute', label: `${this.t('settings.mute')}: ${onOff(s.muted)}` },
           { id: 'purist', label: `${this.t('settings.purist')}: ${onOff(s.purist)}` },
+          { id: 'layout', label: `${this.t('settings.layout')}: ${this.t(`settings.layout.${s.layout}`)}` },
           { id: 'crt', label: `${this.t('settings.aspect')}: ${onOff(s.crt)}` },
           { id: 'back', label: this.t('menu.back') },
         ];
@@ -267,6 +377,7 @@ export class App {
     if (id === 'mute') s.muted = !s.muted;
     if (id === 'purist') s.purist = !s.purist;
     if (id === 'crt') s.crt = !s.crt;
+    if (id === 'layout') s.layout = cycle(LAYOUT_CHOICES, s.layout);
     this.saveSettings();
     const focus = this.focus;
     this.show('settings');
@@ -284,6 +395,10 @@ export class App {
     this.session = new Session(this.level, { purist: this.settings.purist });
     this.playfield = new PlayfieldRenderer(this.theme, this.level.width, this.text);
     this.panel = new PanelRenderer(this.theme, this.text);
+    this.touchPanel.setTheme(this.theme);
+    this.touchPanel.setLabels((button) => this.touchLabel(button));
+    this.gestures = new PlayfieldGestures({ width: SCREEN_WIDTH, height: PLAYFIELD_HEIGHT });
+    this.zoomFocus = null;
     this.lastFrame = performance.now();
     this.playMusic(ALL_LEVELS.indexOf(this.level));
     this.show('play');
@@ -316,6 +431,7 @@ export class App {
       const events = this.session.advance(elapsed);
       this.handleEvents(events);
       this.edgeScroll();
+      this.repeatTouchButtons(time);
       if (this.session.state.outcome !== 'playing') this.finishLevel();
     }
     this.render();
@@ -342,13 +458,29 @@ export class App {
 
   private logical(event: PointerEvent): { x: number; y: number } {
     const rect = this.canvas.getBoundingClientRect();
-    return toLogical(event.clientX - rect.left, event.clientY - rect.top, rect.width, rect.height);
+    return toLogical(event.clientX - rect.left, event.clientY - rect.top, rect.width, rect.height, this.canvas.height);
   }
 
   private onPointerMove(event: PointerEvent): void {
-    this.pointer = this.logical(event);
-    const hit = itemAt(this.items, this.pointer.x, this.pointer.y);
+    const point = this.logical(event);
+    if (this.minimapPointer === event.pointerId && this.session) {
+      const hit = hitPanel(Math.max(0, point.x), PLAYFIELD_HEIGHT + 20, this.session.level.width);
+      if (hit.kind === 'minimap') this.session.centreOn(hit.levelX);
+    }
+    if (event.pointerType === 'touch') {
+      if (this.screen === 'play') this.applyGestures(this.gestures.move(event.pointerId, point.x, point.y));
+      return;
+    }
+    this.pointer = point;
+    this.zoomFocus = null;
+    const hit = itemAt(this.items, point.x, point.y);
     if (hit) this.focus = this.items.indexOf(hit);
+  }
+
+  private onPointerUp(event: PointerEvent, cancelled: boolean): void {
+    if (this.minimapPointer === event.pointerId) this.minimapPointer = null;
+    if (event.pointerType !== 'touch') return;
+    this.applyGestures(cancelled ? this.gestures.cancel(event.pointerId) : this.gestures.up(event.pointerId));
   }
 
   private onPointerDown(event: PointerEvent): void {
@@ -356,7 +488,17 @@ export class App {
     void this.deps.audio?.unlock();
     this.canvas.focus();
     const point = this.logical(event);
-    this.pointer = point;
+    const touch = event.pointerType === 'touch';
+    this.pointer = touch ? null : point;
+    if (touch && this.screen === 'play' && point.y < PLAYFIELD_HEIGHT) {
+      this.applyGestures(this.gestures.down(event.pointerId, point.x, point.y));
+      return;
+    }
+    if (this.screen === 'play' && this.session && hitPanel(point.x, point.y, this.session.level.width).kind === 'minimap') {
+      // Dragging on the minimap scrolls (vision 3.4.1); the canvas keeps the pointer while it is down.
+      this.minimapPointer = event.pointerId;
+      this.canvas.setPointerCapture(event.pointerId);
+    }
     if (this.screen === 'preview') {
       this.startLevel();
       return;
@@ -396,6 +538,98 @@ export class App {
     else session.command({ type: button });
   }
 
+  /** Apply what a touch gesture on the playfield asks for (vision 3.4.1). */
+  private applyGestures(effects: readonly GestureEffect[]): void {
+    const session = this.session;
+    if (!session) return;
+    for (const effect of effects) {
+      switch (effect.type) {
+        case 'aim':
+          this.aim = { x: effect.x, y: effect.y };
+          break;
+        case 'aimCancel':
+          this.aim = null;
+          break;
+        case 'assign': {
+          this.aim = null;
+          const point = this.levelPoint(effect.x, effect.y);
+          session.touchLevel(point.x, point.y, this.selectRadiusInLevel());
+          break;
+        }
+        case 'panStart':
+          this.panAnchor = session.viewX;
+          break;
+        case 'pan':
+          session.scrollTo(this.panAnchor - (effect.offsetX * this.view().width) / SCREEN_WIDTH);
+          break;
+        case 'zoom':
+          if (effect.zoomIn !== session.zoomed && session.command({ type: 'zoom' })) {
+            this.zoomFocus = { x: effect.x, y: effect.y };
+            this.panAnchor = session.viewX;
+          }
+          break;
+      }
+    }
+  }
+
+  /** About 8 mm around the finger (vision 3.4.1), converted into level pixels at the current scale. */
+  private selectRadiusInLevel(): number {
+    const cssPerLogical = this.canvas.getBoundingClientRect().width / SCREEN_WIDTH;
+    return (selectRadius(cssPerLogical) * this.view().width) / SCREEN_WIDTH;
+  }
+
+  private touchLabel(button: TouchButton): string {
+    if (isSkill(button)) return this.t(`skill.${button}`);
+    if (button === 'nuke') return this.t('panel.nukeHold');
+    return this.t(`panel.${button}`);
+  }
+
+  private pressTouchButton(button: TouchButton, time: number): void {
+    const session = this.session;
+    void this.deps.audio?.unlock();
+    if (!session || this.screen !== 'play') return;
+    this.deps.audio?.playSfx('click');
+    switch (button) {
+      case 'releaseMinus':
+      case 'releasePlus':
+        this.releaseButtons[button].press(time);
+        session.command({ type: 'releaseRate', delta: button === 'releasePlus' ? 1 : -1 });
+        return;
+      case 'nuke':
+        if (this.nukeButton.press(time)) session.confirmNuke();
+        return;
+      case 'fullscreen':
+        toggleFullscreen();
+        return;
+      case 'menu':
+        this.show('title');
+        return;
+      case 'pause':
+      case 'fastForward':
+      case 'restart':
+        session.command({ type: button });
+        return;
+      default:
+        session.command({ type: 'selectSkill', skill: button });
+    }
+  }
+
+  private releaseTouchButton(button: TouchButton, time: number): void {
+    if (button === 'releaseMinus' || button === 'releasePlus') this.releaseButtons[button].release();
+    if (button === 'nuke') this.nukeButton.release(time);
+  }
+
+  /** Release rate buttons repeat while held; the nuke fires when its hold is complete. */
+  private repeatTouchButtons(time: number): void {
+    const session = this.session;
+    if (!session) return;
+    if (this.nukeButton.update(time)) session.confirmNuke();
+    for (const button of ['releaseMinus', 'releasePlus'] as const) {
+      const delta = button === 'releasePlus' ? 1 : -1;
+      for (let n = this.releaseButtons[button].update(time); n > 0; n -= 1) session.command({ type: 'releaseRate', delta });
+    }
+  }
+
   private onKey(event: KeyboardEvent): void {
     void this.deps.audio?.unlock();
     const command = commandForKey(event.key);
@@ -425,8 +659,10 @@ export class App {
     if (!session) return { x: 0, y: 0, width: SCREEN_WIDTH };
     const width = session.visibleWidth;
     if (!session.zoomed) return { x: session.viewX, y: 0, width };
-    const pointerX = this.pointer?.x ?? SCREEN_WIDTH / 2;
-    const pointerY = Math.min(this.pointer?.y ?? PLAYFIELD_HEIGHT / 2, PLAYFIELD_HEIGHT);
+    // The mouse zoom follows the mouse; a pinch stays where it was made, so the aim does not move the view.
+    const focus = this.zoomFocus ?? this.pointer;
+    const pointerX = focus?.x ?? SCREEN_WIDTH / 2;
+    const pointerY = Math.min(focus?.y ?? PLAYFIELD_HEIGHT / 2, PLAYFIELD_HEIGHT);
     const x = Math.max(0, Math.min(session.level.width - width, session.viewX + Math.round(pointerX / 2)));
     return { x, y: Math.round((pointerY / PLAYFIELD_HEIGHT) * (PLAYFIELD_HEIGHT / 2)), width };
   }
@@ -553,8 +789,13 @@ export class App {
 
   private hovered(): Lemming | null {
     const session = this.session;
+    if (!session) return null;
+    if (this.aim) {
+      const point = this.levelPoint(this.aim.x, this.aim.y);
+      return session.lemmingNear(point.x, point.y, this.selectRadiusInLevel());
+    }
     const pointer = this.pointer;
-    if (!session || !pointer || pointer.y >= PLAYFIELD_HEIGHT) return null;
+    if (!pointer || pointer.y >= PLAYFIELD_HEIGHT) return null;
     const point = this.levelPoint(pointer.x, pointer.y);
     return session.lemmingAt(point.x, point.y);
   }
@@ -565,25 +806,37 @@ export class App {
     const hovered = this.hovered();
     const view = this.view();
     this.playfield.draw(this.ctx, session.state, view, hovered, this.pointer);
-    let count = 0;
-    if (hovered && this.pointer) {
-      const point = this.levelPoint(this.pointer.x, this.pointer.y);
-      count = session.countUnderCursor(point.x, point.y);
-    }
-    this.panel.draw(
-      this.ctx,
-      session.state,
-      {
-        selectedSkill: session.selectedSkill,
-        paused: session.paused,
-        nukeArmed: session.nukeArmed,
-        fastForward: session.fastForward,
-        viewX: view.x,
-        viewWidth: view.width,
-      },
-      statusParts(session.state, hovered, count, this.settings.language),
-      this.playfield.terrainImage,
-    );
+    if (this.aim) this.renderMagnifier(this.aim);
+    const count = hovered ? session.countUnderCursor(hovered.x, hovered.y - LEMMING_HEIGHT / 2) : 0;
+    const panel = {
+      selectedSkill: session.selectedSkill,
+      paused: session.paused,
+      nukeArmed: session.nukeArmed,
+      fastForward: session.fastForward,
+      viewX: view.x,
+      viewWidth: view.width,
+    };
+    const status = statusParts(session.state, hovered, count, this.settings.language);
+    if (this.touchLayout) {
+      const nukeProgress = this.nukeButton.progress(performance.now());
+      this.touchPanel.draw(session.state, { ...panel, nukeProgress, purist: this.settings.purist }, status, this.playfield.terrainImage);
+    } else this.panel.draw(this.ctx, session.state, panel, status, this.playfield.terrainImage);
+  }
+
+  /** A 2× magnifier above the finger shows what the fingertip covers (vision 3.4.1). */
+  private renderMagnifier(aim: Point): void {
+    const source = (this.magnifierSource ??= document.createElement('canvas'));
+    source.width = SCREEN_WIDTH;
+    source.height = PLAYFIELD_HEIGHT;
+    const sourceContext = context2d(source);
+    sourceContext.drawImage(this.canvas, 0, 0, SCREEN_WIDTH, PLAYFIELD_HEIGHT, 0, 0, SCREEN_WIDTH, PLAYFIELD_HEIGHT);
+    const rect = magnifierRect(aim.x, aim.y);
+    const width = rect.sw * MAGNIFIER_ZOOM;
+    const height = rect.sh * MAGNIFIER_ZOOM;
+    this.ctx.drawImage(source, rect.sx, rect.sy, rect.sw, rect.sh, rect.dx, rect.dy, width, height);
+    this.ctx.strokeStyle = this.theme.ui.highlight;
+    this.ctx.lineWidth = 1;
+    this.ctx.strokeRect(rect.dx + 0.5, rect.dy + 0.5, width - 1, height - 1);
   }
 
   // ---------------------------------------------------------------- test hook (R-04)
@@ -591,7 +844,7 @@ export class App {
   private installTestHook(): void {
     const toClient = (x: number, y: number): { x: number; y: number } => {
       const rect = this.canvas.getBoundingClientRect();
-      return { x: rect.left + ((x + 0.5) * rect.width) / SCREEN_WIDTH, y: rect.top + ((y + 0.5) * rect.height) / SCREEN_HEIGHT };
+      return { x: rect.left + ((x + 0.5) * rect.width) / SCREEN_WIDTH, y: rect.top + ((y + 0.5) * rect.height) / this.canvas.height };
     };
     const hook = {
       screen: (): ScreenId => this.screen,
@@ -607,6 +860,17 @@ export class App {
         const view = this.view();
         const scale = SCREEN_WIDTH / view.width;
         return toClient((x - view.x) * scale, (y - view.y) * scale);
+      },
+      /** The layout in use on this screen: 'touch' only while playing in the touch layout. */
+      layout: (): EffectiveLayout => (this.touchLayout ? 'touch' : 'classic'),
+      touchLayout: () => this.touchLayout,
+      /** Client coordinates of a level column on the touch minimap. */
+      touchMinimapToClient: (levelX: number) => {
+        const rect = this.touchPanel.bar.getBoundingClientRect();
+        const level = this.session?.level.width ?? SCREEN_WIDTH;
+        const x = TOUCH_MINIMAP.x + ((levelX + 0.5) * TOUCH_MINIMAP.w) / level;
+        const y = TOUCH_MINIMAP.y + TOUCH_MINIMAP.h / 2;
+        return { x: rect.left + (x * rect.width) / SCREEN_WIDTH, y: rect.top + (y * rect.height) / TOUCH_BAR_HEIGHT };
       },
       state: () => {
         const session = this.session;
@@ -624,6 +888,8 @@ export class App {
           selectedSkill: session.selectedSkill,
           paused: session.paused,
           fastForward: session.fastForward,
+          zoomed: session.zoomed,
+          aiming: this.aim !== null,
           nuking: s.nuking,
           viewX: session.viewX,
           secondsLeft: Math.ceil(s.ticksLeft / TICKS_PER_SECOND),

@@ -7,7 +7,7 @@
  * Pure apart from the time it is handed; the browser loop calls `advance(elapsedMs)`.
  */
 import { canAssign, isUnderCursor, pickLemming } from '../sim/assign';
-import { FAST_FORWARD_FACTOR, SCREEN_WIDTH, TICK_MS } from '../sim/constants';
+import { FAST_FORWARD_FACTOR, LEMMING_HEIGHT, SCREEN_WIDTH, SELECT_HALF_WIDTH, TICK_MS } from '../sim/constants';
 import { createGame, step } from '../sim/game';
 import type { Lemming } from '../sim/lemming';
 import type { LevelData } from '../sim/level';
@@ -79,10 +79,43 @@ export class Session {
     return pickLemming(this.state, levelX, levelY, this.selectedSkill);
   }
 
+  /**
+   * The lemming a finger at level coordinates selects (vision 3.4.1): the best lemming whose
+   * selection box lies within `radius` level pixels. Like `pickLemming`: one that accepts the skill
+   * first, then the box closest to the finger, then the box centre closest to the finger.
+   */
+  lemmingNear(levelX: number, levelY: number, radius: number): Lemming | null {
+    let best: Lemming | null = null;
+    let bestScore = Number.POSITIVE_INFINITY;
+    for (const lemming of this.state.lemmings) {
+      if (lemming.removed) continue;
+      const outsideX = Math.max(0, Math.abs(lemming.x - levelX) - SELECT_HALF_WIDTH);
+      const outsideY = Math.max(0, lemming.y - LEMMING_HEIGHT - levelY, levelY - lemming.y - 1);
+      const boxDistance = Math.hypot(outsideX, outsideY);
+      if (boxDistance > radius) continue;
+      const accepts = this.selectedSkill === null || canAssign(lemming, this.selectedSkill);
+      const centreDistance = Math.hypot(lemming.x - levelX, lemming.y - LEMMING_HEIGHT / 2 - levelY);
+      const score = (accepts ? 0 : 1e6) + boxDistance * 1000 + centreDistance;
+      if (score < bestScore) {
+        best = lemming;
+        bestScore = score;
+      }
+    }
+    return best;
+  }
+
   /** Click on the playfield at level coordinates: assign the selected skill. Returns success. */
   clickLevel(levelX: number, levelY: number): boolean {
+    return this.assignTo(this.lemmingAt(levelX, levelY));
+  }
+
+  /** A finger was lifted at level coordinates: assign to the best lemming within `radius`. */
+  touchLevel(levelX: number, levelY: number, radius: number): boolean {
+    return this.assignTo(this.lemmingNear(levelX, levelY, radius));
+  }
+
+  private assignTo(lemming: Lemming | null): boolean {
     if (this.selectedSkill === null || this.state.outcome !== 'playing') return false;
-    const lemming = this.lemmingAt(levelX, levelY);
     if (!lemming) return false;
     // Check now, so the click gives feedback at once; the sim checks again on its tick.
     if (this.state.skills[this.selectedSkill] <= 0 || !canAssign(lemming, this.selectedSkill)) return false;
@@ -138,12 +171,24 @@ export class Session {
     return false;
   }
 
+  /** The touch nuke button is confirmed by its one-second hold or a double tap: fire at once. */
+  confirmNuke(): boolean {
+    if (this.state.nuking) return false;
+    this.pending.push({ type: 'nuke' });
+    this.nukeArmedAt = Number.NEGATIVE_INFINITY;
+    return true;
+  }
+
   get nukeArmed(): boolean {
     return this.clock - this.nukeArmedAt <= NUKE_CONFIRM_MS;
   }
 
   scrollBy(dx: number): void {
     this.viewX = clampView(this.viewX + dx, this.level.width);
+  }
+
+  scrollTo(viewX: number): void {
+    this.viewX = clampView(viewX, this.level.width);
   }
 
   centreOn(levelX: number): void {

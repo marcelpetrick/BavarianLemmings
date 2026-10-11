@@ -27,7 +27,11 @@ export default defineConfig({
         'src/ui/app.ts',
         'src/render/draw.ts',
         'src/render/playfield.ts',
-        'src/render/panel.ts',
+        'src/render/panel/classic.ts',
+        'src/render/panel/shared.ts',
+        // The touch panel builds DOM buttons and draws on canvas; its geometry lives in ui/layout.ts
+        // and its gestures in input/touchGestures.ts, both unit tested; Playwright covers the DOM.
+        'src/render/panel/touch.ts',
       ],
       thresholds: { statements: 95, branches: 95, functions: 95, lines: 95 },
     },
