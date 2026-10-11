@@ -5,18 +5,31 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 # BavarianLemmings
 
-[![Play in browser](https://img.shields.io/badge/play-in%20browser-2ea44f.svg)](https://marcelpetrick.github.io/BavarianLemmings/)
-[![Pages](https://github.com/marcelpetrick/BavarianLemmings/actions/workflows/pages.yml/badge.svg)](https://github.com/marcelpetrick/BavarianLemmings/actions/workflows/pages.yml)
-[![CI](https://github.com/marcelpetrick/BavarianLemmings/actions/workflows/ci.yml/badge.svg)](https://github.com/marcelpetrick/BavarianLemmings/actions/workflows/ci.yml)
-[![License: GPL v3 or later](https://img.shields.io/badge/License-GPLv3%2B-blue.svg)](LICENSE)
-[![Status: planning](https://img.shields.io/badge/status-planning-lightgrey.svg)](vision.md)
+[![Play in browser](https://img.shields.io/badge/play-in%20your%20browser-1e5aa8?logo=firefoxbrowser&logoColor=white)](https://marcelpetrick.github.io/BavarianLemmings/)
+[![CI](https://github.com/marcelpetrick/BavarianLemmings/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/marcelpetrick/BavarianLemmings/actions/workflows/ci.yml)
+[![GitHub Pages](https://img.shields.io/github/actions/workflow/status/marcelpetrick/BavarianLemmings/pages.yml?branch=main&label=GitHub%20Pages&logo=github)](https://github.com/marcelpetrick/BavarianLemmings/actions/workflows/pages.yml)
+[![Docker on GHCR](https://img.shields.io/github/actions/workflow/status/marcelpetrick/BavarianLemmings/docker.yml?branch=main&label=Docker%20%28GHCR%29&logo=docker&logoColor=white)](https://github.com/marcelpetrick/BavarianLemmings/pkgs/container/bavarianlemmings)
+[![Release](https://img.shields.io/github/v/release/marcelpetrick/BavarianLemmings)](https://github.com/marcelpetrick/BavarianLemmings/releases/latest)
+[![License: GPL-3.0-or-later](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](LICENSE)
+[![REUSE 3.3 compliant](https://img.shields.io/badge/REUSE-3.3%20compliant-green.svg)](https://reuse.software/)
+[![TypeScript](https://img.shields.io/github/package-json/dependency-version/marcelpetrick/BavarianLemmings/dev/typescript?label=TypeScript&logo=typescript&logoColor=white&color=3178c6)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/github/package-json/dependency-version/marcelpetrick/BavarianLemmings/dev/vite?label=Vite&logo=vite&logoColor=white&color=646cff)](https://vite.dev/)
+[![Vitest](https://img.shields.io/github/package-json/dependency-version/marcelpetrick/BavarianLemmings/dev/vitest?label=Vitest&logo=vitest&logoColor=white&color=6e9f18)](https://vitest.dev/)
+[![Playwright](https://img.shields.io/github/package-json/dependency-version/marcelpetrick/BavarianLemmings/dev/@playwright/test?label=Playwright&logo=playwright&color=2ead33)](https://playwright.dev/)
+[![Node.js 24](https://img.shields.io/badge/Node.js-24-5fa04e.svg?logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 
 An homage to **Lemmings**, the 1991 DOS game, running natively in the browser (Firefox and Chrome).
 It has a classic mode in the spirit of the 386-era original and a **Bavarian mode** in white and
 blue, with mountains, Alpine folk music, Lederhosen and Weißwurst traps.
 
-> **Status:** planning complete, implementation starting (plan.md milestone M0). There is no
-> playable game yet.
+## Play
+
+Open **<https://marcelpetrick.github.io/BavarianLemmings/>** in a desktop browser. No install, no
+account. Progress and settings stay in your browser.
+
+> **Status:** playable prototype, v0.1.x. The first level (Fun 1), the eight skills, menus, the
+> panel, audio and both themes work. The remaining levels and features follow
+> [plan.md](plan.md).
 >
 > | Document | Answers |
 > | --- | --- |
@@ -25,16 +38,56 @@ blue, with mountains, Alpine folk music, Lederhosen and Weißwurst traps.
 > | [plan.md](plan.md) | What next: checkable tasks per milestone and the Gantt roadmap |
 > | [AGENTS.md](AGENTS.md) | Rules for anyone (human or agent) working here |
 
-## What it will be
+## Screenshots
 
-- **Classic mode:** 320×200 pixel art scaled crisply, the eight skills (Climber, Floater, Bomber,
-  Blocker, Builder, Basher, Miner, Digger), per-pixel destructible terrain, steel and one-way
-  walls, traps, release rate, time limit, nuke, DOS function-key shortcuts, AdLib-style music.
-- **Bavarian mode:** the same game re-themed in white and blue with mountains, Lederhosen and
-  Dirndl, a beer tent exit, Weißwurst traps and Alpine folk music.
-- Four ratings of recreated levels, three UI languages (English, German, Bavarian), mouse and
-  keyboard first, touch play on tablets, progress saved in the browser.
-- Static site: GitHub Pages and a Docker image on GHCR. No backend, no emulator.
+Captured from the production build by [`scripts/screenshot.mjs`](scripts/screenshot.mjs)
+(`npm run screenshots`).
+
+| Classic | Bavarian |
+| --- | --- |
+| ![Title screen, classic theme](docs/screenshots/classic-title.png) | ![Title screen, Bavarian theme](docs/screenshots/bavarian-title.png) |
+| ![Fun 1 in play, classic theme](docs/screenshots/classic-play.png) | ![Fun 1 in play, Bavarian theme](docs/screenshots/bavarian-play.png) |
+
+## Controls
+
+The DOS function keys work as in the original. Browsers keep F11 (full screen) and F12 (developer
+tools) for themselves, so every command also has a plain key.
+
+| Input | Action |
+| --- | --- |
+| Mouse, left click on the panel | Select a skill, change the release rate, pause, nuke |
+| Mouse, left click on a lemming | Give the selected skill to that lemming |
+| `F1` / `F2`, or `-` / `+` | Release rate down / up |
+| `F3` to `F10`, or `1` to `8` | Select a skill: Climber, Floater, Bomber, Blocker, Builder, Basher, Miner, Digger |
+| `F11`, `P` or `Space` | Pause |
+| `F12` or `N`, pressed twice | Nuke (the second press confirms) |
+| `←` / `→` or `A` / `D` | Scroll the view |
+| `F` | Fast-forward (4×) |
+| `R` | Restart the level |
+| `.` | Step one frame (while paused) |
+| `Z` | Zoom (2× view) |
+| `Esc` | Back to the menu |
+| `↑` / `↓`, `Enter` | Move through and choose menu items |
+
+Fast-forward, restart, frame step and zoom did not exist in the DOS original. The **Purist**
+setting switches them off.
+
+## Run it yourself
+
+1. Install Node.js 24 and the pinned tools: `npm ci`.
+2. Start the development server: `npm run dev`, then open the address it prints.
+3. Or build and serve the production build: `npm run build`, then `npm run preview`, then open
+   <http://localhost:4173>.
+
+With Docker, no Node.js is needed:
+
+```sh
+docker run --rm -p 8080:80 ghcr.io/marcelpetrick/bavarianlemmings   # then open http://localhost:8080
+docker build -t bavarianlemmings . && docker run --rm -p 8080:80 bavarianlemmings   # from source
+```
+
+The image is a node build stage and an nginx serve stage ([Dockerfile](Dockerfile),
+[docker/nginx.conf](docker/nginx.conf)).
 
 ## Disclaimer
 
@@ -45,18 +98,38 @@ fonts or data files. Everything is made by the project itself or used under a fr
 ## Quality pipeline
 
 ```sh
-npm ci                     # install the pinned tools
-./localPipeline.sh         # the gate every commit must pass
-./localPipeline.sh --noRun # the same, without launching the game (used by CI)
+npm ci                                # install the pinned tools
+./localPipeline.sh                    # the gate every commit must pass
+./localPipeline.sh --noRun            # the same, without launching the game (used by CI)
+BL_DOCKER=1 ./localPipeline.sh --noRun  # also build and smoke-test the Docker image
 ```
 
-GitHub Actions run exactly `./localPipeline.sh --noRun` ([ci.yml](.github/workflows/ci.yml)).
+`localPipeline.sh` runs these steps in order and names the step that fails:
+
+1. Dependencies (`npm ci`), semantic version, licence file.
+2. REUSE compliance (SPDX headers), Markdown lint, shellcheck, actionlint.
+3. Plan covers every vision ID, original-game constants have provenance, translations complete.
+4. Type check (`tsc`), ESLint, Prettier, Stylelint.
+5. Unit and integration tests (Vitest) with coverage of at least 95 %.
+6. Production build (Vite).
+7. End-to-end tests in Chromium, desktop and tablet emulation (Playwright), against the
+   production build. Firefox is play-tested by hand (`BL_E2E_FIREFOX=1` adds it to the suite).
+8. Docker image build and smoke test (only with `BL_DOCKER=1`).
+
+GitHub workflows:
+
+| Workflow | Trigger | Does |
+| --- | --- | --- |
+| [ci.yml](.github/workflows/ci.yml) | push and pull request to `main` | `BL_DOCKER=1 ./localPipeline.sh --noRun` |
+| [pages.yml](.github/workflows/pages.yml) | push to `main`, tags `v*` | run the pipeline, then deploy `dist/` to GitHub Pages |
+| [docker.yml](.github/workflows/docker.yml) | push to `main`, `v*` tags | build and push `ghcr.io/marcelpetrick/bavarianlemmings` (`latest`, `sha-…`, `X.Y.Z`) |
+| [release.yml](.github/workflows/release.yml) | `v*` tags | tag equals `package.json` version, pipeline, GitHub release with the zipped `dist/` |
 
 ## Scripts
 
 | Script | Purpose |
 | --- | --- |
-| [`localPipeline.sh`](localPipeline.sh) | Quality gate: Markdown lint, shellcheck, actionlint, version and licence checks |
+| [`localPipeline.sh`](localPipeline.sh) | The single quality gate (steps listed above) |
 | [`scripts/bump-version.sh`](scripts/bump-version.sh) | Raise the semantic version (`patch` by default, every commit) |
 | [`scripts/commit.sh`](scripts/commit.sh) | Bump the version, run the pipeline, commit with the version in the subject, push |
 | [`scripts/generate-voices.sh`](scripts/generate-voices.sh) | Regenerate the English and Bavarian voice lines with espeak-ng |
