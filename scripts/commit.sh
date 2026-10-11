@@ -4,7 +4,7 @@
 #
 # commit.sh: the project's commit routine in one step (AGENTS.md, "Git").
 #
-# 0. formats the tree with Prettier (formatting is mechanical, never a reason for a red pipeline),
+# 0. regenerates the plan's Gantt chart and formats the tree with Prettier (formatting is mechanical, never a reason for a red pipeline),
 # 1. bumps the version (patch by default), 2. runs ./localPipeline.sh --noRun and stops if it is red,
 # 3. stages everything and commits with the subject "<subject> (vX.Y.Z)" and the given body,
 # 4. pushes. On a red pipeline the version bump is undone and nothing is committed.
@@ -24,6 +24,7 @@ part="${3:-patch}"
 
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 mkdir -p .tools
+node scripts/gantt.mjs --write > /dev/null
 npx --no-install prettier --write --log-level warn .
 # Keep the pre-bump manifests, so a red run undoes only the bump and keeps other edits to them.
 cp package.json .tools/package.json.before

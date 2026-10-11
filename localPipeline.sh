@@ -63,6 +63,9 @@ node scripts/check-constants.mjs --quiet || fail "constants check"
 step "Translations complete (scripts/check-translations.mjs)"
 node scripts/check-translations.mjs || fail "translation check"
 
+step "Roadmap chart follows the plan (scripts/gantt.mjs --check)"
+node scripts/gantt.mjs --check || fail "gantt chart"
+
 step "Type check (tsc, strict)"
 npx --no-install tsc --noEmit || fail "type check"
 

@@ -139,6 +139,7 @@ GitHub workflows:
 | [`scripts/check-translations.mjs`](scripts/check-translations.mjs) | Fail if a translation key is missing in a language or used in code but undefined |
 | [`scripts/screenshot.mjs`](scripts/screenshot.mjs) | Capture the README screenshots (`docs/screenshots/`) from the production build with Playwright; `npm run screenshots` |
 | [`scripts/docker-smoke.sh`](scripts/docker-smoke.sh) | Build the Docker image, run it, check index, JS asset, WAV MIME type and the game start; pipeline step with `BL_DOCKER=1` |
+| [`scripts/gantt.mjs`](scripts/gantt.mjs) | Generate the roadmap Gantt chart in plan.md from the task list (`--write`, `--check`) |
 | [`scripts/check-plan.mjs`](scripts/check-plan.mjs) | Fail if a vision.md ID has no plan.md task; `--summary` prints done/open per milestone |
 
 ## Development
