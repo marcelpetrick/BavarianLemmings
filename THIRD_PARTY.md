@@ -6,7 +6,7 @@ the commit that adds them.
 
 | Item | Used in | Author | Licence | Source URL | Evidence of licence |
 | --- | --- | --- | --- | --- | --- |
-| *(none yet)* | | | | | |
+| espeak-ng 1.52.0 (speech synthesiser, run offline by `scripts/generate-voices.sh`; not shipped) | Voice lines in `public/audio/voices/{en,bar}/*.wav` (vision A-06), sped up by `scripts/pitch-wav.mjs` | espeak-ng contributors | GPL-3.0-or-later (the tool); the generated WAVs are ours, GPL-3.0-or-later | <https://github.com/espeak-ng/espeak-ng> | Licence file `COPYING` in the repository; GPL-3.0-or-later, compatible with this project. No recording of the original game is used. |
 
 ## Public-domain melodies
 
