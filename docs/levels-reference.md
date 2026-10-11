@@ -167,6 +167,10 @@ simplification is listed here.
 | Fun 7 | Our builders do not stop walkers, so a few lemmings fall into the pit before the bridge is finished; the target (50 %) allows for it. |
 | Fun 9 | The fire on the left is a pool; the pillar is thick enough that bashing alone saves too few, so a blocker is needed as in the walkthrough's fallback. |
 | Fun 10 | The floater of the original is optional here: the first lemming out of the miner's tunnel can become the blocker. |
+| Fun 13 | Each lemming digs its own hole; our diggers fall as soon as they break through, so holes cannot be shared. |
+| Fun 14 | Stats are `[verify]` (50 lemmings, 60 %, RR 50 chosen). Steel at each pillar foot makes the "build, then bash from the top" idea compulsory. |
+| Fun 15 | Stats are `[verify]` (50 lemmings, 80 %, RR 50 chosen). Our blockers cannot be undermined by a miner, so a bomber removes the blocker. |
+| Fun 16 | Stats are `[verify]` (50 lemmings, 80 %, RR 50 chosen). The right blocker is bombed instead of released. |
 
 ## Sources
 

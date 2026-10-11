@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "id": "fun-12",
+  "name": "level.fun-12.name",
+  "inspiredBy": "Fun 12 of the original ('Patience'): bash the wall, stop the returning lemmings at the cliff with a blocker, and build the crowd out of the pit to the exit. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 640,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 40,
+  "releaseRate": 99,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 2,
+    "builder": 6,
+    "basher": 3,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "dirt",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 60,
+      "y": 80,
+      "w": 340,
+      "h": 80
+    },
+    {
+      "shape": "ellipse",
+      "x": 40,
+      "y": 76,
+      "w": 40,
+      "h": 30
+    },
+    {
+      "shape": "rect",
+      "x": 260,
+      "y": 0,
+      "w": 30,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 400,
+      "y": 110,
+      "w": 80,
+      "h": 50
+    },
+    {
+      "shape": "rect",
+      "x": 470,
+      "y": 80,
+      "w": 170,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 630,
+      "y": 30,
+      "w": 10,
+      "h": 50
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 200,
+      "y": 50
+    },
+    {
+      "type": "exit",
+      "x": 570,
+      "y": 79
+    },
+    {
+      "type": "water",
+      "x": 0,
+      "y": 140,
+      "w": 60,
+      "h": 20
+    }
+  ]
+}

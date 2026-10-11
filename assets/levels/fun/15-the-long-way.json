@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "id": "fun-15",
+  "name": "level.fun-15.name",
+  "inspiredBy": "Fun 15 of the original ('Don't let your eyes deceive you'): a blocker holds the crowd while one scout bashes three pillars, bridges a wide pit and patches a hole in the stairs; then the blocker is blown away. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 1040,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 40,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 1,
+    "blocker": 1,
+    "builder": 7,
+    "basher": 4,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "crystal",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 136,
+      "w": 500,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 200,
+      "y": 20,
+      "w": 20,
+      "h": 116
+    },
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 10,
+      "w": 25,
+      "h": 126
+    },
+    {
+      "shape": "rect",
+      "x": 400,
+      "y": 20,
+      "w": 20,
+      "h": 116
+    },
+    {
+      "shape": "rect",
+      "x": 590,
+      "y": 136,
+      "w": 210,
+      "h": 24
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [640, 160],
+        [640, 131],
+        [655, 131],
+        [655, 126],
+        [670, 126],
+        [670, 121],
+        [685, 121],
+        [685, 116],
+        [700, 116],
+        [700, 111],
+        [715, 111],
+        [715, 106],
+        [730, 106],
+        [730, 101],
+        [745, 101],
+        [745, 96],
+        [760, 96],
+        [760, 160]
+      ]
+    },
+    {
+      "shape": "rect",
+      "x": 760,
+      "y": 96,
+      "w": 60,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 836,
+      "y": 96,
+      "w": 204,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 860,
+      "y": 104,
+      "w": 180,
+      "h": 56
+    },
+    {
+      "shape": "ellipse",
+      "x": 880,
+      "y": 30,
+      "w": 100,
+      "h": 30
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 60,
+      "y": 100
+    },
+    {
+      "type": "exit",
+      "x": 960,
+      "y": 95
+    },
+    {
+      "type": "water",
+      "x": 500,
+      "y": 146,
+      "w": 90,
+      "h": 14
+    },
+    {
+      "type": "water",
+      "x": 800,
+      "y": 146,
+      "w": 60,
+      "h": 14
+    }
+  ]
+}

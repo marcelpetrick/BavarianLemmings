@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "id": "fun-14",
+  "name": "level.fun-14.name",
+  "inspiredBy": "Fun 14 of the original ('Origins and Lemmings'): bash the first pillar, then for each higher pillar build a short stair and bash from its top, because the pillar foot is steel. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 800,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 30,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 0,
+    "builder": 5,
+    "basher": 6,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "marble",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 136,
+      "w": 260,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 260,
+      "y": 124,
+      "w": 160,
+      "h": 36
+    },
+    {
+      "shape": "rect",
+      "x": 420,
+      "y": 112,
+      "w": 160,
+      "h": 48
+    },
+    {
+      "shape": "rect",
+      "x": 580,
+      "y": 100,
+      "w": 220,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 140,
+      "y": 0,
+      "w": 30,
+      "h": 136
+    },
+    {
+      "shape": "rect",
+      "x": 260,
+      "y": 0,
+      "w": 30,
+      "h": 124
+    },
+    {
+      "shape": "rect",
+      "x": 420,
+      "y": 0,
+      "w": 30,
+      "h": 112
+    },
+    {
+      "shape": "rect",
+      "x": 580,
+      "y": 0,
+      "w": 30,
+      "h": 100
+    },
+    {
+      "shape": "ellipse",
+      "x": 700,
+      "y": 20,
+      "w": 80,
+      "h": 30
+    }
+  ],
+  "steel": [
+    {
+      "x": 260,
+      "y": 124,
+      "w": 20,
+      "h": 12
+    },
+    {
+      "x": 420,
+      "y": 112,
+      "w": 20,
+      "h": 12
+    },
+    {
+      "x": 580,
+      "y": 100,
+      "w": 20,
+      "h": 12
+    }
+  ],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 60,
+      "y": 100
+    },
+    {
+      "type": "exit",
+      "x": 720,
+      "y": 99
+    }
+  ]
+}

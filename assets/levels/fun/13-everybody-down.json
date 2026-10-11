@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "id": "fun-13",
+  "name": "level.fun-13.name",
+  "inspiredBy": "Fun 13 of the original ('We all fall down'): the ledge is a little too high to jump from; every lemming digs its own hole through it, which makes the fall just survivable. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 640,
+  "height": 160,
+  "lemmings": 20,
+  "toSave": 20,
+  "releaseRate": 1,
+  "timeSeconds": 180,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 0,
+    "builder": 0,
+    "basher": 0,
+    "miner": 0,
+    "digger": 20
+  },
+  "style": "pillar",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 150,
+      "y": 60,
+      "w": 340,
+      "h": 20
+    },
+    {
+      "shape": "ellipse",
+      "x": 140,
+      "y": 56,
+      "w": 30,
+      "h": 28
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 136,
+      "w": 640,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 630,
+      "y": 90,
+      "w": 10,
+      "h": 46
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 200,
+      "y": 30
+    },
+    {
+      "type": "exit",
+      "x": 580,
+      "y": 135
+    }
+  ]
+}

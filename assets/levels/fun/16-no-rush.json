@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "id": "fun-16",
+  "name": "level.fun-16.name",
+  "inspiredBy": "Fun 16 of the original ('Don't do anything too hasty'): one builder stairs all the way up to a high exit while two blockers keep the crowd at the hatch; then the right blocker is blown up. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 640,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 40,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 1,
+    "blocker": 3,
+    "builder": 9,
+    "basher": 0,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "fire",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 40,
+      "y": 136,
+      "w": 600,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 480,
+      "y": 52,
+      "w": 160,
+      "h": 84
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [480, 52],
+        [520, 40],
+        [560, 52]
+      ]
+    },
+    {
+      "shape": "ellipse",
+      "x": 30,
+      "y": 132,
+      "w": 20,
+      "h": 12
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 150,
+      "y": 106
+    },
+    {
+      "type": "exit",
+      "x": 590,
+      "y": 51
+    },
+    {
+      "type": "water",
+      "x": 0,
+      "y": 146,
+      "w": 40,
+      "h": 14
+    }
+  ]
+}

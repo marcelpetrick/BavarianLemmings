@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "levelId": "fun-12",
+  "entries": [
+    {
+      "tick": 103,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 297,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "blocker"
+      }
+    },
+    {
+      "tick": 402,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 36,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 602,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 36,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 802,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 36,
+        "skill": "builder"
+      }
+    }
+  ]
+}
