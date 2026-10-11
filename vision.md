@@ -1,6 +1,6 @@
 # BavarianLemmings: vision and specification
 
-> Living document. Phase: **planning done, implementation ready to start** (no game code yet).
+> Living document. Phase: **implementation; playable prototype v0.1.x** (Fun 1, both themes).
 > Owner: Marcel Petrick. Last update: 2026-10-11 (rounds A to D closed).
 > Companions: [architecture.md](architecture.md) (how), [plan.md](plan.md) (tasks),
 > [AGENTS.md](AGENTS.md) (rules).
@@ -329,27 +329,26 @@ No open questions remain. New ones go into a round E table here.
 | 2026-10-11 | plan.md: milestones M0 to M7, Gantt roadmap, assumptions | done (v0.0.6) |
 | 2026-10-11 | Review of the planning documents (`review_20261011.md`), AGENTS.md and README refreshed | done (v0.0.7) |
 | 2026-10-11 | First push and CI green on GitHub | done (CI run 38145947990) |
-| – | Implementation M0.10 onwards | handed to the implementing agent |
+| 2026-10-11 | Toolchain M0.10 to M0.21, headless simulation M1 | done (v0.0.11 to v0.0.19) |
+| 2026-10-11 | Pixel art and audio by subagents, integrated | done (v0.0.23 to v0.0.33) |
+| 2026-10-11 | Playable prototype in the browser: menus, Fun 1, panel, themes, audio | done (v0.1.0) |
+| 2026-10-11 | `/updateDependencies`, `/githubAbout` applied | done (v0.1.2) |
+| – | Levels (M6), touch (M5), Docker/Pages/README (M7) | running in subagents |
 
 ## 9. Resume here
 
-- **State (2026-10-11, v0.0.25):** toolchain complete (M0.10 to M0.16: Vite, strict TypeScript,
-  Vitest with a 95 % gate, ESLint with the sim boundary, Prettier, Stylelint, REUSE, Playwright in
-  Firefox and Chromium, plan and constants checks). The headless simulation is done (M1.01 to
-  M1.19, 100 % lines). Done as well: translations EN/DE/BAR (M3.03), storage (M3.02), the pure
-  session logic, layout, key map and status line (M2.07), and all pixel art (`src/render/`).
-- **Not yet playable:** the browser layer is missing: theme loader, canvas renderer (playfield,
-  panel, minimap, cursor), `ui/app.ts` with screens and the rAF loop, the test hook, Fun 1
-  (`assets/levels/fun/01-*.json`) with its replay test, and the e2e play tests (M2.01 to M2.14).
-- **Audio:** an agent worked on `src/audio/` on branch `worktree-agent-abb7a32fb3d503634` and was
-  stopped at the usage limit; check `git log main..worktree-agent-abb7a32fb3d503634` and
-  cherry-pick the finished commits (see how the sprite branch was taken in v0.0.23 to v0.0.25).
-- **Owner requests still open:** `/updateDependencies` after the first runnable version,
-  `/githubAbout` (apply), `/reviewBranch` later.
-- **Commit:** `scripts/commit.sh "<type>: <subject>" "<why>" [patch|minor]` (formats, bumps, runs
-  the pipeline, commits, pushes).
+- **State (v0.1.x):** the game is playable in the browser. Run it: `npm ci && npm run dev`
+  (<http://localhost:5173>), or `npm run build && npm run preview` (<http://localhost:4173>).
+  Only Fun 1 exists so far. The simulation, sprites, audio, menus, settings, progress, both themes
+  and three languages are in.
+- **Running in subagents (worktrees under `.claude/worktrees/`):** levels Fun 02 onwards (M6),
+  touch controls (M5), Docker, Pages, release workflow and README screenshots (M7.01 to M7.06,
+  M2.14). Integrate their branches as described in AGENTS.md, "Working with subagents".
+- **Next after that:** the remaining ratings (Tricky, Taxing, Mayhem), verify constants (M6.123,
+  M6.124), offline (M7.05), `/reviewBranch` with `review_YYYYMMDD.md`, final check (M7.09).
+- **Commit:** `scripts/commit.sh "<type>: <subject>" "<why>" [patch|minor]`.
 - **Check:** `node scripts/check-plan.mjs --summary`, `gh run list -L 3`,
-  `node scripts/check-constants.mjs`.
+  `node scripts/check-constants.mjs`, `git branch --list 'worktree-*'`.
 
 ## Sources (fact check 2026-10-11)
 

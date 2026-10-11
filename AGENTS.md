@@ -16,10 +16,28 @@ current milestone in `plan.md`.
 
 ## Current phase
 
-**Planning is done; implementation starts with M0.10 in `plan.md`.** The owner has delegated the
-remaining product decisions (see the assumptions table in `plan.md`). Ask only for decisions that
-are really the owner's: an irreversible action, a change on shared infrastructure, a real trade-off
-between stated goals.
+**Implementation runs; a playable prototype exists (v0.1.x).** Fun 1 plays end to end in the
+browser with mouse and keyboard, both themes, audio, three languages. The open work is in
+`plan.md`: levels (M6), touch (M5), delivery (M7). The owner has delegated the remaining product
+decisions (see the assumptions table in `plan.md`). Ask only for decisions that are really the
+owner's: an irreversible action, a change on shared infrastructure, a real trade-off between
+stated goals.
+
+## Working with subagents
+
+The owner wants parallel work through subagents. The routine:
+
+1. Give each subagent an isolated git worktree and a disjoint set of files (for example levels,
+   touch, delivery). Name the files it may touch in its brief.
+2. A subagent commits on its own branch with conventional messages, **without** bumping the version
+   and **without** pushing.
+3. The integrator takes each commit onto `main` with `git cherry-pick --no-commit <sha>`, restores
+   `package.json` and `package-lock.json`, and commits it with `scripts/commit.sh` (version bump,
+   full pipeline, push). One subagent commit gives one `main` commit.
+4. Conflicts in shared files (locale JSON, `plan.md`, `playwright.config.ts`) are resolved by the
+   integrator, never by force.
+5. `.claude/worktrees/` is ignored by git, ESLint and Prettier. Parallel pipelines get their own
+   preview port automatically (`playwright.config.ts`).
 
 ## Mission
 
@@ -36,9 +54,11 @@ requirements. When something new is needed, add it to `plan.md` first, then do i
   version in parentheses, for example `feat: add digger skill (v0.1.4)`.
 - **Semantic versioning:** every commit bumps the patch version (`scripts/bump-version.sh`). A
   finished milestone or a major feature bumps the minor version. 1.0.0 is the owner's call.
-- Every commit is green before it is made: `./localPipeline.sh` passes.
-- Push after every commit. The sandbox has no GitHub credentials; when a push fails for that
-  reason, say so once and let the owner run `git push`. Never leave unpushed work unmentioned.
+- Every commit is green before it is made: `./localPipeline.sh` passes. Use
+  `scripts/commit.sh "<type>: <subject>" "<why>" [patch|minor]`, which formats, bumps, runs the
+  pipeline, commits and pushes, and refuses on a red pipeline.
+- Push after every commit (`scripts/commit.sh` does it). The owner allowed agents to push on
+  2026-10-11. When a push fails, say so once. Never leave unpushed work unmentioned.
 - Never force-push, never rewrite published history, never push without being allowed to.
 
 ## Everything is verifiable

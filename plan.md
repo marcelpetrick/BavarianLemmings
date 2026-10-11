@@ -1,7 +1,8 @@
 # BavarianLemmings: implementation plan
 
 > Living checklist. [vision.md](vision.md) says what, [architecture.md](architecture.md) says how,
-> this file says what to do next. Owner: Marcel Petrick. Last update: 2026-10-11.
+> this file says what to do next. Owner: Marcel Petrick.
+> Last update: 2026-10-11 (v0.1.2, prototype playable).
 
 ## How to use this file
 
@@ -24,7 +25,7 @@
 | Order of work (Q-D7) | Vertical slice first: one level playable end to end with mouse and keyboard, then the layers (audio, i18n, themes, touch), then the content. | Finds integration problems early; every milestone ships something playable. |
 | Level recreation (Q-D8) | Levels are rebuilt by the agent from public level descriptions, walkthrough texts and memory. Geometry, pieces and names are ours. Each level JSON records `inspiredBy`. | Owner: "check what is available in the web"; X-02 forbids any original data. |
 | Touch (Q-D1, Q-D3) | Mouse and keyboard are primary and are built first. Touch is a later layer (M5) with press-aim-release and side panels in landscape as proposed in vision 3.4.1; a plain-tap option is added if the e2e tests on tablet emulation show press-aim-release is awkward. | Owner: "primary input is mouse and keyboard, touch is something you have to work out". |
-| Devices (Q-D2) | Desktop Firefox and Chrome are tested in CI. Tablets via Chrome on Android and Playwright tablet emulation. Safari on iPad and phones are best effort, not in CI. | Only Firefox and Chrome were ever required. |
+| Devices (Q-D2) | Desktop Chrome is tested in CI (Firefox by manual play-testing, owner 2026-10-11). Tablets via Chrome on Android and Playwright tablet emulation. Safari on iPad and phones are best effort, not in CI. | Only Firefox and Chrome were ever required. |
 | Fast-forward (Q-D4) | One speed, 4×, toggled by a button and by the `F` key; frame step with `.` while paused. | One speed keeps the panel simple; 4× matches the DOS tick rate times a comfortable factor. |
 | Bavarian mode entry (Q-D5) | A theme toggle in settings **and** a "Bayern" button on the title screen. The theme does not change the language. | Discoverability without coupling two independent settings. |
 | Level codes (Q-D6) | Deferred. Progress is saved in the browser; passwords can come later as a nostalgic extra. | Not needed for the goal; keeps M3 small. |
@@ -95,7 +96,7 @@ gantt
       all in the pipeline.
 - [x] M0.13 (X-01, X-03) REUSE: `REUSE.toml`, SPDX headers on every source file, `reuse lint` in the
       pipeline; `THIRD_PARTY.md` created (empty table with licence columns).
-- [ ] M0.14 (Q) `scripts/check-constants.mjs`: lists every `unverified` constant (architecture 6.2).
+- [x] M0.14 (Q) `scripts/check-constants.mjs`: lists every `unverified` constant (architecture 6.2).
 - [x] M0.15 (Q) Playwright installed with Firefox and Chromium; one smoke test (page loads, canvas
       exists); in the pipeline and in CI with browser caching.
 - [x] M0.16 (Q) `scripts/check-plan.mjs`: every vision.md ID (G/L/V/C/A/P/R/I/X) is referenced by
@@ -104,42 +105,49 @@ gantt
 - [ ] M0.17 (Q) Pipeline step order documented in README; CI badge works after M0.09.
 - [ ] M0.18 (Q) `scripts/gantt.mjs`: generates the Mermaid Gantt in this file from the milestone
       headings and tick state (dashboards follow the data); README refreshed from the same data.
+- [x] M0.19 (Q) `scripts/commit.sh`: format, bump, run the pipeline, commit with the version in the
+      subject, push; refuses to commit on a red pipeline.
+- [x] M0.20 (Q, P-01) End-to-end tests in Chromium only (owner, 2026-10-11); Firefox on demand with
+      `BL_E2E_FIREFOX=1` and by manual play-testing. Preview port per checkout, so parallel
+      worktree pipelines do not collide.
+- [x] M0.21 (Q) `/updateDependencies`: all direct dependencies exact and current (TypeScript held at
+      6.0 for typescript-eslint, `@types/node` at 24 for Node 24); smol-toml and katex overridden.
 
 ## M1: headless simulation
 
-- [ ] M1.01 (R-01, R-03, G-15) `src/sim/constants.ts` with every original-game number as a `constant()`
+- [x] M1.01 (R-01, R-03, G-15) `src/sim/constants.ts` with every original-game number as a `constant()`
       with unit, status and source (tick rate, splat height, level size, lemming cap, release-rate
       bounds, builder bricks, bomber countdown, skill counts max 99).
-- [ ] M1.02 (G-12) `src/sim/rng.ts` xorshift32 with tests for a known sequence.
-- [ ] M1.03 (G-08) `src/sim/terrain.ts`: mask + palette image, `isSolid`, `clearMask`, `setBrick`,
+- [x] M1.02 (G-12) `src/sim/rng.ts` xorshift32 with tests for a known sequence.
+- [x] M1.03 (G-08) `src/sim/terrain.ts`: mask + palette image, `isSolid`, `clearMask`, `setBrick`,
       steel and one-way rules; unit tests with ASCII-art fixtures.
-- [ ] M1.04 (L-03) `src/sim/level.ts`: Level type, JSON schema (`schemas/level.schema.json`),
+- [x] M1.04 (L-03) `src/sim/level.ts`: Level type, JSON schema (`schemas/level.schema.json`),
       loader, validator; one hand-written test level `assets/levels/test/flat.json`.
-- [ ] M1.05 (G-02) Walker and faller: walking, turning at walls, stepping up to N pixels, falling,
+- [x] M1.05 (G-02) Walker and faller: walking, turning at walls, stepping up to N pixels, falling,
       fall distance counter, splat; fixtures for every edge (step up, step down, wall, cliff).
-- [ ] M1.06 (G-01) Hatch and release rate: spawn timing from the release rate, bounds 1..99 and
+- [x] M1.06 (G-01) Hatch and release rate: spawn timing from the release rate, bounds 1..99 and
       the level minimum, spawn order, initial direction from the RNG.
-- [ ] M1.07 (G-09) Exit, drowning, out-of-bounds death, trap objects with trigger areas.
-- [ ] M1.08 (G-03, G-04) Climber and floater: permanent flags, climbing geometry, falling back,
+- [x] M1.07 (G-09) Exit, drowning, out-of-bounds death, trap objects with trigger areas.
+- [x] M1.08 (G-03, G-04) Climber and floater: permanent flags, climbing geometry, falling back,
       floater opening delay, athlete combination.
-- [ ] M1.09 (G-03, G-05) Bomber: countdown ticks, "oh no" state, crater mask, steel respected.
-- [ ] M1.10 (G-03, G-06) Blocker: turn zone, freeing by crater or by removed ground.
-- [ ] M1.11 (G-03, G-07) Builder: 12 bricks, brick geometry, head bump, shrug, turns at ceiling.
-- [ ] M1.12 (G-03, G-07) Basher: tunnel mask per stroke, stops at steel and at empty space,
+- [x] M1.09 (G-03, G-05) Bomber: countdown ticks, "oh no" state, crater mask, steel respected.
+- [x] M1.10 (G-03, G-06) Blocker: turn zone, freeing by crater or by removed ground.
+- [x] M1.11 (G-03, G-07) Builder: 12 bricks, brick geometry, head bump, shrug, turns at ceiling.
+- [x] M1.12 (G-03, G-07) Basher: tunnel mask per stroke, stops at steel and at empty space,
       one-way respected.
-- [ ] M1.13 (G-03, G-07) Miner: diagonal stroke mask, stops at steel.
-- [ ] M1.14 (G-03, G-07) Digger: vertical mask, stops at steel, falls when done.
-- [ ] M1.15 (C-04) Skill assignment rules: which lemming under the cursor wins, which actions
+- [x] M1.13 (G-03, G-07) Miner: diagonal stroke mask, stops at steel.
+- [x] M1.14 (G-03, G-07) Digger: vertical mask, stops at steel, falls when done.
+- [x] M1.15 (C-04) Skill assignment rules: which lemming under the cursor wins, which actions
       accept which skill, counters decrement.
-- [ ] M1.16 (G-10, G-11) `game.ts`: `step(state, inputs)`, time limit, OUT/IN/saved counters,
+- [x] M1.16 (G-10, G-11) `game.ts`: `step(state, inputs)`, time limit, OUT/IN/saved counters,
       win/lose evaluation, pause, nuke with countdown wave.
-- [ ] M1.17 (G-12) Determinism test: two runs with the same replay give identical state hashes;
+- [x] M1.17 (G-12) Determinism test: two runs with the same replay give identical state hashes;
       `replay.ts` with record and run.
-- [ ] M1.18 (G-13) Edge-case fixtures as named tests: builder meets ceiling, basher meets steel,
+- [x] M1.18 (G-13) Edge-case fixtures as named tests: builder meets ceiling, basher meets steel,
       blocker on crumbling edge, digger into water, floater over trap, climber at overhang.
-- [ ] M1.19 (G-14) Documented non-goal: no two-player code paths; a test asserts the public API
+- [x] M1.19 (G-14) Documented non-goal: no two-player code paths; a test asserts the public API
       has no second player.
-- [ ] M1.20 (Q) Coverage of `src/sim` at 100 % lines; milestone bump to 0.1.0.
+- [x] M1.20 (Q) Coverage of `src/sim` at 100 % lines; milestone bump to 0.1.0.
 
 ## M2: vertical slice (one level, mouse and keyboard)
 
@@ -180,7 +188,7 @@ gantt
       repaired field by field (v1 is the first version, so there is nothing to migrate yet).
 - [x] M3.03 (I-01, I-02) `i18n/`: EN, DE, BAR locale files, `t()`, fallback to EN, language in
       settings; `scripts/check-translations.mjs` in the pipeline.
-- [ ] M3.04 (L-06) All level names and texts through i18n keys in all three languages.
+- [x] M3.04 (L-06) All level names and texts through i18n keys in all three languages.
 - [x] M3.05 (A-02) `audio/engine.ts`: unlock on first gesture, master/music/sfx volume, mute,
       settings persisted.
 - [x] M3.06 (A-03) `audio/fm.ts`: 2-operator FM voices with envelopes; a test renders a note to a
@@ -192,18 +200,21 @@ gantt
       evidence.
 - [x] M3.09 (A-01, A-06) Voice lines EN and BAR, generated by us offline (generator and licence noted
       in `THIRD_PARTY.md`), selected by UI language; DE falls back to EN.
-- [ ] M3.10 (P-01) e2e: settings persist across reload, language switch changes the title text,
+- [x] M3.10 (P-01) e2e: settings persist across reload, language switch changes the title text,
       audio unlock does not throw.
 - [ ] M3.11 (Q) Milestone bump to 0.3.0.
 
 ## M4: Bavarian theme
 
-- [ ] M4.01 (V-09) Bavarian `theme.json`: white-and-blue palette, mountain backgrounds, panel skin,
-      Bavarian rating names; the sprite sheet geometry check in the pipeline.
-- [ ] M4.02 (V-10) Bavarian lemming sprites in Lederhosen and Dirndl, same frames as classic.
-- [ ] M4.03 (V-10) Bavarian objects: beer tent exit, maypole scenery, Weißwurst and Maßkrug traps,
+- [x] M4.01 (V-09) Bavarian `theme.json`: white-and-blue palette, mountain backgrounds, panel skin,
+      Bavarian rating names; the sprite sheet geometry check in the pipeline. Done as TypeScript data
+      (`src/theme/themes.ts`), checked by unit tests instead of a JSON manifest.
+- [x] M4.02 (V-10) Bavarian lemming sprites in Lederhosen and Dirndl, same frames as classic.
+      One sheet for all lemmings: Lederhosen with braces and an alpine hat (a Dirndl variant needs
+      per-lemming sheets; see M4.09).
+- [x] M4.03 (V-10) Bavarian objects: beer tent exit, maypole scenery, Weißwurst and Maßkrug traps,
       Bavarian hatch.
-- [ ] M4.04 (V-07) Bavarian terrain styles mapped from the classic ones (dirt → Alm, marble →
+- [x] M4.04 (V-07) Bavarian terrain styles mapped from the classic ones (dirt → Alm, marble →
       Wirtshaus wood, pillar → maypole, fire → Hendl grill, crystal → ice).
 - [x] M4.05 (A-04) Bavarian music: at least three of our own arrangements of traditional
       public-domain tunes (Ländler, Zwiefacher, march), sources in `THIRD_PARTY.md`.
@@ -211,6 +222,9 @@ gantt
       persisted; switching reloads assets without reloading the page.
 - [ ] M4.07 (P-01) e2e: switch to Bavarian, play the first level, screenshot for the README.
 - [ ] M4.08 (Q) Milestone bump to 0.4.0.
+- [ ] M4.09 (V-10) Dirndl lemmings: a second Bavarian sheet with the same geometry, chosen per
+      lemming (even ids), renderer only.
+- [ ] M4.10 (V-10) Maypole scenery placed in Bavarian levels (renderer decoration, no sim effect).
 
 ## M5: touch
 
@@ -374,10 +388,13 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
 - [ ] M7.06 (Q, X-04) README complete: badges (Play, CI, Pages, Docker, Release, Licence, REUSE,
       Coverage, stack), setup, testing, pipeline, Docker, usage, screenshots of both modes.
 - [ ] M7.07 (Q) `/reviewBranch`, fix every finding; `review_YYYYMMDD.md` with status per finding.
-- [ ] M7.08 (Q) `/githubAbout`: description and topics applied.
+- [x] M7.08 (Q) `/githubAbout`: description and topics applied.
 - [ ] M7.09 (Q) Final check against every vision.md item (`scripts/check-plan.mjs` plus a manual
       pass); pipeline green locally and in CI; Docker image runs; tree clean; everything pushed.
 - [ ] M7.10 (Q) Bump to 1.0.0 when the owner says so.
+- [ ] M7.11 (Q) After the first Pages deployment: set the repository homepage to the Pages URL.
+- [ ] M7.12 (P-01) Manual play-test in Firefox and Chrome of every rating before 1.0; findings as
+      issues or plan tasks.
 
 ## Cross-cutting rules (apply in every milestone)
 
