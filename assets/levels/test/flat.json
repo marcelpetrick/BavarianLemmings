@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "id": "test-flat",
+  "name": "level.test-flat.name",
+  "inspiredBy": "none: a flat test level for the simulation and the end-to-end tests",
+  "rating": "test",
+  "width": 480,
+  "height": 160,
+  "lemmings": 10,
+  "toSave": 5,
+  "releaseRate": 50,
+  "timeSeconds": 120,
+  "skills": { "climber": 2, "floater": 2, "bomber": 2, "blocker": 2, "builder": 2, "basher": 2, "miner": 2, "digger": 2 },
+  "style": "dirt",
+  "startX": 0,
+  "terrain": [
+    { "shape": "rect", "x": 0, "y": 120, "w": 480, "h": 40 },
+    { "shape": "ellipse", "x": 150, "y": 100, "w": 60, "h": 40 },
+    { "shape": "polygon", "points": [[300, 120], [340, 90], [380, 120]] },
+    { "shape": "rect", "x": 160, "y": 130, "w": 20, "h": 10, "erase": true }
+  ],
+  "steel": [{ "x": 440, "y": 140, "w": 20, "h": 10 }],
+  "oneWay": [{ "x": 0, "y": 140, "w": 60, "h": 20, "dir": "right" }],
+  "objects": [
+    { "type": "hatch", "x": 60, "y": 70 },
+    { "type": "exit", "x": 420, "y": 119 },
+    { "type": "water", "x": 0, "y": 150, "w": 10, "h": 10 },
+    { "type": "trap", "x": 100, "y": 150, "w": 10, "h": 10, "kind": "squasher" }
+  ]
+}

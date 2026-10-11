@@ -56,6 +56,9 @@ actionlint_bin="$(scripts/install-actionlint.sh)" || fail "actionlint install"
 step "Plan covers every vision ID (scripts/check-plan.mjs)"
 node scripts/check-plan.mjs || fail "plan check"
 
+step "Original-game constants have provenance (scripts/check-constants.mjs)"
+node scripts/check-constants.mjs --quiet || fail "constants check"
+
 step "Type check (tsc, strict)"
 npx --no-install tsc --noEmit || fail "type check"
 
