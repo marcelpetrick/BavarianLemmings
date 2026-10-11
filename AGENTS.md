@@ -16,7 +16,7 @@ for decisions that are really the owner's (see the parent AGENTS.md).
 
 ## Git
 
-- Work directly on `main`. *(The repository currently has an unborn `master`; see vision.md Q-B9.)*
+- Work directly on `main`. *(The history currently lives on `master`; renaming is vision.md Q-B9.)*
 - Atomic commits with **Conventional Commits** messages (`feat:`, `fix:`, `docs:`, `test:`,
   `build:`, `ci:`, `refactor:`, `chore:`). The message says why.
 - **Semantic versioning:** every commit bumps the patch version. Major features bump the minor
