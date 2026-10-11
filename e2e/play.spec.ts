@@ -60,9 +60,12 @@ test.describe('playing Fun 1 (P-01, C-01, C-02, G-10)', () => {
     await page.keyboard.press('ArrowRight');
     expect((await gameState(page)).viewX).toBeGreaterThan(before);
     await advance(page, 3000);
+    // Fast-forward off first, so the frame loop adds few ticks between the key and the read.
+    await page.keyboard.press('f');
+    expect((await gameState(page)).fastForward).toBe(false);
     const ticksBefore = (await gameState(page)).tick;
     await page.keyboard.press('r');
-    // Fast-forward stays on and the frame loop keeps running, so only "much earlier" is stable.
+    // The frame loop keeps running on a busy machine, so only "much earlier" is a stable check.
     expect((await gameState(page)).tick).toBeLessThan(ticksBefore / 2);
     await page.keyboard.press('Escape');
     expect(await screen(page)).toBe('title');
