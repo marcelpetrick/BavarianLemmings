@@ -374,6 +374,32 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
 - [ ] M6.124 (C-02) Verify the F1/F2 direction and the scroll keys against a documented DOS source.
 - [ ] M6.125 (Q) Milestone bump to 0.6.0.
 
+### M6 round 2 (owner play-test, 2026-10-12): follow the real layouts, make it pop
+
+The owner play-tested the first 30 levels: they are solvable but abstract and plain. Round 2
+rebuilds every level so that its layout **follows the original level**, traced by eye from
+screenshots of the original used as visual reference only (never shipped, never committed, never
+sampled; our own shapes and textures, owner decision Q-C1). Order: the toolkit first, then four
+rating agents in parallel.
+
+- [ ] M6.126 (V-07, V-02) Terrain-art toolkit: organic shapes (noisy blobs, rock outlines), a
+      library of our own parametric pieces (pillars with capitals, brick walls, steps, arches,
+      crystals, girders, stalactites, grass tufts), per-style texture functions with more colour
+      slots (strata, veins, bricks, facets), lit top edges and shaded undersides; level format stays
+      backwards compatible.
+- [ ] M6.127 (Q) Level preview tool: renders every level to a PNG (opt-in vitest run) so a layout
+      can be compared side by side with the reference screenshot.
+- [x] M6.128 (L-06, I-02) Level names per rating in their own locale files
+      (`src/i18n/locales/levels/<rating>.<lang>.json`), so rating agents never edit the same file.
+- [ ] M6.129 (L-01a) Fun 01-30 rebuilt to follow the original layouts with the toolkit; replays
+      updated.
+- [ ] M6.130 (L-01a) Tricky 01-30 rebuilt the same way (replaces the Tricky placeholders).
+- [ ] M6.131 (L-01a) Taxing 01-30 rebuilt the same way.
+- [ ] M6.132 (L-01a) Mayhem 01-30 rebuilt the same way.
+- [ ] M6.133 (G-11, V-05) Nuke and bomber aftermath: every pixel of an exploding lemming flies off
+      as a particle until it leaves the screen; the result screen waits until the last particle is
+      gone and then a further pause, so the player can look at the holes.
+
 ## M7: delivery
 
 - [x] M7.01 (P-03) `Dockerfile` (node:24 build, nginx:alpine serve), `.dockerignore`,

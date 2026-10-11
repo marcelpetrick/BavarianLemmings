@@ -2,7 +2,8 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 /**
- * check-translations.mjs: every translation key exists in every language (vision I-02), and every
+ * check-translations.mjs: every translation key exists in every language (vision I-02), including
+ * the per-rating level-name files in src/i18n/locales/levels/, and every
  * key written literally in the code (`translate(language, 'some.key')`, `t('some.key')`) exists.
  *
  * Keys that the code builds at run time (`action.${name}`, `level.${id}.name`, `rating.${id}`) are
@@ -12,10 +13,20 @@
  * Exit codes: 0 = complete, 1 = a key is missing somewhere
  */
 import { execFileSync } from 'node:child_process';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 
 const languages = ['en', 'de', 'bar'];
-const locales = Object.fromEntries(languages.map((l) => [l, JSON.parse(readFileSync(`src/i18n/locales/${l}.json`, 'utf8'))]));
+// Main texts plus the per-rating level-name files `src/i18n/locales/levels/<rating>.<lang>.json`.
+const levelFiles = readdirSync('src/i18n/locales/levels');
+const locales = Object.fromEntries(
+  languages.map((l) => [
+    l,
+    Object.assign(
+      JSON.parse(readFileSync(`src/i18n/locales/${l}.json`, 'utf8')),
+      ...levelFiles.filter((f) => f.endsWith(`.${l}.json`)).map((f) => JSON.parse(readFileSync(`src/i18n/locales/levels/${f}`, 'utf8'))),
+    ),
+  ]),
+);
 const problems = [];
 const allKeys = new Set(languages.flatMap((l) => Object.keys(locales[l])));
 

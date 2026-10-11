@@ -13,7 +13,20 @@ import en from './locales/en.json';
 export const LANGUAGES = ['en', 'de', 'bar'] as const;
 export type Language = (typeof LANGUAGES)[number];
 
-const LOCALES: Record<Language, Readonly<Record<string, string>>> = { en, de, bar };
+/** Level names live in one file per rating and language (`levels/<rating>.<lang>.json`), merged here. */
+const levelFiles = import.meta.glob<Record<string, string>>('./locales/levels/*.json', { eager: true, import: 'default' });
+
+function levelTexts(language: Language): Record<string, string> {
+  const texts: Record<string, string> = {};
+  for (const [path, entries] of Object.entries(levelFiles)) if (path.endsWith(`.${language}.json`)) Object.assign(texts, entries);
+  return texts;
+}
+
+const LOCALES: Record<Language, Readonly<Record<string, string>>> = {
+  en: { ...en, ...levelTexts('en') },
+  de: { ...de, ...levelTexts('de') },
+  bar: { ...bar, ...levelTexts('bar') },
+};
 
 export function isLanguage(value: unknown): value is Language {
   return typeof value === 'string' && (LANGUAGES as readonly string[]).includes(value);
