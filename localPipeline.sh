@@ -52,6 +52,15 @@ actionlint_bin="$(scripts/install-actionlint.sh)" || fail "actionlint install"
 step "Type check (tsc, strict)"
 npx --no-install tsc --noEmit || fail "type check"
 
+step "ESLint (type-aware, sim import boundary)"
+npx --no-install eslint . || fail "eslint"
+
+step "Prettier (formatting)"
+npx --no-install prettier --check . || fail "prettier (run: npm run format)"
+
+step "Stylelint (CSS)"
+npx --no-install stylelint "src/**/*.css" || fail "stylelint"
+
 step "Unit and integration tests with coverage >= 95 % (vitest)"
 npx --no-install vitest run --coverage --reporter=dot || fail "tests or coverage"
 

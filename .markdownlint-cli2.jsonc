@@ -10,6 +10,6 @@
     // Prose wraps at 100 characters; tables and code blocks may be longer.
     "MD013": { "line_length": 100, "tables": false, "code_blocks": false },
     // Strikethrough IDs like ~~L-05~~ and inline HTML are not used; keep the default strictness.
-    "MD033": true
-  }
+    "MD033": true,
+  },
 }
