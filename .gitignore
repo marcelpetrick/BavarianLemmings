@@ -6,3 +6,4 @@ coverage/
 .tools/
 test-results/
 playwright-report/
+.claude/worktrees/
