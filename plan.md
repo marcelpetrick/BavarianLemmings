@@ -245,7 +245,7 @@ the level is built. A level task is done when: our geometry and name exist, the 
 schema, a recorded solution replay passes as a test, the texts exist in three languages, and
 `inspiredBy` is set. Numbering inside M6 is three digits because there are more than 99 tasks.
 
-- [ ] M6.01 (L-01a, X-02, X-05) Collect public level descriptions (names, skill sets, lemming
+- [x] M6.01 (L-01a, X-02, X-05) Collect public level descriptions (names, skill sets, lemming
       counts, rescue targets, time limits) as a reference table `docs/levels-reference.md` with
       sources; no original data files are downloaded.
 - [ ] M6.02 (V-07) Remaining classic terrain styles: fire, marble, pillar, crystal, with pieces.
