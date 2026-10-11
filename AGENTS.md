@@ -1,80 +1,113 @@
 # AGENTS.md: how to work on BavarianLemmings
 
-This file overrides the parent `codingWithGPT/AGENTS.md` where they differ. The goal and the
-specification are in [vision.md](vision.md).
+This file overrides the parent `codingWithGPT/AGENTS.md` where they differ.
+
+## The four documents
+
+| File | Answers | Who changes it |
+| --- | --- | --- |
+| [vision.md](vision.md) | **What** we build: specification list with stable IDs, decisions, open questions, status, "Resume here" | Agents, after every step; owner decisions go into its decision log with the date |
+| [architecture.md](architecture.md) | **How** it is built: decision rule, candidates, choice, module map, formats | Agents, when a structural decision changes, with the reason |
+| [plan.md](plan.md) | **What to do next**: checkable tasks per milestone, Gantt roadmap | Agents: tick tasks in the commit that finishes them, add new tasks before starting them |
+| [README.md](README.md) | **How to use it**: status, setup, pipeline, scripts, Docker, screenshots | Agents, refreshed whenever a user-visible thing changes (at least once per milestone) |
+
+Start every session by reading the "Resume here" section of `vision.md`, then the open tasks of the
+current milestone in `plan.md`.
 
 ## Current phase
 
-**Requirements engineering.** No code until the owner has answered the open questions in
-`vision.md` section 6 and frozen the specification. Until then, only documents are changed.
+**Planning is done; implementation starts with M0.10 in `plan.md`.** The owner has delegated the
+remaining product decisions (see the assumptions table in `plan.md`). Ask only for decisions that
+are really the owner's: an irreversible action, a change on shared infrastructure, a real trade-off
+between stated goals.
 
-## Mission (implementation phase)
+## Mission
 
-Read `vision.md` and understand the goal. Make a plan and implement everything it describes. Make the
-decisions yourself and keep working until the whole vision is done and the product works. Ask only
-for decisions that are really the owner's (see the parent AGENTS.md).
+Read `vision.md` and understand the goal. Follow `plan.md`, implement everything, make the decisions
+yourself, and keep working until the whole vision is done and the product works. Do not skip
+requirements. When something new is needed, add it to `plan.md` first, then do it.
 
 ## Git
 
 - Work directly on `main`.
-- Atomic commits with **Conventional Commits** messages (`feat:`, `fix:`, `docs:`, `test:`,
-  `build:`, `ci:`, `refactor:`, `chore:`). The message says why.
-- **Semantic versioning:** every commit bumps the patch version. Major features bump the minor
-  version.
+- **Atomic commits:** one logical change per commit, committed as you go.
+- **Conventional Commits:** `feat:`, `fix:`, `docs:`, `test:`, `build:`, `ci:`, `refactor:`,
+  `chore:`, `perf:`, `style:`. The body says **why**, not only what. The subject ends with the new
+  version in parentheses, for example `feat: add digger skill (v0.1.4)`.
+- **Semantic versioning:** every commit bumps the patch version (`scripts/bump-version.sh`). A
+  finished milestone or a major feature bumps the minor version. 1.0.0 is the owner's call.
 - Every commit is green before it is made: `./localPipeline.sh` passes.
-- Push continuously once the GitHub remote exists. During the planning phase there is no remote.
-- The version starts at 0.0.x. When 1.0 comes is not fixed in advance.
+- Push after every commit. The sandbox has no GitHub credentials; when a push fails for that
+  reason, say so once and let the owner run `git push`. Never leave unpushed work unmentioned.
+- Never force-push, never rewrite published history, never push without being allowed to.
+
+## Everything is verifiable
+
+Nothing is believed, everything is checked by a test or a pipeline step that a stranger can run:
+
+- **Unit tests** (Vitest) for every function in `src/sim` and every pure helper elsewhere.
+- **Integration tests** (Vitest) for whole-level replays and determinism.
+- **End-to-end tests** (Playwright) in Firefox **and** Chrome for every user-visible feature: mouse,
+  keyboard, touch (tablet emulation), themes, languages, settings persistence, offline.
+- **Pipeline checks** for everything that is not code: Markdown, shell scripts, workflows, SPDX
+  headers, translations complete, assets attributed, sprite-sheet geometry equal across themes,
+  unverified constants listed, every vision ID covered by a plan task, Docker image serves the game.
+- **Coverage at least 95 %** (lines, branches, functions); `src/sim` at 100 % lines.
+- A feature without its test is not done. A fix without a regression test is not done.
+- Facts about the original game are `constant()`s with a source and a status; `unverified` ones
+  are listed by the pipeline until a documented source confirms them.
 
 ## Local pipeline
 
-- Set up `localPipeline.sh` as early as possible. It runs all tests, linting, formatting checks,
-  type/static checks, coverage and builds. Later it also runs the end-to-end tests (Firefox and Chrome)
-  and the Docker checks.
-- Test coverage stays **at least 95 %**.
-- GitHub Actions mirror the local pipeline exactly: CI calls `./localPipeline.sh --noRun`, as in
-  Cullendula. They stay green.
-- A translation check makes sure every text key exists in English, German and Bavarian.
-- An asset check makes sure every file under the asset directories has an entry in
-  `THIRD_PARTY.md` or an SPDX header.
-- Unit, integration and end-to-end tests where each fits. No requirement is skipped.
+- `./localPipeline.sh` is the single gate. GitHub Actions run exactly `./localPipeline.sh --noRun`
+  (as in Cullendula) and stay green.
+- It grows with the project in this order: Markdown, shell, workflow lint (done); type check,
+  ESLint, Prettier, Stylelint; unit and integration tests with coverage; build; translation, asset,
+  constants and plan checks; REUSE; Playwright in Firefox and Chrome; Docker build and smoke test.
+- Every step is idempotent and prints its name; a failure names the step.
 
 ## Scripts
 
-Write small, reusable scripts for repetitive tasks. Every script is documented: a header comment
-with its purpose, usage and exit codes, and an entry in the README.
+Write small, reusable scripts for repetitive tasks (`scripts/`). Every script has a header comment
+with purpose, usage and exit codes, an SPDX header, passes shellcheck, and has a row in the README.
 
 ## Delivery order
 
-1. The local version works in the browser.
-2. Then dockerize it (a static web server image).
+1. The local version works in the browser (M1 to M6 in `plan.md`).
+2. Then dockerize it (node build stage, nginx serve stage).
 3. GitHub Actions build the Docker image and publish it to **GHCR**.
 4. GitHub Pages deploys the static build (the "Play in browser" badge).
 
 ## Assets and copyright
 
 - No original Lemmings material: no graphics, sounds, music, fonts, level files or data files, and no
-  loading of the player's own copy. Draw and compose from memory and description.
+  loading of the player's own copy. No disassembly of the original code. Draw, compose and rebuild
+  from memory, public descriptions and observation.
 - Every asset is generated by us (pixel art, procedural graphics, Web Audio synthesis, pre-rendered
-  samples) or has a free licence that is compatible with the GPL. Each one is recorded in
-  `THIRD_PARTY.md`.
+  samples we generate) or has a free licence compatible with the GPL. Each one is recorded in
+  `THIRD_PARTY.md` with licence and URL.
 - Community reverse-engineering notes are a reference for **behaviour**. Code from them is only taken
-  under vision.md X-03.
+  under vision.md X-03 (licence checked, attributed, GPL-compatible).
+- The credits screen and the README say: unofficial homage to the 1991 original, not affiliated,
+  browser recreation by Marcel Petrick, no original assets, no disassembled code; anyone with a
+  concern is asked to contact us so a solution can be found.
 
 ## Licence
 
-**GPL-3.0-or-later.** A proper `LICENSE` file, and SPDX copyright/licence headers where they make
-sense (REUSE-compliant, as in AlliumAssault).
+**GPL-3.0-or-later.** `LICENSE` holds the text. SPDX copyright and licence headers on every source,
+script, style and workflow file; REUSE-compliant (`reuse lint` in the pipeline), as in AlliumAssault.
 
 ## README
 
-- A disclaimer: an unofficial homage, no affiliation with the rights holders of Lemmings.
-
+- Refreshed from time to time: at least at every milestone and whenever setup, scripts, pipeline or
+  usage change. Its status line matches `plan.md`.
+- Disclaimer: unofficial homage, no affiliation with the rights holders of Lemmings.
 - Badges in the style of [AlliumAssault](https://github.com/marcelpetrick/AlliumAssault),
   [myLastFmPlayer](https://github.com/marcelpetrick/myLastFmPlayer) and
   [Cullendula](https://github.com/marcelpetrick/Cullendula): play in browser, CI / local pipeline,
   Pages, Docker/GHCR, latest release, licence, REUSE, coverage, and the stack versions.
-- Documents setup, testing, the pipeline, Docker and usage.
-- Includes at least one **real screenshot** of the running UI.
+- Documents setup, testing, the pipeline, Docker and usage; a table of all scripts.
+- Includes at least one **real screenshot** of the running UI per mode, taken by a script.
 
 ## Reference template
 
@@ -82,20 +115,30 @@ sense (REUSE-compliant, as in AlliumAssault).
 the README and the badges. Check its licence and attribution rules before copying anything
 (vision.md X-03).
 
+## Readability: the flight-manual style
+
+Documents and code are written so that a tired reader at 2 a.m. can act on them without guessing:
+
+- Short declarative sentences. One idea per sentence. Present tense. Active voice.
+- Procedures are numbered steps with the exact command, in the order they are run.
+- Every term is used in one meaning only, and defined where it first appears (lemming *action*,
+  *skill*, *intent*, *tick*, *theme*).
+- Every number has a unit and a source. No magic numbers in code: a `constant()` with provenance.
+- Checklists over prose where a reader must verify something. Tables over lists where things have
+  more than one attribute.
+- No unexplained abbreviations. No jargon where a plain word exists.
+- Every living document ends with a "Resume here" section: state, check commands, restart commands.
+- Code comments explain why, and name the original behaviour being reproduced; names are full words.
+
 ## Definition of done
 
-1. Run `/reviewBranch` and fix every finding.
+1. Run `/reviewBranch` and fix every finding; record them in `review_YYYYMMDD.md` with a status
+   per finding (fixed with commit / scheduled / open).
 2. Run `/githubAbout`.
-3. Do a final check against **every** item in `vision.md`. Each one is done, or explicitly deferred
-   by the owner.
+3. Do a final check against **every** item in `vision.md` (`scripts/check-plan.mjs` plus a manual
+   pass). Each one is done, or explicitly deferred by the owner.
 4. The full `localPipeline.sh` is green, and GitHub Actions are green.
 5. The Docker image builds, starts and serves the working game.
 6. Everything is pushed and the working tree is clean.
 
 Stop only when the whole `vision.md` is really done and the product works.
-
-## Documentation style
-
-Everything is understandable by humans: well documented, reviewed, with no unexplained magic numbers
-(original-game constants carry their source). The living document is `vision.md`, and its "Resume
-here" section is kept up to date.

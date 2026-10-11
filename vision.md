@@ -1,7 +1,9 @@
 # BavarianLemmings: vision and specification
 
-> Living document. Phase: **requirements engineering** (no code yet).
-> Owner: Marcel Petrick. Last update: 2026-10-11 (rounds A to C answered).
+> Living document. Phase: **planning done, implementation ready to start** (no game code yet).
+> Owner: Marcel Petrick. Last update: 2026-10-11 (rounds A to D closed).
+> Companions: [architecture.md](architecture.md) (how), [plan.md](plan.md) (tasks),
+> [AGENTS.md](AGENTS.md) (rules).
 
 ## 1. Vision
 
@@ -64,6 +66,7 @@ IDs are stable. A removed item is struck through, never renumbered.
 | G-12 | MUST: the game logic is deterministic: the same inputs on the same ticks give the same result. Needed for testing and replays. |
 | G-13 | SHOULD: lemmings react exactly like the original in edge cases (builder hits the ceiling, basher hits steel, blocker on a crumbling edge, and so on). These cases are documented as test fixtures. |
 | G-14 | MUST NOT (1.0): two-player mode (Amiga only, never on DOS). |
+| G-15 | MUST: the DOS lemming cap. `[verify: the PC version is reported to allow at most 80 lemmings per level, the Amiga 100]` The cap is a `constant()` with its source. |
 
 ### 3.2 Levels and progression (L)
 
@@ -72,7 +75,7 @@ IDs are stable. A removed item is struck through, never renumbered.
 | L-01 | MUST: four difficulty ratings with the level progression of the original. Names: classic mode **Fun / Tricky / Taxing / Mayhem**; Bavarian mode **Gmiatlich / Zach / Hundsgemein / Saupreiß** (Q-C2). |
 | L-01a | MUST: the original level layouts are **recreated by us** from memory, description and observation: our own terrain pieces, drawn by hand and placed to match the original puzzle (positions of the hatch and exit, terrain shape, skill counts, rescue target, time). No original files, graphics or extracted data are used (owner decision Q-C1, 2026-10-11; risk accepted by the owner, see section 6). |
 | L-02 | MUST: progress is saved in the browser (local storage) **after every finished level**. In the same browser, the player continues from the furthest level reached. Nothing is saved in the middle of a level (Q-C8). |
-| L-02a | MAY: level codes (passwords) as in the original (Q-D6). |
+| L-02a | MAY: level codes (passwords) as in the original. Deferred (Q-D6, plan assumptions). |
 | L-03 | MUST: the level data format is documented, human-readable (for example JSON) and versioned. |
 | L-04 | SHOULD: a level preview screen before play: name, number of lemmings, % to save, release rate, time, and a skill overview. |
 | ~~L-05~~ | Dropped: no level editor for now (Q-C4). |
@@ -92,6 +95,7 @@ IDs are stable. A removed item is struck through, never renumbered.
 | V-09 | MUST: Bavarian mode re-themes the palette (white and blue), the backgrounds (Alpine mountains), the terrain styles, the panel and the menus. Lemming behaviour and level logic stay identical. |
 | V-10 | MUST: Bavarian extras (Q-C3): lemmings in Lederhosen and Dirndl, a beer tent / Wirtshaus as the exit, a maypole as scenery, Weißwurst and Maßkrug traps, dialect voice lines ("Oh mei!", "Pfiat di!"). Sprites have the same size and frame count as in classic mode, so the logic stays identical. |
 | V-08 | SHOULD: a title screen and menus in the style of the original. |
+| V-11 | MUST: a credits screen with this content (Q-D10): an homage to the 1991 original, not affiliated with its rights holders; a browser recreation by Marcel Petrick; no original assets used, no original code disassembled, because we want to avoid legal problems; anyone with a concern is asked to contact us so that a solution can be found. |
 
 ### 3.4 Controls (C)
 
@@ -101,10 +105,10 @@ IDs are stable. A removed item is struck through, never renumbered.
 | C-02 | MUST: DOS keyboard shortcuts: **F1/F2** release rate, **F3 to F10** the skills in panel order, **F11** pause, **F12** nuke. `[verify: whether F1 is − or + in the retail version; the sources disagree]` |
 | C-03 | MUST: keys for scrolling the view. `[verify: original keys]` |
 | C-04 | SHOULD: when several lemmings overlap, the choice of which one gets the skill follows the original rules. `[verify]` |
-| C-05 | MUST: modern conveniences, which the DOS original lacked (Q-C7): fast-forward, restart level, frame step while paused, zoom. They are on by default. A **Purist** setting switches all of them off for the original experience. |
+| C-05 | MUST: modern conveniences, which the DOS original lacked (Q-C7): fast-forward (one speed, 4×, Q-D4), restart level, frame step while paused, zoom. They are on by default. A **Purist** setting switches all of them off for the original experience. |
 | C-06 | MUST: touch play: the whole game can be played by touch alone, on a touch screen or tablet. See 3.4.1. |
 
-#### 3.4.1 Touch proposal (for review, Q-D1 to Q-D3)
+#### 3.4.1 Touch design (accepted as the working design; owner delegated the details, Q-D1 to Q-D3)
 
 The problem: the original is designed for a mouse. A lemming is about 6 × 10 logical pixels. There is
 no hover on touch (the original's selection box only appears under the cursor). And the bottom panel
@@ -145,6 +149,7 @@ The proposal:
 
 | ID | Requirement |
 | --- | --- |
+| A-06 | MUST: voice lines follow the UI language: an English set and a Bavarian set ("Oh mei!", "Pfiat di!"). The German UI uses the English set (Q-D9). |
 | A-01 | MUST: sound effects for the original events (hatch opening, "Let's go!", "Oh no!", splat, explosion, exit, and so on). They sound similar to the original but are produced by us: synthesised in the browser with Web Audio, or pre-rendered samples that we generate (for example offline speech synthesis), never cut from the original. |
 | A-02 | MUST: background music per level with mute/volume controls. Browsers do not play audio before the user interacts with the page; this is handled cleanly. |
 | A-03 | MUST: the sound character of a period sound card (AdLib FM / Sound Blaster). Sound effects and music are synthesised by us or come from freely licensed sources. No original audio is used. |
@@ -160,7 +165,7 @@ The proposal:
 | P-03 | MUST: no backend. The build is static files: playable on **GitHub Pages** ("Play in browser" badge) and served from a Docker image on GHCR. |
 | P-04 | MUST: steady frame rate on a mid-range laptop. Game logic is independent of the display refresh rate (60/120/144 Hz). |
 | P-05 | SHOULD: works offline after the first load. |
-| P-06 | MUST: touch screens and tablets (C-06, 3.4.1). Phones are best effort (Q-D2). |
+| P-06 | MUST: touch screens and tablets (C-06, 3.4.1), tested with Chromium tablet emulation. Phones and Safari on iPad are best effort, not in CI (Q-D2). |
 
 ### 3.7 Architecture (R)
 
@@ -170,7 +175,7 @@ The proposal:
 | R-02 | MUST: rendering, input and audio are separate layers on top of the simulation. |
 | R-03 | MUST: a fixed-tick simulation loop, decoupled from rendering. |
 | R-04 | SHOULD: a test hook (`window.__bavarianLemmings` or similar) for end-to-end tests. |
-| R-05 | MUST: the mode switch (Classic/Bavarian) is a setting that loads a theme layer (palette, sprites, backgrounds, music, texts), not a fork of the code. It can be changed in the settings menu and is remembered. |
+| R-05 | MUST: the mode switch (Classic/Bavarian) is a setting that loads a theme layer (palette, sprites, backgrounds, music, texts), not a fork of the code. It can be changed in the settings menu and by a "Bayern" button on the title screen, and it is remembered. It does not change the language (Q-D5). |
 
 ### 3.8 Languages (I)
 
@@ -212,7 +217,7 @@ The owner will supply these. Do not take code from a project before its licence 
 | AlliumAssault (owner) | <https://github.com/marcelpetrick/AlliumAssault> | GPL-3.0-or-later | Toolchain, CI/Pages/Release workflows, README badges, REUSE setup | 2026-10-11 (README only) |
 | myLastFmPlayer (owner) | <https://github.com/marcelpetrick/myLastFmPlayer> | GPL-3.0-or-later | Badges: Local Pipeline, Manual Release, Latest Release, licence, stack, coverage. `localPipeline.sh` as the gate before every commit, called by CI | 2026-10-11 (README) |
 | Cullendula (owner) | <https://github.com/marcelpetrick/Cullendula> | GPL-3.0-or-later | Badges: CI, licence, stack versions. `ci.yml` calls `./localPipeline.sh --noRun`. `release.yml` on version tags checks that the tag matches the version and CHANGELOG | 2026-10-11 (README) |
-| Community mechanics documentation | `[to be collected]` | per source | Behaviour reference only (X-05) | – |
+| Community mechanics documentation | [Lemmings Forums](https://www.lemmingsforums.net/), [DOS Days](https://www.dosdays.co.uk/topics/Games/game_lemmings.php), [VOGONS](https://www.vogons.org/) | per source | Behaviour reference only (X-05); facts found so far: DOS 320×200 16 colours, 80-lemming cap on PC, F-keys select panel options, AdLib music and effects together | 2026-10-11 |
 | *(more to come)* | | | | |
 
 The AlliumAssault stack is TypeScript (strict), Vite, Vitest, Playwright, ESLint, Prettier, Stylelint,
@@ -260,20 +265,27 @@ template for this project unless the owner decides otherwise.
 | Q-C9 | Devices | Mouse and keyboard, **and** pure touch play with a tablet layout for the UI. See the proposal in 3.4.1. |
 | Q-C10 | GitHub | Public repository, push in between. Blocked: `gh` is not logged in on this machine (see Resume here). CI for Markdown and code quality right away. |
 
-### Round D: open
+### Round D (2026-10-11): closed
 
-| # | Question | Status |
+The owner answered Q-D9 and Q-D10 and delegated the rest ("I don't want to give input directly
+here about the plans or the levels; you should do this and check what is available on the web").
+The delegated decisions are recorded in the assumptions table of [plan.md](plan.md) and in the
+decision log below.
+
+| # | Question | Outcome |
 | --- | --- | --- |
-| Q-D1 | Touch proposal 3.4.1: is "press, aim, release" with a magnifier right, or should a plain tap assign the skill immediately (faster, less precise)? | open |
-| Q-D2 | Touch devices: tablets only, or are phones in landscape a target too (the playfield is then only about 2× scaled)? Is Safari on iPad a target too (until now only Firefox and Chrome)? | open |
-| Q-D3 | Touch layout: may the skill buttons sit at the sides of the playfield in landscape (thumb reach), or must the original bottom panel always be kept? | open |
-| Q-D4 | Fast-forward: one speed (for example 3×), or several (2×/4×/8×)? | open |
-| Q-D5 | Bavarian mode: just a switch in the settings, or also a separate button in the main menu ("Bayern-Modus")? Does it also switch the language to Bavarian automatically? | open |
-| Q-D6 | Level codes (passwords) in addition to saving in the browser: as a nostalgic feature, or not at all? | open |
-| Q-D7 | Order of work: classic mode completely first (all 120 levels) and then Bavarian mode, or a playable vertical slice (for example 5 levels, both modes, touch) first and then content? | open |
-| Q-D8 | Recreated levels: may an AI agent recreate them from public level descriptions and screenshots (we rebuild them, we never copy), or do you want to check each level against your memory? | open |
-| Q-D9 | Lemming voice in classic mode: English as in the original ("Let's go!", "Oh no!"), and in Bavarian mode dialect? Or follow the selected UI language? | open |
-| Q-D10 | Splash and credits: a credits screen ("homage to the original from 1991, no affiliation") in the game, and should it mention your name and the year? | open |
+| Q-D1 | Touch assignment | Delegated: press-aim-release, plain tap added if e2e shows it is needed. |
+| Q-D2 | Touch devices | Delegated: tablets in CI via emulation; phones and iPad Safari best effort. |
+| Q-D3 | Touch layout | Delegated: side columns in landscape, bottom panel in portrait. |
+| Q-D4 | Fast-forward | Delegated: one speed, 4×. |
+| Q-D5 | Bavarian mode entry | Delegated: settings toggle and a title-screen button; language stays separate. |
+| Q-D6 | Level codes | Delegated: deferred. |
+| Q-D7 | Order of work | Delegated: vertical slice first. |
+| Q-D8 | Level recreation | Delegated: agent rebuilds from public descriptions; nothing original is used. |
+| Q-D9 | Voices | **Owner:** localized; English and Bavarian sets, no German set. |
+| Q-D10 | Credits | **Owner:** yes, with the text in V-11. |
+
+No open questions remain. New ones go into a round E table here.
 
 ## 7. Decision log
 
@@ -285,7 +297,7 @@ template for this project unless the owner decides otherwise.
 | 2026-10-11 | GPL-3.0-or-later | Owner's working style (AGENTS.md) |
 | 2026-10-11 | No original assets: everything is ours or freely licensed. The project is an homage | Owner: avoid any copyright infringement (Q2) |
 | 2026-10-11 | Bavarian mode = a theme switch in the settings (white and blue, mountains, Alpine folk music) | Owner (Q1) |
-| 2026-10-11 | Our own levels in the spirit of the original | Owner (Q3) together with Q2 |
+| 2026-10-11 | ~~Our own levels in the spirit of the original~~ superseded the same day by Q-C1 | Owner (Q3) together with Q2 |
 | 2026-10-11 | 2D pixel graphics only | Owner |
 | 2026-10-11 | Keep the name "BavarianLemmings", with a disclaimer | Owner (Q-B1) |
 | 2026-10-11 | No loading of the player's own DOS files | Owner: that would also be an infringement |
@@ -299,6 +311,10 @@ template for this project unless the owner decides otherwise.
 | 2026-10-11 | Modern conveniences on, with a Purist setting | Owner (Q-C7); the Purist setting keeps the original experience available |
 | 2026-10-11 | Touch support with its own UI layout (proposal 3.4.1) | Owner (Q-C9) |
 | 2026-10-11 | CI for Markdown/documentation quality from the very first push | Owner (Q-C10) |
+| 2026-10-11 | Architecture: per-pixel terrain mask, pure main-thread simulation, plain data, two canvases (see architecture.md) | Highest simplicity and debuggability; passes every gate |
+| 2026-10-11 | Round D delegated decisions (plan.md assumptions): vertical slice first, agent rebuilds levels from public descriptions, mouse and keyboard primary with touch as a later layer, 4× fast-forward, Bayern button plus settings toggle, level codes deferred | Owner delegated; reasons per row in plan.md |
+| 2026-10-11 | Voices localized EN and Bavarian, no German set; credits text fixed (V-11) | Owner (Q-D9, Q-D10) |
+| 2026-10-11 | Implementation is handed to another agent; this session ends with the planning documents | Owner |
 
 ## 8. Status
 
@@ -306,26 +322,25 @@ template for this project unless the owner decides otherwise.
 | --- | --- | --- |
 | 2026-10-11 | Vision and specification list drafted | done |
 | 2026-10-11 | AGENTS.md drafted from the owner's working style | done |
-| 2026-10-11 | Owner answers round A (Q1, Q2, Q3, Q9, 2D) | done |
-| 2026-10-11 | Owner answers round B | done |
-| 2026-10-11 | Owner answers round C | done |
-| 2026-10-11 | Touch proposal written (3.4.1) | done, waiting for review |
-| – | Owner answers round D (Q-D1 to Q-D10) | waiting |
-| 2026-10-11 | LICENSE, README, `localPipeline.sh` (Markdown, shellcheck, actionlint) and CI workflow | done, green locally (v0.0.3) |
-| – | GitHub remote and first push | blocked: `gh` not logged in |
-| – | Specification frozen, implementation plan written | open |
+| 2026-10-11 | Owner answers rounds A, B, C; round D answered in part and delegated | done |
+| 2026-10-11 | LICENSE, README, `localPipeline.sh` (Markdown, shellcheck, actionlint) and CI workflow | done, green locally (v0.0.2 to v0.0.4) |
+| 2026-10-11 | architecture.md: decision rule, candidates, choice, module map | done (v0.0.5) |
+| 2026-10-11 | plan.md: milestones M0 to M7, Gantt roadmap, assumptions | done (v0.0.6) |
+| 2026-10-11 | Review of the planning documents (`review_20261011.md`), AGENTS.md and README refreshed | done (v0.0.7) |
+| – | First push and CI green on GitHub | **waiting for the owner**: the sandbox has no credentials |
+| – | Implementation M0.10 onwards | handed to the implementing agent |
 
 ## 9. Resume here
 
-- **State:** requirements phase. No code. Rounds A to C are answered. Waiting for round D
-  (Q-D1 to Q-D10, section 6).
-- **Blocked:** the GitHub push. On this machine `gh` is not logged in, and the sandbox cannot read
-  SSH keys. Restart: the owner runs `gh auth login`, then
-  `gh repo create marcelpetrick/BavarianLemmings --public --source . --push`.
-- **Next:** put the answers into sections 3 and 7, mark the open `[verify]` items as checked or
-  replaced, then write the implementation plan (milestones) into this document.
+- **State:** planning complete. No game code yet. No open owner questions. The remote
+  `https://github.com/marcelpetrick/BavarianLemmings.git` is configured; nothing is pushed.
+- **Push (owner):** `git push -u origin main`, then check that the CI workflow is green.
+- **Next (implementing agent):** read `AGENTS.md`, then start at `plan.md` task M0.10 (Vite and
+  TypeScript scaffold). Tick tasks as they finish, bump the version per commit, keep the pipeline
+  green, refresh the README at least per milestone.
 - **Pipeline:** `npm ci && ./localPipeline.sh` must be green before every commit.
-- **Check:** `git log --oneline` and `grep -n "verify\|open" vision.md`.
+- **Check:** `git log --oneline`, `grep -c "\[ \]" plan.md` (open tasks),
+  `grep -n "verify" vision.md` (unverified facts).
 
 ## Sources (fact check 2026-10-11)
 
@@ -334,6 +349,14 @@ template for this project unless the owner decides otherwise.
 - [Psygnosis demo README][demo-readme]: F1 to F12 layout
 - [DOS Game Club forum: F3–F10 choose the type][dgc-forum]: F1/F2 in the opposite order
 - [AlliumAssault README](https://github.com/marcelpetrick/AlliumAssault)
+- [Lemmings Forums: how to play Lemmings (1991) on a modern PC][lf-modern]: PC cap of 80 lemmings,
+  basher differences, F-keys
+- [VOGONS: Lemmings sound][vogons]: AdLib music and effects together in the 1991/92 release
+- [Lemmings Forums: NeoLemmix frame rate][lf-fps]: engines run at a capped frame rate; the exact
+  DOS tick rate is still `[verify]`
 
 [demo-readme]: https://discmaster.textfiles.com/file/11501/Gold%20Medal%20Software%20Volume%201%20(Gold%20Medal)%20(1994).iso/demos/lem93dem.arj/README.DOC
 [dgc-forum]: https://dosgameclub.com/forums/topic/keyboard-shortcuts-f3-f10-chooses-type
+[lf-modern]: https://www.lemmingsforums.net/index.php?msg=54078
+[vogons]: https://www.vogons.org/viewtopic.php?p=15574
+[lf-fps]: https://www.lemmingsforums.net/index.php?msg=97987

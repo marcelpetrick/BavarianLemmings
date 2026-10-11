@@ -13,9 +13,26 @@ An homage to **Lemmings**, the 1991 DOS game, running natively in the browser (F
 It has a classic mode in the spirit of the 386-era original and a **Bavarian mode** in white and
 blue, with mountains, Alpine folk music, Lederhosen and Weißwurst traps.
 
-> **Status:** requirements engineering. There is no game yet. The goal, the specification list
-> and the open questions are in [vision.md](vision.md). The working rules are in
-> [AGENTS.md](AGENTS.md).
+> **Status:** planning complete, implementation starting (plan.md milestone M0). There is no
+> playable game yet.
+>
+> | Document | Answers |
+> | --- | --- |
+> | [vision.md](vision.md) | What: specification list, decisions, status, resume point |
+> | [architecture.md](architecture.md) | How: decision rule, candidates, chosen structure, formats |
+> | [plan.md](plan.md) | What next: checkable tasks per milestone and the Gantt roadmap |
+> | [AGENTS.md](AGENTS.md) | Rules for anyone (human or agent) working here |
+
+## What it will be
+
+- **Classic mode:** 320×200 pixel art scaled crisply, the eight skills (Climber, Floater, Bomber,
+  Blocker, Builder, Basher, Miner, Digger), per-pixel destructible terrain, steel and one-way
+  walls, traps, release rate, time limit, nuke, DOS function-key shortcuts, AdLib-style music.
+- **Bavarian mode:** the same game re-themed in white and blue with mountains, Lederhosen and
+  Dirndl, a beer tent exit, Weißwurst traps and Alpine folk music.
+- Four ratings of recreated levels, three UI languages (English, German, Bavarian), mouse and
+  keyboard first, touch play on tablets, progress saved in the browser.
+- Static site: GitHub Pages and a Docker image on GHCR. No backend, no emulator.
 
 ## Disclaimer
 
@@ -40,6 +57,18 @@ GitHub Actions run exactly `./localPipeline.sh --noRun` ([ci.yml](.github/workfl
 | [`localPipeline.sh`](localPipeline.sh) | Quality gate: Markdown lint, shellcheck, actionlint, version and licence checks |
 | [`scripts/bump-version.sh`](scripts/bump-version.sh) | Raise the semantic version (`patch` by default, every commit) |
 | [`scripts/install-actionlint.sh`](scripts/install-actionlint.sh) | Download the pinned actionlint into `.tools/` |
+
+## Development
+
+```sh
+git clone https://github.com/marcelpetrick/BavarianLemmings.git
+cd BavarianLemmings
+npm ci
+./localPipeline.sh
+```
+
+Work follows [plan.md](plan.md): tick a task in the commit that finishes it, bump the version with
+`scripts/bump-version.sh`, keep `./localPipeline.sh` green, push. See [AGENTS.md](AGENTS.md).
 
 ## Licence
 
