@@ -49,8 +49,10 @@ export default defineConfig([
         'setInterval',
         'requestAnimationFrame',
         'localStorage',
-        'Math',
+        'Date',
       ],
+      // G-12 determinism: all randomness comes from the seeded sim/rng.ts.
+      'no-restricted-properties': ['error', { object: 'Math', property: 'random', message: 'use sim/rng.ts (G-12)' }],
     },
   },
   {
