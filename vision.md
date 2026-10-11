@@ -49,7 +49,7 @@ IDs are stable. A removed item is struck through, never renumbered.
 ### 3.1 Gameplay (G)
 
 | ID | Requirement |
-|---|---|
+| --- | --- |
 | G-01 | MUST: lemmings spawn from an entrance hatch at a release rate between 1 and 99, which the player can change during play. The lower bound is the level's minimum rate. |
 | G-02 | MUST: lemmings walk, turn at walls and steep slopes, step up small rises, and fall. A fall from too high kills the lemming ("splat"). `[verify: exact fall height in pixels]` |
 | G-03 | MUST: the eight original skills: **Climber, Floater, Bomber, Blocker, Builder, Basher, Miner, Digger**, each limited to the per-level count. |
@@ -68,7 +68,7 @@ IDs are stable. A removed item is struck through, never renumbered.
 ### 3.2 Levels and progression (L)
 
 | ID | Requirement |
-|---|---|
+| --- | --- |
 | L-01 | MUST: four difficulty ratings with the level progression of the original. Names: classic mode **Fun / Tricky / Taxing / Mayhem**; Bavarian mode **Gmiatlich / Zach / Hundsgemein / Saupreiß** (Q-C2). |
 | L-01a | MUST: the original level layouts are **recreated by us** from memory, description and observation: our own terrain pieces, drawn by hand and placed to match the original puzzle (positions of the hatch and exit, terrain shape, skill counts, rescue target, time). No original files, graphics or extracted data are used (owner decision Q-C1, 2026-10-11; risk accepted by the owner, see section 6). |
 | L-02 | MUST: progress is saved in the browser (local storage) **after every finished level**. In the same browser, the player continues from the furthest level reached. Nothing is saved in the middle of a level (Q-C8). |
@@ -81,7 +81,7 @@ IDs are stable. A removed item is struck through, never renumbered.
 ### 3.3 Look and feel (V)
 
 | ID | Requirement |
-|---|---|
+| --- | --- |
 | V-01 | MUST: logical resolution of **320×200** (VGA), scaled with integer factors and crisp pixels (no smoothing). The 4:3 aspect ratio of a CRT is available as an option. `[verify: the DOS version's VGA mode and its 16-colour limit]` |
 | V-02 | MUST: indexed-colour look within the palette limits of the original. |
 | V-03 | MUST: the original bottom panel layout: release rate −/+, eight skill buttons with counters, pause, nuke, minimap. A status line shows the lemming type under the cursor, OUT, IN and TIME. |
@@ -96,7 +96,7 @@ IDs are stable. A removed item is struck through, never renumbered.
 ### 3.4 Controls (C)
 
 | ID | Requirement |
-|---|---|
+| --- | --- |
 | C-01 | MUST: mouse control as in the original: select a skill in the panel, click a lemming to assign it, use the crosshair cursor. The cursor changes into a box when it is over a lemming. |
 | C-02 | MUST: DOS keyboard shortcuts: **F1/F2** release rate, **F3 to F10** the skills in panel order, **F11** pause, **F12** nuke. `[verify: whether F1 is − or + in the retail version; the sources disagree]` |
 | C-03 | MUST: keys for scrolling the view. `[verify: original keys]` |
@@ -118,9 +118,9 @@ The proposal:
    image, scaled by an integer factor. Only the **controls** change:
    - *Classic layout:* the original 320 × 40 panel underneath, scaled together with the playfield.
    - *Touch layout:* the same buttons, but drawn independently with a minimum target size of
-     48 × 48 CSS pixels (WCAG 2.5.5 / Material guidelines). In **landscape**, the skill buttons sit in
-     two columns to the left and right of the playfield (thumbs reach them), and the minimap and the
-     status line sit above. In **portrait**, the playfield sits at the top at full width and a large
+     48 × 48 CSS pixels (WCAG 2.5.5 / Material guidelines). In **landscape**, the skill buttons sit
+     in two columns to the left and right of the playfield (thumbs reach them), and the minimap and
+     the status line sit above. In **portrait**, the playfield sits at the top at full width and a large
      two-row panel sits underneath.
    - *Auto* (the default) picks the touch layout when the primary pointer is coarse
      (`@media (pointer: coarse)`). It can be overridden in the settings at any time.
@@ -132,19 +132,19 @@ The proposal:
 4. **Scrolling and zoom.** Dragging with two fingers, or dragging on the minimap, scrolls the view.
    Pinching zooms (a modern convenience, C-05). One finger is reserved for assigning, so scrolling
    never assigns a skill by accident.
-5. **Panel buttons.** Release rate −/+ repeat while held. **Nuke** needs a press of one second with a
-   progress ring (or a double tap), so it cannot be triggered by accident. Pause, fast-forward and
+5. **Panel buttons.** Release rate −/+ repeat while held. **Nuke** needs a press of one second with
+   a progress ring (or a double tap), so it cannot be triggered by accident. Pause, fast-forward and
    restart are big buttons.
-6. **The browser stays out of the way.** `touch-action: none` on the game area, no pull-to-refresh, no
-   double-tap zoom, no text selection, no context menu on long press. A fullscreen button. The game
+6. **The browser stays out of the way.** `touch-action: none` on the game area, no pull-to-refresh,
+   no double-tap zoom, no text selection, no context menu on long press. A fullscreen button. The game
    pauses automatically when the page is hidden (another app, a locked screen).
-7. **Testing.** Playwright with touch emulation (`hasTouch`, tablet viewports in both orientations) in
-   CI, plus a manual check on a real tablet before each release.
+7. **Testing.** Playwright with touch emulation (`hasTouch`, tablet viewports in both orientations)
+   in CI, plus a manual check on a real tablet before each release.
 
 ### 3.5 Audio (A)
 
 | ID | Requirement |
-|---|---|
+| --- | --- |
 | A-01 | MUST: sound effects for the original events (hatch opening, "Let's go!", "Oh no!", splat, explosion, exit, and so on). They sound similar to the original but are produced by us: synthesised in the browser with Web Audio, or pre-rendered samples that we generate (for example offline speech synthesis), never cut from the original. |
 | A-02 | MUST: background music per level with mute/volume controls. Browsers do not play audio before the user interacts with the page; this is handled cleanly. |
 | A-03 | MUST: the sound character of a period sound card (AdLib FM / Sound Blaster). Sound effects and music are synthesised by us or come from freely licensed sources. No original audio is used. |
@@ -154,7 +154,7 @@ The proposal:
 ### 3.6 Platform and technology (P)
 
 | ID | Requirement |
-|---|---|
+| --- | --- |
 | P-01 | MUST: runs in the current stable **Firefox** and **Chrome** on desktop. Both are tested in CI (end-to-end). |
 | P-02 | MUST: native web technology: **TypeScript (strict), Vite, HTML5 Canvas 2D** with nearest-neighbour pixel scaling, Web Audio. No game engine, no emulator. Tests use Vitest (unit/integration) and Playwright (end-to-end in Firefox and Chrome). Decided 2026-10-11. |
 | P-03 | MUST: no backend. The build is static files: playable on **GitHub Pages** ("Play in browser" badge) and served from a Docker image on GHCR. |
@@ -165,7 +165,7 @@ The proposal:
 ### 3.7 Architecture (R)
 
 | ID | Requirement |
-|---|---|
+| --- | --- |
 | R-01 | MUST: the game logic (simulation) is pure TypeScript with no DOM, canvas or audio access, so it can be unit-tested headlessly. |
 | R-02 | MUST: rendering, input and audio are separate layers on top of the simulation. |
 | R-03 | MUST: a fixed-tick simulation loop, decoupled from rendering. |
@@ -175,14 +175,14 @@ The proposal:
 ### 3.8 Languages (I)
 
 | ID | Requirement |
-|---|---|
+| --- | --- |
 | I-01 | MUST: three UI languages: **English** (the original language and the default), **German**, **Bavarian**. They can be switched in the settings. A missing key falls back to English. |
 | I-02 | MUST: all texts live in translation files, not in the code. A pipeline check makes sure every key exists in all three languages. |
 
 ### 3.9 Legal and third-party code (X)
 
 | ID | Requirement |
-|---|---|
+| --- | --- |
 | X-01 | MUST: licence **GPL-3.0-or-later**, with SPDX headers in source files. |
 | X-02 | MUST: none of the original Lemmings assets (graphics, sounds, music, fonts, data files) are used, shipped or loaded. The game does **not** read the player's own DOS files either. Everything is ours or freely licensed, drawn and composed from memory and description. The README states that the project is an unofficial homage with no affiliation to the rights holders. |
 | X-04 | MUST: the name stays **BavarianLemmings**, and the creatures are called lemmings (owner, 2026-10-11). The README carries a disclaimer about the trademark. |
@@ -208,10 +208,10 @@ and a real screenshot.
 The owner will supply these. Do not take code from a project before its licence is checked.
 
 | Project | URL | Licence | What we may take | Checked |
-|---|---|---|---|---|
-| AlliumAssault (owner) | https://github.com/marcelpetrick/AlliumAssault | GPL-3.0-or-later | Toolchain, CI/Pages/Release workflows, README badges, REUSE setup | 2026-10-11 (README only) |
-| myLastFmPlayer (owner) | https://github.com/marcelpetrick/myLastFmPlayer | GPL-3.0-or-later | Badges: Local Pipeline, Manual Release, Latest Release, licence, stack, coverage. `localPipeline.sh` as the gate before every commit, called by CI | 2026-10-11 (README) |
-| Cullendula (owner) | https://github.com/marcelpetrick/Cullendula | GPL-3.0-or-later | Badges: CI, licence, stack versions. `ci.yml` calls `./localPipeline.sh --noRun`. `release.yml` on version tags checks that the tag matches the version and CHANGELOG | 2026-10-11 (README) |
+| --- | --- | --- | --- | --- |
+| AlliumAssault (owner) | <https://github.com/marcelpetrick/AlliumAssault> | GPL-3.0-or-later | Toolchain, CI/Pages/Release workflows, README badges, REUSE setup | 2026-10-11 (README only) |
+| myLastFmPlayer (owner) | <https://github.com/marcelpetrick/myLastFmPlayer> | GPL-3.0-or-later | Badges: Local Pipeline, Manual Release, Latest Release, licence, stack, coverage. `localPipeline.sh` as the gate before every commit, called by CI | 2026-10-11 (README) |
+| Cullendula (owner) | <https://github.com/marcelpetrick/Cullendula> | GPL-3.0-or-later | Badges: CI, licence, stack versions. `ci.yml` calls `./localPipeline.sh --noRun`. `release.yml` on version tags checks that the tag matches the version and CHANGELOG | 2026-10-11 (README) |
 | Community mechanics documentation | `[to be collected]` | per source | Behaviour reference only (X-05) | – |
 | *(more to come)* | | | | |
 
@@ -224,7 +224,7 @@ template for this project unless the owner decides otherwise.
 ### Round A (2026-10-11): answered
 
 | # | Question | Answer |
-|---|---|---|
+| --- | --- | --- |
 | Q1 | What is Bavarian mode? | A switch in the settings. White and blue colours, mountains, Alpine folk music: "really use what is possible". |
 | Q2 | Original assets? | None. Everything is self-generated or freely licensed. The project is an homage with no copyright infringement. |
 | Q3 | Levels? | Our own levels, designed in the spirit of the original. |
@@ -234,7 +234,7 @@ template for this project unless the owner decides otherwise.
 ### Round B (2026-10-11): answered
 
 | # | Question | Answer |
-|---|---|---|
+| --- | --- | --- |
 | Q-B1 | Name and trademark | Keep "BavarianLemmings". The creatures are lemmings. Avoid anything that would be a legal trap. |
 | Q-B2 | Stack | Not specified ("not too ugly, pixel graphics"). Decided: TypeScript, Vite, Canvas 2D (P-02). |
 | Q-B3 | Levels | Recreate the original layouts with our own graphics. **Legal check pending (Q-C1).** |
@@ -248,7 +248,7 @@ template for this project unless the owner decides otherwise.
 ### Round C (2026-10-11): answered
 
 | # | Question | Answer |
-|---|---|---|
+| --- | --- | --- |
 | Q-C1 | Level layouts | **The original layouts, recreated by us** (no copy and paste, no extracted data). The owner knows about the legal risk and accepts it. |
 | Q-C2 | Difficulty names | Fun/Tricky/Taxing/Mayhem; Bavarian: Gmiatlich/Zach/Hundsgemein/Saupreiß. |
 | Q-C3 | Bavarian extras | All of them: Lederhosen/Dirndl, beer tent, maypole, Weißwurst/Maßkrug, "Oh mei!". |
@@ -263,7 +263,7 @@ template for this project unless the owner decides otherwise.
 ### Round D: open
 
 | # | Question | Status |
-|---|---|---|
+| --- | --- | --- |
 | Q-D1 | Touch proposal 3.4.1: is "press, aim, release" with a magnifier right, or should a plain tap assign the skill immediately (faster, less precise)? | open |
 | Q-D2 | Touch devices: tablets only, or are phones in landscape a target too (the playfield is then only about 2× scaled)? Is Safari on iPad a target too (until now only Firefox and Chrome)? | open |
 | Q-D3 | Touch layout: may the skill buttons sit at the sides of the playfield in landscape (thumb reach), or must the original bottom panel always be kept? | open |
@@ -278,7 +278,7 @@ template for this project unless the owner decides otherwise.
 ## 7. Decision log
 
 | Date | Decision | Reason |
-|---|---|---|
+| --- | --- | --- |
 | 2026-10-11 | Reference is the DOS (386) version, not Amiga or consoles | Owner's request |
 | 2026-10-11 | Native web technology, no emulation | Owner's request |
 | 2026-10-11 | Firefox and Chrome are the target browsers | Owner's request |
@@ -303,7 +303,7 @@ template for this project unless the owner decides otherwise.
 ## 8. Status
 
 | Date | Step | State |
-|---|---|---|
+| --- | --- | --- |
 | 2026-10-11 | Vision and specification list drafted | done |
 | 2026-10-11 | AGENTS.md drafted from the owner's working style | done |
 | 2026-10-11 | Owner answers round A (Q1, Q2, Q3, Q9, 2D) | done |
@@ -316,8 +316,11 @@ template for this project unless the owner decides otherwise.
 
 ## 9. Resume here
 
-- **State:** requirements phase. No code. Rounds A to C are answered. Waiting for round D (Q-D1 to Q-D10, section 6).
-- **Blocked:** the GitHub push. On this machine `gh` is not logged in, and the sandbox cannot read SSH keys. Restart: the owner runs `gh auth login`, then `gh repo create marcelpetrick/BavarianLemmings --public --source . --push`.
+- **State:** requirements phase. No code. Rounds A to C are answered. Waiting for round D
+  (Q-D1 to Q-D10, section 6).
+- **Blocked:** the GitHub push. On this machine `gh` is not logged in, and the sandbox cannot read
+  SSH keys. Restart: the owner runs `gh auth login`, then
+  `gh repo create marcelpetrick/BavarianLemmings --public --source . --push`.
 - **Next:** put the answers into sections 3 and 7, mark the open `[verify]` items as checked or
   replaced, then write the implementation plan (milestones) into this document.
 - **Check:** `git log --oneline` and `grep -n "verify\|open" vision.md`.
@@ -326,6 +329,9 @@ template for this project unless the owner decides otherwise.
 
 - [Lemmings (video game), Wikipedia](https://en.wikipedia.org/wiki/Lemmings_(video_game))
 - [DOS Days: Lemmings](https://www.dosdays.co.uk/topics/Games/game_lemmings.php): VGA, 320×200
-- [Psygnosis demo README](https://discmaster.textfiles.com/file/11501/Gold%20Medal%20Software%20Volume%201%20(Gold%20Medal)%20(1994).iso/demos/lem93dem.arj/README.DOC): F1 to F12 layout
-- [DOS Game Club forum: F3–F10 choose the type](https://dosgameclub.com/forums/topic/keyboard-shortcuts-f3-f10-chooses-type): F1/F2 in the opposite order
+- [Psygnosis demo README][demo-readme]: F1 to F12 layout
+- [DOS Game Club forum: F3–F10 choose the type][dgc-forum]: F1/F2 in the opposite order
 - [AlliumAssault README](https://github.com/marcelpetrick/AlliumAssault)
+
+[demo-readme]: https://discmaster.textfiles.com/file/11501/Gold%20Medal%20Software%20Volume%201%20(Gold%20Medal)%20(1994).iso/demos/lem93dem.arj/README.DOC
+[dgc-forum]: https://dosgameclub.com/forums/topic/keyboard-shortcuts-f3-f10-chooses-type

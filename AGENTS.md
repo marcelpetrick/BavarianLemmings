@@ -31,9 +31,11 @@ for decisions that are really the owner's (see the parent AGENTS.md).
   type/static checks, coverage and builds. Later it also runs the end-to-end tests (Firefox and Chrome)
   and the Docker checks.
 - Test coverage stays **at least 95 %**.
-- GitHub Actions mirror the local pipeline exactly: CI calls `./localPipeline.sh --noRun`, as in Cullendula. They stay green.
+- GitHub Actions mirror the local pipeline exactly: CI calls `./localPipeline.sh --noRun`, as in
+  Cullendula. They stay green.
 - A translation check makes sure every text key exists in English, German and Bavarian.
-- An asset check makes sure every file under the asset directories has an entry in `THIRD_PARTY.md` or an SPDX header.
+- An asset check makes sure every file under the asset directories has an entry in
+  `THIRD_PARTY.md` or an SPDX header.
 - Unit, integration and end-to-end tests where each fits. No requirement is skipped.
 
 ## Scripts
@@ -84,8 +86,8 @@ the README and the badges. Check its licence and attribution rules before copyin
 
 1. Run `/reviewBranch` and fix every finding.
 2. Run `/githubAbout`.
-3. Do a final check against **every** item in `vision.md`. Each one is done, or explicitly deferred by
-   the owner.
+3. Do a final check against **every** item in `vision.md`. Each one is done, or explicitly deferred
+   by the owner.
 4. The full `localPipeline.sh` is green, and GitHub Actions are green.
 5. The Docker image builds, starts and serves the working game.
 6. Everything is pushed and the working tree is clean.

@@ -1,0 +1,15 @@
+// SPDX-FileCopyrightText: 2026 Marcel Petrick
+// SPDX-License-Identifier: GPL-3.0-or-later
+//
+// markdownlint configuration: which Markdown files are checked and which rules apply.
+{
+  "globs": ["**/*.md"],
+  "ignores": ["node_modules/**", "dist/**", "coverage/**", ".claude/**"],
+  "config": {
+    "default": true,
+    // Prose wraps at 100 characters; tables and code blocks may be longer.
+    "MD013": { "line_length": 100, "tables": false, "code_blocks": false },
+    // Strikethrough IDs like ~~L-05~~ and inline HTML are not used; keep the default strictness.
+    "MD033": true
+  }
+}
