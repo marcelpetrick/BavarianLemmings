@@ -171,6 +171,11 @@ simplification is listed here.
 | Fun 14 | Stats are `[verify]` (50 lemmings, 60 %, RR 50 chosen). Steel at each pillar foot makes the "build, then bash from the top" idea compulsory. |
 | Fun 15 | Stats are `[verify]` (50 lemmings, 80 %, RR 50 chosen). Our blockers cannot be undermined by a miner, so a bomber removes the blocker. |
 | Fun 16 | Stats are `[verify]` (50 lemmings, 80 %, RR 50 chosen). The right blocker is bombed instead of released. |
+| Fun 17 | The blocker of the walkthrough is optional; the 20 floaters are exactly the target, as in the original. |
+| Fun 18 | Fire rooms are closed rooms with fire traps; lemmings that fall in cross the traps until all are gone. |
+| Fun 19 | Stats are `[verify]` (50 lemmings, 80 %, RR 50 chosen). |
+| Fun 20 | Target raised from 60 % to 90 %: our crowd waits safely between the poles, so only the raised target makes the blockers necessary. |
+| Fun 21 | Stats are `[verify]` (50 lemmings, 94 %, RR 50 chosen); the high target makes the blocker necessary. |
 
 ## Sources
 

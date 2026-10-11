@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "id": "fun-21",
+  "name": "level.fun-21.name",
+  "inspiredBy": "Fun 21 of the original ('You Live and Lem'): a blocker keeps the crowd in the first cave; the scout bashes out, drops through a gap, bashes again and bridges over a trap; then the blocker is bombed. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 900,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 47,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 1,
+    "blocker": 2,
+    "builder": 3,
+    "basher": 4,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "crystal",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 30,
+      "y": 0,
+      "w": 10,
+      "h": 160
+    },
+    {
+      "shape": "rect",
+      "x": 40,
+      "y": 0,
+      "w": 260,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 40,
+      "y": 60,
+      "w": 260,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 0,
+      "w": 30,
+      "h": 70
+    },
+    {
+      "shape": "rect",
+      "x": 330,
+      "y": 60,
+      "w": 70,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 420,
+      "y": 60,
+      "w": 80,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 500,
+      "y": 0,
+      "w": 20,
+      "h": 70
+    },
+    {
+      "shape": "rect",
+      "x": 330,
+      "y": 0,
+      "w": 170,
+      "h": 12
+    },
+    {
+      "shape": "rect",
+      "x": 40,
+      "y": 100,
+      "w": 860,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 560,
+      "y": 40,
+      "w": 30,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 890,
+      "y": 40,
+      "w": 10,
+      "h": 60
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 100,
+      "y": 30
+    },
+    {
+      "type": "exit",
+      "x": 820,
+      "y": 99
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 680,
+      "y": 94,
+      "w": 8,
+      "h": 6
+    }
+  ]
+}

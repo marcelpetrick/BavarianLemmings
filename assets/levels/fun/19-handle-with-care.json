@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "id": "fun-19",
+  "name": "level.fun-19.name",
+  "inspiredBy": "Fun 19 of the original ('Take good care of my Lemmings'): two blockers hold the crowd at the hatch while the first lemming walks over the humps and bridges the chasm to the exit. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 800,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 40,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 1,
+    "blocker": 3,
+    "builder": 6,
+    "basher": 0,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "dirt",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 40,
+      "y": 120,
+      "w": 160,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 200,
+      "y": 136,
+      "w": 240,
+      "h": 24
+    },
+    {
+      "shape": "ellipse",
+      "x": 210,
+      "y": 116,
+      "w": 80,
+      "h": 40
+    },
+    {
+      "shape": "ellipse",
+      "x": 300,
+      "y": 114,
+      "w": 80,
+      "h": 44
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [400, 136],
+        [440, 100],
+        [520, 100],
+        [520, 160],
+        [400, 160]
+      ]
+    },
+    {
+      "shape": "rect",
+      "x": 590,
+      "y": 100,
+      "w": 210,
+      "h": 60
+    },
+    {
+      "shape": "ellipse",
+      "x": 650,
+      "y": 20,
+      "w": 80,
+      "h": 24
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 100,
+      "y": 90
+    },
+    {
+      "type": "exit",
+      "x": 700,
+      "y": 99
+    },
+    {
+      "type": "water",
+      "x": 0,
+      "y": 146,
+      "w": 40,
+      "h": 14
+    },
+    {
+      "type": "water",
+      "x": 520,
+      "y": 146,
+      "w": 70,
+      "h": 14
+    }
+  ]
+}

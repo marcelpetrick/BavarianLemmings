@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "id": "fun-20",
+  "name": "level.fun-20.name",
+  "inspiredBy": "Fun 20 of the original ('We are now at LEMCON ONE'): bridge a gap, bash through seven poles one after the other and bridge the last gap, while blockers keep the crowd safe. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 760,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 45,
+  "releaseRate": 10,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 1,
+    "blocker": 3,
+    "builder": 4,
+    "basher": 9,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "marble",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 40,
+      "y": 80,
+      "w": 160,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 222,
+      "y": 80,
+      "w": 358,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 280,
+      "y": 0,
+      "w": 8,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 320,
+      "y": 0,
+      "w": 8,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 360,
+      "y": 0,
+      "w": 8,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 400,
+      "y": 0,
+      "w": 8,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 440,
+      "y": 0,
+      "w": 8,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 480,
+      "y": 0,
+      "w": 8,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 520,
+      "y": 0,
+      "w": 8,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 602,
+      "y": 80,
+      "w": 158,
+      "h": 80
+    },
+    {
+      "shape": "ellipse",
+      "x": 650,
+      "y": 30,
+      "w": 80,
+      "h": 20
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 100,
+      "y": 50
+    },
+    {
+      "type": "exit",
+      "x": 690,
+      "y": 79
+    }
+  ]
+}

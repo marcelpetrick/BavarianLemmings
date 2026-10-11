@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "id": "fun-17",
+  "name": "level.fun-17.name",
+  "inspiredBy": "Fun 17 of the original ('Easy when you know how'): four hatches over walled-in rooms; the lower passage is full of traps, so block it, bash the walls and float down to the exit. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 960,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 20,
+  "releaseRate": 99,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 20,
+    "bomber": 0,
+    "blocker": 2,
+    "builder": 0,
+    "basher": 6,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "pillar",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 60,
+      "y": 60,
+      "w": 580,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 180,
+      "y": 0,
+      "w": 16,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 0,
+      "w": 16,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 420,
+      "y": 0,
+      "w": 16,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 540,
+      "y": 0,
+      "w": 16,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 110,
+      "w": 600,
+      "h": 50
+    },
+    {
+      "shape": "rect",
+      "x": 600,
+      "y": 136,
+      "w": 360,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 950,
+      "y": 90,
+      "w": 10,
+      "h": 46
+    },
+    {
+      "shape": "ellipse",
+      "x": 760,
+      "y": 126,
+      "w": 60,
+      "h": 20
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 100,
+      "y": 20
+    },
+    {
+      "type": "hatch",
+      "x": 240,
+      "y": 20
+    },
+    {
+      "type": "hatch",
+      "x": 360,
+      "y": 20
+    },
+    {
+      "type": "hatch",
+      "x": 480,
+      "y": 20
+    },
+    {
+      "type": "exit",
+      "x": 860,
+      "y": 135
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 150,
+      "y": 100,
+      "w": 10,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 270,
+      "y": 100,
+      "w": 10,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 390,
+      "y": 100,
+      "w": 10,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 510,
+      "y": 100,
+      "w": 10,
+      "h": 10
+    }
+  ]
+}
