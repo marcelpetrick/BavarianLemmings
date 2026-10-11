@@ -10,6 +10,8 @@ export default defineConfig({
   test: {
     include: ['tests/**/*.test.ts'],
     environment: 'node',
+    // Audio rendering tests are CPU-heavy; parallel worktree pipelines can slow them past 5 s.
+    testTimeout: 30_000,
     coverage: {
       provider: 'v8',
       reporter: ['text-summary', 'text', 'html', 'lcov', 'json-summary'],

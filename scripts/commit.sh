@@ -25,9 +25,13 @@ part="${3:-patch}"
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 mkdir -p .tools
 npx --no-install prettier --write --log-level warn .
+# Keep the pre-bump manifests, so a red run undoes only the bump and keeps other edits to them.
+cp package.json .tools/package.json.before
+cp package-lock.json .tools/package-lock.json.before
 version="$(scripts/bump-version.sh "${part}")"
 if ! ./localPipeline.sh --noRun > .tools/last-pipeline.log 2>&1; then
-  git checkout -- package.json package-lock.json
+  cp .tools/package.json.before package.json
+  cp .tools/package-lock.json.before package-lock.json
   grep -E "^==>|FAILED" .tools/last-pipeline.log | tail -3 >&2
   echo "pipeline red: nothing committed (log: .tools/last-pipeline.log)" >&2
   exit 1
