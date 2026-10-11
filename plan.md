@@ -176,8 +176,8 @@ gantt
       win; same by keyboard.
 - [x] M2.13 (C-05) Conveniences: fast-forward 4×, restart level, frame step, zoom (2× viewport);
       a Purist setting disables them.
-- [ ] M2.14 (Q) README screenshot captured by Playwright (`scripts/screenshot.mjs`), committed;
-      milestone bump to 0.2.0.
+- [x] M2.14 (Q) README screenshot captured by Playwright (`scripts/screenshot.mjs`), committed;
+      milestone bump to 0.2.0 (the bump is made by the integrating commit on `main`).
 
 ## M3: full game loop, audio, languages, persistence
 
