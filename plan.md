@@ -396,7 +396,7 @@ rating agents in parallel.
 - [ ] M6.130 (L-01a) Tricky 01-30 rebuilt the same way (replaces the Tricky placeholders).
 - [ ] M6.131 (L-01a) Taxing 01-30 rebuilt the same way.
 - [ ] M6.132 (L-01a) Mayhem 01-30 rebuilt the same way.
-- [ ] M6.133 (G-11, V-05) Nuke and bomber aftermath: every pixel of an exploding lemming flies off
+- [x] M6.133 (G-11, V-05) Nuke and bomber aftermath: every pixel of an exploding lemming flies off
       as a particle until it leaves the screen; the result screen waits until the last particle is
       gone and then a further pause, so the player can look at the holes.
 

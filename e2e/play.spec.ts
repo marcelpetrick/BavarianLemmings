@@ -46,6 +46,10 @@ test.describe('playing Fun 1 (P-01, C-01, C-02, G-10)', () => {
     await page.keyboard.press('n');
     await advance(page, 120);
     expect((await gameState(page)).nuking).toBe(true);
+    // M6.133: after the last explosion the playfield stays, so the player sees the debris and holes.
+    for (let i = 0; i < 100 && (await gameState(page)).outcome === 'playing'; i += 1) await advance(page, 200);
+    expect((await gameState(page)).outcome).toBe('lost');
+    expect(await screen(page)).toBe('play');
     await playUntilEnd(page);
     expect(await screen(page)).toBe('result');
     expect(errors).toEqual([]);

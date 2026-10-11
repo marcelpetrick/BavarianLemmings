@@ -10,18 +10,8 @@ import { LEMMING_HEIGHT, PLAYFIELD_HEIGHT, SCREEN_WIDTH, TRAP_CYCLE_TICKS } from
 import type { Lemming } from '../sim/lemming';
 import type { GameState, SimEvent } from '../sim/state';
 import { terrainColorsFor, trapAnimation, type Theme } from '../theme/themes';
+import { Debris } from './debris';
 import { mountainBackdrop, SpriteCache, TerrainLayer, TextRenderer, type Context } from './draw';
-
-interface Particle {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  life: number;
-  color: string;
-}
-
-const PARTICLE_COLORS = ['#f8e830', '#f88820', '#e82828', '#f8f8f8'];
 
 export interface View {
   /** Left edge of the view in level pixels. */
@@ -36,8 +26,7 @@ export class PlayfieldRenderer {
   private readonly sprites: SpriteCache;
   private readonly terrain: TerrainLayer;
   private readonly backdrop: HTMLCanvasElement | null;
-  private particles: Particle[] = [];
-  private particleSeed = 1;
+  private readonly debris: Debris;
 
   constructor(
     private readonly theme: Theme,
@@ -47,26 +36,27 @@ export class PlayfieldRenderer {
     this.sprites = new SpriteCache(theme.spritePalette);
     this.terrain = new TerrainLayer(levelWidth);
     this.backdrop = theme.backdrop === 'mountains' ? mountainBackdrop(levelWidth) : null;
+    this.debris = new Debris(levelWidth, PLAYFIELD_HEIGHT);
   }
 
-  /** Visual reactions to simulation events (explosions). Deterministic pseudo-random spread. */
+  /** Visual reactions to simulation events: an exploding lemming bursts into its own pixels. */
   react(events: readonly SimEvent[]): void {
+    const sprite = this.theme.lemmings.ohNo;
+    const last = sprite.frames[sprite.frames.length - 1];
+    if (!last) return;
     for (const event of events) {
-      if (event.type !== 'explode') continue;
-      for (let i = 0; i < 24; i += 1) {
-        this.particleSeed = (this.particleSeed * 1103515245 + 12345) & 0x7fffffff;
-        const angle = (this.particleSeed % 628) / 100;
-        const speed = 1 + (this.particleSeed % 7) / 3;
-        this.particles.push({
-          x: event.x,
-          y: event.y - LEMMING_HEIGHT / 2,
-          vx: Math.cos(angle) * speed,
-          vy: Math.sin(angle) * speed - 2,
-          life: 30,
-          color: PARTICLE_COLORS[i % PARTICLE_COLORS.length] ?? '#ffffff',
-        });
-      }
+      if (event.type === 'explode') this.debris.burst(last, sprite.anchorX, sprite.anchorY, this.theme.spritePalette, event.x, event.y);
     }
+  }
+
+  /** Move the debris by wall-clock time (independent of the display refresh rate). */
+  update(elapsedMs: number): void {
+    this.debris.update(elapsedMs);
+  }
+
+  /** True while explosion debris is still flying; the level end waits for it. */
+  get busy(): boolean {
+    return this.debris.busy;
   }
 
   draw(ctx: Context, state: GameState, view: View, hovered: Lemming | null, cursor: { x: number; y: number } | null): void {
@@ -134,14 +124,9 @@ export class PlayfieldRenderer {
   }
 
   private drawParticles(ctx: Context): void {
-    this.particles = this.particles.filter((p) => p.life > 0);
-    for (const p of this.particles) {
+    for (const p of this.debris.particles) {
       ctx.fillStyle = p.color;
       ctx.fillRect(Math.round(p.x), Math.round(p.y), 1, 1);
-      p.x += p.vx;
-      p.y += p.vy;
-      p.vy += 0.25;
-      p.life -= 1;
     }
   }
 

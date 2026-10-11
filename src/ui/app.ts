@@ -61,6 +61,8 @@ import { statusParts } from './status';
 const EDGE_SCROLL_ZONE = 6;
 const EDGE_SCROLL_SPEED = 4;
 const VOLUME_STEPS = [0, 0.2, 0.4, 0.6, 0.8, 1];
+/** After the level ends and the last debris is gone, the playfield stays this long (plan M6.133). */
+const AFTERMATH_PAUSE_MS = 2500;
 const LAYOUT_CHOICES: readonly LayoutChoice[] = ['auto', 'classic', 'touch'];
 
 /** Enter or leave full screen (vision 3.4.1). Browsers may refuse; the game then simply stays as it is. */
@@ -109,6 +111,7 @@ export class App {
   private magnifierSource: HTMLCanvasElement | null = null;
   private lastFrame = 0;
   private resultWon = false;
+  private quietAfterEndMs = 0;
   private readonly events: SimEvent[] = [];
 
   constructor(private readonly deps: AppDeps) {
@@ -432,12 +435,27 @@ export class App {
       this.handleEvents(events);
       this.edgeScroll();
       this.repeatTouchButtons(time);
-      if (this.session.state.outcome !== 'playing') this.finishLevel();
+      this.afterTime(elapsed);
     }
     this.render();
     requestAnimationFrame((next) => {
       this.frame(next);
     });
+  }
+
+  /**
+   * Time passes on the play screen: debris flies, and once the level has ended the result screen
+   * follows only after the last debris has left and a further pause (plan M6.133), so the player
+   * sees the holes the bombs left.
+   */
+  private afterTime(elapsedMs: number): void {
+    this.playfield?.update(elapsedMs);
+    if (!this.session || this.session.state.outcome === 'playing') {
+      this.quietAfterEndMs = 0;
+      return;
+    }
+    if (this.playfield?.busy !== true) this.quietAfterEndMs += elapsedMs;
+    if (this.quietAfterEndMs >= AFTERMATH_PAUSE_MS) this.finishLevel();
   }
 
   private handleEvents(events: readonly SimEvent[]): void {
@@ -900,8 +918,10 @@ export class App {
       events: () => this.events.splice(0).map((e) => e.type),
       /** Run the session faster in tests: real ticks, no waiting for wall-clock time. */
       advance: (ms: number) => {
-        for (let left = ms; left > 0 && this.session; left -= TICK_MS) this.handleEvents(this.session.advance(Math.min(left, TICK_MS)));
-        if (this.session && this.session.state.outcome !== 'playing' && this.screen === 'play') this.finishLevel();
+        for (let left = ms; left > 0 && this.session && this.screen === 'play'; left -= TICK_MS) {
+          this.handleEvents(this.session.advance(Math.min(left, TICK_MS)));
+          this.afterTime(Math.min(left, TICK_MS));
+        }
       },
     };
     Object.assign(window, { __bavarianLemmings: hook });
