@@ -315,6 +315,7 @@ No open questions remain. New ones go into a round E table here.
 | 2026-10-11 | Round D delegated decisions (plan.md assumptions): vertical slice first, agent rebuilds levels from public descriptions, mouse and keyboard primary with touch as a later layer, 4× fast-forward, Bayern button plus settings toggle, level codes deferred | Owner delegated; reasons per row in plan.md |
 | 2026-10-11 | Voices localized EN and Bavarian, no German set; credits text fixed (V-11) | Owner (Q-D9, Q-D10) |
 | 2026-10-11 | Implementation is handed to another agent; this session ends with the planning documents | Owner |
+| 2026-10-11 | End-to-end tests run in Chromium only; Firefox is covered by manual play-testing (P-01 stays a requirement) | Owner: one browser is enough for automated tests, faster pipeline |
 
 ## 8. Status
 

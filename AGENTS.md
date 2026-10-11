@@ -47,8 +47,10 @@ Nothing is believed, everything is checked by a test or a pipeline step that a s
 
 - **Unit tests** (Vitest) for every function in `src/sim` and every pure helper elsewhere.
 - **Integration tests** (Vitest) for whole-level replays and determinism.
-- **End-to-end tests** (Playwright) in Firefox **and** Chrome for every user-visible feature: mouse,
-  keyboard, touch (tablet emulation), themes, languages, settings persistence, offline.
+- **End-to-end tests** (Playwright) in **Chromium only** for every user-visible feature: mouse,
+  keyboard, touch (tablet emulation), themes, languages, settings persistence, offline. Firefox is
+  checked by manual play-testing (owner decision 2026-10-11); `BL_E2E_FIREFOX=1 npx playwright test`
+  runs the suite in Firefox on demand.
 - **Pipeline checks** for everything that is not code: Markdown, shell scripts, workflows, SPDX
   headers, translations complete, assets attributed, sprite-sheet geometry equal across themes,
   unverified constants listed, every vision ID covered by a plan task, Docker image serves the game.
@@ -63,7 +65,7 @@ Nothing is believed, everything is checked by a test or a pipeline step that a s
   (as in Cullendula) and stay green.
 - It grows with the project in this order: Markdown, shell, workflow lint (done); type check,
   ESLint, Prettier, Stylelint; unit and integration tests with coverage; build; translation, asset,
-  constants and plan checks; REUSE; Playwright in Firefox and Chrome; Docker build and smoke test.
+  constants and plan checks; REUSE; Playwright in Chromium; Docker build and smoke test.
 - Every step is idempotent and prints its name; a failure names the step.
 
 ## Scripts

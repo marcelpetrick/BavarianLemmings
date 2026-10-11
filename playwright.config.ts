@@ -3,7 +3,8 @@
 
 import { defineConfig, devices } from '@playwright/test';
 
-// P-01: every user-visible feature is tested in Firefox and Chrome against the production build.
+// End-to-end tests run in Chromium only (owner decision 2026-10-11, AGENTS.md): faster, one browser.
+// Firefox is checked by manual play-testing; `BL_E2E_FIREFOX=1 npx playwright test` adds it on demand.
 export default defineConfig({
   testDir: 'e2e',
   timeout: 60_000,
@@ -13,8 +14,10 @@ export default defineConfig({
   outputDir: 'test-results',
   use: { baseURL: 'http://localhost:4173', viewport: { width: 1280, height: 800 } },
   projects: [
-    { name: 'firefox', use: { ...devices['Desktop Firefox'], viewport: { width: 1280, height: 800 } } },
     { name: 'chromium', use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 800 } } },
+    ...(process.env.BL_E2E_FIREFOX === '1'
+      ? [{ name: 'firefox', use: { ...devices['Desktop Firefox'], viewport: { width: 1280, height: 800 } } }]
+      : []),
   ],
   webServer: {
     // Always test what was just built; reusing a stray server could certify a stale dist/.
