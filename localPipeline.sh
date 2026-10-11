@@ -49,9 +49,15 @@ step "Workflow lint (actionlint)"
 actionlint_bin="$(scripts/install-actionlint.sh)" || fail "actionlint install"
 "${actionlint_bin}" || fail "actionlint"
 
+step "Type check (tsc, strict)"
+npx --no-install tsc --noEmit || fail "type check"
+
+step "Build (vite)"
+npx --no-install vite build --logLevel warn || fail "build"
+
 if [[ "${no_run}" == false ]]; then
   step "Launch"
-  echo "nothing to launch yet (requirements phase)"
+  echo "the game is served by: npm run preview (http://localhost:4173)"
 fi
 
 printf '\nAll steps green.\n'

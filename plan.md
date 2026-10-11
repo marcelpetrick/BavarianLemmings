@@ -88,7 +88,7 @@ gantt
 - [x] M0.08 (Q) `plan.md` (this file).
 - [x] M0.09 (Q) First push to `github.com/marcelpetrick/BavarianLemmings` and CI green there
       (pushed by the owner; CI run 38145947990 green on 2026-10-11).
-- [ ] M0.10 (Q, P-02) Vite + TypeScript strict scaffold: `index.html`, `src/main.ts`, `vite.config.ts`,
+- [x] M0.10 (Q, P-02) Vite + TypeScript strict scaffold: `index.html`, `src/main.ts`, `vite.config.ts`,
       `tsconfig.json` with `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`.
 - [ ] M0.11 (Q) Vitest with V8 coverage, threshold 95 % lines/branches/functions, in the pipeline.
 - [ ] M0.12 (Q, R-02) ESLint (type-aware) with import-boundary rule for `src/sim`, Prettier, Stylelint;
