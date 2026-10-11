@@ -157,7 +157,7 @@ gantt
       cursor, OUT, IN, TIME; bitmap font (ours).
 - [ ] M2.06 (C-01) `input/pointer.ts`: mouse to intents, crosshair cursor, box cursor over a
       lemming, click to assign, panel clicks, minimap click, edge scrolling.
-- [ ] M2.07 (C-02, C-03) `input/keyboard.ts`: F1/F2 release rate (direction per verified source),
+- [x] M2.07 (C-02, C-03) `input/keyboard.ts`: F1/F2 release rate (direction per verified source),
       F3–F10 skills, F11 pause, F12 nuke, arrow keys scroll.
 - [ ] M2.08 (R-03, P-04) `ui/app.ts`: rAF loop with tick accumulator, pause, visibility pause.
 - [ ] M2.09 (R-04) `window.__bavarianLemmings` test hook in dev/test builds only.
