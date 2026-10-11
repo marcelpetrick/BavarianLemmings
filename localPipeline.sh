@@ -59,6 +59,9 @@ node scripts/check-plan.mjs || fail "plan check"
 step "Original-game constants have provenance (scripts/check-constants.mjs)"
 node scripts/check-constants.mjs --quiet || fail "constants check"
 
+step "Translations complete (scripts/check-translations.mjs)"
+node scripts/check-translations.mjs || fail "translation check"
+
 step "Type check (tsc, strict)"
 npx --no-install tsc --noEmit || fail "type check"
 

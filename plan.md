@@ -177,7 +177,7 @@ gantt
       credits screen with the owner's text (see assumptions).
 - [ ] M3.02 (L-02) `persist/storage.ts`: versioned keys, progress written on level completion,
       continue from the furthest level; in-memory implementation for tests; migration test.
-- [ ] M3.03 (I-01, I-02) `i18n/`: EN, DE, BAR locale files, `t()`, fallback to EN, language in
+- [x] M3.03 (I-01, I-02) `i18n/`: EN, DE, BAR locale files, `t()`, fallback to EN, language in
       settings; `scripts/check-translations.mjs` in the pipeline.
 - [ ] M3.04 (L-06) All level names and texts through i18n keys in all three languages.
 - [ ] M3.05 (A-02) `audio/engine.ts`: unlock on first gesture, master/music/sfx volume, mute,

@@ -4,6 +4,7 @@
 #
 # commit.sh: the project's commit routine in one step (AGENTS.md, "Git").
 #
+# 0. formats the tree with Prettier (formatting is mechanical, never a reason for a red pipeline),
 # 1. bumps the version (patch by default), 2. runs ./localPipeline.sh --noRun and stops if it is red,
 # 3. stages everything and commits with the subject "<subject> (vX.Y.Z)" and the given body,
 # 4. pushes. On a red pipeline the version bump is undone and nothing is committed.
@@ -23,6 +24,7 @@ part="${3:-patch}"
 
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 mkdir -p .tools
+npx --no-install prettier --write --log-level warn .
 version="$(scripts/bump-version.sh "${part}")"
 if ! ./localPipeline.sh --noRun > .tools/last-pipeline.log 2>&1; then
   git checkout -- package.json package-lock.json
