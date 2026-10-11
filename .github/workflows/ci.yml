@@ -1,7 +1,8 @@
 # SPDX-FileCopyrightText: 2026 Marcel Petrick <mail@marcelpetrick.it>
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
-# CI mirrors the local quality gate: it runs exactly ./localPipeline.sh, nothing more, nothing less.
+# CI mirrors the local quality gate: it runs exactly ./localPipeline.sh --noRun, nothing more.
+# The only extra is a cache for the Playwright browsers, so they are not downloaded on every run.
 name: CI
 
 on:
@@ -9,18 +10,35 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
 
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   pipeline:
     runs-on: ubuntu-24.04
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       - name: Local pipeline
         run: ./localPipeline.sh --noRun
+      - name: Upload Playwright results
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-results
+          path: test-results
+          retention-days: 7

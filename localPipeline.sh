@@ -71,6 +71,13 @@ npx --no-install vitest run --coverage --reporter=dot || fail "tests or coverage
 step "Build (vite)"
 npx --no-install vite build --logLevel warn || fail "build"
 
+step "Playwright browsers (Firefox, Chromium; no-op when cached)"
+if [[ -n "${CI:-}" ]]; then deps_flag=(--with-deps); else deps_flag=(); fi
+npx --no-install playwright install "${deps_flag[@]}" firefox chromium >/dev/null || fail "playwright install"
+
+step "End-to-end tests in Firefox and Chromium (Playwright, production build)"
+npx --no-install playwright test || fail "end-to-end tests"
+
 if [[ "${no_run}" == false ]]; then
   step "Launch"
   echo "the game is served by: npm run preview (http://localhost:4173)"
