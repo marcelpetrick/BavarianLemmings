@@ -175,8 +175,9 @@ gantt
 
 - [ ] M3.01 (V-08, V-11) Title screen, level select by rating, level preview (L-04), settings screen,
       credits screen with the owner's text (see assumptions).
-- [ ] M3.02 (L-02) `persist/storage.ts`: versioned keys, progress written on level completion,
-      continue from the furthest level; in-memory implementation for tests; migration test.
+- [x] M3.02 (L-02) `persist/storage.ts`: versioned keys, progress written on level completion,
+      continue from the furthest level; in-memory implementation for tests; invalid stored values are
+      repaired field by field (v1 is the first version, so there is nothing to migrate yet).
 - [x] M3.03 (I-01, I-02) `i18n/`: EN, DE, BAR locale files, `t()`, fallback to EN, language in
       settings; `scripts/check-translations.mjs` in the pipeline.
 - [ ] M3.04 (L-06) All level names and texts through i18n keys in all three languages.
