@@ -53,6 +53,9 @@ step "Workflow lint (actionlint)"
 actionlint_bin="$(scripts/install-actionlint.sh)" || fail "actionlint install"
 "${actionlint_bin}" || fail "actionlint"
 
+step "Plan covers every vision ID (scripts/check-plan.mjs)"
+node scripts/check-plan.mjs || fail "plan check"
+
 step "Type check (tsc, strict)"
 npx --no-install tsc --noEmit || fail "type check"
 

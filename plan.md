@@ -98,7 +98,7 @@ gantt
 - [ ] M0.14 (Q) `scripts/check-constants.mjs`: lists every `unverified` constant (architecture 6.2).
 - [x] M0.15 (Q) Playwright installed with Firefox and Chromium; one smoke test (page loads, canvas
       exists); in the pipeline and in CI with browser caching.
-- [ ] M0.16 (Q) `scripts/check-plan.mjs`: every vision.md ID (G/L/V/C/A/P/R/I/X) is referenced by
+- [x] M0.16 (Q) `scripts/check-plan.mjs`: every vision.md ID (G/L/V/C/A/P/R/I/X) is referenced by
       at least one plan task; fails the pipeline otherwise. Exempt: struck-through IDs and MAY items
       marked deferred in vision.md.
 - [ ] M0.17 (Q) Pipeline step order documented in README; CI badge works after M0.09.

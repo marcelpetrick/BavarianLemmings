@@ -57,6 +57,7 @@ GitHub Actions run exactly `./localPipeline.sh --noRun` ([ci.yml](.github/workfl
 | [`localPipeline.sh`](localPipeline.sh) | Quality gate: Markdown lint, shellcheck, actionlint, version and licence checks |
 | [`scripts/bump-version.sh`](scripts/bump-version.sh) | Raise the semantic version (`patch` by default, every commit) |
 | [`scripts/install-actionlint.sh`](scripts/install-actionlint.sh) | Download the pinned actionlint into `.tools/` |
+| [`scripts/check-plan.mjs`](scripts/check-plan.mjs) | Fail if a vision.md ID has no plan.md task; `--summary` prints done/open per milestone |
 
 ## Development
 
