@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "id": "fun-27",
+  "name": "level.fun-27.name",
+  "inspiredBy": "Fun 27 of the original ('Let's be careful out there'): the short way is a deadly drop, so a blocker turns the crowd and a builder makes the long way: over a gap, up a step and over the acid. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 640,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 25,
+  "releaseRate": 1,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 3,
+    "builder": 8,
+    "basher": 0,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "dirt",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 60,
+      "w": 140,
+      "h": 100
+    },
+    {
+      "shape": "rect",
+      "x": 150,
+      "y": 60,
+      "w": 128,
+      "h": 100
+    },
+    {
+      "shape": "rect",
+      "x": 70,
+      "y": 48,
+      "w": 80,
+      "h": 112
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 48,
+      "w": 48,
+      "h": 112
+    },
+    {
+      "shape": "rect",
+      "x": 440,
+      "y": 136,
+      "w": 200,
+      "h": 24
+    },
+    {
+      "shape": "ellipse",
+      "x": 500,
+      "y": 100,
+      "w": 70,
+      "h": 40
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 380,
+      "y": 30
+    },
+    {
+      "type": "exit",
+      "x": 20,
+      "y": 47
+    },
+    {
+      "type": "water",
+      "x": 48,
+      "y": 150,
+      "w": 22,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 520,
+      "y": 126,
+      "w": 30,
+      "h": 10
+    }
+  ]
+}

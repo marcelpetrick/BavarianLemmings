@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "id": "fun-28",
+  "name": "level.fun-28.name",
+  "inspiredBy": "Fun 28 of the original ('If only they could fly'): a climber-floater leaves the closed hatch room and builds a long ramp to the exit; the crowd digs down through the floors and bashes out. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 720,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 48,
+  "releaseRate": 80,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 2,
+    "floater": 2,
+    "bomber": 0,
+    "blocker": 0,
+    "builder": 7,
+    "basher": 2,
+    "miner": 0,
+    "digger": 4
+  },
+  "style": "fire",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 136,
+      "w": 720,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 50,
+      "y": 20,
+      "w": 10,
+      "h": 116
+    },
+    {
+      "shape": "rect",
+      "x": 260,
+      "y": 20,
+      "w": 10,
+      "h": 116
+    },
+    {
+      "shape": "rect",
+      "x": 60,
+      "y": 50,
+      "w": 200,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 60,
+      "y": 80,
+      "w": 200,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 60,
+      "y": 110,
+      "w": 200,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 520,
+      "y": 76,
+      "w": 200,
+      "h": 60
+    },
+    {
+      "shape": "ellipse",
+      "x": 540,
+      "y": 30,
+      "w": 90,
+      "h": 24
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 120,
+      "y": 24
+    },
+    {
+      "type": "exit",
+      "x": 620,
+      "y": 75
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 460,
+      "y": 126,
+      "w": 20,
+      "h": 10
+    }
+  ]
+}

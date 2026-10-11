@@ -180,6 +180,10 @@ simplification is listed here.
 | Fun 23 | Stats are `[verify]` (50 lemmings, 80 %, RR 50 chosen). The hidden third exit of the original is left out. |
 | Fun 25 | 80 lemmings instead of 100. The mesh is a staircase and the web a hollow block, because our lemmings walk only on solid ground. |
 | Fun 26 | The second lemming is delayed by letting it build early stairs before each gap, as the walkthrough suggests. |
+| Fun 27 | One builder makes the whole long way; the original's floater shortcut is left out, so the route is the only way. |
+| Fun 28 | The crowd digs at a different place on each floor, because our lemmings would otherwise fall through all holes at once. |
+| Fun 29 | Stats partly `[verify]` (RR 60 and 5 minutes chosen). The pyramid is a staircase of 10 px steps, one builder per step. |
+| Fun 30 | 70 lemmings and 66 % from source S; source G gives 60 and 60 %. |
 
 ## Sources
 

@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "id": "fun-29",
+  "name": "level.fun-29.name",
+  "inspiredBy": "Fun 29 of the original ('worra lorra lemmings'): block the water by the hatch, bash through the rocks, bridge the gap, break into the pyramid and build up its steps to the exit. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 1100,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 48,
+  "releaseRate": 60,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 2,
+    "builder": 7,
+    "basher": 4,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "marble",
+  "startX": 500,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 622,
+      "y": 136,
+      "w": 378,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 148,
+      "w": 600,
+      "h": 12
+    },
+    {
+      "shape": "rect",
+      "x": 820,
+      "y": 30,
+      "w": 20,
+      "h": 106
+    },
+    {
+      "shape": "rect",
+      "x": 700,
+      "y": 20,
+      "w": 30,
+      "h": 116
+    },
+    {
+      "shape": "rect",
+      "x": 500,
+      "y": 138,
+      "w": 60,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 592,
+      "y": 140,
+      "w": 8,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 460,
+      "y": 128,
+      "w": 40,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 420,
+      "y": 118,
+      "w": 40,
+      "h": 30
+    },
+    {
+      "shape": "rect",
+      "x": 320,
+      "y": 108,
+      "w": 100,
+      "h": 40
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [320, 108],
+        [280, 148],
+        [320, 148]
+      ]
+    },
+    {
+      "shape": "ellipse",
+      "x": 250,
+      "y": 20,
+      "w": 100,
+      "h": 30
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 950,
+      "y": 100
+    },
+    {
+      "type": "exit",
+      "x": 370,
+      "y": 107
+    },
+    {
+      "type": "water",
+      "x": 1000,
+      "y": 146,
+      "w": 100,
+      "h": 14
+    }
+  ]
+}

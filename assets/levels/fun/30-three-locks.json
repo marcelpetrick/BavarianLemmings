@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "id": "fun-30",
+  "name": "level.fun-30.name",
+  "inspiredBy": "Fun 30 of the original ('Lock up your Lemmings'): three locked cells one below the other; bash out of each on the side that leads down to the next, never towards the water. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 640,
+  "height": 160,
+  "lemmings": 70,
+  "toSave": 46,
+  "releaseRate": 10,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 2,
+    "builder": 0,
+    "basher": 4,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "crystal",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 190,
+      "y": 10,
+      "w": 10,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 320,
+      "y": 10,
+      "w": 10,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 200,
+      "y": 44,
+      "w": 120,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 290,
+      "y": 50,
+      "w": 10,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 440,
+      "y": 50,
+      "w": 10,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 84,
+      "w": 140,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 170,
+      "y": 90,
+      "w": 10,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 90,
+      "w": 10,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 180,
+      "y": 124,
+      "w": 120,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 310,
+      "y": 124,
+      "w": 200,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 500,
+      "y": 100,
+      "w": 10,
+      "h": 24
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 260,
+      "y": 14
+    },
+    {
+      "type": "exit",
+      "x": 450,
+      "y": 123
+    },
+    {
+      "type": "water",
+      "x": 0,
+      "y": 150,
+      "w": 640,
+      "h": 10
+    }
+  ]
+}

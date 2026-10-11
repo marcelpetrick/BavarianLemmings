@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "levelId": "fun-28",
+  "entries": [
+    {
+      "tick": 35,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 36,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 300,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 373,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 440,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 571,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 640,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 840,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1040,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1240,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1240,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 18,
+        "skill": "basher"
+      }
+    }
+  ]
+}
