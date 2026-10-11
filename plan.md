@@ -225,30 +225,139 @@ gantt
 
 ## M6: content, all four ratings
 
-Each level task means: our geometry and name, JSON passes the schema, a recorded solution replay
-passes as a test, texts in three languages, `inspiredBy` filled in. Levels are grouped in batches so
-progress is visible.
+One task per level, as a placeholder: the real name, geometry and `inspiredBy` are filled in when
+the level is built. A level task is done when: our geometry and name exist, the JSON passes the
+schema, a recorded solution replay passes as a test, the texts exist in three languages, and
+`inspiredBy` is set. Numbering inside M6 is three digits because there are more than 99 tasks.
 
 - [ ] M6.01 (L-01a, X-02, X-05) Collect public level descriptions (names, skill sets, lemming
-      counts, rescue targets, time limits) as a reference table `docs/levels-reference.md` with sources; no
-      original data files are downloaded.
+      counts, rescue targets, time limits) as a reference table `docs/levels-reference.md` with
+      sources; no original data files are downloaded.
 - [ ] M6.02 (V-07) Remaining classic terrain styles: fire, marble, pillar, crystal, with pieces.
-- [ ] M6.03 (L-01) Fun 1–10.
-- [ ] M6.04 (L-01) Fun 11–20.
-- [ ] M6.05 (L-01) Fun 21–30.
-- [ ] M6.06 (L-01) Tricky 1–10.
-- [ ] M6.07 (L-01) Tricky 11–20.
-- [ ] M6.08 (L-01) Tricky 21–30.
-- [ ] M6.09 (L-01) Taxing 1–10.
-- [ ] M6.10 (L-01) Taxing 11–20.
-- [ ] M6.11 (L-01) Taxing 21–30.
-- [ ] M6.12 (L-01) Mayhem 1–10.
-- [ ] M6.13 (L-01) Mayhem 11–20.
-- [ ] M6.14 (L-01) Mayhem 21–30.
-- [ ] M6.15 (V-06, G-15) Verify the tick rate, splat height, level size and lemming cap against
+- [ ] M6.003 (L-01) Fun 01: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.004 (L-01) Fun 02: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.005 (L-01) Fun 03: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.006 (L-01) Fun 04: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.007 (L-01) Fun 05: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.008 (L-01) Fun 06: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.009 (L-01) Fun 07: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.010 (L-01) Fun 08: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.011 (L-01) Fun 09: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.012 (L-01) Fun 10: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.013 (L-01) Fun 11: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.014 (L-01) Fun 12: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.015 (L-01) Fun 13: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.016 (L-01) Fun 14: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.017 (L-01) Fun 15: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.018 (L-01) Fun 16: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.019 (L-01) Fun 17: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.020 (L-01) Fun 18: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.021 (L-01) Fun 19: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.022 (L-01) Fun 20: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.023 (L-01) Fun 21: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.024 (L-01) Fun 22: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.025 (L-01) Fun 23: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.026 (L-01) Fun 24: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.027 (L-01) Fun 25: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.028 (L-01) Fun 26: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.029 (L-01) Fun 27: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.030 (L-01) Fun 28: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.031 (L-01) Fun 29: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.032 (L-01) Fun 30: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.033 (L-01) Tricky 01: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.034 (L-01) Tricky 02: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.035 (L-01) Tricky 03: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.036 (L-01) Tricky 04: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.037 (L-01) Tricky 05: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.038 (L-01) Tricky 06: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.039 (L-01) Tricky 07: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.040 (L-01) Tricky 08: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.041 (L-01) Tricky 09: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.042 (L-01) Tricky 10: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.043 (L-01) Tricky 11: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.044 (L-01) Tricky 12: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.045 (L-01) Tricky 13: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.046 (L-01) Tricky 14: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.047 (L-01) Tricky 15: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.048 (L-01) Tricky 16: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.049 (L-01) Tricky 17: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.050 (L-01) Tricky 18: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.051 (L-01) Tricky 19: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.052 (L-01) Tricky 20: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.053 (L-01) Tricky 21: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.054 (L-01) Tricky 22: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.055 (L-01) Tricky 23: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.056 (L-01) Tricky 24: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.057 (L-01) Tricky 25: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.058 (L-01) Tricky 26: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.059 (L-01) Tricky 27: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.060 (L-01) Tricky 28: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.061 (L-01) Tricky 29: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.062 (L-01) Tricky 30: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.063 (L-01) Taxing 01: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.064 (L-01) Taxing 02: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.065 (L-01) Taxing 03: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.066 (L-01) Taxing 04: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.067 (L-01) Taxing 05: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.068 (L-01) Taxing 06: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.069 (L-01) Taxing 07: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.070 (L-01) Taxing 08: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.071 (L-01) Taxing 09: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.072 (L-01) Taxing 10: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.073 (L-01) Taxing 11: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.074 (L-01) Taxing 12: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.075 (L-01) Taxing 13: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.076 (L-01) Taxing 14: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.077 (L-01) Taxing 15: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.078 (L-01) Taxing 16: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.079 (L-01) Taxing 17: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.080 (L-01) Taxing 18: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.081 (L-01) Taxing 19: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.082 (L-01) Taxing 20: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.083 (L-01) Taxing 21: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.084 (L-01) Taxing 22: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.085 (L-01) Taxing 23: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.086 (L-01) Taxing 24: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.087 (L-01) Taxing 25: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.088 (L-01) Taxing 26: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.089 (L-01) Taxing 27: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.090 (L-01) Taxing 28: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.091 (L-01) Taxing 29: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.092 (L-01) Taxing 30: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.093 (L-01) Mayhem 01: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.094 (L-01) Mayhem 02: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.095 (L-01) Mayhem 03: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.096 (L-01) Mayhem 04: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.097 (L-01) Mayhem 05: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.098 (L-01) Mayhem 06: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.099 (L-01) Mayhem 07: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.100 (L-01) Mayhem 08: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.101 (L-01) Mayhem 09: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.102 (L-01) Mayhem 10: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.103 (L-01) Mayhem 11: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.104 (L-01) Mayhem 12: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.105 (L-01) Mayhem 13: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.106 (L-01) Mayhem 14: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.107 (L-01) Mayhem 15: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.108 (L-01) Mayhem 16: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.109 (L-01) Mayhem 17: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.110 (L-01) Mayhem 18: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.111 (L-01) Mayhem 19: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.112 (L-01) Mayhem 20: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.113 (L-01) Mayhem 21: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.114 (L-01) Mayhem 22: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.115 (L-01) Mayhem 23: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.116 (L-01) Mayhem 24: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.117 (L-01) Mayhem 25: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.118 (L-01) Mayhem 26: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.119 (L-01) Mayhem 27: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.120 (L-01) Mayhem 28: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.121 (L-01) Mayhem 29: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.122 (L-01) Mayhem 30: placeholder, name and `inspiredBy` filled in when built.
+- [ ] M6.123 (V-06, G-15) Verify the tick rate, splat height, level size and lemming cap against
       behaviour documentation; flip the constants to `verified`; note the DOS 80-lemming cap.
-- [ ] M6.16 (C-02) Verify the F1/F2 direction and the scroll keys against a documented DOS source.
-- [ ] M6.17 (Q) Milestone bump to 0.6.0.
+- [ ] M6.124 (C-02) Verify the F1/F2 direction and the scroll keys against a documented DOS source.
+- [ ] M6.125 (Q) Milestone bump to 0.6.0.
 
 ## M7: delivery
 
