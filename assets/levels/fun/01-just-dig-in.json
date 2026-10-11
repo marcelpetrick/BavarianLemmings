@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "id": "fun-01",
+  "name": "level.fun-01.name",
+  "inspiredBy": "Fun 1 of the original ('Just dig!'): the lemmings land on a thick mound and must dig down to the exit below it. Geometry, name and art are ours.",
+  "rating": "fun",
+  "width": 640,
+  "height": 160,
+  "lemmings": 10,
+  "toSave": 1,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 0,
+    "builder": 0,
+    "basher": 0,
+    "miner": 0,
+    "digger": 10
+  },
+  "style": "dirt",
+  "startX": 160,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 136,
+      "w": 640,
+      "h": 24
+    },
+    {
+      "shape": "ellipse",
+      "x": 200,
+      "y": 78,
+      "w": 240,
+      "h": 44
+    },
+    {
+      "shape": "rect",
+      "x": 226,
+      "y": 86,
+      "w": 188,
+      "h": 28
+    },
+    {
+      "shape": "rect",
+      "x": 214,
+      "y": 70,
+      "w": 8,
+      "h": 22
+    },
+    {
+      "shape": "rect",
+      "x": 418,
+      "y": 70,
+      "w": 8,
+      "h": 22
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 96,
+      "w": 12,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 628,
+      "y": 96,
+      "w": 12,
+      "h": 40
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 250,
+      "y": 40
+    },
+    {
+      "type": "exit",
+      "x": 330,
+      "y": 135
+    }
+  ]
+}

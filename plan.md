@@ -162,7 +162,7 @@ gantt
 - [ ] M2.08 (R-03, P-04) `ui/app.ts`: rAF loop with tick accumulator, pause, visibility pause.
 - [ ] M2.09 (R-04) `window.__bavarianLemmings` test hook in dev/test builds only.
 - [ ] M2.10 (G-10) Result screen: saved vs. needed, retry or next.
-- [ ] M2.11 (L-01a) First recreated level, Fun 1 equivalent ("Just dig!" idea): our geometry, our
+- [x] M2.11 (L-01a) First recreated level, Fun 1 equivalent ("Just dig!" idea): our geometry, our
       name, a recorded solution replay as its test.
 - [ ] M2.12 (P-01) Playwright e2e in Firefox and Chrome: load the level, assign a digger by mouse,
       win; same by keyboard.

@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "levelId": "fun-01",
+  "entries": [{ "tick": 118, "intent": { "type": "assign", "lemmingId": 0, "skill": "digger" } }]
+}
