@@ -26,3 +26,11 @@ if (root) {
   audio.attachUnlockListeners();
   new App({ root, store, settings, audio, testHook: new URLSearchParams(window.location.search).has('test') });
 }
+
+// Offline play after the first visit (vision P-05); only in the production build, so the dev
+// server never serves stale files.
+if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(() => undefined);
+  });
+}

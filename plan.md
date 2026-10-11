@@ -384,7 +384,7 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
       browser" badge.
 - [ ] M7.04 (Q) `.github/workflows/release.yml`: on `v*` tags, check that the tag matches
       `package.json`, run the pipeline, attach the zipped `dist/`.
-- [ ] M7.05 (P-05) Service worker for offline play after the first load; e2e: reload offline.
+- [x] M7.05 (P-05) Service worker for offline play after the first load; e2e: reload offline.
 - [ ] M7.06 (Q, X-04) README complete: badges (Play, CI, Pages, Docker, Release, Licence, REUSE,
       Coverage, stack), setup, testing, pipeline, Docker, usage, screenshots of both modes.
 - [ ] M7.07 (Q) `/reviewBranch`, fix every finding; `review_YYYYMMDD.md` with status per finding.
