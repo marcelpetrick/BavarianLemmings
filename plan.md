@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (42/147) :active, m6, after m5, 32h
+    M6 content, all four ratings (43/147) :active, m6, after m5, 32h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -434,7 +434,7 @@ hit with the mouse.
 - [ ] M6.143 (G-03, G-04, G-05, G-06, G-07, C-01, A-01) Browser end-to-end test of all eight skills:
       a real mouse click assigns each skill, the counter drops, the action starts, the assign sound
       event fires.
-- [ ] M6.144 (L-01, G-12) Level audit: every shipped replay wins, and every assignment in it is
+- [x] M6.144 (L-01, G-12) Level audit: every shipped replay wins, and every assignment in it is
       accepted by the rules (no replay relies on a refused intent).
 - [x] M6.145 (V-08, V-11) Show the running version on the title and credits screens and in the
       test hook; e2e checks it equals `package.json`.

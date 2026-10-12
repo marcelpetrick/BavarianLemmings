@@ -9,7 +9,9 @@ import { existsSync, readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { LANGUAGES, translate } from '../../src/i18n';
 import { ALL_LEVELS, RATINGS, collectLevels, levelById, levelsOf, nextLevel } from '../../src/levels';
+import { createGame, step } from '../../src/sim/game';
 import { runReplay, type Replay } from '../../src/sim/replay';
+import type { Intent } from '../../src/sim/state';
 
 const shipped = ALL_LEVELS.filter((level) => level.rating !== 'test');
 
@@ -38,6 +40,28 @@ describe('shipped levels', () => {
         const result = runReplay(level, replay);
         expect(result.outcome).toBe('won');
         expect(result.saved).toBeGreaterThanOrEqual(level.toSave);
+      });
+
+      it('accepts every assignment in its replay (M6.144)', () => {
+        // A replay that only wins because some clicks were refused would not prove what a player can do.
+        const replay = JSON.parse(readFileSync(`assets/replays/${level.id}.json`, 'utf8')) as Replay;
+        const state = createGame(level);
+        let next = 0;
+        const refused: string[] = [];
+        while (state.outcome === 'playing' && next < replay.entries.length) {
+          const tick = state.tick + 1;
+          const intents: Intent[] = [];
+          for (; next < replay.entries.length && (replay.entries[next]?.tick ?? Infinity) <= tick; next += 1) {
+            intents.push(replay.entries[next]!.intent);
+          }
+          const before = Object.values(state.skills).reduce((sum, count) => sum + count, 0);
+          step(state, intents);
+          const spent = before - Object.values(state.skills).reduce((sum, count) => sum + count, 0);
+          const assigns = intents.filter((intent) => intent.type === 'assign').length;
+          if (spent !== assigns) refused.push(`tick ${tick}: ${assigns - spent} of ${assigns} refused`);
+        }
+        expect(next, 'every entry applied before the level ended').toBe(replay.entries.length);
+        expect(refused).toEqual([]);
       });
     });
   }
