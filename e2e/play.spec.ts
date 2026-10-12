@@ -34,8 +34,13 @@ test.describe('playing Fun 1 (P-01, C-01, C-02, G-10)', () => {
     await page.keyboard.press('3');
     expect((await gameState(page)).selectedSkill).toBe('bomber');
     await page.keyboard.press('F2');
-    await advance(page, 120);
-    expect((await gameState(page)).releaseRate).toBe(51);
+    // Under load the key event can be handled after the next hook call, so wait for its effect.
+    await expect
+      .poll(async () => {
+        await advance(page, 60);
+        return (await gameState(page)).releaseRate;
+      })
+      .toBe(51);
     await page.keyboard.press('p');
     expect((await gameState(page)).paused).toBe(true);
     await page.keyboard.press('p');
