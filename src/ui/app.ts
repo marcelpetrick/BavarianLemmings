@@ -839,6 +839,12 @@ export class App {
       const nukeProgress = this.nukeButton.progress(performance.now());
       this.touchPanel.draw(session.state, { ...panel, nukeProgress, purist: this.settings.purist }, status, this.playfield.terrainImage);
     } else this.panel.draw(this.ctx, session.state, panel, status, this.playfield.terrainImage);
+    if (session.nukeArmed) {
+      // A border alone made the first press look ignored. Explain the confirming action in view.
+      this.ctx.fillStyle = this.theme.ui.panel;
+      this.ctx.fillRect(0, 0, SCREEN_WIDTH, 12);
+      this.text.centred(this.ctx, this.t('panel.nuke'), SCREEN_WIDTH / 2, 3, this.theme.ui.highlight);
+    }
   }
 
   /** A 2× magnifier above the finger shows what the fingertip covers (vision 3.4.1). */
@@ -909,9 +915,12 @@ export class App {
           zoomed: session.zoomed,
           aiming: this.aim !== null,
           nuking: s.nuking,
+          nukeArmed: session.nukeArmed,
           viewX: session.viewX,
           secondsLeft: Math.ceil(s.ticksLeft / TICKS_PER_SECOND),
-          lemmings: s.lemmings.filter((l) => !l.removed).map((l) => ({ id: l.id, x: l.x, y: l.y, action: l.action })),
+          lemmings: s.lemmings
+            .filter((l) => !l.removed)
+            .map((l) => ({ id: l.id, x: l.x, y: l.y, action: l.action, bombTicks: l.bombTicks })),
         };
       },
       settings: () => ({ ...this.settings }),

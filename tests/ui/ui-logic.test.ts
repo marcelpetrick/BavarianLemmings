@@ -118,6 +118,29 @@ describe('session', () => {
     expect(replayed.lemmings[0]?.action).toBe('building');
   });
 
+  it('assigns a bomber on the first click with its five-second countdown', () => {
+    const session = new Session(level, { purist: false });
+    session.state.lemmings.push(lemmingAt(100, 100));
+    session.command({ type: 'selectSkill', skill: 'bomber' });
+    const stock = session.state.skills.bomber;
+    expect(session.clickLevel(100, 96)).toBe(true);
+    session.advance(TICK_MS);
+    expect(session.state.lemmings[0]?.bombTicks).toBe(5 * TICKS_PER_SECOND - 1);
+    expect(session.state.skills.bomber).toBe(stock - 1);
+    expect(session.replay).toEqual([{ tick: 1, intent: { type: 'assign', lemmingId: 0, skill: 'bomber' } }]);
+  });
+
+  it('disarms the nuke when restarting so the first click cannot destroy the new attempt', () => {
+    const session = new Session(level, { purist: false });
+    session.command({ type: 'nuke' });
+    session.restart();
+    expect(session.nukeArmed).toBe(false);
+    expect(session.command({ type: 'nuke' })).toBe(false);
+    session.advance(TICK_MS);
+    expect(session.state.nuking).toBe(false);
+    expect(session.nukeArmed).toBe(true);
+  });
+
   it('changes the release rate and scrolls', () => {
     const session = new Session(level, { purist: false });
     session.command({ type: 'releaseRate', delta: 5 });

@@ -2,7 +2,18 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 import { expect, test } from '@playwright/test';
-import { advance, assignWhen, clickMenu, clickPanel, gameState, openGame, playUntilEnd, screen, startFirstLevel } from './helpers';
+import {
+  advance,
+  assignWhen,
+  clickLevel,
+  clickMenu,
+  clickPanel,
+  gameState,
+  openGame,
+  playUntilEnd,
+  screen,
+  startFirstLevel,
+} from './helpers';
 
 test.describe('playing Fun 1 (P-01, C-01, C-02, G-10)', () => {
   test('win by mouse: select the digger in the panel, click a lemming, reach the exit', async ({ page }) => {
@@ -57,6 +68,32 @@ test.describe('playing Fun 1 (P-01, C-01, C-02, G-10)', () => {
     expect(await screen(page)).toBe('play');
     await playUntilEnd(page);
     expect(await screen(page)).toBe('result');
+    expect(errors).toEqual([]);
+  });
+
+  test('one click assigns the bomber and the first nuke click visibly arms confirmation', async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem('bl.v1.progress', JSON.stringify({ fun: 5 }));
+    });
+    const errors = await openGame(page);
+    await startFirstLevel(page);
+    await advance(page, 3000);
+    await page.keyboard.press('p');
+    const target = (await gameState(page)).lemmings[0]!;
+    await clickPanel(page, 'bomber');
+    const stock = (await gameState(page)).skills.bomber;
+    expect(stock).toBeGreaterThan(0);
+    await clickLevel(page, target.x, target.y - 4);
+    await page.keyboard.press('.');
+    const assigned = await gameState(page);
+    expect(assigned.skills.bomber).toBe(stock! - 1);
+    expect(assigned.lemmings.find((lemming) => lemming.id === target.id)?.bombTicks).toBeGreaterThan(0);
+    await clickPanel(page, 'nuke');
+    expect((await gameState(page)).nukeArmed).toBe(true);
+    expect((await gameState(page)).nuking).toBe(false);
+    await clickPanel(page, 'nuke');
+    await page.keyboard.press('.');
+    expect((await gameState(page)).nuking).toBe(true);
     expect(errors).toEqual([]);
   });
 

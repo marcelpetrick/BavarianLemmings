@@ -8,6 +8,7 @@ export interface LemmingView {
   x: number;
   y: number;
   action: string;
+  bombTicks: number;
 }
 
 export interface GameView {
@@ -25,6 +26,7 @@ export interface GameView {
   /** A finger aims on the playfield (touch press-aim-release). */
   aiming: boolean;
   nuking: boolean;
+  nukeArmed: boolean;
   viewX: number;
   lemmings: LemmingView[];
 }

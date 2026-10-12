@@ -198,6 +198,7 @@ export class Session {
   restart(): void {
     this.state = createGame(this.level);
     this.pending = [];
+    this.nukeArmedAt = Number.NEGATIVE_INFINITY;
     this.replay.length = 0;
     this.accumulator = 0;
     this.paused = false;
