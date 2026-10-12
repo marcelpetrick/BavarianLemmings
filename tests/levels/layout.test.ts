@@ -6,7 +6,7 @@ import { describe, expect, it } from 'vitest';
 import { ALL_LEVELS } from '../../src/levels';
 import { buildTerrain } from '../../src/sim/level';
 import { flagsAt, SOLID } from '../../src/sim/terrain';
-import { themeById } from '../../src/theme/themes';
+import { themeById, trapAnimation } from '../../src/theme/themes';
 
 for (const level of ALL_LEVELS.filter((item) => item.rating !== 'test')) {
   describe(`${level.id} object clearance`, () => {
@@ -16,8 +16,8 @@ for (const level of ALL_LEVELS.filter((item) => item.rating !== 'test')) {
         const theme = themeById(themeId);
         const failures: string[] = [];
         for (const object of level.objects) {
-          if (object.type !== 'hatch' && object.type !== 'exit') continue;
-          const sprite = theme[object.type];
+          if (object.type !== 'hatch' && object.type !== 'exit' && object.type !== 'trap') continue;
+          const sprite = object.type === 'trap' ? trapAnimation(theme, object.kind) : theme[object.type];
           for (const frame of sprite.frames) {
             frame.rows.forEach((row, y) => {
               for (let x = 0; x < row.length; x += 1) {
