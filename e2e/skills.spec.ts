@@ -122,4 +122,21 @@ test.describe('all eight skills by mouse (G-03 to G-07, C-01, A-01)', () => {
     expect((await gameState(page)).skills.bomber).toBe(bombers - 1);
     expect(errors).toEqual([]);
   });
+
+  test('a click a few pixels beside a lemming still assigns the skill (M6.146)', async ({ page }) => {
+    const errors = await openGame(page);
+    await openLevel(page, 'test-flat');
+    await clickScreen(page, 160, 100);
+    await expect.poll(() => screen(page)).toBe('play');
+    await clickPanel(page, 'digger');
+    used.clear();
+    for (let i = 0; i < 300 && !(await gameState(page)).lemmings.some(fresh); i += 1) await advance(page, 60);
+    await page.keyboard.press('p');
+    const walker = (await gameState(page)).lemmings.find(fresh)!;
+    // The selection box is 5 pixels to each side; this click lands 3 pixels beyond it.
+    await clickLevel(page, walker.x + 8, walker.y - 4);
+    await page.keyboard.press('.');
+    await expect.poll(async () => (await gameState(page)).lemmings.find((l) => l.id === walker.id)?.action).toBe('digging');
+    expect(errors).toEqual([]);
+  });
 });

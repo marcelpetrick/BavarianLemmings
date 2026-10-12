@@ -21,6 +21,12 @@ import { centreView, clampView } from './layout';
 export const NUKE_CONFIRM_MS = 1000;
 /** Pixels the view moves per scroll command (keys) and per frame at the screen edge. */
 export const SCROLL_STEP = 8;
+/**
+ * A mouse click that misses every selection box still selects a lemming whose box is this close, in
+ * level pixels (design value, plan M6.146): small children aim roughly, and lemmings are only
+ * ten pixels tall. A click inside a box always wins, so the original's choice rules stay intact.
+ */
+export const MOUSE_SELECT_SLACK = 4;
 /** Never run more than this many ticks for one frame, so a stalled tab does not fast-forward. */
 export const MAX_TICKS_PER_FRAME = 4 * FAST_FORWARD_FACTOR;
 
@@ -107,9 +113,14 @@ export class Session {
     return best;
   }
 
+  /** The lemming a mouse pointer selects: the one under it, else the nearest within MOUSE_SELECT_SLACK. */
+  lemmingForMouse(levelX: number, levelY: number): Lemming | null {
+    return this.lemmingAt(levelX, levelY) ?? this.lemmingNear(levelX, levelY, MOUSE_SELECT_SLACK);
+  }
+
   /** Click on the playfield at level coordinates: assign the selected skill. Returns success. */
   clickLevel(levelX: number, levelY: number): boolean {
-    return this.assignTo(this.lemmingAt(levelX, levelY));
+    return this.assignTo(this.lemmingForMouse(levelX, levelY));
   }
 
   /** A finger was lifted at level coordinates: assign to the best lemming within `radius`. */

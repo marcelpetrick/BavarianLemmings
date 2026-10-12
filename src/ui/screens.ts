@@ -27,6 +27,11 @@ export interface MenuItem {
 }
 
 export const MENU_LINE_HEIGHT = 13;
+/**
+ * A click this far left or right of a menu label still hits it, in logical pixels (design value,
+ * plan M6.146): labels are short, and small children click near them rather than on them.
+ */
+export const MENU_HIT_SLACK = 24;
 
 /** Centre the entries on the screen, one per line, from `top` downwards. */
 export function layoutMenu(entries: readonly MenuEntry[], top: number, lineHeight = MENU_LINE_HEIGHT): MenuItem[] {
@@ -46,7 +51,9 @@ export function layoutMenu(entries: readonly MenuEntry[], top: number, lineHeigh
 
 /** The enabled item at a point, if any. */
 export function itemAt(items: readonly MenuItem[], x: number, y: number): MenuItem | undefined {
-  return items.find((item) => item.enabled && x >= item.x && x < item.x + item.w && y >= item.y && y < item.y + item.h);
+  return items.find(
+    (item) => item.enabled && x >= item.x - MENU_HIT_SLACK && x < item.x + item.w + MENU_HIT_SLACK && y >= item.y && y < item.y + item.h,
+  );
 }
 
 /** Move the keyboard focus by `delta` over the enabled items, wrapping around. */

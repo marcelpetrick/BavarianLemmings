@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (46/148) :active, m6, after m5, 31h
+    M6 content, all four ratings (47/148) :active, m6, after m5, 31h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -438,7 +438,7 @@ hit with the mouse.
       accepted by the rules (no replay relies on a refused intent).
 - [x] M6.145 (V-08, V-11) Show the running version on the title and credits screens and in the
       test hook; e2e checks it equals `package.json`.
-- [ ] M6.146 (C-01, C-06) Controls for small children: a mouse click selects a lemming within a few
+- [x] M6.146 (C-01, C-06) Controls for small children: a mouse click selects a lemming within a few
       pixels of its box, the touch-layout icons fill their buttons, and the menu lines are taller.
 - [ ] M6.147 (Q) Release the result as a tagged GitHub release.
 - [x] M6.148 (A-01, C-05) A frame stepped while paused (`.`) hands its events to the sound layer,

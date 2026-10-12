@@ -826,7 +826,7 @@ export class App {
     const pointer = this.pointer;
     if (!pointer || pointer.y >= PLAYFIELD_HEIGHT) return null;
     const point = this.levelPoint(pointer.x, pointer.y);
-    return session.lemmingAt(point.x, point.y);
+    return session.lemmingForMouse(point.x, point.y);
   }
 
   private renderPlay(): void {

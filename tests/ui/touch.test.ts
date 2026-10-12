@@ -3,7 +3,7 @@
 
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { TICK_MS } from '../../src/sim/constants';
+import { SELECT_HALF_WIDTH, TICK_MS } from '../../src/sim/constants';
 import { parseLevel } from '../../src/sim/level';
 import {
   MAGNIFIER_GAP,
@@ -15,7 +15,7 @@ import {
   toLogical,
   touchMinimapLevelX,
 } from '../../src/ui/layout';
-import { Session } from '../../src/ui/session';
+import { MOUSE_SELECT_SLACK, Session } from '../../src/ui/session';
 import { lemmingAt } from '../sim/helpers';
 
 const level = parseLevel(JSON.parse(readFileSync('assets/levels/test/flat.json', 'utf8')));
@@ -88,6 +88,20 @@ describe('touch layout (vision C-06, 3.4.1)', () => {
 });
 
 describe('session: touch assignment, nuke confirmation, scrolling', () => {
+  it('a mouse click just beside a lemming still selects it (M6.146)', () => {
+    const session = new Session(level, { purist: false });
+    const walker = lemmingAt(100, 120, 'walking', 1, 1);
+    session.state.lemmings.push(walker);
+    session.command({ type: 'selectSkill', skill: 'digger' });
+    // The selection box reaches x = 100 + SELECT_HALF_WIDTH; the slack adds MOUSE_SELECT_SLACK more.
+    expect(session.lemmingForMouse(100, 115)).toBe(walker);
+    expect(session.lemmingForMouse(100 + SELECT_HALF_WIDTH + MOUSE_SELECT_SLACK, 115)).toBe(walker);
+    expect(session.lemmingForMouse(100 + SELECT_HALF_WIDTH + MOUSE_SELECT_SLACK + 1, 115)).toBeNull();
+    expect(session.clickLevel(100 - SELECT_HALF_WIDTH - 3, 115)).toBe(true);
+    session.advance(TICK_MS);
+    expect(session.replay[0]?.intent).toEqual({ type: 'assign', lemmingId: walker.id, skill: 'digger' });
+  });
+
   it('picks the best lemming within the radius, preferring one that accepts the skill', () => {
     const session = new Session(level, { purist: false });
     const near = lemmingAt(100, 120, 'walking', 1, 1);

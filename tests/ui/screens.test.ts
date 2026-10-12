@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 import { describe, expect, it } from 'vitest';
-import { cycle, itemAt, layoutMenu, moveFocus, resultCommentKey } from '../../src/ui/screens';
+import { MENU_HIT_SLACK, cycle, itemAt, layoutMenu, moveFocus, resultCommentKey } from '../../src/ui/screens';
 
 describe('menus (V-08)', () => {
   const items = layoutMenu(
@@ -23,6 +23,13 @@ describe('menus (V-08)', () => {
     expect(itemAt(items, 160, 105)?.id).toBe('a');
     expect(itemAt(items, 160, 117)).toBeUndefined();
     expect(itemAt(items, 0, 0)).toBeUndefined();
+  });
+
+  it('accepts clicks beside a label, for small children (M6.146)', () => {
+    const play = items[0]!;
+    expect(itemAt(items, play.x - MENU_HIT_SLACK, 105)?.id).toBe('a');
+    expect(itemAt(items, play.x + play.w + MENU_HIT_SLACK - 1, 105)?.id).toBe('a');
+    expect(itemAt(items, play.x - MENU_HIT_SLACK - 1, 105)).toBeUndefined();
   });
 
   it('moves the focus over enabled items and wraps', () => {
