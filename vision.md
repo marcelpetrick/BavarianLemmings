@@ -341,15 +341,16 @@ No open questions remain. New ones go into a round E table here.
 | 2026-10-11 | `/updateDependencies`, `/githubAbout` applied | done (v0.1.2) |
 | 2026-10-12 | 30 Fun levels, touch, Docker, Pages and offline play | implemented |
 | 2026-10-12 | Owner play-test fixes, Dirndl, hazard geometry, screenshots and independent review | done |
-
 | 2026-10-12 | Bavarian default; saved Classic preserved; storage and Chromium checks pass | done |
+| 2026-10-12 | Skills end to end, replay audit, version shown, child-friendly clicks | done |
 
 ## 9. Resume here
 
-- **State (v0.1.52):** owner play-test follow-up is complete: 16-pixel blasts, visible nuke
-  confirmation, Bavarian defaults, Dirndl sprites, clear objects and matching hazard triggers.
-  README links nine browser screenshots and two whole-catalogue inspection renders.
-- **Verified:** 701 tests, 22 desktop/tablet browser checks, all 30 Fun winning replays,
+- **State (v0.1.59):** second owner play-test follow-up is complete: all eight skills checked by
+  mouse in the browser, a blocker refuses tool skills as in the original (so no sound), every
+  replay uses only accepted clicks, the version shows on title and credits, clicks forgive small
+  children's aim, and frames stepped while paused sound.
+- **Verified:** 737 tests, 25 desktop/tablet browser checks, all 30 Fun winning replays,
   both-theme object clearance, collision masks, independent review and Docker startup.
 - **Remaining:** 90 unimplemented Tricky/Taxing/Mayhem levels, original-layout fidelity,
   original-game constant/key verification, milestone versions, final vision audit and manual

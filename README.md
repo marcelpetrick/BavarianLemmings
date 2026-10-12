@@ -28,8 +28,10 @@ Dirndl outfits and Weißwurst traps. Classic mode remains available in settings;
 Open **<https://marcelpetrick.github.io/BavarianLemmings/>** in a desktop browser. No install, no
 account. Progress and settings stay in your browser.
 
-> **Status:** playable prototype, v0.1.52. All 30 Fun levels have winning replays. Eight skills,
-> desktop and tablet controls, three languages, both themes, audio and offline play work.
+> **Status:** playable prototype, v0.1.59. All 30 Fun levels have winning replays that use only
+> accepted clicks. All eight skills are checked end to end in the browser. Desktop and tablet
+> controls (with forgiving clicks for small children), three languages, both themes, audio and
+> offline play work. The title and credits screens show the running version.
 > Tricky, Taxing, Mayhem and original-layout reconstruction remain open in [plan.md](plan.md).
 >
 > | Document | Answers |
@@ -185,7 +187,7 @@ Work follows [plan.md](plan.md): tick a task in the commit that finishes it, bum
 
 ## Resume here
 
-- State: v0.1.52; owner play-test fixes are implemented and covered by regression tests.
+- State: v0.1.59; skills, level replays, version display and child-friendly controls are verified.
 - Check: `./localPipeline.sh --noRun`; include Docker with `BL_DOCKER=1`.
 - Run: `npm ci && npm run dev`. Regenerate browser captures with `npm run screenshots`.
 - Next: remaining original-layout and rating content in [plan.md](plan.md); 1.0 needs the owner.
