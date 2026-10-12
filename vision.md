@@ -264,7 +264,7 @@ template for this project unless the owner decides otherwise.
 | Q-C7 | Modern conveniences | Yes: add whatever helps. |
 | Q-C8 | Progress | Save after every finished level. In the same browser, continue from where the player left off. |
 | Q-C9 | Devices | Mouse and keyboard, **and** pure touch play with a tablet layout for the UI. See the proposal in 3.4.1. |
-| Q-C10 | GitHub | Public repository, push in between. Blocked: `gh` is not logged in on this machine (see Resume here). CI for Markdown and code quality right away. |
+| Q-C10 | GitHub | Public repository; push authorized. GitHub authentication works. CI covers documentation and code quality. |
 
 ### Round D (2026-10-11): closed
 
@@ -318,6 +318,10 @@ No open questions remain. New ones go into a round E table here.
 | 2026-10-11 | Implementation is handed to another agent; this session ends with the planning documents | Owner |
 | 2026-10-11 | End-to-end tests run in Chromium only; Firefox is covered by manual play-testing (P-01 stays a requirement) | Owner: one browser is enough for automated tests, faster pipeline |
 | 2026-10-11 | No separate plain-tap option for touch (M5.05): a quick tap is already a press-aim-release without the aim, so it assigns at once to the best lemming within about 8 mm; the e2e tests on Chromium tablet emulation (landscape and portrait) won Fun 1 this way without problems | Agent, delegated by the owner (Q-D1) |
+| 2026-10-12 | Bavarian mode is the default; preserve explicitly saved theme choices | Owner play-test request |
+| 2026-10-12 | Bomber radius is 16 logical pixels, a deliberate departure from original behavior | Owner asks for larger blasts |
+| 2026-10-12 | Preserve the five-second bomber fuse and nuke confirmation; show the first nuke action visibly | Diagnose first-click behavior; keep existing G-05 and G-11 |
+| 2026-10-12 | Omit decorative maypoles when neither side of an exit has clear space | Owner prioritizes fitting layouts without wrong overlaps |
 
 ## 8. Status
 
@@ -335,25 +339,25 @@ No open questions remain. New ones go into a round E table here.
 | 2026-10-11 | Pixel art and audio by subagents, integrated | done (v0.0.23 to v0.0.33) |
 | 2026-10-11 | Playable prototype in the browser: menus, Fun 1, panel, themes, audio | done (v0.1.0) |
 | 2026-10-11 | `/updateDependencies`, `/githubAbout` applied | done (v0.1.2) |
-| – | Levels (M6), touch (M5), Docker/Pages/README (M7) | running in subagents |
+| 2026-10-12 | 30 Fun levels, touch, Docker, Pages and offline play | implemented |
+| 2026-10-12 | Owner play-test fixes, Dirndl, hazard geometry, screenshots and independent review | done |
 
 | 2026-10-12 | Bavarian default; saved Classic preserved; storage and Chromium checks pass | done |
 
 ## 9. Resume here
 
-- **State (v0.1.38):** 30 Fun levels, touch controls, offline play, Docker and Pages exist.
-  Tricky, Taxing and Mayhem content and original-layout fidelity remain unfinished.
-- **Owner decisions (2026-10-12):** use Bavarian mode by default; enlarge suicide-bomber
-  blasts; diagnose first-click behavior; improve level layouts and eliminate accidental overlaps;
-  provide real screenshots. Keep the five-second individual bomber fuse and make intentional
-  nuke confirmation clear.
-- **Running:** isolated subagents `bomb-fixes`, `level-design`, `bavarian-default` under
-  `.claude/worktrees/`. The integrator owns living documents, shared translations and final gates.
-- **Next:** integrate each logical change with `scripts/commit.sh`, check replays and screenshots,
-  run the full gate, independent review and Docker smoke test. Keep unfinished content tasks open.
+- **State (v0.1.51):** owner play-test follow-up is complete: 16-pixel blasts, visible nuke
+  confirmation, Bavarian defaults, Dirndl sprites, clear objects and matching hazard triggers.
+  README links nine browser screenshots and two whole-catalogue inspection renders.
+- **Verified:** 701 tests, 22 desktop/tablet browser checks, all 30 Fun winning replays,
+  both-theme object clearance, collision masks, independent review and Docker startup.
+- **Remaining:** 90 unimplemented Tricky/Taxing/Mayhem levels, original-layout fidelity,
+  original-game constant/key verification, milestone versions, final vision audit and manual
+  Firefox/Chrome rating checks. These requirements are open, not waived. 1.0 needs owner approval.
 - **Check:** `node scripts/check-plan.mjs --summary`, `node scripts/check-constants.mjs`,
   `git status --short`, `gh run list -L 3`.
-- **Restart:** `npm ci && npm run dev`; integrate as described in `AGENTS.md`.
+- **Restart:** `npm ci && npm run dev`; capture with `npm run screenshots`;
+  `BL_DOCKER=1 ./localPipeline.sh --noRun` runs the complete local gate.
 
 ## Sources (fact check 2026-10-11)
 

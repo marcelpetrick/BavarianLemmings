@@ -54,13 +54,13 @@ gantt
     section M3
     M3 full game loop, audio, languages, persistence (10/11) :active, m3, 2026-10-12, 1h
     section M4
-    M4 Bavarian theme (8/10) :active, m4, after m3, 1h
+    M4 Bavarian theme (9/10) :active, m4, after m3, 1h
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (40/139) :active, m6, after m5, 30h
+    M6 content, all four ratings (41/139) :active, m6, after m5, 30h
     section M7
-    M7 delivery (7/12) :active, m7, after m6, 2h
+    M7 delivery (9/12) :active, m7, after m6, 1h
 ```
 
 <!-- gantt:end -->
@@ -209,7 +209,7 @@ gantt
       public-domain tunes (Ländler, Zwiefacher, march), sources in `THIRD_PARTY.md`.
 - [x] M4.06 (R-05) Theme switch in settings and a "Bayern" button on the title screen; theme
       persisted; switching reloads assets without reloading the page.
-- [ ] M4.07 (P-01) e2e: switch to Bavarian, play the first level, screenshot for the README.
+- [x] M4.07 (P-01) e2e: switch to Bavarian, play the first level, screenshot for the README.
 - [ ] M4.08 (Q) Milestone bump to 0.4.0.
 - [x] M4.09 (V-10) Dirndl lemmings: a second Bavarian sheet with the same geometry, chosen per
       lemming (even ids), renderer only.
@@ -403,7 +403,7 @@ verifies them. Preserve the owner's untracked recording in `media/`.
       hatches, exits and hazards; validate winning replays after every layout change.
 - [x] M6.137 (A-01, V-02, Q) Select Bavarian mode for fresh or invalid settings while
       retaining an explicitly saved Classic preference.
-- [ ] M6.138 (V-05, Q) Capture real screenshots of both themes, representative levels and
+- [x] M6.138 (V-05, Q) Capture real screenshots of both themes, representative levels and
       the enlarged blast; update README and record review findings.
 
 - [x] M6.139 (G-09, V-04) Match every authored trap trigger to its visible sprite trigger
@@ -411,10 +411,10 @@ verifies them. Preserve the owner's untracked recording in `media/`.
 
 | Step | Estimated work | State |
 | --- | --- | --- |
-| Bomber and first-click diagnosis | 20–40 min | subagent running |
-| Level layout and overlap audit | 30–60 min | subagent running |
-| Bavarian defaults, sprites and screenshots | 20–40 min | subagent running |
-| Integration, full pipeline, review, Docker and CI | 20–40 min | waiting for changes |
+| Bomber and first-click diagnosis | 20–40 min | done; first click and confirmation tested |
+| Level layout and overlap audit | 30–60 min | done; 30 replays and both themes checked |
+| Bavarian defaults, sprites and screenshots | 20–40 min | done; 11 captures and inspection renders |
+| Integration, full pipeline, review, Docker and CI | 20–40 min | local gate and Docker pass; final CI checked after push |
 
 ## M7: delivery
 
@@ -427,9 +427,9 @@ verifies them. Preserve the owner's untracked recording in `media/`.
 - [x] M7.04 (Q) `.github/workflows/release.yml`: on `v*` tags, check that the tag matches
       `package.json`, run the pipeline, attach the zipped `dist/`.
 - [x] M7.05 (P-05) Service worker for offline play after the first load; e2e: reload offline.
-- [ ] M7.06 (Q, X-04) README complete: badges (Play, CI, Pages, Docker, Release, Licence, REUSE,
+- [x] M7.06 (Q, X-04) README complete: badges (Play, CI, Pages, Docker, Release, Licence, REUSE,
       Coverage, stack), setup, testing, pipeline, Docker, usage, screenshots of both modes.
-- [ ] M7.07 (Q) `/reviewBranch`, fix every finding; `review_YYYYMMDD.md` with status per finding.
+- [x] M7.07 (Q) `/reviewBranch`, fix every finding; `review_YYYYMMDD.md` with status per finding.
 - [x] M7.08 (Q) `/githubAbout`: description and topics applied.
 - [ ] M7.09 (Q) Final check against every vision.md item (`scripts/check-plan.mjs` plus a manual
       pass); pipeline green locally and in CI; Docker image runs; tree clean; everything pushed.
@@ -448,9 +448,12 @@ verifies them. Preserve the owner's untracked recording in `media/`.
 
 ## Resume here
 
-- State: v0.1.38; 30 Fun levels shipped. Three isolated subagents work on the owner's
-  bomber, layout and Bavarian-default requests. Remaining ratings and fidelity tasks stay open.
-- Check: `node scripts/check-plan.mjs --summary`, `git status --short`,
-  `git worktree list`.
-- Restart: `npm ci && npm run dev`; integrate subagent commits according to `AGENTS.md`,
-  then `scripts/commit.sh "fix: address owner play-test feedback" "Explain the verified change"`.
+- State: v0.1.51; M6.134–M6.139 and Dirndl/README/review follow-up are complete.
+  There are 30 playable Fun levels, with unchanged winning replay inputs. The 90 levels in
+  Tricky, Taxing and Mayhem and original-layout reconstruction remain open.
+- Results: 701 unit/integration tests, 22 desktop/tablet browser tests, line/function coverage
+  100%, branch coverage 97.84%. Both-theme object clearances and collision-mask guards pass.
+- Check: `node scripts/check-plan.mjs --summary`, `git status --short`, `gh run list -L 3`.
+- Restart: `npm ci && npm run dev`; `npm run screenshots`; `npm run levels:preview`.
+- Next: M6.129–M6.132 original-layout content; M6.123–M6.124 fidelity sources;
+  milestone versions and final vision audit/manual browser tests remain open. No 1.0 release yet.

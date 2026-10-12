@@ -16,9 +16,10 @@ current milestone in `plan.md`.
 
 ## Current phase
 
-**Implementation runs; a playable prototype exists (v0.1.x).** Fun 1 plays end to end in the
-browser with mouse and keyboard, both themes, audio, three languages. The open work is in
-`plan.md`: levels (M6), touch (M5), delivery (M7). The owner has delegated the remaining product
+**Implementation runs; a playable prototype exists (v0.1.x).** All 30 Fun levels play end to end
+in the browser with mouse and keyboard, both themes, audio, three languages. The open work is in
+`plan.md`: original-layout reconstruction and the three remaining ratings (M6), fidelity checks
+and final release validation (M7). The owner has delegated the remaining product
 decisions (see the assumptions table in `plan.md`). Ask only for decisions that are really the
 owner's: an irreversible action, a change on shared infrastructure, a real trade-off between
 stated goals.

@@ -1,7 +1,7 @@
 # BavarianLemmings: architecture
 
 > Living document. It answers **how** the game is built. [vision.md](vision.md) says **what**,
-> [plan.md](plan.md) lists the tasks. Owner: Marcel Petrick. Last update: 2026-10-11.
+> [plan.md](plan.md) lists the tasks. Owner: Marcel Petrick. Last update: 2026-10-12.
 
 ## 1. Decision rule (written before the candidates were scored)
 
@@ -20,7 +20,7 @@ A candidate that fails one gate is out, whatever its other merits.
 | H4: the playfield is a pixel-exact 320×200 logical image, scaled by an integer factor. The control panel can be replaced by a touch layout without touching the simulation. | V-01, V-03, C-06 |
 | H5: the fixed simulation tick is independent of the display refresh rate. | R-03, P-04 |
 | H6: 95 % test coverage is reachable: every piece of logic can be driven from a test without a browser. | AGENTS.md |
-| H7: end-to-end tests run in Firefox and Chrome on GitHub Actions. | P-01 |
+| H7: end-to-end tests run in Chromium on GitHub Actions; Firefox is checked manually. | P-01 |
 | H8: the build is static files that work on GitHub Pages, which cannot set custom HTTP headers, and from a plain nginx container. | P-03 |
 | H9: themes (Classic, Bavarian) and languages (EN, DE, Bavarian) are data, loaded at runtime, not code branches. | R-05, I-01 |
 
@@ -106,7 +106,7 @@ panel.
 | H4 swappable panel | pass | pass | weak (one canvas) | weak (one canvas) |
 | H5 fixed tick | pass | pass | pass | pass |
 | H6 95 % coverage | pass | pass (worker glue is hard to cover) | pass | pass |
-| H7 e2e in both browsers | pass | pass | pass | pass |
+| H7 automated Chromium and manual Firefox | pass | pass | pass | pass |
 | H8 static on Pages | pass | **fail with shared memory**, pass with copies | pass | pass |
 | H9 themes as data | pass | pass | pass | pass |
 | S1 simplicity | 5 | 3 | 4 | 2 |
@@ -353,7 +353,7 @@ gesture (A-02).
 | --- | --- | --- |
 | Unit | Vitest | every skill function against hand-built terrain fixtures (G-13 cases), terrain primitives, RNG, i18n, persistence, level validation |
 | Integration | Vitest | `step` over whole levels with recorded replays; determinism (two runs, identical state hashes); every shipped level solvable by its replay |
-| End-to-end | Playwright, Firefox + Chrome, desktop + tablet emulation | boot, title, play a level with the mouse, with the keyboard, with touch; theme and language switches; settings persist across reload; the screenshot for the README |
+| End-to-end | Playwright, Chromium, desktop + tablet emulation; manual Firefox | boot, title, play a level with the mouse, with the keyboard, with touch; theme and language switches; settings persist across reload; the screenshot for the README |
 | Static | ESLint (type-aware, import boundaries), Prettier, Stylelint, markdownlint, shellcheck, actionlint, REUSE | pipeline |
 
 The test hook `window.__bavarianLemmings` exposes
@@ -378,3 +378,19 @@ The test hook `window.__bavarianLemmings` exposes
 | Voice line generation method | Q-D9 |
 | Level codes (passwords) | Q-D6 |
 | Service worker for offline | after the vertical slice |
+
+## 16. Presentation follow-up (2026-10-12)
+
+- `persist/storage.ts` defaults missing or invalid themes to Bavarian, preserving saved choices.
+- `theme/themes.ts` selects Dirndl for even IDs. Sprite geometry and simulation remain identical.
+- Removal events carry optional entity IDs so explosion debris uses the matching costume.
+- `render/scenery.ts` chooses a clear side for a maypole or omits it. The renderer caches
+  placement from initial level terrain; later digging cannot move decorations.
+- Authored trap dimensions match `TRAP_TRIGGER_AREAS`. Every animation frame is checked for
+  terrain, boundary and gameplay-object overlaps in both themes.
+
+## Resume here
+
+- State: presentation changes retain the simulation/theme boundary and deterministic replays.
+- Check: `npm run test -- --run`; `npm run levels:preview`; `npm run screenshots`.
+- Restart: `npm ci && npm run dev`; remaining fidelity/content work is in [plan.md](plan.md).

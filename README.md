@@ -16,20 +16,21 @@ SPDX-License-Identifier: GPL-3.0-or-later
 [![Vite](https://img.shields.io/github/package-json/dependency-version/marcelpetrick/BavarianLemmings/dev/vite?label=Vite&logo=vite&logoColor=white&color=646cff)](https://vite.dev/)
 [![Vitest](https://img.shields.io/github/package-json/dependency-version/marcelpetrick/BavarianLemmings/dev/vitest?label=Vitest&logo=vitest&logoColor=white&color=6e9f18)](https://vitest.dev/)
 [![Playwright](https://img.shields.io/github/package-json/dependency-version/marcelpetrick/BavarianLemmings/dev/@playwright/test?label=Playwright&logo=playwright&color=2ead33)](https://playwright.dev/)
+[![Coverage gate ≥95%](https://img.shields.io/badge/coverage%20gate-%E2%89%A595%25-brightgreen)](vite.config.ts)
 [![Node.js 24](https://img.shields.io/badge/Node.js-24-5fa04e.svg?logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 
 An homage to **Lemmings**, the 1991 DOS game, running natively in the browser (Firefox and Chrome).
-It has a classic mode in the spirit of the 386-era original and a **Bavarian mode** in white and
-blue, with mountains, Alpine folk music, Lederhosen and Weißwurst traps.
+**Bavarian mode is the default**, with white and blue, mountains, Alpine folk music, Lederhosen,
+Dirndl outfits and Weißwurst traps. Classic mode remains available in settings; saved choices persist.
 
 ## Play
 
 Open **<https://marcelpetrick.github.io/BavarianLemmings/>** in a desktop browser. No install, no
 account. Progress and settings stay in your browser.
 
-> **Status:** playable prototype, v0.1.x. The first level (Fun 1), the eight skills, menus, the
-> panel, audio and both themes work. The remaining levels and features follow
-> [plan.md](plan.md).
+> **Status:** playable prototype, v0.1.51. All 30 Fun levels have winning replays. Eight skills,
+> desktop and tablet controls, three languages, both themes, audio and offline play work.
+> Tricky, Taxing, Mayhem and original-layout reconstruction remain open in [plan.md](plan.md).
 >
 > | Document | Answers |
 > | --- | --- |
@@ -47,6 +48,23 @@ Captured from the production build by [`scripts/screenshot.mjs`](scripts/screens
 | --- | --- |
 | ![Title screen, classic theme](docs/screenshots/classic-title.png) | ![Title screen, Bavarian theme](docs/screenshots/bavarian-title.png) |
 | ![Fun 1 in play, classic theme](docs/screenshots/classic-play.png) | ![Fun 1 in play, Bavarian theme](docs/screenshots/bavarian-play.png) |
+
+The enlarged bomber blast removes terrain within **16 logical pixels** (previously 8). Steel stays
+intact. The screenshots below use actual game events, with no edited simulation state.
+
+| Individual bomber blast | Confirmed nuke blast |
+| --- | --- |
+| ![Fun 6 bomber blast](docs/screenshots/bavarian-bomber-blast.png) | ![Fun 1 nuke blast](docs/screenshots/bavarian-nuke-blast.png) |
+
+[Bomber aftermath](docs/screenshots/bavarian-bomber-aftermath.png),
+[first nuke press](docs/screenshots/bavarian-nuke-armed.png), and
+[Fun 6 before the blast](docs/screenshots/bavarian-fun06.png).
+
+Whole-level inspection renders use a black background to expose overlaps outside the initial view:
+[Classic catalogue](docs/screenshots/levels-classic.png),
+[Bavarian catalogue](docs/screenshots/levels-bavarian.png).
+Regenerate them with `npm run levels:preview` and `BL_THEME=bavarian npm run levels:preview`;
+labelled contact sheets are written to `.tools/level-previews/`.
 
 ## Controls
 
@@ -68,6 +86,11 @@ tools) for themselves, so every command also has a plain key.
 | `Z` | Zoom (2× view) |
 | `Esc` | Back to the menu |
 | `↑` / `↓`, `Enter` | Move through and choose menu items |
+
+An individual bomber arms with one lemming click after selecting the skill, then starts its
+five-second countdown. A zero counter means none are available: Fun 1 supplies no bombers; Fun 6
+does. The global nuke needs a second press within one second; the first press displays its
+confirmation instruction. On touch, hold for one second or tap twice. Restart clears confirmation.
 
 Fast-forward, restart, frame step and zoom did not exist in the DOS original. The **Purist**
 setting switches them off.
@@ -137,7 +160,7 @@ GitHub workflows:
 | [`scripts/install-actionlint.sh`](scripts/install-actionlint.sh) | Download the pinned actionlint into `.tools/` |
 | [`scripts/check-constants.mjs`](scripts/check-constants.mjs) | List the unverified original-game constants; fail if one lacks a status or source |
 | [`scripts/check-translations.mjs`](scripts/check-translations.mjs) | Fail if a translation key is missing in a language or used in code but undefined |
-| [`scripts/screenshot.mjs`](scripts/screenshot.mjs) | Capture the README screenshots (`docs/screenshots/`) from the production build with Playwright; `npm run screenshots` |
+| [`scripts/screenshot.mjs`](scripts/screenshot.mjs) | Capture both themes and bomber/nuke states (`docs/screenshots/`) from the production build with Playwright; `npm run screenshots` |
 | [`scripts/docker-smoke.sh`](scripts/docker-smoke.sh) | Build the Docker image, run it, check index, JS asset, WAV MIME type and the game start; pipeline step with `BL_DOCKER=1` |
 | [`scripts/gantt.mjs`](scripts/gantt.mjs) | Generate the roadmap Gantt chart in plan.md from the task list (`--write`, `--check`) |
 | [`scripts/check-plan.mjs`](scripts/check-plan.mjs) | Fail if a vision.md ID has no plan.md task; `--summary` prints done/open per milestone |
@@ -159,3 +182,10 @@ Work follows [plan.md](plan.md): tick a task in the commit that finishes it, bum
 ## Licence
 
 [GPL-3.0-or-later](LICENSE) © 2026 Marcel Petrick
+
+## Resume here
+
+- State: v0.1.51; owner play-test fixes are implemented and covered by regression tests.
+- Check: `./localPipeline.sh --noRun`; include Docker with `BL_DOCKER=1`.
+- Run: `npm ci && npm run dev`. Regenerate browser captures with `npm run screenshots`.
+- Next: remaining original-layout and rating content in [plan.md](plan.md); 1.0 needs the owner.
