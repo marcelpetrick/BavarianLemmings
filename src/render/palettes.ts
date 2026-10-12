@@ -74,21 +74,53 @@ export type TerrainStyle = 'dirt' | 'fire' | 'marble' | 'pillar' | 'crystal';
 export const TERRAIN_STYLES: readonly TerrainStyle[] = ['dirt', 'fire', 'marble', 'pillar', 'crystal'];
 
 /**
- * Terrain colour slots: 1 body, 2 body shadow, 3 body highlight, 4 top edge (grass, crust),
- * 5 steel, 6 steel shadow, 7 builder brick.
+ * Terrain colour slots 1 to 16, with the meaning the level builder gives them (sim/terrain.ts SLOT):
+ * 1 outline, 2 deep shadow, 3 shadow, 4 body dark, 5 body, 6 body light, 7 highlight (lit top edge),
+ * 8-10 surface layer dark/middle/light (grass, crust, frost), 11-12 second material middle/light
+ * (pebbles, embers, veins, carvings, crystal), 13-15 steel dark/middle/light, 16 builder brick.
+ * Slots 1 to 7 must go from dark to light: the texture functions shade by stepping along them.
  */
-export type TerrainSlot = 1 | 2 | 3 | 4 | 5 | 6 | 7;
+export type TerrainSlot = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16;
 
-export const TERRAIN_SLOTS: readonly TerrainSlot[] = [1, 2, 3, 4, 5, 6, 7];
+export const TERRAIN_SLOTS: readonly TerrainSlot[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
 export type TerrainColors = Readonly<Record<TerrainSlot, string>>;
 
+/** Steel looks the same in every style and theme, so players always recognise it (slots 13-15). */
+const STEEL_COLORS = ['#4c5468', '#8890a0', '#c8d0dc'] as const;
+
+/** Slots 1-12 of a style, then steel, then the builder brick. */
+function colors(style: readonly string[], brick: string): TerrainColors {
+  const all = [...style, ...STEEL_COLORS, brick];
+  return Object.fromEntries(all.map((color, index) => [index + 1, color])) as unknown as TerrainColors;
+}
+
 export const CLASSIC_TERRAIN_COLORS: Readonly<Record<TerrainStyle, TerrainColors>> = {
-  dirt: { 1: '#8a5a2a', 2: '#5e3a18', 3: '#b07a40', 4: '#3aa838', 5: '#8890a0', 6: '#50586a', 7: '#c8a070' },
-  fire: { 1: '#a83818', 2: '#6a1e0c', 3: '#e86828', 4: '#f8c838', 5: '#8890a0', 6: '#50586a', 7: '#d88848' },
-  marble: { 1: '#9898a8', 2: '#606070', 3: '#d0d0d8', 4: '#f0f0f8', 5: '#8890a0', 6: '#50586a', 7: '#b8b8c8' },
-  pillar: { 1: '#c8a868', 2: '#8a6a38', 3: '#e8d098', 4: '#f0e0b0', 5: '#8890a0', 6: '#50586a', 7: '#d8c088' },
-  crystal: { 1: '#3878d8', 2: '#1c3c90', 3: '#88c0f8', 4: '#c8f0ff', 5: '#8890a0', 6: '#50586a', 7: '#78a8f0' },
+  // Brown earth in strata, green grass, grey pebbles.
+  dirt: colors(
+    ['#2a1608', '#4a2a10', '#6a3c18', '#84501f', '#a06428', '#bc7e38', '#d8a050', '#1e7a1e', '#30a830', '#78e050', '#8c8c84', '#c8c8bc'],
+    '#c8a070',
+  ),
+  // Dark red lava rock, a glowing crust, orange and yellow embers.
+  fire: colors(
+    ['#200604', '#3e0c06', '#5c160a', '#7a2010', '#962c14', '#b4401c', '#e06a28', '#d84010', '#f88820', '#fce860', '#e85818', '#ffd040'],
+    '#d88848',
+  ),
+  // White-grey marble blocks with blue-grey veins.
+  marble: colors(
+    ['#24242e', '#44444f', '#686874', '#8c8c98', '#b0b0bc', '#d0d0d8', '#f0f0f8', '#8890a0', '#c0c8d8', '#f8f8ff', '#5a6a8a', '#8a9ac0'],
+    '#b8b8c8',
+  ),
+  // Sandstone with terracotta carvings.
+  pillar: colors(
+    ['#2e2010', '#4e3818', '#6e5226', '#8e6e36', '#b08c4c', '#ccaa68', '#ecd498', '#8e6e36', '#ccaa68', '#f0e0b0', '#a84828', '#d87048'],
+    '#d8c088',
+  ),
+  // Blue crystal with frost on top and violet shards.
+  crystal: colors(
+    ['#0a1238', '#142060', '#1c3088', '#2848b0', '#3868d0', '#5890e8', '#a0d0ff', '#78b0f0', '#b0e0ff', '#f0ffff', '#8048d0', '#c890ff'],
+    '#78a8f0',
+  ),
 };
 
 /** What each classic terrain style becomes in Bavarian mode (vision V-09). */
@@ -101,9 +133,29 @@ export const BAVARIAN_TERRAIN_NAMES: Readonly<Record<TerrainStyle, string>> = {
 };
 
 export const BAVARIAN_TERRAIN_COLORS: Readonly<Record<TerrainStyle, TerrainColors>> = {
-  dirt: { 1: '#8a8478', 2: '#5c584e', 3: '#b0aa9c', 4: '#48b040', 5: '#8890a0', 6: '#50586a', 7: '#c89858' },
-  fire: { 1: '#7a3a1a', 2: '#4a2010', 3: '#d07030', 4: '#f0b040', 5: '#8890a0', 6: '#50586a', 7: '#d8a060' },
-  marble: { 1: '#9a6a3a', 2: '#6a4422', 3: '#c8945a', 4: '#e0c090', 5: '#8890a0', 6: '#50586a', 7: '#d0a060' },
-  pillar: { 1: '#d8e4f0', 2: '#0066b3', 3: '#ffffff', 4: '#38a038', 5: '#8890a0', 6: '#50586a', 7: '#a8c8ec' },
-  crystal: { 1: '#a8d8f0', 2: '#6aa8d8', 3: '#e8f8ff', 4: '#ffffff', 5: '#8890a0', 6: '#50586a', 7: '#c8e8f8' },
+  // Alm: grey limestone under a green meadow, pale limestone pebbles.
+  dirt: colors(
+    ['#1e1e1a', '#3a3a34', '#56544c', '#706c62', '#8c887c', '#aaa698', '#cac6b8', '#2f7a28', '#48a838', '#9ad860', '#b8b4a8', '#ece8dc'],
+    '#c89858',
+  ),
+  // Hendl grill: charcoal with glowing embers under a golden roast crust.
+  fire: colors(
+    ['#100c0a', '#221a16', '#342822', '#4a3a30', '#5e4a3c', '#76604e', '#a08068', '#a85a18', '#d88a28', '#f8c050', '#e84818', '#ffb030'],
+    '#d8a060',
+  ),
+  // Wirtshaus: wooden planks with darker grain.
+  marble: colors(
+    ['#1e1008', '#3a2010', '#5a3418', '#7a4a22', '#9a6a3a', '#b8844a', '#e0b070', '#6a4422', '#a87a48', '#e0c090', '#6a3e1a', '#c89050'],
+    '#d0a060',
+  ),
+  // Maibaum: white and Bavarian blue stripes, green garlands with gold.
+  pillar: colors(
+    ['#0a2448', '#003a78', '#0058a8', '#0066b3', '#c8dcf0', '#ffffff', '#ffffff', '#2a7a30', '#38a038', '#78d060', '#38a038', '#ffe060'],
+    '#a8c8ec',
+  ),
+  // Glacier: pale blue ice, snow on top, turquoise crevasses.
+  crystal: colors(
+    ['#1a3a5a', '#2a5a80', '#4a80a8', '#6aa8d0', '#98cce8', '#c0e4f4', '#ffffff', '#c8dce8', '#e8f4fc', '#ffffff', '#4ab0e0', '#b0f0ff'],
+    '#c8e8f8',
+  ),
 };

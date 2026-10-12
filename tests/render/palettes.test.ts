@@ -12,12 +12,18 @@ import {
   TERRAIN_SLOTS,
   TERRAIN_STYLES,
 } from '../../src/render/palettes';
-import { rasterize, slotsUsed, type Animation } from '../../src/render/pixelArt';
+import { parseHexColor, rasterize, slotsUsed, type Animation } from '../../src/render/pixelArt';
+import { SLOT, TERRAIN_SLOT_COUNT } from '../../src/sim/terrain';
 import { ICONS } from '../../src/render/sprites/icons';
 import { LEMMING_ANIMATIONS } from '../../src/render/sprites/lemmings';
 import { OBJECT_ANIMATIONS } from '../../src/render/sprites/objects';
 
 const HEX = /^#[0-9a-f]{6}$/;
+
+function luminance(color: string): number {
+  const [r, g, b] = parseHexColor(color);
+  return 0.299 * r + 0.587 * g + 0.114 * b;
+}
 
 const ALL_SPRITES: [string, Animation][] = [
   ...Object.entries(LEMMING_ANIMATIONS).map(([name, animation]): [string, Animation] => [`lemming ${name}`, animation]),
@@ -56,11 +62,16 @@ describe('terrain colours', () => {
     ['classic', CLASSIC_TERRAIN_COLORS],
     ['bavarian', BAVARIAN_TERRAIN_COLORS],
   ] as const) {
-    it(`${themeName} has slots 1 to 7 for every style`, () => {
+    it(`${themeName} has slots 1 to 16 for every style, a dark-to-light ramp and shared steel`, () => {
       expect(Object.keys(colors).sort()).toEqual([...TERRAIN_STYLES].sort());
+      expect(TERRAIN_SLOTS).toHaveLength(TERRAIN_SLOT_COUNT);
       for (const style of TERRAIN_STYLES) {
         expect(Object.keys(colors[style]).map(Number)).toEqual([...TERRAIN_SLOTS]);
         for (const slot of TERRAIN_SLOTS) expect(colors[style][slot]).toMatch(HEX);
+        // The texture functions shade by stepping along slots 1-7, so each must be at least as bright as the one before.
+        const ramp = ([1, 2, 3, 4, 5, 6, 7] as const).map((slot) => luminance(colors[style][slot]));
+        for (let i = 1; i < ramp.length; i += 1) expect(ramp[i], `${style} slot ${i + 1}`).toBeGreaterThanOrEqual(ramp[i - 1]!);
+        expect(colors[style][SLOT.steel]).toBe(CLASSIC_TERRAIN_COLORS.dirt[SLOT.steel]);
       }
     });
   }

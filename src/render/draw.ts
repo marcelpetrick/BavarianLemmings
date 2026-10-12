@@ -9,7 +9,8 @@ import { LEVEL_HEIGHT } from '../sim/constants';
 import type { Terrain } from '../sim/terrain';
 import { FONT, glyphFor, measureText } from './font';
 import type { TerrainColors } from './palettes';
-import { frameAt, parseHexColor, rasterize, type Animation, type Palette, type PixelFrame } from './pixelArt';
+import { frameAt, rasterize, type Animation, type Palette, type PixelFrame } from './pixelArt';
+import { paintTerrainPixels } from './terrainImage';
 
 export type Context = CanvasRenderingContext2D;
 
@@ -115,17 +116,7 @@ export class TerrainLayer {
     if (!terrain.dirty && key === this.colorKey) return;
     this.colorKey = key;
     terrain.dirty = false;
-    const rgb = [[0, 0, 0], ...Object.values(colors).map((c) => parseHexColor(c))];
-    const data = this.image.data;
-    for (let i = 0; i < terrain.colors.length; i += 1) {
-      const slot = terrain.mask[i] === 0 ? 0 : (terrain.colors[i] ?? 0);
-      const color = rgb[slot] ?? rgb[1];
-      const o = i * 4;
-      data[o] = color?.[0] ?? 0;
-      data[o + 1] = color?.[1] ?? 0;
-      data[o + 2] = color?.[2] ?? 0;
-      data[o + 3] = slot === 0 ? 0 : 255;
-    }
+    paintTerrainPixels(terrain, colors, this.image.data);
     this.ctx.putImageData(this.image, 0, 0);
   }
 }

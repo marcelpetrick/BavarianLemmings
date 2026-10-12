@@ -12,10 +12,44 @@ export const STEEL = 2;
 export const ONE_WAY_LEFT = 4;
 export const ONE_WAY_RIGHT = 8;
 
-/** Palette slots of terrain pixels; the theme maps them to colours. 0 is empty. */
+/**
+ * Colour slots of terrain pixels (architecture.md 6.3). The level builder writes a slot per pixel,
+ * the theme maps every slot of a terrain style to a colour (render/palettes.ts). 0 is empty.
+ * Slots 1 to 7 are one brightness ramp from the outline to the lit top edge; the texture functions
+ * step along it for shading.
+ */
+export const SLOT = {
+  /** Darkest visible tone: the underside where terrain meets air. */
+  outline: 1,
+  /** Deep shadow: mortar, cracks, the second row of an underside. */
+  deep: 2,
+  shadow: 3,
+  bodyDark: 4,
+  body: 5,
+  bodyLight: 6,
+  /** Lit top edge and sparkles. */
+  highlight: 7,
+  /** Surface layer (grass, glowing crust, frost): dark, middle, light. */
+  topDark: 8,
+  top: 9,
+  topLight: 10,
+  /** Second material (pebbles, embers, veins, carvings, facets): middle and light. */
+  accent: 11,
+  accentLight: 12,
+  /** Steel (indestructible) as riveted plates. */
+  steelDark: 13,
+  steel: 14,
+  steelLight: 15,
+  /** Bricks laid by builders. */
+  brick: 16,
+} as const;
+
+/** The number of terrain colour slots; a palette defines slots 1 to this number. */
+export const TERRAIN_SLOT_COUNT = 16;
+
 export const COLOR_EMPTY = 0;
-export const COLOR_STEEL = 5;
-export const COLOR_BRICK = 7;
+export const COLOR_STEEL = SLOT.steel;
+export const COLOR_BRICK = SLOT.brick;
 
 export interface Terrain {
   readonly width: number;

@@ -9,18 +9,10 @@
  */
 import { LEMMING_CAP, LEVEL_HEIGHT, LEVEL_MAX_WIDTH, RELEASE_RATE_MAX, RELEASE_RATE_MIN, SKILL_COUNT_MAX } from './constants';
 import { SKILLS, type SkillCounts } from './skills';
-import {
-  COLOR_STEEL,
-  ONE_WAY_LEFT,
-  ONE_WAY_RIGHT,
-  SOLID,
-  STEEL,
-  createTerrain,
-  erasePixel,
-  flagsAt,
-  setPixel,
-  type Terrain,
-} from './terrain';
+import { blobPolygon, hash3, insidePolygon, pointBounds, roughenPolygon, type Point } from './geometry';
+import { PIECE_NAMES, renderPiece, type PieceRaster } from './pieces';
+import { ONE_WAY_LEFT, ONE_WAY_RIGHT, SOLID, STEEL, createTerrain, erasePixel, flagsAt, setPixel, type Terrain } from './terrain';
+import { HINT_FIXED, HINT_NATURAL, paintTerrain, steelSlot } from './texture';
 
 export const LEVEL_FORMAT_VERSION = 1;
 
@@ -31,9 +23,35 @@ export interface Rect {
   readonly h: number;
 }
 
+/**
+ * One terrain shape (docs/terrain-pieces.md). `seed` varies the irregular details of a shape
+ * deterministically; when it is left out, the shape's position is the seed.
+ */
 export type TerrainShape =
   | (Rect & { readonly shape: 'rect' | 'ellipse'; readonly erase?: boolean })
-  | { readonly shape: 'polygon'; readonly points: readonly (readonly [number, number])[]; readonly erase?: boolean };
+  | {
+      readonly shape: 'polygon';
+      readonly points: readonly (readonly [number, number])[];
+      /** 0..1: craggy edges, up to 3 px deep. */
+      readonly rough?: number;
+      readonly seed?: number;
+      readonly erase?: boolean;
+    }
+  | (Rect & { readonly shape: 'blob'; readonly rough?: number; readonly seed?: number; readonly erase?: boolean })
+  | {
+      readonly shape: 'piece';
+      /** A name from the piece library (sim/pieces.ts). */
+      readonly piece: string;
+      readonly x: number;
+      readonly y: number;
+      /** Size in pixels; the piece's default size when left out. */
+      readonly w?: number;
+      readonly h?: number;
+      /** Mirror left to right. */
+      readonly flip?: boolean;
+      readonly seed?: number;
+      readonly erase?: boolean;
+    };
 
 export type LevelObject =
   | { readonly type: 'hatch' | 'exit'; readonly x: number; readonly y: number }
@@ -77,10 +95,32 @@ function isInt(value: unknown, min: number, max: number): value is number {
   return typeof value === 'number' && Number.isInteger(value) && value >= min && value <= max;
 }
 
-function checkRect(value: Json, path: string, errors: string[]): void {
+const SHAPES = ['rect', 'ellipse', 'polygon', 'blob', 'piece'];
+
+function checkPosition(value: Json, path: string, errors: string[]): void {
   for (const key of ['x', 'y'])
     if (!isInt(value[key], -LEVEL_MAX_WIDTH, LEVEL_MAX_WIDTH * 2)) errors.push(`${path}.${key}: integer expected`);
+}
+
+function checkRect(value: Json, path: string, errors: string[]): void {
+  checkPosition(value, path, errors);
   for (const key of ['w', 'h']) if (!isInt(value[key], 1, LEVEL_MAX_WIDTH)) errors.push(`${path}.${key}: positive integer expected`);
+}
+
+function checkOptions(shape: Json, path: string, errors: string[]): void {
+  if (shape.erase !== undefined && typeof shape.erase !== 'boolean') errors.push(`${path}.erase: boolean expected`);
+  if (shape.seed !== undefined && !isInt(shape.seed, 0, 2 ** 31 - 1)) errors.push(`${path}.seed: integer 0..2147483647 expected`);
+  if (shape.rough !== undefined && (typeof shape.rough !== 'number' || !(shape.rough >= 0 && shape.rough <= 1)))
+    errors.push(`${path}.rough: number 0..1 expected`);
+}
+
+function checkPiece(shape: Json, path: string, errors: string[]): void {
+  if (typeof shape.piece !== 'string' || !PIECE_NAMES.includes(shape.piece))
+    errors.push(`${path}.piece: one of ${PIECE_NAMES.join(', ')} expected`);
+  checkPosition(shape, path, errors);
+  for (const key of ['w', 'h'])
+    if (shape[key] !== undefined && !isInt(shape[key], 1, LEVEL_MAX_WIDTH)) errors.push(`${path}.${key}: positive integer expected`);
+  if (shape.flip !== undefined && typeof shape.flip !== 'boolean') errors.push(`${path}.flip: boolean expected`);
 }
 
 function checkShape(shape: unknown, path: string, errors: string[]): void {
@@ -88,13 +128,17 @@ function checkShape(shape: unknown, path: string, errors: string[]): void {
     errors.push(`${path}: object expected`);
     return;
   }
-  if (shape.erase !== undefined && typeof shape.erase !== 'boolean') errors.push(`${path}.erase: boolean expected`);
-  if (shape.shape === 'rect' || shape.shape === 'ellipse') {
-    checkRect(shape, path, errors);
+  if (!SHAPES.includes(shape.shape as string)) {
+    errors.push(`${path}.shape: ${SHAPES.join(', ')} expected`);
+    return;
+  }
+  checkOptions(shape, path, errors);
+  if (shape.shape === 'piece') {
+    checkPiece(shape, path, errors);
     return;
   }
   if (shape.shape !== 'polygon') {
-    errors.push(`${path}.shape: rect, ellipse or polygon expected`);
+    checkRect(shape, path, errors);
     return;
   }
   const points = shape.points;
@@ -179,63 +223,87 @@ export function parseLevel(data: unknown): LevelData {
   return data as LevelData;
 }
 
-function insidePolygon(points: readonly (readonly [number, number])[], x: number, y: number): boolean {
-  let inside = false;
-  let previous = points[points.length - 1];
-  for (const point of points) {
-    if (previous === undefined) break;
-    const [xi, yi] = point;
-    const [xj, yj] = previous;
-    if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) inside = !inside;
-    previous = point;
+/** A shape as something that can be asked pixel by pixel: its bounds and its hint per pixel. */
+interface Stencil {
+  readonly bounds: Rect;
+  /** 0: the shape does not cover the pixel; otherwise the hint (texture.ts). */
+  readonly hintAt: (x: number, y: number) => number;
+}
+
+function seedOf(shape: { readonly seed?: number }, x: number, y: number): number {
+  return shape.seed ?? hash3(x, y, 0x5eed) % 2 ** 31;
+}
+
+function polygonStencil(points: readonly Point[]): Stencil {
+  return { bounds: pointBounds(points), hintAt: (x, y) => (insidePolygon(points, x + 0.5, y + 0.5) ? HINT_NATURAL : 0) };
+}
+
+function pieceStencil(x: number, y: number, raster: PieceRaster): Stencil {
+  return {
+    bounds: { x, y, w: raster.w, h: raster.h },
+    hintAt: (px, py) => raster.cells[(py - y) * raster.w + (px - x)] ?? 0,
+  };
+}
+
+function stencilOf(shape: TerrainShape): Stencil {
+  switch (shape.shape) {
+    case 'rect':
+      return { bounds: shape, hintAt: () => HINT_NATURAL };
+    case 'ellipse': {
+      const rx = shape.w / 2;
+      const ry = shape.h / 2;
+      return {
+        bounds: shape,
+        hintAt: (x, y) => {
+          const dx = (x + 0.5 - (shape.x + rx)) / rx;
+          const dy = (y + 0.5 - (shape.y + ry)) / ry;
+          return dx * dx + dy * dy <= 1 ? HINT_NATURAL : 0;
+        },
+      };
+    }
+    case 'polygon': {
+      const [firstX, firstY] = shape.points[0] ?? [0, 0];
+      return polygonStencil(roughenPolygon(shape.points, shape.rough ?? 0, seedOf(shape, firstX, firstY)));
+    }
+    case 'blob':
+      return polygonStencil(blobPolygon(shape.x, shape.y, shape.w, shape.h, shape.rough ?? 0.5, seedOf(shape, shape.x, shape.y)));
+    case 'piece': {
+      const raster = renderPiece(shape.piece, shape.w, shape.h, seedOf(shape, shape.x, shape.y), shape.flip ?? false);
+      return pieceStencil(shape.x, shape.y, raster);
+    }
   }
-  return inside;
-}
-
-function shapeBounds(shape: TerrainShape): Rect {
-  if (shape.shape !== 'polygon') return shape;
-  const xs = shape.points.map((p) => p[0]);
-  const ys = shape.points.map((p) => p[1]);
-  const x = Math.min(...xs);
-  const y = Math.min(...ys);
-  return { x, y, w: Math.max(...xs) - x + 1, h: Math.max(...ys) - y + 1 };
-}
-
-function shapeContains(shape: TerrainShape, x: number, y: number): boolean {
-  if (shape.shape === 'rect') return true;
-  if (shape.shape === 'polygon') return insidePolygon(shape.points, x + 0.5, y + 0.5);
-  const rx = shape.w / 2;
-  const ry = shape.h / 2;
-  const dx = (x + 0.5 - (shape.x + rx)) / rx;
-  const dy = (y + 0.5 - (shape.y + ry)) / ry;
-  return dx * dx + dy * dy <= 1;
 }
 
 /**
- * Terrain shade for a pixel: a fixed pattern (not random, G-12) of slots 1..3, and slot 4 on top
- * edges so the surface reads as grass or rim in every theme.
+ * Build the terrain of a level: shapes in order (later shapes paint over earlier ones, erase shapes
+ * cut holes), then steel areas, then one-way areas, then the colours of the terrain style
+ * (texture.ts).
  */
-function terrainShade(x: number, y: number): number {
-  const hash = Math.imul(x * 374761393 + y * 668265263, 1274126177) >>> 0;
-  return 1 + ((hash >>> 13) % 3);
-}
-
-/** Build the terrain of a level from its shapes, steel areas and one-way areas. */
 export function buildTerrain(level: LevelData): Terrain {
   const terrain = createTerrain(level.width, level.height);
+  const hints = new Uint8Array(level.width * level.height);
   for (const shape of level.terrain) {
-    const bounds = shapeBounds(shape);
-    for (let y = bounds.y; y < bounds.y + bounds.h; y += 1) {
-      for (let x = bounds.x; x < bounds.x + bounds.w; x += 1) {
-        if (!shapeContains(shape, x, y)) continue;
+    const { bounds, hintAt } = stencilOf(shape);
+    const x1 = Math.min(level.width, bounds.x + bounds.w);
+    const y1 = Math.min(level.height, bounds.y + bounds.h);
+    for (let y = Math.max(0, bounds.y); y < y1; y += 1) {
+      for (let x = Math.max(0, bounds.x); x < x1; x += 1) {
+        const hint = hintAt(x, y);
+        if (hint === 0) continue;
         if (shape.erase === true) erasePixel(terrain, x, y);
-        else setPixel(terrain, x, y, SOLID, terrainShade(x, y));
+        else {
+          setPixel(terrain, x, y, SOLID, 0);
+          hints[y * level.width + x] = hint;
+        }
       }
     }
   }
   for (const rect of level.steel) {
-    for (let y = rect.y; y < rect.y + rect.h; y += 1) {
-      for (let x = rect.x; x < rect.x + rect.w; x += 1) setPixel(terrain, x, y, SOLID | STEEL, COLOR_STEEL + ((x + y) % 2));
+    for (let y = Math.max(0, rect.y); y < Math.min(level.height, rect.y + rect.h); y += 1) {
+      for (let x = Math.max(0, rect.x); x < Math.min(level.width, rect.x + rect.w); x += 1) {
+        setPixel(terrain, x, y, SOLID | STEEL, 0);
+        hints[y * level.width + x] = HINT_FIXED | steelSlot(x - rect.x, y - rect.y, rect.w, rect.h);
+      }
     }
   }
   for (const rect of level.oneWay) {
@@ -247,12 +315,6 @@ export function buildTerrain(level: LevelData): Terrain {
       }
     }
   }
-  // Top edges get slot 4.
-  for (let y = 1; y < terrain.height; y += 1) {
-    for (let x = 0; x < terrain.width; x += 1) {
-      const index = y * terrain.width + x;
-      if ((terrain.mask[index] ?? 0) === SOLID && (terrain.mask[index - terrain.width] ?? 0) === 0) terrain.colors[index] = 4;
-    }
-  }
+  paintTerrain(terrain, hints, level.style);
   return terrain;
 }
