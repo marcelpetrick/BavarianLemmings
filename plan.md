@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (44/148) :active, m6, after m5, 32h
+    M6 content, all four ratings (46/148) :active, m6, after m5, 31h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -429,9 +429,9 @@ The owner asked: why a blocker turned builder gives no sound, whether every skil
 browser, whether every level is solvable, which version runs, and for controls a small child can
 hit with the mouse.
 
-- [ ] M6.142 (G-03, G-06, C-04) A blocker refuses Builder, Basher, Miner and Digger as in the
+- [x] M6.142 (G-03, G-06, C-04) A blocker refuses Builder, Basher, Miner and Digger as in the
       original, so nothing is spent and no assign sound plays; regression test in Vitest and e2e.
-- [ ] M6.143 (G-03, G-04, G-05, G-06, G-07, C-01, A-01) Browser end-to-end test of all eight skills:
+- [x] M6.143 (G-03, G-04, G-05, G-06, G-07, C-01, A-01) Browser end-to-end test of all eight skills:
       a real mouse click assigns each skill, the counter drops, the action starts, the assign sound
       event fires.
 - [x] M6.144 (L-01, G-12) Level audit: every shipped replay wins, and every assignment in it is

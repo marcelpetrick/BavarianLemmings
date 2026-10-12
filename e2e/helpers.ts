@@ -9,6 +9,10 @@ export interface LemmingView {
   y: number;
   action: string;
   bombTicks: number;
+  /** 1 walks right, -1 walks left. */
+  dir: number;
+  climber: boolean;
+  floater: boolean;
 }
 
 export interface GameView {
@@ -58,6 +62,8 @@ export const gameState = async (page: Page): Promise<GameView> => {
   return state;
 };
 export const settings = (page: Page): Promise<Record<string, unknown>> => hook(page, 'settings()');
+export const events = (page: Page): Promise<string[]> => hook(page, 'events()');
+export const openLevel = (page: Page, id: string): Promise<void> => hook(page, `openLevel(${JSON.stringify(id)})`);
 export const appVersion = (page: Page): Promise<string> => hook(page, 'version()');
 export const advance = (page: Page, ms: number): Promise<void> => hook(page, `advance(${ms})`);
 

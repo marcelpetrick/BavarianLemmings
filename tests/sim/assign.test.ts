@@ -61,6 +61,19 @@ describe('skill assignment (G-03, C-04)', () => {
     expect(canAssign(lemming, 'bomber')).toBe(false);
   });
 
+  it('a blocker refuses the tool skills but takes bomber, climber and floater (M6.142, G-06)', () => {
+    const state = stateWith(terrainFromArt(flat), [lemmingAt(5, 14)]);
+    const blocker = state.lemmings[0]!;
+    blocker.action = 'blocking';
+    const builders = state.skills.builder;
+    for (const skill of ['builder', 'basher', 'miner', 'digger', 'blocker'] as const) {
+      expect(assignSkill(state, blocker, skill), skill).toBe(false);
+    }
+    expect(state.skills.builder).toBe(builders);
+    expect(state.events.some((event) => event.type === 'assign')).toBe(false);
+    for (const skill of ['climber', 'floater', 'bomber'] as const) expect(canAssign(blocker, skill), skill).toBe(true);
+  });
+
   it('picks the lemming under the cursor that accepts the skill, then the closest', () => {
     const a = lemmingAt(10, 14, 'walking', 1, 0);
     const b = lemmingAt(12, 14, 'walking', 1, 1);

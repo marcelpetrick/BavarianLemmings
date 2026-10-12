@@ -931,8 +931,23 @@ export class App {
           secondsLeft: Math.ceil(s.ticksLeft / TICKS_PER_SECOND),
           lemmings: s.lemmings
             .filter((l) => !l.removed)
-            .map((l) => ({ id: l.id, x: l.x, y: l.y, action: l.action, bombTicks: l.bombTicks })),
+            .map((l) => ({
+              id: l.id,
+              x: l.x,
+              y: l.y,
+              action: l.action,
+              bombTicks: l.bombTicks,
+              dir: l.dir,
+              climber: l.climber,
+              floater: l.floater,
+            })),
         };
+      },
+      /** Open the preview of any level, test levels included (they are not in the menus). */
+      openLevel: (id: string) => {
+        const level = ALL_LEVELS.find((candidate) => candidate.id === id);
+        if (!level) throw new Error(`no level ${id}`);
+        this.openPreview(level);
       },
       settings: () => ({ ...this.settings }),
       /** The version in package.json, which the title and credits screens show. */
