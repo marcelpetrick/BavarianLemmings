@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (33/133) :active, m6, after m5, 30h
+    M6 content, all four ratings (35/133) :active, m6, after m5, 30h
     section M7
     M7 delivery (7/12) :active, m7, after m6, 2h
 ```
@@ -371,12 +371,12 @@ screenshots of the original used as visual reference only (never shipped, never 
 sampled; our own shapes and textures, owner decision Q-C1). Order: the toolkit first, then four
 rating agents in parallel.
 
-- [ ] M6.126 (V-07, V-02) Terrain-art toolkit: organic shapes (noisy blobs, rock outlines), a
+- [x] M6.126 (V-07, V-02) Terrain-art toolkit: organic shapes (noisy blobs, rock outlines), a
       library of our own parametric pieces (pillars with capitals, brick walls, steps, arches,
       crystals, girders, stalactites, grass tufts), per-style texture functions with more colour
       slots (strata, veins, bricks, facets), lit top edges and shaded undersides; level format stays
       backwards compatible.
-- [ ] M6.127 (Q) Level preview tool: renders every level to a PNG (opt-in vitest run) so a layout
+- [x] M6.127 (Q) Level preview tool: renders every level to a PNG (opt-in vitest run) so a layout
       can be compared side by side with the reference screenshot.
 - [x] M6.128 (L-06, I-02) Level names per rating in their own locale files
       (`src/i18n/locales/levels/<rating>.<lang>.json`), so rating agents never edit the same file.

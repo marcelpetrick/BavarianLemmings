@@ -225,6 +225,11 @@ constant means citing a behaviour description or a measurement, never pasting co
 - Primitives: `isSolid(x, y)`, `clearRect`, `clearMask(shape)`, `setBrick(x, y, dir)`. Each primitive
   respects steel (never cleared) and one-way (cleared only in the allowed direction).
 - The renderer keeps an `ImageData` of the visible slice and redraws only dirty rows.
+- Colours (M6.126, 2026-10-12): `buildTerrain` writes a *hint* per pixel (style texture, piece slot
+  or fixed slot); `sim/texture.ts` turns hints into 16 colour slots (`SLOT` in `sim/terrain.ts`)
+  with per-style textures and top-left lighting. Masks use only `+ - * /`, `floor`, `sqrt` and
+  integer hashes (`sim/geometry.ts`), never `Math.sin`, so they are bit-identical in every engine.
+  `render/terrainImage.ts` maps slots to RGBA for the game and the node preview tool.
 
 ### 6.4 Lemming behaviour
 
@@ -292,7 +297,10 @@ theme is chosen in settings and remembered; switching it reloads assets, never t
 ```
 
 Terrain is composed from our own hand-drawn pieces, like the original's level format did with its
-own; the piece names are ours. A JSON schema validates every level in the pipeline, and a
+own; the piece names are ours. As built (M6.126), the shapes are `rect`, `ellipse`, `polygon`
+(optional `rough`, `seed`), `blob` and `piece` with a name from the code-drawn library in
+`src/sim/pieces.ts`; [docs/terrain-pieces.md](docs/terrain-pieces.md) documents every parameter.
+A JSON schema validates every level in the pipeline, and a
 "solvability" test runs a recorded replay for each shipped level (the replay is the proof that the
 level is solvable, and it is the regression test for the simulation).
 
