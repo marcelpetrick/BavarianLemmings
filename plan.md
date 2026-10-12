@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (39/138) :active, m6, after m5, 30h
+    M6 content, all four ratings (39/139) :active, m6, after m5, 30h
     section M7
     M7 delivery (7/12) :active, m7, after m6, 2h
 ```
@@ -405,6 +405,9 @@ verifies them. Preserve the owner's untracked recording in `media/`.
       retaining an explicitly saved Classic preference.
 - [ ] M6.138 (V-05, Q) Capture real screenshots of both themes, representative levels and
       the enlarged blast; update README and record review findings.
+
+- [ ] M6.139 (G-09, V-04) Match every authored trap trigger to its visible sprite trigger
+      geometry so no danger extends invisibly past the drawn hazard; verify winning replays.
 
 | Step | Estimated work | State |
 | --- | --- | --- |

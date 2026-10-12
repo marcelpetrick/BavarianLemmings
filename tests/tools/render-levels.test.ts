@@ -10,6 +10,10 @@
  *   BL_LEVEL=fun-05 npm run levels:preview          one level (any id prefix: BL_LEVEL=fun-1)
  *   BL_SCALE=3 BL_GRID=40 npm run levels:preview    enlarged 3 ×, guide lines every 40 px
  *   BL_THEME=bavarian npm run levels:preview        Bavarian colours and sprites
+ *
+ * Every preview run also writes contact-sheet-<theme>.png, with labelled whole-level views.
+ * The plain black inspection background keeps collision silhouettes legible in either theme.
+ * These are inspection renders; use npm run screenshots for the running browser UI.
  *   BL_RENDER_PIECES=1 npx vitest run tests/tools   the piece gallery -> docs/terrain-pieces.png
  */
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -29,17 +33,28 @@ const grid = Math.max(0, Number(env.BL_GRID ?? '0') || 0);
 
 describe.skipIf(env.BL_RENDER_LEVELS !== '1')('level previews (BL_RENDER_LEVELS=1)', () => {
   const filter = env.BL_LEVEL ?? '';
-  const levels = ALL_LEVELS.filter((level) => level.id.startsWith(filter));
+  const levels = ALL_LEVELS.filter((level) => level.id.startsWith(filter) && (level.rating !== 'test' || filter.startsWith('test')));
 
   it(`renders ${levels.length} level(s) to .tools/level-previews/`, () => {
     expect(levels.length, `no level id starts with "${filter}"`).toBeGreaterThan(0);
     mkdirSync('.tools/level-previews', { recursive: true });
-    for (const level of levels) {
-      const picture = levelPicture(level, buildTerrain(level), theme, grid).scaled(scale);
+    const columns = Math.min(3, levels.length);
+    const cellWidth = Math.max(...levels.map((level) => level.width));
+    const cellHeight = Math.max(...levels.map((level) => level.height)) + 16;
+    const contact = new Picture(columns * cellWidth, Math.ceil(levels.length / columns) * cellHeight);
+    for (const [index, level] of levels.entries()) {
+      const preview = levelPicture(level, buildTerrain(level), theme, grid);
+      const picture = preview.scaled(scale);
+      const column = index % columns;
+      const row = Math.floor(index / columns);
+      contact.text(level.id, column * cellWidth + 4, row * cellHeight + 4, '#f8f8f8');
+      contact.blit(preview.data, preview.width, preview.height, column * cellWidth, row * cellHeight + 16);
       const path = `.tools/level-previews/${level.id}${theme.id === 'classic' ? '' : `-${theme.id}`}.png`;
       writeFileSync(path, encodePng(picture.width, picture.height, picture.data));
       console.log(`wrote ${path}`);
     }
+    const sheet = contact.scaled(scale);
+    writeFileSync(`.tools/level-previews/contact-sheet-${theme.id}.png`, encodePng(sheet.width, sheet.height, sheet.data));
   });
 });
 

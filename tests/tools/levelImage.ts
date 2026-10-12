@@ -6,6 +6,7 @@
  * the objects as their real sprites, composed in the playfield's order (render/playfield.ts):
  * hatches, exits and traps behind the terrain, water in front of it.
  */
+import { findExitSceneryPosition } from '../../src/render/scenery';
 import { FONT, glyphFor } from '../../src/render/font';
 import { frameAt, parseHexColor, rasterize, type Animation, type Palette } from '../../src/render/pixelArt';
 import { paintTerrainPixels } from '../../src/render/terrainImage';
@@ -95,8 +96,11 @@ export function levelPicture(level: LevelData, terrain: Terrain, theme: Theme, g
   const palette = theme.spritePalette;
   for (const object of level.objects) {
     if (object.type === 'hatch') drawSprite(picture, theme.hatch, 99, palette, object.x, object.y);
-    else if (object.type === 'exit') drawSprite(picture, theme.exit, 0, palette, object.x, object.y);
-    else if (object.type === 'trap') drawSprite(picture, trapAnimation(theme, object.kind), 0, palette, object.x, object.y);
+    else if (object.type === 'exit') {
+      const scenery = findExitSceneryPosition(level, terrain, object, theme);
+      if (theme.exitScenery && scenery) drawSprite(picture, theme.exitScenery, 0, palette, scenery.x, scenery.y);
+      drawSprite(picture, theme.exit, 0, palette, object.x, object.y);
+    } else if (object.type === 'trap') drawSprite(picture, trapAnimation(theme, object.kind), 0, palette, object.x, object.y);
   }
   drawTerrain(picture, terrain, theme, level.style);
   for (const object of level.objects) {

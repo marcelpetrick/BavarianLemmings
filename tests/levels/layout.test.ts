@@ -10,8 +10,29 @@ import { themeById, trapAnimation } from '../../src/theme/themes';
 
 for (const level of ALL_LEVELS.filter((item) => item.rating !== 'test')) {
   describe(`${level.id} object clearance`, () => {
+    it('keeps embedded toolkit details inside the existing collision mask', () => {
+      const undecorated = {
+        ...level,
+        terrain: level.terrain.filter((shape, index, shapes) => {
+          const support = shapes[index - 1];
+          return !(
+            shape.shape === 'piece' &&
+            support?.shape === 'rect' &&
+            !support.erase &&
+            shape.x === support.x &&
+            shape.y === support.y &&
+            shape.w === support.w &&
+            shape.h === support.h
+          );
+        }),
+      };
+      const decoratedMask = buildTerrain(level).mask;
+      const originalMask = buildTerrain(undecorated).mask;
+      expect(decoratedMask.every((value, index) => value === originalMask[index])).toBe(true);
+    });
+
     for (const themeId of ['classic', 'bavarian'] as const) {
-      it(`keeps every opaque hatch and exit pixel clear in ${themeId}`, () => {
+      it(`keeps every opaque hatch, exit and trap pixel clear in ${themeId}`, () => {
         const terrain = buildTerrain(level);
         const theme = themeById(themeId);
         const failures: string[] = [];
