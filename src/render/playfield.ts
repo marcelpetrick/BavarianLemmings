@@ -8,9 +8,11 @@
 import { bomberDigit } from '../sim/assign';
 import { LEMMING_HEIGHT, PLAYFIELD_HEIGHT, SCREEN_WIDTH, TRAP_CYCLE_TICKS } from '../sim/constants';
 import type { Lemming } from '../sim/lemming';
+import { buildTerrain, type LevelData } from '../sim/level';
 import type { GameState, SimEvent } from '../sim/state';
 import { lemmingAnimation, terrainColorsFor, trapAnimation, type Theme } from '../theme/themes';
 import { Debris } from './debris';
+import { findExitSceneryPosition, type SceneryPosition } from './scenery';
 import { mountainBackdrop, SpriteCache, TerrainLayer, TextRenderer, type Context } from './draw';
 
 export interface View {
@@ -27,6 +29,7 @@ export class PlayfieldRenderer {
   private readonly terrain: TerrainLayer;
   private readonly backdrop: HTMLCanvasElement | null;
   private readonly debris: Debris;
+  private readonly exitScenery = new WeakMap<LevelData, ReadonlyMap<number, SceneryPosition>>();
 
   constructor(
     private readonly theme: Theme,
@@ -86,6 +89,17 @@ export class PlayfieldRenderer {
   }
 
   private drawObjects(ctx: Context, state: GameState, layer: 'behind' | 'front'): void {
+    let scenery = this.exitScenery.get(state.level);
+    if (!scenery) {
+      const initialTerrain = buildTerrain(state.level);
+      scenery = new Map(
+        state.level.objects.flatMap((object, index) => {
+          const position = findExitSceneryPosition(state.level, initialTerrain, object, this.theme);
+          return position ? [[index, position] as const] : [];
+        }),
+      );
+      this.exitScenery.set(state.level, scenery);
+    }
     state.level.objects.forEach((object, index) => {
       switch (object.type) {
         case 'hatch':
@@ -95,7 +109,10 @@ export class PlayfieldRenderer {
         case 'exit':
           if (layer !== 'behind') break;
           // The maypole stands beside the beer tent, behind the terrain, with its foot on the exit's floor.
-          if (this.theme.exitScenery) this.sprites.draw(ctx, this.theme.exitScenery, 0, object.x + this.theme.exit.width / 2 + 6, object.y);
+          {
+            const position = scenery.get(index);
+            if (this.theme.exitScenery && position) this.sprites.draw(ctx, this.theme.exitScenery, 0, position.x, position.y);
+          }
           this.sprites.draw(ctx, this.theme.exit, Math.floor(state.tick / 2), object.x, object.y);
           break;
         case 'water':
