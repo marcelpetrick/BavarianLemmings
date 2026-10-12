@@ -60,7 +60,11 @@ export const HATCH_OPEN_TICKS = constant('HATCH_OPEN_TICKS', 34, { unit: 'ticks'
 export const SKILL_COUNT_MAX = constant('SKILL_COUNT_MAX', 99, { unit: 'skills', status: 'verified', source: 'two-digit panel counters' });
 export const BOMBER_COUNTDOWN_SECONDS = constant('BOMBER_COUNTDOWN_SECONDS', 5, { unit: 's', status: 'verified', source: 'vision G-05' });
 export const OH_NO_TICKS = constant('OH_NO_TICKS', 16, { unit: 'ticks', status: 'unverified', source: COMMUNITY });
-export const EXPLOSION_RADIUS = constant('EXPLOSION_RADIUS', 8, { unit: 'px', status: 'unverified', source: COMMUNITY });
+export const EXPLOSION_RADIUS = constant('EXPLOSION_RADIUS', 16, {
+  unit: 'px',
+  status: 'design',
+  source: 'owner request 2026-10-12: larger suicide-bomber blast; twice the previous radius in both themes',
+});
 export const BLOCKER_REACH = constant('BLOCKER_REACH', 6, { unit: 'px', status: 'unverified', source: COMMUNITY });
 export const BUILDER_BRICKS = constant('BUILDER_BRICKS', 12, { unit: 'bricks', status: 'verified', source: 'vision G-07' });
 export const BRICK_WIDTH = constant('BRICK_WIDTH', 6, { unit: 'px', status: 'unverified', source: COMMUNITY });

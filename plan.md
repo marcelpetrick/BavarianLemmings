@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (36/138) :active, m6, after m5, 31h
+    M6 content, all four ratings (37/138) :active, m6, after m5, 31h
     section M7
     M7 delivery (7/12) :active, m7, after m6, 2h
 ```
@@ -395,7 +395,7 @@ rating agents in parallel.
 Three isolated subagents implement the following changes; the main worktree integrates and
 verifies them. Preserve the owner's untracked recording in `media/`.
 
-- [ ] M6.134 (G-05, G-07, V-05) Increase bomber blast radius from 8 to 16 logical pixels;
+- [x] M6.134 (G-05, G-07, V-05) Increase bomber blast radius from 8 to 16 logical pixels;
       retain steel protection and deterministic replays; show immediate assignment feedback.
 - [ ] M6.135 (G-11, C-01, C-06) Explain and test nuke confirmation on desktop and touch;
       verify the individual bomber arms on the first valid lemming click.

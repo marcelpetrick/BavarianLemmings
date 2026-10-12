@@ -57,7 +57,7 @@ IDs are stable. A removed item is struck through, never renumbered.
 | G-02 | MUST: lemmings walk, turn at walls and steep slopes, step up small rises, and fall. A fall from too high kills the lemming ("splat"). `[verify: exact fall height in pixels]` |
 | G-03 | MUST: the eight original skills: **Climber, Floater, Bomber, Blocker, Builder, Basher, Miner, Digger**, each limited to the per-level count. |
 | G-04 | MUST: Climber and Floater are permanent abilities and can be combined ("athlete"). |
-| G-05 | MUST: Bomber starts a 5-second countdown shown above the lemming, says "Oh no!", then explodes and removes terrain. |
+| G-05 | MUST: Bomber starts a 5-second countdown shown above the lemming, says "Oh no!", then explodes and removes terrain within a 16-pixel radius (owner choice, 2026-10-12). |
 | G-06 | MUST: Blocker stops and turns the other lemmings. It can only be freed by blowing it up, or by removing the ground beneath it. |
 | G-07 | MUST: Builder lays 12 bricks of a staircase and shrugs when it runs out. Basher digs horizontally, Miner diagonally downwards, Digger vertically downwards. |
 | G-08 | MUST: terrain types: normal (destructible), **steel** (indestructible), **one-way** areas (can only be bashed or mined in one direction). |

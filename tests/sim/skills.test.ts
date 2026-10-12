@@ -8,11 +8,14 @@ import {
   BUILDER_BRICKS,
   BUILDER_TICKS_PER_BRICK,
   DIG_TICKS_PER_ROW,
+  EXPLOSION_RADIUS,
+  LEMMING_HEIGHT,
   MINE_TICKS_PER_STEP,
   OH_NO_TICKS,
   SHRUG_TICKS,
   TICKS_PER_SECOND,
 } from '../../src/sim/constants';
+import { explode } from '../../src/sim/actions/bombing';
 import { step } from '../../src/sim/game';
 import type { GameState } from '../../src/sim/state';
 import { isSolid } from '../../src/sim/terrain';
@@ -49,6 +52,38 @@ describe('blocker (G-06)', () => {
 });
 
 describe('bomber (G-05)', () => {
+  it('clears a 16-pixel-radius disc and preserves its boundary, steel and other lemmings', () => {
+    const bomber = lemmingAt(40, 44);
+    const neighbour = lemmingAt(42, 44, 'blocking', 1, 1);
+    const art = ground(80, 80, 0);
+    art[40] = '#'.repeat(45) + 'S' + '#'.repeat(34);
+    const state = stateWith(terrainFromArt(art), [bomber, neighbour]);
+    explode(state, bomber);
+    const centreY = bomber.y - Math.floor(LEMMING_HEIGHT / 2) + 1;
+    expect(EXPLOSION_RADIUS).toBe(16);
+    for (const [dx, dy] of [
+      [16, 0],
+      [-16, 0],
+      [0, 16],
+      [0, -16],
+      [11, 11],
+    ]) {
+      expect(isSolid(state.terrain, bomber.x + dx!, centreY + dy!)).toBe(false);
+    }
+    for (const [dx, dy] of [
+      [17, 0],
+      [-17, 0],
+      [0, 17],
+      [0, -17],
+      [12, 12],
+    ]) {
+      expect(isSolid(state.terrain, bomber.x + dx!, centreY + dy!)).toBe(true);
+    }
+    expect(isSolid(state.terrain, 45, 40)).toBe(true);
+    expect(neighbour.removed).toBe(false);
+    expect(state.events.map((event) => event.type)).toEqual(['explode']);
+  });
+
   it('counts down, says oh no, explodes and leaves a crater; steel survives', () => {
     const art = ground(40, 30, 15);
     art[16] = '#'.repeat(15) + 'S' + '#'.repeat(24);
