@@ -17,6 +17,7 @@ import {
   type TerrainStyle,
 } from '../render/palettes';
 import type { Animation, Palette } from '../render/pixelArt';
+import { DIRNDL_LEMMING_ANIMATIONS } from '../render/sprites/dirndlLemmings';
 import { BAVARIAN_LEMMING_ANIMATIONS } from '../render/sprites/bavarianLemmings';
 import { LEMMING_ANIMATIONS } from '../render/sprites/lemmings';
 import { OBJECT_ANIMATIONS } from '../render/sprites/objects';
@@ -113,4 +114,9 @@ export function terrainColorsFor(theme: Theme, style: string): TerrainColors {
 /** The trap animation for a kind; unknown kinds use the squasher. */
 export function trapAnimation(theme: Theme, kind: string): Animation {
   return theme.traps[kind] ?? OBJECT_ANIMATIONS.trapSquasher;
+}
+
+/** Alternate Bavarian costumes by stable entity ID without changing the simulation. */
+export function lemmingAnimation(theme: Theme, action: Action, id: number): Animation {
+  return theme.id === 'bavarian' && id % 2 === 0 ? DIRNDL_LEMMING_ANIMATIONS[action] : theme.lemmings[action];
 }

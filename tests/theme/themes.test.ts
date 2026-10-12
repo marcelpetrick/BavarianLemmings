@@ -3,9 +3,10 @@
 
 import { describe, expect, it } from 'vitest';
 import { slotsUsed } from '../../src/render/pixelArt';
+import { DIRNDL_LEMMING_ANIMATIONS } from '../../src/render/sprites/dirndlLemmings';
 import { OBJECT_ANIMATIONS } from '../../src/render/sprites/objects';
 import { ACTIONS } from '../../src/sim/lemming';
-import { BAVARIAN_THEME, CLASSIC_THEME, terrainColorsFor, themeById, trapAnimation } from '../../src/theme/themes';
+import { BAVARIAN_THEME, CLASSIC_THEME, lemmingAnimation, terrainColorsFor, themeById, trapAnimation } from '../../src/theme/themes';
 
 describe('themes (V-09, V-10, R-05)', () => {
   it('finds themes by id', () => {
@@ -32,6 +33,16 @@ describe('themes (V-09, V-10, R-05)', () => {
       const animations = [...Object.values(theme.lemmings), theme.hatch, theme.exit, theme.water, ...Object.values(theme.traps)];
       for (const animation of animations)
         for (const frame of animation.frames) for (const slot of slotsUsed(frame)) expect(theme.spritePalette[slot], slot).toBeDefined();
+    }
+  });
+
+  it('alternates Dirndl and Lederhosen for Bavarian IDs while keeping Classic unchanged', () => {
+    for (const action of ACTIONS) {
+      expect(lemmingAnimation(BAVARIAN_THEME, action, 0)).toBe(DIRNDL_LEMMING_ANIMATIONS[action]);
+      expect(lemmingAnimation(BAVARIAN_THEME, action, 2)).toBe(DIRNDL_LEMMING_ANIMATIONS[action]);
+      expect(lemmingAnimation(BAVARIAN_THEME, action, 1)).toBe(BAVARIAN_THEME.lemmings[action]);
+      expect(lemmingAnimation(CLASSIC_THEME, action, 0)).toBe(CLASSIC_THEME.lemmings[action]);
+      expect(lemmingAnimation(CLASSIC_THEME, action, 1)).toBe(CLASSIC_THEME.lemmings[action]);
     }
   });
 

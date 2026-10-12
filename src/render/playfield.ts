@@ -9,7 +9,7 @@ import { bomberDigit } from '../sim/assign';
 import { LEMMING_HEIGHT, PLAYFIELD_HEIGHT, SCREEN_WIDTH, TRAP_CYCLE_TICKS } from '../sim/constants';
 import type { Lemming } from '../sim/lemming';
 import type { GameState, SimEvent } from '../sim/state';
-import { terrainColorsFor, trapAnimation, type Theme } from '../theme/themes';
+import { lemmingAnimation, terrainColorsFor, trapAnimation, type Theme } from '../theme/themes';
 import { Debris } from './debris';
 import { mountainBackdrop, SpriteCache, TerrainLayer, TextRenderer, type Context } from './draw';
 
@@ -119,7 +119,7 @@ export class PlayfieldRenderer {
   }
 
   private drawLemming(ctx: Context, state: GameState, lemming: Lemming): void {
-    const animation = this.theme.lemmings[lemming.action];
+    const animation = lemmingAnimation(this.theme, lemming.action, lemming.id);
     const tick = animation.loop ? state.tick + lemming.id : lemming.frame;
     this.sprites.draw(ctx, animation, tick, lemming.x, lemming.y, lemming.dir < 0);
     const digit = bomberDigit(lemming);

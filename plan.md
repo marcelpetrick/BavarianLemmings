@@ -54,7 +54,7 @@ gantt
     section M3
     M3 full game loop, audio, languages, persistence (10/11) :active, m3, 2026-10-12, 1h
     section M4
-    M4 Bavarian theme (7/10) :active, m4, after m3, 1h
+    M4 Bavarian theme (8/10) :active, m4, after m3, 1h
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
@@ -211,7 +211,7 @@ gantt
       persisted; switching reloads assets without reloading the page.
 - [ ] M4.07 (P-01) e2e: switch to Bavarian, play the first level, screenshot for the README.
 - [ ] M4.08 (Q) Milestone bump to 0.4.0.
-- [ ] M4.09 (V-10) Dirndl lemmings: a second Bavarian sheet with the same geometry, chosen per
+- [x] M4.09 (V-10) Dirndl lemmings: a second Bavarian sheet with the same geometry, chosen per
       lemming (even ids), renderer only.
 - [x] M4.10 (V-10) Maypole scenery placed in Bavarian levels (renderer decoration, no sim effect):
       it stands beside every beer-tent exit, behind the terrain.
