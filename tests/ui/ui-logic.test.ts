@@ -95,6 +95,9 @@ describe('session', () => {
     expect(session.advance(TICK_MS * 10)).toEqual([]);
     session.command({ type: 'frameStep' });
     expect(session.state.tick).toBe(1);
+    // The stepped tick's events still reach the sound layer on the next frame, even while paused.
+    expect(session.advance(TICK_MS).map((event) => event.type)).toContain('letsGo');
+    expect(session.advance(TICK_MS)).toEqual([]);
     session.command({ type: 'restart' });
     expect(session.state.tick).toBe(0);
     expect(session.paused).toBe(false);

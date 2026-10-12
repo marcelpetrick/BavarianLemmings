@@ -38,6 +38,8 @@ export class Session {
   viewX: number;
   readonly replay: ReplayEntry[] = [];
   private pending: Intent[] = [];
+  /** Events of single frames stepped while paused; the next `advance` hands them out, so they still sound. */
+  private stepped: SimEvent[] = [];
   private accumulator = 0;
   private nukeArmedAt = Number.NEGATIVE_INFINITY;
   private clock = 0;
@@ -53,9 +55,10 @@ export class Session {
   /** Feed wall-clock time; runs the ticks that are due. Returns every event of those ticks. */
   advance(elapsedMs: number): SimEvent[] {
     this.clock += elapsedMs;
-    if (this.paused || this.state.outcome !== 'playing') return [];
+    const events = this.stepped;
+    this.stepped = [];
+    if (this.paused || this.state.outcome !== 'playing') return events;
     this.accumulator += elapsedMs * (this.fastForward ? FAST_FORWARD_FACTOR : 1);
-    const events: SimEvent[] = [];
     let ticks = 0;
     while (this.accumulator >= TICK_MS && ticks < MAX_TICKS_PER_FRAME) {
       this.accumulator -= TICK_MS;
@@ -149,7 +152,7 @@ export class Session {
         return true;
       case 'frameStep':
         if (!this.paused) return false;
-        this.tick();
+        this.stepped.push(...this.tick());
         return true;
       case 'zoom':
         this.zoomed = !this.zoomed;

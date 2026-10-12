@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (43/147) :active, m6, after m5, 32h
+    M6 content, all four ratings (44/148) :active, m6, after m5, 32h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -441,6 +441,8 @@ hit with the mouse.
 - [ ] M6.146 (C-01, C-06) Controls for small children: a mouse click selects a lemming within a few
       pixels of its box, the touch-layout icons fill their buttons, and the menu lines are taller.
 - [ ] M6.147 (Q) Release the result as a tagged GitHub release.
+- [x] M6.148 (A-01, C-05) A frame stepped while paused (`.`) hands its events to the sound layer,
+      so a skill assigned during pause still sounds; regression test in Vitest.
 
 ## M7: delivery
 
