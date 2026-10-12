@@ -41,11 +41,11 @@ export class PlayfieldRenderer {
 
   /** Visual reactions to simulation events: an exploding lemming bursts into its own pixels. */
   react(events: readonly SimEvent[]): void {
-    const sprite = this.theme.lemmings.ohNo;
-    const last = sprite.frames[sprite.frames.length - 1];
-    if (!last) return;
     for (const event of events) {
-      if (event.type === 'explode') this.debris.burst(last, sprite.anchorX, sprite.anchorY, this.theme.spritePalette, event.x, event.y);
+      if (event.type !== 'explode') continue;
+      const sprite = event.lemmingId === undefined ? this.theme.lemmings.ohNo : lemmingAnimation(this.theme, 'ohNo', event.lemmingId);
+      const last = sprite.frames[sprite.frames.length - 1];
+      if (last) this.debris.burst(last, sprite.anchorX, sprite.anchorY, this.theme.spritePalette, event.x, event.y);
     }
   }
 

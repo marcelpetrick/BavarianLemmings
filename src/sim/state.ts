@@ -31,6 +31,8 @@ export interface SimEvent {
   readonly type: SimEventType;
   readonly x: number;
   readonly y: number;
+  /** Entity identity lets rendering choose its costume without introducing themes to the simulation. */
+  readonly lemmingId?: number;
 }
 
 /** Inputs to the simulation: the only thing it receives from the player (architecture.md 11). */
@@ -63,6 +65,6 @@ export interface GameState {
   events: SimEvent[];
 }
 
-export function emit(state: GameState, type: SimEventType, x = 0, y = 0): void {
-  state.events.push({ type, x, y });
+export function emit(state: GameState, type: SimEventType, x = 0, y = 0, lemmingId?: number): void {
+  state.events.push(lemmingId === undefined ? { type, x, y } : { type, x, y, lemmingId });
 }

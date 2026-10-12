@@ -41,5 +41,5 @@ export function removeLemming(state: GameState, lemming: Lemming, saved: boolean
   lemming.removed = true;
   if (saved) state.saved += 1;
   else state.died += 1;
-  if (event !== null) emit(state, event, lemming.x, lemming.y);
+  if (event !== null) emit(state, event, lemming.x, lemming.y, lemming.id);
 }
