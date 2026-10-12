@@ -31,6 +31,14 @@
       "h": 24
     },
     {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 0,
+      "y": 136,
+      "w": 540,
+      "h": 24
+    },
+    {
       "shape": "ellipse",
       "x": 190,
       "y": 44,
@@ -45,7 +53,23 @@
       "h": 50
     },
     {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 205,
+      "y": 54,
+      "w": 150,
+      "h": 50
+    },
+    {
       "shape": "rect",
+      "x": 0,
+      "y": 90,
+      "w": 10,
+      "h": 46
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
       "x": 0,
       "y": 90,
       "w": 10,

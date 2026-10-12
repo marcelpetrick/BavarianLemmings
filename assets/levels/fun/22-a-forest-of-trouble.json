@@ -38,6 +38,14 @@
       "h": 86
     },
     {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 220,
+      "y": 50,
+      "w": 14,
+      "h": 86
+    },
+    {
       "shape": "ellipse",
       "x": 190,
       "y": 20,
@@ -52,6 +60,14 @@
       "h": 90
     },
     {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 340,
+      "y": 46,
+      "w": 14,
+      "h": 90
+    },
+    {
       "shape": "ellipse",
       "x": 305,
       "y": 16,
@@ -60,6 +76,14 @@
     },
     {
       "shape": "rect",
+      "x": 576,
+      "y": 40,
+      "w": 14,
+      "h": 96
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
       "x": 576,
       "y": 40,
       "w": 14,
@@ -87,6 +111,14 @@
       "h": 26
     },
     {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 720,
+      "y": 70,
+      "w": 16,
+      "h": 26
+    },
+    {
       "shape": "ellipse",
       "x": 708,
       "y": 56,
@@ -95,6 +127,14 @@
     },
     {
       "shape": "rect",
+      "x": 890,
+      "y": 40,
+      "w": 10,
+      "h": 56
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
       "x": 890,
       "y": 40,
       "w": 10,

@@ -31,7 +31,23 @@
       "h": 24
     },
     {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 0,
+      "y": 136,
+      "w": 640,
+      "h": 24
+    },
+    {
       "shape": "rect",
+      "x": 110,
+      "y": 46,
+      "w": 90,
+      "h": 90
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
       "x": 110,
       "y": 46,
       "w": 90,
@@ -52,7 +68,23 @@
       "h": 40
     },
     {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 0,
+      "y": 96,
+      "w": 10,
+      "h": 40
+    },
+    {
       "shape": "rect",
+      "x": 630,
+      "y": 96,
+      "w": 10,
+      "h": 40
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
       "x": 630,
       "y": 96,
       "w": 10,

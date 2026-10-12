@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (38/138) :active, m6, after m5, 30h
+    M6 content, all four ratings (39/138) :active, m6, after m5, 30h
     section M7
     M7 delivery (7/12) :active, m7, after m6, 2h
 ```
@@ -399,7 +399,7 @@ verifies them. Preserve the owner's untracked recording in `media/`.
       retain steel protection and deterministic replays; show immediate assignment feedback.
 - [x] M6.135 (G-11, C-01, C-06) Explain and test nuke confirmation on desktop and touch;
       verify the individual bomber arms on the first valid lemming click.
-- [ ] M6.136 (V-07, L-01a) Audit shipped levels visually and fix accidental overlaps at
+- [x] M6.136 (V-07, L-01a) Audit shipped levels visually and fix accidental overlaps at
       hatches, exits and hazards; validate winning replays after every layout change.
 - [x] M6.137 (A-01, V-02, Q) Select Bavarian mode for fresh or invalid settings while
       retaining an explicitly saved Classic preference.

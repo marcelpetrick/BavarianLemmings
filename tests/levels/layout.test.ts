@@ -1,0 +1,37 @@
+// SPDX-FileCopyrightText: 2026 Marcel Petrick <mail@marcelpetrick.it>
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+/** A solvable replay alone does not catch scenery buried in the terrain or clipped by the level. */
+import { describe, expect, it } from 'vitest';
+import { ALL_LEVELS } from '../../src/levels';
+import { buildTerrain } from '../../src/sim/level';
+import { flagsAt, SOLID } from '../../src/sim/terrain';
+import { themeById } from '../../src/theme/themes';
+
+for (const level of ALL_LEVELS.filter((item) => item.rating !== 'test')) {
+  describe(`${level.id} object clearance`, () => {
+    for (const themeId of ['classic', 'bavarian'] as const) {
+      it(`keeps every opaque hatch and exit pixel clear in ${themeId}`, () => {
+        const terrain = buildTerrain(level);
+        const theme = themeById(themeId);
+        const failures: string[] = [];
+        for (const object of level.objects) {
+          if (object.type !== 'hatch' && object.type !== 'exit') continue;
+          const sprite = theme[object.type];
+          for (const frame of sprite.frames) {
+            frame.rows.forEach((row, y) => {
+              for (let x = 0; x < row.length; x += 1) {
+                if (row[x] === '.') continue;
+                const px = object.x - sprite.anchorX + x;
+                const py = object.y - sprite.anchorY + y;
+                if (px < 0 || px >= level.width || py < 0 || py >= level.height || (flagsAt(terrain, px, py) & SOLID) !== 0)
+                  failures.push(`${object.type} (${px}, ${py})`);
+              }
+            });
+          }
+        }
+        expect([...new Set(failures)]).toEqual([]);
+      });
+    }
+  });
+}

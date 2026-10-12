@@ -31,7 +31,23 @@
       "h": 160
     },
     {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 30,
+      "y": 0,
+      "w": 10,
+      "h": 160
+    },
+    {
       "shape": "rect",
+      "x": 600,
+      "y": 0,
+      "w": 10,
+      "h": 160
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
       "x": 600,
       "y": 0,
       "w": 10,
@@ -45,6 +61,14 @@
       "h": 4
     },
     {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 40,
+      "y": 36,
+      "w": 560,
+      "h": 4
+    },
+    {
       "shape": "rect",
       "x": 40,
       "y": 72,
@@ -52,7 +76,23 @@
       "h": 4
     },
     {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 40,
+      "y": 72,
+      "w": 560,
+      "h": 4
+    },
+    {
       "shape": "rect",
+      "x": 40,
+      "y": 108,
+      "w": 560,
+      "h": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
       "x": 40,
       "y": 108,
       "w": 560,
@@ -73,7 +113,23 @@
       "h": 32
     },
     {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 296,
+      "y": 40,
+      "w": 8,
+      "h": 32
+    },
+    {
       "shape": "rect",
+      "x": 446,
+      "y": 76,
+      "w": 8,
+      "h": 32
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
       "x": 446,
       "y": 76,
       "w": 8,
@@ -87,6 +143,14 @@
       "h": 32
     },
     {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 296,
+      "y": 76,
+      "w": 8,
+      "h": 32
+    },
+    {
       "shape": "rect",
       "x": 446,
       "y": 112,
@@ -94,7 +158,23 @@
       "h": 32
     },
     {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 446,
+      "y": 112,
+      "w": 8,
+      "h": 32
+    },
+    {
       "shape": "rect",
+      "x": 196,
+      "y": 112,
+      "w": 8,
+      "h": 32
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
       "x": 196,
       "y": 112,
       "w": 8,
@@ -107,7 +187,7 @@
     {
       "type": "hatch",
       "x": 100,
-      "y": 10
+      "y": 14
     },
     {
       "type": "exit",

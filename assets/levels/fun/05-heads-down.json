@@ -38,6 +38,14 @@
       "h": 100
     },
     {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 0,
+      "y": 0,
+      "w": 10,
+      "h": 100
+    },
+    {
       "shape": "rect",
       "x": 180,
       "y": 20,
@@ -45,7 +53,23 @@
       "h": 80
     },
     {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 180,
+      "y": 20,
+      "w": 22,
+      "h": 80
+    },
+    {
       "shape": "rect",
+      "x": 300,
+      "y": 30,
+      "w": 30,
+      "h": 70
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
       "x": 300,
       "y": 30,
       "w": 30,
@@ -74,6 +98,14 @@
       "h": 66
     },
     {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 600,
+      "y": 70,
+      "w": 14,
+      "h": 66
+    },
+    {
       "shape": "rect",
       "x": 640,
       "y": 70,
@@ -81,7 +113,23 @@
       "h": 66
     },
     {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 640,
+      "y": 70,
+      "w": 14,
+      "h": 66
+    },
+    {
       "shape": "rect",
+      "x": 790,
+      "y": 60,
+      "w": 10,
+      "h": 76
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
       "x": 790,
       "y": 60,
       "w": 10,

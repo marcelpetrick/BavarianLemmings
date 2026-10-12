@@ -90,7 +90,23 @@
       "h": 76
     },
     {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 950,
+      "y": 60,
+      "w": 10,
+      "h": 76
+    },
+    {
       "shape": "rect",
+      "x": 0,
+      "y": 60,
+      "w": 10,
+      "h": 76
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
       "x": 0,
       "y": 60,
       "w": 10,

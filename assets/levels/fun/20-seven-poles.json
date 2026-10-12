@@ -31,7 +31,23 @@
       "h": 80
     },
     {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 40,
+      "y": 80,
+      "w": 160,
+      "h": 80
+    },
+    {
       "shape": "rect",
+      "x": 222,
+      "y": 80,
+      "w": 358,
+      "h": 80
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
       "x": 222,
       "y": 80,
       "w": 358,
@@ -45,7 +61,23 @@
       "h": 80
     },
     {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 280,
+      "y": 0,
+      "w": 8,
+      "h": 80
+    },
+    {
       "shape": "rect",
+      "x": 320,
+      "y": 0,
+      "w": 8,
+      "h": 80
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
       "x": 320,
       "y": 0,
       "w": 8,
@@ -59,7 +91,23 @@
       "h": 80
     },
     {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 360,
+      "y": 0,
+      "w": 8,
+      "h": 80
+    },
+    {
       "shape": "rect",
+      "x": 400,
+      "y": 0,
+      "w": 8,
+      "h": 80
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
       "x": 400,
       "y": 0,
       "w": 8,
@@ -73,7 +121,23 @@
       "h": 80
     },
     {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 440,
+      "y": 0,
+      "w": 8,
+      "h": 80
+    },
+    {
       "shape": "rect",
+      "x": 480,
+      "y": 0,
+      "w": 8,
+      "h": 80
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
       "x": 480,
       "y": 0,
       "w": 8,
@@ -87,7 +151,23 @@
       "h": 80
     },
     {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 520,
+      "y": 0,
+      "w": 8,
+      "h": 80
+    },
+    {
       "shape": "rect",
+      "x": 602,
+      "y": 80,
+      "w": 158,
+      "h": 80
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
       "x": 602,
       "y": 80,
       "w": 158,
