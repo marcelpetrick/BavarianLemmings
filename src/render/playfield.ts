@@ -93,7 +93,10 @@ export class PlayfieldRenderer {
             this.sprites.draw(ctx, this.theme.hatch, state.hatchOpen ? 99 : Math.max(0, state.tick - 24), object.x, object.y);
           break;
         case 'exit':
-          if (layer === 'behind') this.sprites.draw(ctx, this.theme.exit, Math.floor(state.tick / 2), object.x, object.y);
+          if (layer !== 'behind') break;
+          // The maypole stands beside the beer tent, behind the terrain, with its foot on the exit's floor.
+          if (this.theme.exitScenery) this.sprites.draw(ctx, this.theme.exitScenery, 0, object.x + this.theme.exit.width / 2 + 6, object.y);
+          this.sprites.draw(ctx, this.theme.exit, Math.floor(state.tick / 2), object.x, object.y);
           break;
         case 'water':
           if (layer === 'front') {

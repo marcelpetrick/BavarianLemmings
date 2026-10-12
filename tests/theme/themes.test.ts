@@ -35,6 +35,11 @@ describe('themes (V-09, V-10, R-05)', () => {
     }
   });
 
+  it('puts a maypole beside the Bavarian exit only (V-10)', () => {
+    expect(BAVARIAN_THEME.exitScenery).toBe(OBJECT_ANIMATIONS.maypole);
+    expect(CLASSIC_THEME.exitScenery).toBeNull();
+  });
+
   it('falls back for unknown styles and trap kinds', () => {
     expect(terrainColorsFor(CLASSIC_THEME, 'lava')).toBe(CLASSIC_THEME.terrainColors.dirt);
     expect(terrainColorsFor(BAVARIAN_THEME, 'crystal')).toBe(BAVARIAN_THEME.terrainColors.crystal);

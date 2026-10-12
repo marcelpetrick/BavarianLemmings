@@ -43,6 +43,8 @@ export interface Theme {
   readonly water: Animation;
   /** Trap animation per trap kind of the level format. */
   readonly traps: Readonly<Record<string, Animation>>;
+  /** Scenery drawn behind each exit, beside it (vision V-10: the maypole); null for none. */
+  readonly exitScenery: Animation | null;
   /** Background: plain black like the original, or Alpine mountains. */
   readonly backdrop: 'black' | 'mountains';
   readonly ui: UiColors;
@@ -59,6 +61,7 @@ export const CLASSIC_THEME: Theme = {
   exit: OBJECT_ANIMATIONS.exit,
   water: OBJECT_ANIMATIONS.water,
   traps: { squasher: OBJECT_ANIMATIONS.trapSquasher, fire: OBJECT_ANIMATIONS.trapFire },
+  exitScenery: null,
   backdrop: 'black',
   ui: {
     background: '#000000',
@@ -82,6 +85,7 @@ export const BAVARIAN_THEME: Theme = {
   exit: OBJECT_ANIMATIONS.bavarianExit,
   water: OBJECT_ANIMATIONS.water,
   traps: { squasher: OBJECT_ANIMATIONS.trapWeisswurst, fire: OBJECT_ANIMATIONS.trapMasskrug },
+  exitScenery: OBJECT_ANIMATIONS.maypole,
   backdrop: 'mountains',
   ui: {
     background: '#0a2a5a',
