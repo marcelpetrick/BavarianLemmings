@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (35/133) :active, m6, after m5, 30h
+    M6 content, all four ratings (35/138) :active, m6, after m5, 31h
     section M7
     M7 delivery (7/12) :active, m7, after m6, 2h
 ```
@@ -390,6 +390,29 @@ rating agents in parallel.
       as a particle until it leaves the screen; the result screen waits until the last particle is
       gone and then a further pause, so the player can look at the holes.
 
+### Owner play-test follow-up (2026-10-12)
+
+Three isolated subagents implement the following changes; the main worktree integrates and
+verifies them. Preserve the owner's untracked recording in `media/`.
+
+- [ ] M6.134 (G-05, G-07, V-05) Increase bomber blast radius from 8 to 16 logical pixels;
+      retain steel protection and deterministic replays; show immediate assignment feedback.
+- [ ] M6.135 (G-11, C-01, C-06) Explain and test nuke confirmation on desktop and touch;
+      verify the individual bomber arms on the first valid lemming click.
+- [ ] M6.136 (V-07, L-01a) Audit shipped levels visually and fix accidental overlaps at
+      hatches, exits and hazards; validate winning replays after every layout change.
+- [ ] M6.137 (A-01, V-02, Q) Select Bavarian mode for fresh or invalid settings while
+      retaining an explicitly saved Classic preference.
+- [ ] M6.138 (V-05, Q) Capture real screenshots of both themes, representative levels and
+      the enlarged blast; update README and record review findings.
+
+| Step | Estimated work | State |
+| --- | --- | --- |
+| Bomber and first-click diagnosis | 20–40 min | subagent running |
+| Level layout and overlap audit | 30–60 min | subagent running |
+| Bavarian defaults, sprites and screenshots | 20–40 min | subagent running |
+| Integration, full pipeline, review, Docker and CI | 20–40 min | waiting for changes |
+
 ## M7: delivery
 
 - [x] M7.01 (P-03) `Dockerfile` (node:24 build, nginx:alpine serve), `.dockerignore`,
@@ -419,3 +442,12 @@ rating agents in parallel.
 - Every asset: ours (noted in the commit) or a `THIRD_PARTY.md` row with licence and URL.
 - Every original-game number: a `constant()` with a source, never a literal.
 - Every new vision.md ID: at least one plan task that references it.
+
+## Resume here
+
+- State: v0.1.38; 30 Fun levels shipped. Three isolated subagents work on the owner's
+  bomber, layout and Bavarian-default requests. Remaining ratings and fidelity tasks stay open.
+- Check: `node scripts/check-plan.mjs --summary`, `git status --short`,
+  `git worktree list`.
+- Restart: `npm ci && npm run dev`; integrate subagent commits according to `AGENTS.md`,
+  then `scripts/commit.sh "fix: address owner play-test feedback" "Explain the verified change"`.

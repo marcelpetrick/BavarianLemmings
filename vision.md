@@ -338,18 +338,19 @@ No open questions remain. New ones go into a round E table here.
 
 ## 9. Resume here
 
-- **State (v0.1.x):** the game is playable in the browser. Run it: `npm ci && npm run dev`
-  (<http://localhost:5173>), or `npm run build && npm run preview` (<http://localhost:4173>).
-  Only Fun 1 exists so far. The simulation, sprites, audio, menus, settings, progress, both themes
-  and three languages are in.
-- **Running in subagents (worktrees under `.claude/worktrees/`):** levels Fun 02 onwards (M6),
-  touch controls (M5), Docker, Pages, release workflow and README screenshots (M7.01 to M7.06,
-  M2.14). Integrate their branches as described in AGENTS.md, "Working with subagents".
-- **Next after that:** the remaining ratings (Tricky, Taxing, Mayhem), verify constants (M6.123,
-  M6.124), offline (M7.05), `/reviewBranch` with `review_YYYYMMDD.md`, final check (M7.09).
-- **Commit:** `scripts/commit.sh "<type>: <subject>" "<why>" [patch|minor]`.
-- **Check:** `node scripts/check-plan.mjs --summary`, `gh run list -L 3`,
-  `node scripts/check-constants.mjs`, `git branch --list 'worktree-*'`.
+- **State (v0.1.38):** 30 Fun levels, touch controls, offline play, Docker and Pages exist.
+  Tricky, Taxing and Mayhem content and original-layout fidelity remain unfinished.
+- **Owner decisions (2026-10-12):** use Bavarian mode by default; enlarge suicide-bomber
+  blasts; diagnose first-click behavior; improve level layouts and eliminate accidental overlaps;
+  provide real screenshots. Keep the five-second individual bomber fuse and make intentional
+  nuke confirmation clear.
+- **Running:** isolated subagents `bomb-fixes`, `level-design`, `bavarian-default` under
+  `.claude/worktrees/`. The integrator owns living documents, shared translations and final gates.
+- **Next:** integrate each logical change with `scripts/commit.sh`, check replays and screenshots,
+  run the full gate, independent review and Docker smoke test. Keep unfinished content tasks open.
+- **Check:** `node scripts/check-plan.mjs --summary`, `node scripts/check-constants.mjs`,
+  `git status --short`, `gh run list -L 3`.
+- **Restart:** `npm ci && npm run dev`; integrate as described in `AGENTS.md`.
 
 ## Sources (fact check 2026-10-11)
 
