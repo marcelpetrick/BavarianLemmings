@@ -11,6 +11,7 @@
  * HTML buttons (render/panel/touch.ts). A finger on the playfield never clicks: it aims, and lifting
  * it assigns (input/touchGestures.ts), in either layout.
  */
+import { version } from '../../package.json';
 import type { AudioEngine } from '../audio/engine';
 import { LANGUAGES, translate, type Language } from '../i18n';
 import { ALL_LEVELS, RATINGS, levelsOf, nextLevel } from '../levels';
@@ -64,6 +65,9 @@ const VOLUME_STEPS = [0, 0.2, 0.4, 0.6, 0.8, 1];
 /** After the level ends and the last debris is gone, the playfield stays this long (plan M6.133). */
 const AFTERMATH_PAUSE_MS = 2500;
 const LAYOUT_CHOICES: readonly LayoutChoice[] = ['auto', 'classic', 'touch'];
+/** Where the version stands: bottom left, under the menus and above the Bavarian lozenge border (logical px). */
+const VERSION_X = 4;
+const VERSION_Y = 180;
 
 /** Enter or leave full screen (vision 3.4.1). Browsers may refuse; the game then simply stays as it is. */
 function toggleFullscreen(): void {
@@ -699,6 +703,7 @@ export class App {
         this.renderBigTitle(this.t('app.title'), 30, ui.title);
         this.text.centred(ctx, this.t('app.subtitle'), SCREEN_WIDTH / 2, 62, ui.text);
         if (this.settings.theme === 'bavarian') this.renderLozenges();
+        this.renderVersion();
         break;
       case 'levels':
         this.text.centred(ctx, this.t('menu.levels'), SCREEN_WIDTH / 2, 16, ui.title);
@@ -715,9 +720,15 @@ export class App {
       case 'credits':
         this.text.centred(ctx, this.t('credits.title'), SCREEN_WIDTH / 2, 16, ui.title);
         for (let i = 1; i <= 7; i += 1) this.renderWrapped(this.t(`credits.line${i}`), 30 + (i - 1) * 19, ui.text);
+        this.renderVersion();
         break;
     }
     this.renderMenu();
+  }
+
+  /** The running build, so a play-tester can tell which release they see (plan M6.145). */
+  private renderVersion(): void {
+    this.text.draw(this.ctx, `v${version}`, VERSION_X, VERSION_Y, this.theme.ui.text);
   }
 
   private renderMenu(): void {
@@ -924,6 +935,8 @@ export class App {
         };
       },
       settings: () => ({ ...this.settings }),
+      /** The version in package.json, which the title and credits screens show. */
+      version: () => version,
       events: () => this.events.splice(0).map((e) => e.type),
       /** Run the session faster in tests: real ticks, no waiting for wall-clock time. */
       advance: (ms: number) => {

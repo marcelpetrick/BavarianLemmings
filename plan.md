@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (41/141) :active, m6, after m5, 30h
+    M6 content, all four ratings (42/147) :active, m6, after m5, 32h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -422,6 +422,25 @@ verifies them. Preserve the owner's untracked recording in `media/`.
       across menus, previews and reloads; fix confirmed mismatches and cover with browser tests.
 - [ ] M6.141 (I-01, V-08, C-06) Audit every settings label/value and localized glyph;
       remove untranslated boolean values and invalid glyph fallbacks; verify all languages.
+
+### Owner play-test follow-up, skills and kids (2026-10-12)
+
+The owner asked: why a blocker turned builder gives no sound, whether every skill works in the
+browser, whether every level is solvable, which version runs, and for controls a small child can
+hit with the mouse.
+
+- [ ] M6.142 (G-03, G-06, C-04) A blocker refuses Builder, Basher, Miner and Digger as in the
+      original, so nothing is spent and no assign sound plays; regression test in Vitest and e2e.
+- [ ] M6.143 (G-03, G-04, G-05, G-06, G-07, C-01, A-01) Browser end-to-end test of all eight skills:
+      a real mouse click assigns each skill, the counter drops, the action starts, the assign sound
+      event fires.
+- [ ] M6.144 (L-01, G-12) Level audit: every shipped replay wins, and every assignment in it is
+      accepted by the rules (no replay relies on a refused intent).
+- [x] M6.145 (V-08, V-11) Show the running version on the title and credits screens and in the
+      test hook; e2e checks it equals `package.json`.
+- [ ] M6.146 (C-01, C-06) Controls for small children: a mouse click selects a lemming within a few
+      pixels of its box, the touch-layout icons fill their buttons, and the menu lines are taller.
+- [ ] M6.147 (Q) Release the result as a tagged GitHub release.
 
 ## M7: delivery
 

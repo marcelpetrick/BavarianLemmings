@@ -58,6 +58,7 @@ export const gameState = async (page: Page): Promise<GameView> => {
   return state;
 };
 export const settings = (page: Page): Promise<Record<string, unknown>> => hook(page, 'settings()');
+export const appVersion = (page: Page): Promise<string> => hook(page, 'version()');
 export const advance = (page: Page, ms: number): Promise<void> => hook(page, `advance(${ms})`);
 
 /** Click a menu item with the real mouse. */

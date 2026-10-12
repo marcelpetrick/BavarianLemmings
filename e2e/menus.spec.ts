@@ -1,8 +1,9 @@
 // SPDX-FileCopyrightText: 2026 Marcel Petrick <mail@marcelpetrick.it>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
+import { readFileSync } from 'node:fs';
 import { expect, test } from '@playwright/test';
-import { clickMenu, openGame, screen, settings, startFirstLevel } from './helpers';
+import { appVersion, clickMenu, openGame, screen, settings, startFirstLevel } from './helpers';
 
 test.describe('menus and settings (V-08, V-11, I-01, R-05, L-02)', () => {
   test('language and theme persist across a reload', async ({ page }) => {
@@ -60,6 +61,15 @@ test.describe('menus and settings (V-08, V-11, I-01, R-05, L-02)', () => {
     expect(await screen(page)).toBe('levels');
     await clickMenu(page, 'level:fun-01');
     expect(await screen(page)).toBe('preview');
+    expect(errors).toEqual([]);
+  });
+
+  test('title and credits show the running version from package.json (M6.145)', async ({ page }) => {
+    const errors = await openGame(page);
+    const { version } = JSON.parse(readFileSync('package.json', 'utf8')) as { version: string };
+    expect(await appVersion(page)).toBe(version);
+    await clickMenu(page, 'credits');
+    expect(await screen(page)).toBe('credits');
     expect(errors).toEqual([]);
   });
 });
