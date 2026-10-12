@@ -11,7 +11,7 @@
  *
  *   classic-title.png    title screen, classic theme
  *   classic-play.png     Fun 1 in play, classic theme
- *   bavarian-title.png   title screen after clicking the "Bayern" menu item
+ *   bavarian-title.png   title screen, Bavarian theme
  *   bavarian-play.png    Fun 1 in play, Bavarian theme
  *
  * Every capture uses a fresh browser context, so saved settings never leak between shots.
@@ -107,7 +107,12 @@ async function capture(page, name) {
 
 async function shootTheme(browser, theme) {
   const { context, page, errors } = await openGame(browser);
-  if (theme === 'bavarian') await clickMenu(page, 'bayern');
+  // Select each theme explicitly: fresh installations default to Bavarian.
+  await clickMenu(page, 'settings');
+  const settings = await hook(page, 'settings()');
+  if (settings.theme !== theme) await clickMenu(page, 'theme');
+  await clickMenu(page, 'back');
+  if ((await hook(page, 'settings()')).theme !== theme) throw new Error(`could not select ${theme} theme`);
   await waitForScreen(page, 'title');
   await capture(page, `${theme}-title`);
   await clickMenu(page, 'play');

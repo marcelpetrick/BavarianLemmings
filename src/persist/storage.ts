@@ -45,7 +45,7 @@ export const SETTINGS_KEY = 'bl.v1.settings';
 export const PROGRESS_KEY = 'bl.v1.progress';
 
 export function defaultSettings(language: Language): Settings {
-  return { language, theme: 'classic', musicVolume: 0.6, sfxVolume: 0.8, muted: false, purist: false, layout: 'auto', crt: false };
+  return { language, theme: 'bavarian', musicVolume: 0.6, sfxVolume: 0.8, muted: false, purist: false, layout: 'auto', crt: false };
 }
 
 function readJson(store: KeyValueStore, key: string): unknown {
@@ -78,7 +78,7 @@ export function loadSettings(store: KeyValueStore, fallbackLanguage: Language): 
   const data = raw as Record<string, unknown>;
   return {
     language: isLanguage(data.language) ? data.language : defaults.language,
-    theme: data.theme === 'bavarian' ? 'bavarian' : 'classic',
+    theme: data.theme === 'classic' || data.theme === 'bavarian' ? data.theme : defaults.theme,
     musicVolume: volume(data.musicVolume, defaults.musicVolume),
     sfxVolume: volume(data.sfxVolume, defaults.sfxVolume),
     muted: data.muted === true,

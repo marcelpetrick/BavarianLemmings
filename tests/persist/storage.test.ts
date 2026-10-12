@@ -41,6 +41,17 @@ describe('settings (R-05, C-05, A-02)', () => {
     expect(loadSettings(store, 'en')).toEqual(settings);
   });
 
+  it('defaults to Bavarian while preserving an explicitly saved Classic preference', () => {
+    const store = new MemoryStore();
+    expect(defaultSettings('en').theme).toBe('bavarian');
+    for (const theme of [undefined, null, 'invalid']) {
+      store.setItem(SETTINGS_KEY, JSON.stringify({ theme }));
+      expect(loadSettings(store, 'en').theme).toBe('bavarian');
+    }
+    saveSettings(store, { ...defaultSettings('en'), theme: 'classic' });
+    expect(loadSettings(store, 'en').theme).toBe('classic');
+  });
+
   it('repairs invalid fields one by one', () => {
     const store = new MemoryStore();
     store.setItem(SETTINGS_KEY, JSON.stringify({ language: 'fr', theme: 'x', musicVolume: 3, sfxVolume: 0.1, layout: 'classic' }));

@@ -13,16 +13,21 @@ test.describe('menus and settings (V-08, V-11, I-01, R-05, L-02)', () => {
     await clickMenu(page, 'language');
     expect((await settings(page)).language).not.toBe(start);
     await clickMenu(page, 'theme');
-    expect((await settings(page)).theme).toBe('bavarian');
+    expect((await settings(page)).theme).toBe('classic');
     await page.reload();
     await expect.poll(() => page.evaluate('typeof window.__bavarianLemmings')).toBe('object');
-    expect((await settings(page)).theme).toBe('bavarian');
+    expect((await settings(page)).theme).toBe('classic');
     expect((await settings(page)).language).not.toBe(start);
     expect(errors).toEqual([]);
   });
 
   test('the Bayern button switches the theme and a Bavarian level runs', async ({ page }) => {
     const errors = await openGame(page);
+    expect((await settings(page)).theme).toBe('bavarian');
+    await clickMenu(page, 'settings');
+    await clickMenu(page, 'theme');
+    expect((await settings(page)).theme).toBe('classic');
+    await clickMenu(page, 'back');
     await clickMenu(page, 'bayern');
     expect((await settings(page)).theme).toBe('bavarian');
     await startFirstLevel(page);

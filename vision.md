@@ -1,6 +1,6 @@
 # BavarianLemmings: vision and specification
 
-> Living document. Phase: **implementation; playable prototype v0.1.x** (Fun 1, both themes).
+> Living document. Phase: **implementation; playable prototype v0.1.x** (30 Fun levels, both themes).
 > Owner: Marcel Petrick. Last update: 2026-10-11 (rounds A to D closed).
 > Companions: [architecture.md](architecture.md) (how), [plan.md](plan.md) (tasks),
 > [AGENTS.md](AGENTS.md) (rules).
@@ -17,7 +17,8 @@ of them reach the exit door before the time runs out.
 
 The game has **two modes**:
 
-1. **Classic mode** (the default): the look, sound, lemming types, skills and level design of the
+1. **Classic mode** (optional; Bavarian is the default): the look, sound, lemming types, skills
+   and level design of the
    DOS original, as close as we can get without copying any of its material.
 2. **Bavarian mode**, switched on in the settings: the same game logic, re-themed as Bavaria. The
    colour scheme becomes the white and blue of the Bavarian flag, the backgrounds become Alpine
@@ -335,6 +336,8 @@ No open questions remain. New ones go into a round E table here.
 | 2026-10-11 | Playable prototype in the browser: menus, Fun 1, panel, themes, audio | done (v0.1.0) |
 | 2026-10-11 | `/updateDependencies`, `/githubAbout` applied | done (v0.1.2) |
 | – | Levels (M6), touch (M5), Docker/Pages/README (M7) | running in subagents |
+
+| 2026-10-12 | Bavarian default; saved Classic preserved; storage and Chromium checks pass | done |
 
 ## 9. Resume here
 
