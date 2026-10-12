@@ -4,7 +4,7 @@
 import { describe, expect, it } from 'vitest';
 import { FALLBACK_CHARACTER, FONT, GLYPH_WIDTH, glyphFor, measureText } from '../../src/render/font';
 
-const REQUIRED = [...Array.from({ length: 95 }, (_, index) => String.fromCharCode(32 + index)), ...Array.from('ÄÖÜäöüß€°×−…')];
+const REQUIRED = [...Array.from({ length: 95 }, (_, index) => String.fromCharCode(32 + index)), ...Array.from('ÄÖÜäöüß€°×−…’')];
 
 describe('FONT', () => {
   it('has a 6 × 8 cell', () => {
@@ -35,6 +35,8 @@ describe('glyphFor()', () => {
   it('returns the glyph of a known character', () => {
     expect(glyphFor('A')).toBe(FONT.glyphs.A);
     expect(glyphFor('ß')).toBe(FONT.glyphs['ß']);
+    expect(glyphFor('’')).toBe(FONT.glyphs['’']);
+    expect(glyphFor('’')).not.toBe(FONT.glyphs[FALLBACK_CHARACTER]);
   });
 
   it('falls back to ? for an unknown character', () => {

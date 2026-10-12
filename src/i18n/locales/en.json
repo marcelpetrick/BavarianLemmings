@@ -71,6 +71,8 @@
   "result.next": "Next level",
   "result.menu": "Main menu",
   "settings.title": "Settings",
+  "settings.on": "ON",
+  "settings.off": "OFF",
   "settings.language": "Language",
   "settings.theme": "Theme",
   "settings.theme.classic": "Classic",

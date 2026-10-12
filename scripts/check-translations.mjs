@@ -3,14 +3,14 @@
 
 /**
  * check-translations.mjs: every translation key exists in every language (vision I-02), including
- * the per-rating level-name files in src/i18n/locales/levels/, and every
+ * the per-rating level-name files in src/i18n/locales/levels/, interpolation parameters match, and every
  * key written literally in the code (`translate(language, 'some.key')`, `t('some.key')`) exists.
  *
  * Keys that the code builds at run time (`action.${name}`, `level.${id}.name`, `rating.${id}`) are
  * covered by the language comparison and by the unit tests of their users.
  *
  * Usage:      node scripts/check-translations.mjs
- * Exit codes: 0 = complete, 1 = a key is missing somewhere
+ * Exit codes: 0 = complete, 1 = a key or interpolation parameter differs
  */
 import { execFileSync } from 'node:child_process';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -28,12 +28,20 @@ const locales = Object.fromEntries(
   ]),
 );
 const problems = [];
+const placeholders = (text) =>
+  [...text.matchAll(/\{(\w+)\}/g)]
+    .map((match) => match[1])
+    .sort()
+    .join(',');
 const allKeys = new Set(languages.flatMap((l) => Object.keys(locales[l])));
 
 for (const key of allKeys) {
   for (const language of languages) {
     const text = locales[language][key];
     if (typeof text !== 'string' || text.trim() === '') problems.push(`${language}: missing or empty "${key}"`);
+    else if (typeof locales.en[key] === 'string' && placeholders(text) !== placeholders(locales.en[key])) {
+      problems.push(`${language}: interpolation parameters differ from English for "${key}"`);
+    }
   }
 }
 

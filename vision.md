@@ -346,7 +346,7 @@ No open questions remain. New ones go into a round E table here.
 
 ## 9. Resume here
 
-- **State (v0.1.51):** owner play-test follow-up is complete: 16-pixel blasts, visible nuke
+- **State (v0.1.52):** owner play-test follow-up is complete: 16-pixel blasts, visible nuke
   confirmation, Bavarian defaults, Dirndl sprites, clear objects and matching hazard triggers.
   README links nine browser screenshots and two whole-catalogue inspection renders.
 - **Verified:** 701 tests, 22 desktop/tablet browser checks, all 30 Fun winning replays,
@@ -354,6 +354,8 @@ No open questions remain. New ones go into a round E table here.
 - **Remaining:** 90 unimplemented Tricky/Taxing/Mayhem levels, original-layout fidelity,
   original-game constant/key verification, milestone versions, final vision audit and manual
   Firefox/Chrome rating checks. These requirements are open, not waived. 1.0 needs owner approval.
+- **Language follow-up:** unsupported Bavarian apostrophes are fixed; settings labels and
+  all language/theme combinations are under browser regression review (M6.140–M6.141).
 - **Check:** `node scripts/check-plan.mjs --summary`, `node scripts/check-constants.mjs`,
   `git status --short`, `gh run list -L 3`.
 - **Restart:** `npm ci && npm run dev`; capture with `npm run screenshots`;

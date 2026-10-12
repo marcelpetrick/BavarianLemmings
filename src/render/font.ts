@@ -4,7 +4,7 @@
 /**
  * The bitmap font: 5 × 7 glyphs (plus one descender row) drawn in a 6 × 8 pixel cell. `#` is ink,
  * `.` is empty. The sixth column of the cell is the gap between letters. Drawn by us in the common
- * dot-matrix style; it covers printable ASCII 32 to 126, the German letters ÄÖÜäöüß and €°×−….
+ * dot-matrix style; it covers printable ASCII 32 to 126, the German letters ÄÖÜäöüß and €°×−… plus the typographic apostrophe ’.
  */
 export interface BitmapFont {
   /** Advance per character in pixels (glyph width 5 plus 1 pixel gap). */
@@ -130,6 +130,7 @@ export const FONT: BitmapFont = {
     '°': ['.##..', '#..#.', '#..#.', '.##..', '.....', '.....', '.....', '.....'],
     '×': ['.....', '#...#', '.#.#.', '..#..', '.#.#.', '#...#', '.....', '.....'],
     '−': ['.....', '.....', '.....', '#####', '.....', '.....', '.....', '.....'],
+    '’': ['..#..', '..#..', '.#...', '.....', '.....', '.....', '.....', '.....'],
     '…': ['.....', '.....', '.....', '.....', '.....', '.....', '#.#.#', '.....'],
   },
 };
