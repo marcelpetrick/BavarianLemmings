@@ -1,0 +1,300 @@
+{
+  "version": 1,
+  "id": "taxing-04",
+  "name": "level.taxing-04.name",
+  "inspiredBy": "Taxing 4 of the original ('Lend a helping hand....'): two crowds start in two rooms under a steel-lined block, split by a steel divider; blockers keep them off the pin traps, a basher joins the rooms under the divider, and a builder zigzags up the narrow shaft beside the block to the exit on top. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 786,
+  "height": 160,
+  "lemmings": 40,
+  "toSave": 30,
+  "releaseRate": 50,
+  "timeSeconds": 420,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 5,
+    "blocker": 4,
+    "builder": 20,
+    "basher": 2,
+    "miner": 2,
+    "digger": 2
+  },
+  "style": "pillar",
+  "startX": 230,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 22,
+      "y": 100,
+      "w": 84,
+      "h": 60
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 22,
+      "y": 100,
+      "w": 84,
+      "h": 60
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 0,
+      "y": 60,
+      "w": 32,
+      "h": 100
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 95,
+      "y": 60,
+      "w": 30,
+      "h": 100
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 45,
+      "y": 0,
+      "w": 35,
+      "h": 100
+    },
+    {
+      "shape": "rect",
+      "x": 680,
+      "y": 100,
+      "w": 84,
+      "h": 60
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 680,
+      "y": 100,
+      "w": 84,
+      "h": 60
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 754,
+      "y": 60,
+      "w": 32,
+      "h": 100
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 661,
+      "y": 60,
+      "w": 30,
+      "h": 100
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 706,
+      "y": 0,
+      "w": 35,
+      "h": 100
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 187,
+      "y": 130,
+      "w": 65,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 213,
+      "y": 50,
+      "w": 32,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 250,
+      "y": 0,
+      "w": 35,
+      "h": 140
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 250,
+      "y": 0,
+      "w": 35,
+      "h": 140
+    },
+    {
+      "shape": "rect",
+      "x": 250,
+      "y": 140,
+      "w": 296,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 250,
+      "y": 140,
+      "w": 296,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 270,
+      "y": 8,
+      "w": 70,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 270,
+      "y": 8,
+      "w": 70,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 500,
+      "y": 0,
+      "w": 35,
+      "h": 140
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 500,
+      "y": 0,
+      "w": 35,
+      "h": 140
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 538,
+      "y": 50,
+      "w": 30,
+      "h": 110
+    },
+    {
+      "shape": "rect",
+      "x": 310,
+      "y": 50,
+      "w": 160,
+      "h": 50
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 310,
+      "y": 50,
+      "w": 160,
+      "h": 50
+    },
+    {
+      "shape": "rect",
+      "x": 370,
+      "y": 38,
+      "w": 100,
+      "h": 12
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 370,
+      "y": 38,
+      "w": 100,
+      "h": 12
+    },
+    {
+      "shape": "rect",
+      "x": 395,
+      "y": 130,
+      "w": 13,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 395,
+      "y": 130,
+      "w": 13,
+      "h": 10
+    }
+  ],
+  "steel": [
+    {
+      "x": 310,
+      "y": 62,
+      "w": 160,
+      "h": 38
+    },
+    {
+      "x": 395,
+      "y": 100,
+      "w": 13,
+      "h": 30
+    },
+    {
+      "x": 464,
+      "y": 100,
+      "w": 6,
+      "h": 16
+    },
+    {
+      "x": 280,
+      "y": 90,
+      "w": 5,
+      "h": 50
+    },
+    {
+      "x": 500,
+      "y": 90,
+      "w": 6,
+      "h": 50
+    }
+  ],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 340,
+      "y": 120
+    },
+    {
+      "type": "hatch",
+      "x": 440,
+      "y": 120
+    },
+    {
+      "type": "exit",
+      "x": 420,
+      "y": 37
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 293,
+      "y": 130,
+      "w": 8,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 484,
+      "y": 130,
+      "w": 8,
+      "h": 10
+    }
+  ]
+}

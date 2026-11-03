@@ -1,6 +1,6 @@
 # Layout notes: Taxing 01-30 (plan M6.131)
 
-> Living document. Last update: 2026-10-12.
+> Living document. Last update: 2026-11-03.
 > Purpose: one traced layout per original Taxing level, so that phase B can build our own
 > recreation of each level with the terrain toolkit (vision L-01a, owner decision Q-C1).
 
@@ -940,12 +940,28 @@ is short.
 | W | [Lemmings Wiki](https://lemmings.fandom.com/wiki/Taxing), level pages and DOS map images | Layout, skill counts, solution ideas, DOS save values | 2026-10-12 |
 | R | [levels-reference.md](../levels-reference.md) | Lemmings, save, RR, time | 2026-10-11 |
 
+## Phase B simplifications
+
+Our simulation differs from the original in a few rules (builder bricks rise 1 px per 2 px,
+a builder bumps its head inside a basher tunnel, a miner digs on through any floor). Where a
+traced layout could not be built one to one, the level changes as listed here.
+
+| Level | Change | Why |
+| --- | --- | --- |
+| 01 | Save 79 of 80 (98 %) instead of 80. | The blocker that holds the crowd must be blown up; our blocker cannot be freed otherwise. |
+| 01 | The third column has no stairs on its right; a steel plate lies in the ground under it. | Our miner digs on through the floor; the steel stops it at floor level so the crowd walks out. |
+| 02 | The plant and the coils on the ground are left out; the hidden traps are squashers. | Solid decoration on the ground would turn the crowd on its way to the exit. |
+| 03 | The holding pit is dug by one digger, stopped by a builder at 10 px depth; one builder inside lets the crowd out. The sign reads "HIMMEL ->". | Our miners dig on through the platform; the pit and the stairs out of it work with our builder. |
+| 04 | The exit room is reached by a builder zigzag in a 30 px shaft right of the block. A short steel lip hangs under the block's right edge. The rungs are left out. | Our builder turns only at walls; the lip gives the zigzag its left wall below the block. |
+| 05 | The flame-thrower block reaches 15 px past the bars as a ledge. The crowd waits in a digger pit under the hatch; two builders open it. | A builder cannot start inside a basher tunnel; the ledge gives room to start the bridge. The pit keeps the crowd off the unfinished stairs. |
+
 ## Resume here
 
-- State: phase A done. All 30 Taxing layouts are traced. No level JSON is written yet.
-- Check: `npx markdownlint-cli2 docs/layouts/taxing.md`.
+- State: phase B in progress. Taxing 01-05 are built (level JSON, winning replay, names in three
+  languages). Taxing 06-30 are next.
+- Check: `npx vitest run tests/levels` and `npx markdownlint-cli2 docs/layouts/taxing.md`.
+- Preview: `BL_LEVEL=taxing npm run levels:preview`, then open `.tools/level-previews/taxing-NN.png`.
 - Next (phase B):
-  1. Wait for the terrain toolkit (plan M6.126) and the preview tool (plan M6.127).
-  2. Build `assets/levels/taxing/<nn>-<slug>.json` from each section, best confidence first.
-  3. Render each level with the preview tool and compare it side by side with the reference.
-  4. Resolve every `[verify]` item while building; record the decision in this file.
+  1. Build `assets/levels/taxing/<nn>-<slug>.json` from each remaining section.
+  2. Record a winning replay in `assets/replays/taxing-<nn>.json`; every assignment must be accepted.
+  3. Add every simplification to the table above.

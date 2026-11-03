@@ -1,0 +1,288 @@
+{
+  "version": 1,
+  "id": "taxing-02",
+  "name": "level.taxing-02.name",
+  "inspiredBy": "Taxing 2 of the original ('Watch out, there's traps about'): two crowds land on a rock island split by a steel tub of water; blockers keep them out of the tub, off the edges and away from the traps while miners cut each crowd a way down, a basher opens the rock finger and builders bridge the hidden trap before the exit mound. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 1058,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 64,
+  "releaseRate": 70,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 10,
+    "floater": 5,
+    "bomber": 5,
+    "blocker": 10,
+    "builder": 10,
+    "basher": 5,
+    "miner": 5,
+    "digger": 5
+  },
+  "style": "dirt",
+  "startX": 300,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 0],
+        [1058, 0],
+        [1058, 10],
+        [700, 13],
+        [400, 9],
+        [0, 12]
+      ],
+      "rough": 0.6,
+      "seed": 21
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 120,
+      "y": 8,
+      "w": 12,
+      "h": 22
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 260,
+      "y": 10,
+      "w": 14,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 340,
+      "y": 8,
+      "w": 10,
+      "h": 16
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 540,
+      "y": 10,
+      "w": 14,
+      "h": 22
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 720,
+      "y": 10,
+      "w": 12,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 800,
+      "y": 9,
+      "w": 16,
+      "h": 18
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 900,
+      "y": 9,
+      "w": 12,
+      "h": 22
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [38, 0],
+        [72, 0],
+        [70, 60],
+        [76, 120],
+        [84, 150],
+        [30, 150],
+        [36, 110],
+        [32, 50]
+      ],
+      "rough": 0.7,
+      "seed": 4
+    },
+    {
+      "shape": "blob",
+      "x": 10,
+      "y": 140,
+      "w": 90,
+      "h": 22,
+      "rough": 0.4,
+      "seed": 8
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 142],
+        [1058, 142],
+        [1058, 160],
+        [0, 160]
+      ],
+      "seed": 0
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [85, 150],
+        [100, 112],
+        [118, 98],
+        [158, 98],
+        [175, 104],
+        [196, 118],
+        [226, 142],
+        [85, 160]
+      ],
+      "seed": 0
+    },
+    {
+      "shape": "blob",
+      "x": 92,
+      "y": 120,
+      "w": 120,
+      "h": 40,
+      "rough": 0.5,
+      "seed": 12
+    },
+    {
+      "shape": "rect",
+      "x": 365,
+      "y": 95,
+      "w": 40,
+      "h": 47
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 365,
+      "y": 95,
+      "w": 40,
+      "h": 47,
+      "seed": 5
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [428, 62],
+        [440, 50],
+        [452, 45],
+        [900, 45],
+        [912, 52],
+        [915, 68],
+        [895, 96],
+        [850, 108],
+        [760, 112],
+        [620, 106],
+        [520, 110],
+        [455, 102],
+        [432, 88]
+      ],
+      "seed": 0
+    },
+    {
+      "shape": "blob",
+      "x": 470,
+      "y": 70,
+      "w": 120,
+      "h": 44,
+      "rough": 0.5,
+      "seed": 31
+    },
+    {
+      "shape": "blob",
+      "x": 700,
+      "y": 70,
+      "w": 150,
+      "h": 46,
+      "rough": 0.5,
+      "seed": 32
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [962, 0],
+        [1058, 0],
+        [1058, 160],
+        [925, 160],
+        [940, 120],
+        [950, 60]
+      ],
+      "rough": 0.6,
+      "seed": 9
+    }
+  ],
+  "steel": [
+    {
+      "x": 505,
+      "y": 34,
+      "w": 23,
+      "h": 51
+    },
+    {
+      "x": 588,
+      "y": 34,
+      "w": 22,
+      "h": 51
+    },
+    {
+      "x": 528,
+      "y": 65,
+      "w": 60,
+      "h": 20
+    }
+  ],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 456,
+      "y": 30
+    },
+    {
+      "type": "hatch",
+      "x": 648,
+      "y": 30
+    },
+    {
+      "type": "exit",
+      "x": 138,
+      "y": 97
+    },
+    {
+      "type": "water",
+      "x": 528,
+      "y": 52,
+      "w": 60,
+      "h": 13
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 758,
+      "y": 35,
+      "w": 8,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 842,
+      "y": 35,
+      "w": 8,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 306,
+      "y": 132,
+      "w": 8,
+      "h": 10
+    }
+  ]
+}

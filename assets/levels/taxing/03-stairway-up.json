@@ -1,0 +1,574 @@
+{
+  "version": 1,
+  "id": "taxing-03",
+  "name": "level.taxing-03.name",
+  "inspiredBy": "Taxing 3 of the original ('Heaven can wait (we hope!!!!)'): no blockers and every lemming must live; a digger sinks a holding pit into the brick platform, the scout stairs up to the tower top, and one builder lets the crowd climb out of the pit. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 741,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 80,
+  "releaseRate": 1,
+  "timeSeconds": 120,
+  "skills": {
+    "climber": 30,
+    "floater": 30,
+    "bomber": 30,
+    "blocker": 0,
+    "builder": 30,
+    "basher": 30,
+    "miner": 30,
+    "digger": 30
+  },
+  "style": "fire",
+  "startX": 120,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 147,
+      "y": 128,
+      "w": 196,
+      "h": 17
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 147,
+      "y": 128,
+      "w": 196,
+      "h": 17
+    },
+    {
+      "shape": "rect",
+      "x": 160,
+      "y": 145,
+      "w": 16,
+      "h": 15
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 160,
+      "y": 145,
+      "w": 16,
+      "h": 15
+    },
+    {
+      "shape": "rect",
+      "x": 237,
+      "y": 145,
+      "w": 16,
+      "h": 15
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 237,
+      "y": 145,
+      "w": 16,
+      "h": 15
+    },
+    {
+      "shape": "rect",
+      "x": 314,
+      "y": 145,
+      "w": 16,
+      "h": 15
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 314,
+      "y": 145,
+      "w": 16,
+      "h": 15
+    },
+    {
+      "shape": "rect",
+      "x": 205,
+      "y": 45,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 221,
+      "y": 45,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 205,
+      "y": 49,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 221,
+      "y": 49,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 205,
+      "y": 53,
+      "w": 20,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 205,
+      "y": 57,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 221,
+      "y": 57,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 205,
+      "y": 61,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 221,
+      "y": 61,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 229,
+      "y": 45,
+      "w": 12,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 233,
+      "y": 49,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 233,
+      "y": 53,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 233,
+      "y": 57,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 229,
+      "y": 61,
+      "w": 12,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 245,
+      "y": 45,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 261,
+      "y": 45,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 245,
+      "y": 49,
+      "w": 8,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 257,
+      "y": 49,
+      "w": 8,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 245,
+      "y": 53,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 253,
+      "y": 53,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 261,
+      "y": 53,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 245,
+      "y": 57,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 261,
+      "y": 57,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 245,
+      "y": 61,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 261,
+      "y": 61,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 269,
+      "y": 45,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 285,
+      "y": 45,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 269,
+      "y": 49,
+      "w": 8,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 281,
+      "y": 49,
+      "w": 8,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 269,
+      "y": 53,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 277,
+      "y": 53,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 285,
+      "y": 53,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 269,
+      "y": 57,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 285,
+      "y": 57,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 269,
+      "y": 61,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 285,
+      "y": 61,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 293,
+      "y": 45,
+      "w": 20,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 293,
+      "y": 49,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 293,
+      "y": 53,
+      "w": 16,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 293,
+      "y": 57,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 293,
+      "y": 61,
+      "w": 20,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 317,
+      "y": 45,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 317,
+      "y": 49,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 317,
+      "y": 53,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 317,
+      "y": 57,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 317,
+      "y": 61,
+      "w": 20,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 357,
+      "y": 53,
+      "w": 20,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 381,
+      "y": 45,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 385,
+      "y": 49,
+      "w": 8,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 393,
+      "y": 53,
+      "w": 8,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 385,
+      "y": 57,
+      "w": 8,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 381,
+      "y": 61,
+      "w": 4,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 485,
+      "y": 130,
+      "w": 100,
+      "h": 30
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 485,
+      "y": 130,
+      "w": 100,
+      "h": 30
+    },
+    {
+      "shape": "rect",
+      "x": 520,
+      "y": 74,
+      "w": 28,
+      "h": 56
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 520,
+      "y": 74,
+      "w": 28,
+      "h": 56
+    },
+    {
+      "shape": "rect",
+      "x": 497,
+      "y": 68,
+      "w": 73,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 497,
+      "y": 68,
+      "w": 73,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 0,
+      "y": 120,
+      "w": 22,
+      "h": 40
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 370,
+      "y": 122,
+      "w": 20,
+      "h": 38
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 410,
+      "y": 118,
+      "w": 20,
+      "h": 42
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 445,
+      "y": 126,
+      "w": 17,
+      "h": 34
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 470,
+      "y": 132,
+      "w": 14,
+      "h": 28
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 600,
+      "y": 124,
+      "w": 18,
+      "h": 36
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 660,
+      "y": 130,
+      "w": 16,
+      "h": 30
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 718,
+      "y": 120,
+      "w": 23,
+      "h": 40
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 200,
+      "y": 112
+    },
+    {
+      "type": "exit",
+      "x": 537,
+      "y": 67
+    }
+  ]
+}

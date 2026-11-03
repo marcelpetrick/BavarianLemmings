@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "levelId": "taxing-05",
+  "entries": [
+    {
+      "tick": 80,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "blocker"
+      }
+    },
+    {
+      "tick": 144,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 144,
+      "intent": {
+        "type": "releaseRate",
+        "delta": 98
+      }
+    },
+    {
+      "tick": 152,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 164,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 280,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 472,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 664,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 856,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1048,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1240,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 1305,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1497,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1689,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1737,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 1770,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1831,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 6,
+        "skill": "builder"
+      }
+    }
+  ]
+}

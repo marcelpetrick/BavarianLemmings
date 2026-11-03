@@ -1,0 +1,212 @@
+{
+  "version": 1,
+  "id": "taxing-05",
+  "name": "level.taxing-05.name",
+  "inspiredBy": "Taxing 5 of the original ('The Prison!'): the crowd is penned on a ledge in front of two sets of prison bars with flame throwers between them; a blocker guards the drop, one lemming stairs left and then right high above the flames, bashes through both sets of bars and bridges the gap to the upper exit. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 360,
+  "height": 160,
+  "lemmings": 60,
+  "toSave": 45,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 5,
+    "blocker": 4,
+    "builder": 20,
+    "basher": 10,
+    "miner": 0,
+    "digger": 3
+  },
+  "style": "fire",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 0],
+        [205, 0],
+        [196, 18],
+        [150, 26],
+        [90, 22],
+        [40, 30],
+        [0, 24]
+      ],
+      "rough": 0.8,
+      "seed": 17
+    },
+    {
+      "shape": "rect",
+      "x": 22,
+      "y": 123,
+      "w": 100,
+      "h": 37
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 22,
+      "y": 123,
+      "w": 100,
+      "h": 37
+    },
+    {
+      "shape": "rect",
+      "x": 28,
+      "y": 25,
+      "w": 17,
+      "h": 98
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 28,
+      "y": 25,
+      "w": 17,
+      "h": 98
+    },
+    {
+      "shape": "rect",
+      "x": 172,
+      "y": 0,
+      "w": 20,
+      "h": 160
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 172,
+      "y": 0,
+      "w": 20,
+      "h": 160
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 188,
+      "y": 108,
+      "w": 27,
+      "h": 32,
+      "flip": true
+    },
+    {
+      "shape": "rect",
+      "x": 262,
+      "y": 0,
+      "w": 15,
+      "h": 148
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 262,
+      "y": 0,
+      "w": 15,
+      "h": 148
+    },
+    {
+      "shape": "rect",
+      "x": 260,
+      "y": 60,
+      "w": 100,
+      "h": 25
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 260,
+      "y": 60,
+      "w": 100,
+      "h": 25
+    },
+    {
+      "shape": "rect",
+      "x": 255,
+      "y": 145,
+      "w": 102,
+      "h": 15
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 255,
+      "y": 145,
+      "w": 102,
+      "h": 15
+    },
+    {
+      "shape": "rect",
+      "x": 335,
+      "y": 0,
+      "w": 17,
+      "h": 60
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 335,
+      "y": 0,
+      "w": 17,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 335,
+      "y": 85,
+      "w": 17,
+      "h": 60
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 335,
+      "y": 85,
+      "w": 17,
+      "h": 60
+    }
+  ],
+  "steel": [
+    {
+      "x": 167,
+      "y": 58,
+      "w": 40,
+      "h": 41
+    }
+  ],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 87,
+      "y": 70
+    },
+    {
+      "type": "exit",
+      "x": 312,
+      "y": 59
+    },
+    {
+      "type": "exit",
+      "x": 300,
+      "y": 144
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 215,
+      "y": 60,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 215,
+      "y": 85,
+      "w": 12,
+      "h": 10
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "version": 1,
+  "id": "taxing-01",
+  "name": "level.taxing-01.name",
+  "inspiredBy": "Taxing 1 of the original ('If at first you don't succeed..'): a blocker holds the crowd while one scout bashes two columns, mines the third, bridges a wide pit and the gap below the frame stairs; then the blocker is blown away. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 1227,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 79,
+  "releaseRate": 40,
+  "timeSeconds": 240,
+  "skills": {
+    "climber": 2,
+    "floater": 2,
+    "bomber": 2,
+    "blocker": 2,
+    "builder": 8,
+    "basher": 2,
+    "miner": 2,
+    "digger": 2
+  },
+  "style": "pillar",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 1227,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 0,
+      "y": 0,
+      "w": 1227,
+      "h": 8
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [15, 160],
+        [25, 142],
+        [810, 142],
+        [810, 160]
+      ],
+      "rough": 0.2,
+      "seed": 3
+    },
+    {
+      "shape": "rect",
+      "x": 38,
+      "y": 73,
+      "w": 52,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 38,
+      "y": 73,
+      "w": 52,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 46,
+      "y": 81,
+      "w": 36,
+      "h": 61
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 46,
+      "y": 81,
+      "w": 36,
+      "h": 61
+    },
+    {
+      "shape": "rect",
+      "x": 90,
+      "y": 100,
+      "w": 21,
+      "h": 42
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 90,
+      "y": 100,
+      "w": 21,
+      "h": 42
+    },
+    {
+      "shape": "rect",
+      "x": 111,
+      "y": 122,
+      "w": 20,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 111,
+      "y": 122,
+      "w": 20,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 367,
+      "y": 45,
+      "w": 33,
+      "h": 97
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 367,
+      "y": 45,
+      "w": 33,
+      "h": 97
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 335,
+      "y": 108,
+      "w": 32,
+      "h": 34
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 400,
+      "y": 108,
+      "w": 40,
+      "h": 34,
+      "flip": true
+    },
+    {
+      "shape": "rect",
+      "x": 468,
+      "y": 33,
+      "w": 34,
+      "h": 109
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 468,
+      "y": 33,
+      "w": 34,
+      "h": 109
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 436,
+      "y": 108,
+      "w": 32,
+      "h": 34
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 502,
+      "y": 108,
+      "w": 40,
+      "h": 34,
+      "flip": true
+    },
+    {
+      "shape": "rect",
+      "x": 577,
+      "y": 24,
+      "w": 33,
+      "h": 118
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 577,
+      "y": 24,
+      "w": 33,
+      "h": 118
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 545,
+      "y": 108,
+      "w": 32,
+      "h": 34
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [905, 160],
+        [905, 150],
+        [915, 145],
+        [1227, 145],
+        [1227, 160]
+      ],
+      "rough": 0.2,
+      "seed": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 965,
+      "y": 108,
+      "w": 45,
+      "h": 37
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 1035,
+      "y": 62,
+      "w": 49,
+      "h": 38
+    },
+    {
+      "shape": "rect",
+      "x": 1083,
+      "y": 62,
+      "w": 98,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 1083,
+      "y": 62,
+      "w": 98,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 1088,
+      "y": 85,
+      "w": 92,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 1088,
+      "y": 85,
+      "w": 92,
+      "h": 5
+    },
+    {
+      "shape": "rect",
+      "x": 1088,
+      "y": 108,
+      "w": 92,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 1088,
+      "y": 108,
+      "w": 92,
+      "h": 5
+    },
+    {
+      "shape": "rect",
+      "x": 1088,
+      "y": 128,
+      "w": 92,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 1088,
+      "y": 128,
+      "w": 92,
+      "h": 5
+    },
+    {
+      "shape": "rect",
+      "x": 1085,
+      "y": 62,
+      "w": 5,
+      "h": 83
+    },
+    {
+      "shape": "rect",
+      "x": 1117,
+      "y": 68,
+      "w": 4,
+      "h": 77
+    },
+    {
+      "shape": "rect",
+      "x": 1149,
+      "y": 68,
+      "w": 4,
+      "h": 77
+    },
+    {
+      "shape": "rect",
+      "x": 1176,
+      "y": 62,
+      "w": 5,
+      "h": 83
+    }
+  ],
+  "steel": [
+    {
+      "x": 590,
+      "y": 142,
+      "w": 50,
+      "h": 18
+    }
+  ],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 62,
+      "y": 38
+    },
+    {
+      "type": "exit",
+      "x": 1152,
+      "y": 61
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 1050,
+      "y": 135,
+      "w": 8,
+      "h": 10
+    }
+  ]
+}
