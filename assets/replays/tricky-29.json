@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "levelId": "tricky-29",
+  "entries": [
+    {
+      "tick": 381,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 510,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 573,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 624,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 702,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 816,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 884,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 14,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1076,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 14,
+        "skill": "builder"
+      }
+    }
+  ]
+}

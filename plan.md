@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (106/160) :active, m6, after m5, 17h
+    M6 content, all four ratings (108/160) :active, m6, after m5, 16h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -303,7 +303,8 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
 - [x] M6.058 (L-01) Tricky 26: "Ramps for Walls" (`tricky-26`), after the original's Tricky 26.
 - [x] M6.059 (L-01) Tricky 27: "Wicker Island" (`tricky-27`), after the original's Tricky 27.
 - [x] M6.060 (L-01) Tricky 28: "Lost and Found" (`tricky-28`), after the original's Tricky 28.
-- [ ] M6.061 (L-01) Tricky 29: placeholder, name and `inspiredBy` filled in when built.
+- [x] M6.061 (L-01) Tricky 29: "Over the Rainbow Arches" (`tricky-29`), after the original's Tricky
+      29.
 - [x] M6.062 (L-01) Tricky 30: "Down, Up, Down Again" (`tricky-30`), after the original's Tricky 30.
 - [x] M6.063 (L-01) Taxing 01: "Third Time Lucky" (`taxing-01`), after the original's Taxing 1.
 - [x] M6.064 (L-01) Taxing 02: "Traps Everywhere" (`taxing-02`), after the original's Taxing 2.
@@ -390,7 +391,7 @@ rating agents in parallel.
       (`src/i18n/locales/levels/<rating>.<lang>.json`), so rating agents never edit the same file.
 - [ ] M6.129 (L-01a) Fun 01-30 rebuilt to follow the original layouts with the toolkit; replays
       updated.
-- [ ] M6.130 (L-01a) Tricky 01-30 rebuilt the same way (replaces the Tricky placeholders).
+- [x] M6.130 (L-01a) Tricky 01-30 rebuilt the same way (replaces the Tricky placeholders).
 - [ ] M6.131 (L-01a) Taxing 01-30 rebuilt the same way.
 - [ ] M6.132 (L-01a) Mayhem 01-30 rebuilt the same way.
 - [x] M6.133 (G-11, V-05) Nuke and bomber aftermath: every pixel of an exploding lemming flies off

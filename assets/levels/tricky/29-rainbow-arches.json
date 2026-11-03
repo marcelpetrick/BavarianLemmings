@@ -1,0 +1,524 @@
+{
+  "version": 1,
+  "id": "tricky-29",
+  "name": "level.tricky-29.name",
+  "inspiredBy": "Tricky 29 of the original ('Rainbow Island'): a pyramid of thin brick arches; the spinners mark the way down, and diggers, miners and bashers open it arch by arch to the exit at the foot. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 1132,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 64,
+  "releaseRate": 70,
+  "timeSeconds": 240,
+  "skills": {
+    "climber": 10,
+    "floater": 10,
+    "bomber": 10,
+    "blocker": 10,
+    "builder": 10,
+    "basher": 10,
+    "miner": 10,
+    "digger": 10
+  },
+  "style": "marble",
+  "startX": 100,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 160],
+        [0, 148],
+        [170, 0],
+        [184, 0],
+        [14, 160]
+      ],
+      "rough": 0.3,
+      "seed": 1
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [1132, 160],
+        [1132, 148],
+        [962, 0],
+        [948, 0],
+        [1118, 160]
+      ],
+      "rough": 0.3,
+      "seed": 2
+    },
+    {
+      "shape": "ellipse",
+      "x": 355,
+      "y": 10,
+      "w": 185,
+      "h": 70
+    },
+    {
+      "shape": "ellipse",
+      "x": 367,
+      "y": 22,
+      "w": 161,
+      "h": 46,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 355,
+      "y": 45,
+      "w": 185,
+      "h": 35,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 540,
+      "y": 10,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "shape": "ellipse",
+      "x": 552,
+      "y": 22,
+      "w": 166,
+      "h": 46,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 540,
+      "y": 45,
+      "w": 190,
+      "h": 35,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 272,
+      "y": 48,
+      "w": 188,
+      "h": 68
+    },
+    {
+      "shape": "ellipse",
+      "x": 284,
+      "y": 60,
+      "w": 164,
+      "h": 44,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 272,
+      "y": 82,
+      "w": 188,
+      "h": 34,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 460,
+      "y": 48,
+      "w": 185,
+      "h": 68
+    },
+    {
+      "shape": "ellipse",
+      "x": 472,
+      "y": 60,
+      "w": 161,
+      "h": 44,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 460,
+      "y": 82,
+      "w": 185,
+      "h": 34,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 645,
+      "y": 48,
+      "w": 185,
+      "h": 68
+    },
+    {
+      "shape": "ellipse",
+      "x": 657,
+      "y": 60,
+      "w": 161,
+      "h": 44,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 645,
+      "y": 82,
+      "w": 185,
+      "h": 34,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 183,
+      "y": 85,
+      "w": 187,
+      "h": 70
+    },
+    {
+      "shape": "ellipse",
+      "x": 195,
+      "y": 97,
+      "w": 163,
+      "h": 46,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 183,
+      "y": 120,
+      "w": 187,
+      "h": 35,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 370,
+      "y": 85,
+      "w": 185,
+      "h": 70
+    },
+    {
+      "shape": "ellipse",
+      "x": 382,
+      "y": 97,
+      "w": 161,
+      "h": 46,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 370,
+      "y": 120,
+      "w": 185,
+      "h": 35,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 555,
+      "y": 85,
+      "w": 185,
+      "h": 70
+    },
+    {
+      "shape": "ellipse",
+      "x": 567,
+      "y": 97,
+      "w": 161,
+      "h": 46,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 555,
+      "y": 120,
+      "w": 185,
+      "h": 35,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 740,
+      "y": 85,
+      "w": 185,
+      "h": 70
+    },
+    {
+      "shape": "ellipse",
+      "x": 752,
+      "y": 97,
+      "w": 161,
+      "h": 46,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 740,
+      "y": 120,
+      "w": 185,
+      "h": 35,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 90,
+      "y": 120,
+      "w": 185,
+      "h": 80
+    },
+    {
+      "shape": "ellipse",
+      "x": 102,
+      "y": 132,
+      "w": 161,
+      "h": 56,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 90,
+      "y": 160,
+      "w": 185,
+      "h": 40,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 275,
+      "y": 120,
+      "w": 185,
+      "h": 80
+    },
+    {
+      "shape": "ellipse",
+      "x": 287,
+      "y": 132,
+      "w": 161,
+      "h": 56,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 275,
+      "y": 160,
+      "w": 185,
+      "h": 40,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 460,
+      "y": 120,
+      "w": 190,
+      "h": 80
+    },
+    {
+      "shape": "ellipse",
+      "x": 472,
+      "y": 132,
+      "w": 166,
+      "h": 56,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 460,
+      "y": 160,
+      "w": 190,
+      "h": 40,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 650,
+      "y": 120,
+      "w": 185,
+      "h": 80
+    },
+    {
+      "shape": "ellipse",
+      "x": 662,
+      "y": 132,
+      "w": 161,
+      "h": 56,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 650,
+      "y": 160,
+      "w": 185,
+      "h": 40,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 835,
+      "y": 120,
+      "w": 190,
+      "h": 80
+    },
+    {
+      "shape": "ellipse",
+      "x": 847,
+      "y": 132,
+      "w": 166,
+      "h": 56,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 835,
+      "y": 160,
+      "w": 190,
+      "h": 40,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 1025,
+      "y": 150,
+      "w": 60,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 1025,
+      "y": 150,
+      "w": 60,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 251,
+      "y": 117,
+      "w": 24,
+      "h": 24,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 443,
+      "y": 124,
+      "w": 24,
+      "h": 24,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 538,
+      "y": 85,
+      "w": 24,
+      "h": 24,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 523,
+      "y": 10,
+      "w": 24,
+      "h": 24,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 715,
+      "y": 78,
+      "w": 24,
+      "h": 24,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 746,
+      "y": 25,
+      "w": 24,
+      "h": 24,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 891,
+      "y": 74,
+      "w": 24,
+      "h": 24,
+      "erase": true
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 126,
+      "y": 103
+    },
+    {
+      "type": "hatch",
+      "x": 206,
+      "y": 60
+    },
+    {
+      "type": "hatch",
+      "x": 302,
+      "y": 23
+    },
+    {
+      "type": "exit",
+      "x": 1053,
+      "y": 149
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 259,
+      "y": 131,
+      "w": 8,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 451,
+      "y": 138,
+      "w": 8,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 546,
+      "y": 99,
+      "w": 8,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 531,
+      "y": 24,
+      "w": 8,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 723,
+      "y": 92,
+      "w": 8,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 754,
+      "y": 39,
+      "w": 8,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 899,
+      "y": 88,
+      "w": 8,
+      "h": 10
+    }
+  ]
+}
