@@ -37,6 +37,13 @@ describe('exit, water and traps (G-09, G-10)', () => {
     expect(state.died).toBe(1);
   });
 
+  it('water whose top row is terrain still drowns a lemming walking on it (M6.158)', () => {
+    // The owner saw lemmings walk across a moat: the floor filled the water's top row.
+    const state = stateWith(terrainFromArt(flat), [lemmingAt(5, 14)], [{ type: 'water', x: 10, y: 15, w: 10, h: 5 }]);
+    run(state, 6);
+    expect(state.lemmings[0]?.action).toBe('drowning');
+  });
+
   it('a trap kills one lemming at a time', () => {
     const lemmings = [lemmingAt(9, 14, 'walking', 1, 0), lemmingAt(9, 14, 'walking', 1, 1)];
     const state = stateWith(terrainFromArt(flat), lemmings, [{ type: 'trap', x: 10, y: 10, w: 4, h: 6, kind: 'squasher' }]);

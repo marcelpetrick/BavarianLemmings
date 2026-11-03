@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (57/160) :active, m6, after m5, 31h
+    M6 content, all four ratings (58/160) :active, m6, after m5, 31h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -464,7 +464,7 @@ a release at the end. Order:
       the basher does.
 - [x] M6.157 (C-06) A release-rate button held while the browser draws no frame still counts every
       repeat that came due when the finger is lifted (the touch e2e test was flaky under load).
-- [ ] M6.158 (G-09) Water drowns a lemming that stands on its surface, not only one whose feet
+- [x] M6.158 (G-09) Water drowns a lemming that stands on its surface, not only one whose feet
       are inside the water area (owner play-test 2026-11-03: lemmings walked over a moat).
 - [ ] M6.159 (G-09, L-01a) Level check: no water area lies buried under walkable terrain; fix
       Taxing 02, whose pool sat 7 px under the floor, and every other level the check finds.

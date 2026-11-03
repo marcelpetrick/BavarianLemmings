@@ -38,7 +38,9 @@ export function applyObjects(state: GameState, lemming: Lemming): void {
         emit(state, 'exit', lemming.x, lemming.y);
       }
     } else if (object.type === 'water') {
-      if (inRect(object, lemming.x, lemming.y)) {
+      // A lemming drowns with its feet in the water or standing on its surface (terrain under the
+      // water's top row), as in the original: water is never a floor (M6.158).
+      if (inRect(object, lemming.x, lemming.y) || inRect(object, lemming.x, lemming.y + 1)) {
         setAction(lemming, 'drowning');
         lemming.bombTicks = -1;
         emit(state, 'drown', lemming.x, lemming.y);
