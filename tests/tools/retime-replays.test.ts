@@ -53,7 +53,13 @@ describe.skipIf(ids.length === 0)('replay re-timing (BL_RETIME=<ids> BL_OLD_SRC=
       const path = `assets/replays/${id}.json`;
       const replay = JSON.parse(readFileSync(path, 'utf8')) as Replay;
       // Positions come from the committed replay under the old rules, even if the file was edited.
-      const committed = JSON.parse(execSync(`git show HEAD:${path}`).toString()) as Replay;
+      // A replay that is not committed yet (a new level) is its own reference.
+      let committed = replay;
+      try {
+        committed = JSON.parse(execSync(`git show HEAD:${path}`, { stdio: ['ignore', 'pipe', 'ignore'] }).toString()) as Replay;
+      } catch {
+        console.log(id, 'is not committed; the file on disk is the reference');
+      }
       const oldState = old.createGame(level);
       const committedTargets: Snapshot[] = [];
       for (let next = 0; next < committed.entries.length;) {

@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (90/160) :active, m6, after m5, 21h
+    M6 content, all four ratings (93/160) :active, m6, after m5, 21h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -287,7 +287,7 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
 - [x] M6.046 (L-01) Tricky 14: "The Scary Cave" (`tricky-14`), after the original's Tricky 14.
 - [x] M6.047 (L-01) Tricky 15: "One Crater Deeper" (`tricky-15`), after the original's Tricky 15.
 - [ ] M6.048 (L-01) Tricky 16: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.049 (L-01) Tricky 17: placeholder, name and `inspiredBy` filled in when built.
+- [x] M6.049 (L-01) Tricky 17: "Just Two Bangs" (`tricky-17`), after the original's Tricky 17.
 - [ ] M6.050 (L-01) Tricky 18: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.051 (L-01) Tricky 19: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.052 (L-01) Tricky 20: placeholder, name and `inspiredBy` filled in when built.
@@ -336,9 +336,10 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
 - [x] M6.095 (L-01) Mayhem 03: "Sixty Seconds of Fame" (`mayhem-03`), after the original's Mayhem 3.
 - [x] M6.096 (L-01) Mayhem 04: "Lattice Lane" (`mayhem-04`), after the original's Mayhem 4.
 - [x] M6.097 (L-01) Mayhem 05: "Down, Across, Up" (`mayhem-05`), after the original's Mayhem 5.
-- [ ] M6.098 (L-01) Mayhem 06: placeholder, name and `inspiredBy` filled in when built.
+- [x] M6.098 (L-01) Mayhem 06: "Turn at the Spike" (`mayhem-06`), after the original's Mayhem 6.
 - [ ] M6.099 (L-01) Mayhem 07: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.100 (L-01) Mayhem 08: placeholder, name and `inspiredBy` filled in when built.
+- [x] M6.100 (L-01) Mayhem 08: "Two Guards at the Gate" (`mayhem-08`), after the original's Mayhem
+      8.
 - [ ] M6.101 (L-01) Mayhem 09: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.102 (L-01) Mayhem 10: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.103 (L-01) Mayhem 11: placeholder, name and `inspiredBy` filled in when built.

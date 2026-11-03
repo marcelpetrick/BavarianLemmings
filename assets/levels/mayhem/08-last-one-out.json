@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "id": "mayhem-08",
+  "name": "level.mayhem-08.name",
+  "inspiredBy": "Mayhem 8 of the original ('Last one out is a rotten egg!'): two blockers pen the crowd on the start platform while one lemming bridges to the foot of a one-way block and mines underneath it; a bomber then lets everyone out. Geometry, name and art are ours.",
+  "rating": "mayhem",
+  "width": 668,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 72,
+  "releaseRate": 55,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 5,
+    "floater": 0,
+    "bomber": 5,
+    "blocker": 5,
+    "builder": 10,
+    "basher": 0,
+    "miner": 5,
+    "digger": 5
+  },
+  "style": "fire",
+  "startX": 100,
+  "terrain": [
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 0,
+      "y": 140,
+      "w": 25,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 118,
+      "y": 117,
+      "w": 125,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 118,
+      "y": 117,
+      "w": 125,
+      "h": 8
+    },
+    {
+      "shape": "blob",
+      "x": 150,
+      "y": 112,
+      "w": 90,
+      "h": 26,
+      "rough": 0.5,
+      "seed": 81
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 125,
+      "y": 124,
+      "w": 8,
+      "h": 12
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 236,
+      "y": 124,
+      "w": 7,
+      "h": 10
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [290, 104],
+        [318, 104],
+        [318, 107],
+        [340, 107],
+        [340, 140],
+        [330, 140],
+        [330, 160],
+        [300, 160],
+        [296, 125]
+      ],
+      "rough": 0.3,
+      "seed": 82
+    },
+    {
+      "shape": "rect",
+      "x": 318,
+      "y": 16,
+      "w": 50,
+      "h": 91
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 318,
+      "y": 16,
+      "w": 50,
+      "h": 91
+    },
+    {
+      "shape": "rect",
+      "x": 330,
+      "y": 150,
+      "w": 330,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 330,
+      "y": 150,
+      "w": 330,
+      "h": 10
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [445, -1],
+        [668, -1],
+        [668, 160],
+        [560, 160],
+        [560, 95],
+        [445, 95]
+      ],
+      "rough": 0.5,
+      "seed": 83
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [428, 25],
+        [428, 120],
+        [426, 120],
+        [426, 25]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [436, 25],
+        [436, 120],
+        [434, 120],
+        [434, 25]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [444, 25],
+        [444, 120],
+        [442, 120],
+        [442, 25]
+      ]
+    }
+  ],
+  "steel": [
+    {
+      "x": 398,
+      "y": 0,
+      "w": 27,
+      "h": 123
+    },
+    {
+      "x": 425,
+      "y": 0,
+      "w": 23,
+      "h": 25
+    }
+  ],
+  "oneWay": [
+    {
+      "x": 318,
+      "y": 16,
+      "w": 50,
+      "h": 91,
+      "dir": "left"
+    }
+  ],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 145,
+      "y": 90
+    },
+    {
+      "type": "exit",
+      "x": 515,
+      "y": 149
+    }
+  ]
+}

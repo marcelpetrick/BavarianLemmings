@@ -1,0 +1,206 @@
+{
+  "version": 1,
+  "id": "mayhem-06",
+  "name": "level.mayhem-06.name",
+  "inspiredBy": "Mayhem 6 of the original ('One way or another'): everyone walks into a steel pit; one lemming turns round at the one-way stalactite, bridges the gap in the steel beam, then builds over the one-way mound and the chasm before the crowd is let out. Geometry, name and art are ours.",
+  "rating": "mayhem",
+  "width": 949,
+  "height": 160,
+  "lemmings": 75,
+  "toSave": 75,
+  "releaseRate": 50,
+  "timeSeconds": 240,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 10,
+    "blocker": 0,
+    "builder": 15,
+    "basher": 0,
+    "miner": 5,
+    "digger": 5
+  },
+  "style": "dirt",
+  "startX": 330,
+  "terrain": [
+    {
+      "shape": "blob",
+      "x": 80,
+      "y": -40,
+      "w": 840,
+      "h": 62,
+      "rough": 0.6,
+      "seed": 61
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [40, -1],
+        [92, -1],
+        [92, 72],
+        [148, 102],
+        [140, 112],
+        [100, 108],
+        [98, 160],
+        [12, 160],
+        [18, 104],
+        [38, 92]
+      ],
+      "rough": 0.4,
+      "seed": 62
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [88, 160],
+        [88, 136],
+        [150, 134],
+        [262, 135],
+        [262, 160]
+      ],
+      "rough": 0.5,
+      "seed": 63
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 185,
+      "y": 115,
+      "w": 25,
+      "h": 45
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [310, 160],
+        [310, 136],
+        [470, 136],
+        [480, 133],
+        [520, 133],
+        [530, 136],
+        [665, 136],
+        [665, 160]
+      ]
+    },
+    {
+      "shape": "blob",
+      "x": 705,
+      "y": 142,
+      "w": 115,
+      "h": 40,
+      "rough": 0.4,
+      "seed": 65
+    },
+    {
+      "shape": "blob",
+      "x": 838,
+      "y": 62,
+      "w": 76,
+      "h": 120,
+      "rough": 0.4,
+      "seed": 66
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 725,
+      "y": 16,
+      "w": 45,
+      "h": 44
+    },
+    {
+      "shape": "piece",
+      "piece": "tuft",
+      "x": 120,
+      "y": 128,
+      "w": 16,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "tuft",
+      "x": 600,
+      "y": 128,
+      "w": 16,
+      "h": 8
+    }
+  ],
+  "steel": [
+    {
+      "x": 0,
+      "y": 140,
+      "w": 15,
+      "h": 20
+    },
+    {
+      "x": 140,
+      "y": 68,
+      "w": 145,
+      "h": 22
+    },
+    {
+      "x": 308,
+      "y": 68,
+      "w": 425,
+      "h": 22
+    },
+    {
+      "x": 715,
+      "y": 90,
+      "w": 18,
+      "h": 25
+    },
+    {
+      "x": 733,
+      "y": 93,
+      "w": 97,
+      "h": 22
+    },
+    {
+      "x": 790,
+      "y": 68,
+      "w": 40,
+      "h": 25
+    },
+    {
+      "x": 805,
+      "y": 45,
+      "w": 50,
+      "h": 23
+    },
+    {
+      "x": 890,
+      "y": 140,
+      "w": 59,
+      "h": 20
+    }
+  ],
+  "oneWay": [
+    {
+      "x": 185,
+      "y": 115,
+      "w": 25,
+      "h": 45,
+      "dir": "left"
+    },
+    {
+      "x": 725,
+      "y": 16,
+      "w": 45,
+      "h": 44,
+      "dir": "left"
+    }
+  ],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 493,
+      "y": 42
+    },
+    {
+      "type": "exit",
+      "x": 500,
+      "y": 132
+    }
+  ]
+}

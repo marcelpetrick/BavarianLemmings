@@ -1,0 +1,254 @@
+{
+  "version": 1,
+  "id": "tricky-17",
+  "name": "level.tricky-17.name",
+  "inspiredBy": "Tricky 17 of the original ('Diet Lemmingaid'), on the map of Fun 6 with only two bombers: the first lemming blows a hole in the thin bar so the crowd drops to the base, and the second, armed at the right moment, blows open the thin wall in front of the exit; every bomb must count. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 770,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 48,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 2,
+    "blocker": 0,
+    "builder": 0,
+    "basher": 0,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "fire",
+  "startX": 160,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [15, 160],
+        [20, 130],
+        [40, 118],
+        [55, 100],
+        [80, 92],
+        [105, 110],
+        [105, 160]
+      ],
+      "rough": 0.6,
+      "seed": 1701
+    },
+    {
+      "shape": "rect",
+      "x": 30,
+      "y": 130,
+      "w": 60,
+      "h": 30
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 30,
+      "y": 130,
+      "w": 60,
+      "h": 30
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [680, 160],
+        [690, 100],
+        [720, 70],
+        [745, 64],
+        [770, 80],
+        [770, 160]
+      ],
+      "rough": 0.6,
+      "seed": 1702
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [180, 0],
+        [570, 0],
+        [570, 10],
+        [450, 12],
+        [300, 9],
+        [180, 12]
+      ],
+      "rough": 0.7,
+      "seed": 1703
+    },
+    {
+      "shape": "rect",
+      "x": 175,
+      "y": 92,
+      "w": 275,
+      "h": 36
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 175,
+      "y": 92,
+      "w": 275,
+      "h": 36
+    },
+    {
+      "shape": "rect",
+      "x": 450,
+      "y": 104,
+      "w": 100,
+      "h": 24
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 450,
+      "y": 104,
+      "w": 100,
+      "h": 24
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [180, 128],
+        [440, 128],
+        [430, 136],
+        [400, 133],
+        [360, 142],
+        [320, 134],
+        [280, 140],
+        [240, 133],
+        [200, 138]
+      ],
+      "rough": 0.8,
+      "seed": 1704
+    },
+    {
+      "shape": "rect",
+      "x": 175,
+      "y": 56,
+      "w": 50,
+      "h": 36
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 175,
+      "y": 56,
+      "w": 50,
+      "h": 36
+    },
+    {
+      "shape": "rect",
+      "x": 225,
+      "y": 67,
+      "w": 125,
+      "h": 3
+    },
+    {
+      "shape": "rect",
+      "x": 350,
+      "y": 56,
+      "w": 50,
+      "h": 24
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 350,
+      "y": 56,
+      "w": 50,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 193,
+      "y": 0,
+      "w": 17,
+      "h": 56
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 193,
+      "y": 0,
+      "w": 17,
+      "h": 56
+    },
+    {
+      "shape": "rect",
+      "x": 368,
+      "y": 0,
+      "w": 17,
+      "h": 56
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 368,
+      "y": 0,
+      "w": 17,
+      "h": 56
+    },
+    {
+      "shape": "rect",
+      "x": 440,
+      "y": 0,
+      "w": 18,
+      "h": 33
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 440,
+      "y": 0,
+      "w": 18,
+      "h": 33
+    },
+    {
+      "shape": "rect",
+      "x": 435,
+      "y": 33,
+      "w": 25,
+      "h": 15
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 435,
+      "y": 33,
+      "w": 25,
+      "h": 15
+    },
+    {
+      "shape": "rect",
+      "x": 448,
+      "y": 48,
+      "w": 2,
+      "h": 44
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 255,
+      "y": 32
+    },
+    {
+      "type": "exit",
+      "x": 495,
+      "y": 103
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 352,
+      "y": 46,
+      "w": 12,
+      "h": 10
+    }
+  ]
+}

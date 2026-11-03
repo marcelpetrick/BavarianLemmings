@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "levelId": "mayhem-06",
+  "entries": [
+    {
+      "tick": 356,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 548,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 628,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "miner"
+      }
+    },
+    {
+      "tick": 1170,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1651,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1843,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 2110,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 2302,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 2536,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 11,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 2728,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 11,
+        "skill": "builder"
+      }
+    }
+  ]
+}
