@@ -2,7 +2,7 @@
   "version": 1,
   "id": "fun-01",
   "name": "level.fun-01.name",
-  "inspiredBy": "Fun 1 of the original ('Just dig!'): the lemmings land on a thick mound and must dig down to the exit below it. Geometry, name and art are ours.",
+  "inspiredBy": "Fun 1 of the original ('Just dig!'): the lemmings land on a grassy shelf wedged between two rock masses of a cave and must dig through it to the floor and the exit below. Geometry, name and art are ours.",
   "rating": "fun",
   "width": 640,
   "height": 160,
@@ -21,136 +21,254 @@
     "digger": 10
   },
   "style": "dirt",
-  "startX": 160,
+  "startX": 100,
   "terrain": [
     {
-      "shape": "rect",
-      "x": 0,
-      "y": 136,
-      "w": 640,
-      "h": 24
+      "shape": "polygon",
+      "points": [
+        [0, 160],
+        [0, 133],
+        [90, 134],
+        [180, 131],
+        [260, 133],
+        [340, 131],
+        [430, 133],
+        [520, 132],
+        [640, 134],
+        [640, 160]
+      ],
+      "rough": 0.5,
+      "seed": 21
     },
     {
       "shape": "polygon",
       "points": [
         [0, 160],
-        [0, 40],
-        [22, 30],
-        [40, 64],
-        [58, 100],
-        [96, 128],
-        [150, 138],
-        [150, 160]
+        [0, 102],
+        [24, 98],
+        [48, 108],
+        [62, 126],
+        [66, 160]
       ],
-      "rough": 0.8,
-      "seed": 11
+      "rough": 0.9,
+      "seed": 22
     },
     {
       "shape": "polygon",
       "points": [
-        [490, 160],
-        [490, 138],
-        [546, 126],
-        [590, 96],
-        [608, 50],
-        [626, 34],
-        [640, 40],
-        [640, 160]
+        [38, 0],
+        [168, 0],
+        [156, 30],
+        [160, 56],
+        [152, 80],
+        [154, 104],
+        [144, 120],
+        [132, 134],
+        [70, 134],
+        [52, 112],
+        [60, 84],
+        [50, 52],
+        [56, 22]
       ],
-      "rough": 0.8,
-      "seed": 12
+      "rough": 0.9,
+      "seed": 23
     },
     {
-      "shape": "blob",
-      "x": 198,
-      "y": 76,
-      "w": 244,
-      "h": 44,
-      "rough": 0.25,
-      "seed": 4
+      "shape": "polygon",
+      "points": [
+        [0, 0],
+        [640, 0],
+        [640, 14],
+        [560, 12],
+        [470, 9],
+        [400, 12],
+        [330, 8],
+        [250, 11],
+        [170, 8],
+        [90, 12],
+        [0, 9]
+      ],
+      "rough": 0.8,
+      "seed": 24
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [146, 80],
+        [180, 78],
+        [214, 80],
+        [252, 77],
+        [290, 79],
+        [330, 78],
+        [330, 100],
+        [300, 106],
+        [250, 104],
+        [200, 107],
+        [146, 104]
+      ],
+      "rough": 0.4,
+      "seed": 25
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [318, 0],
+        [500, 0],
+        [478, 40],
+        [452, 70],
+        [420, 88],
+        [390, 93],
+        [356, 92],
+        [332, 88],
+        [320, 78],
+        [322, 40]
+      ],
+      "rough": 0.9,
+      "seed": 26
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [424, 0],
+        [640, 0],
+        [640, 160],
+        [404, 160],
+        [408, 140],
+        [418, 118],
+        [424, 70]
+      ],
+      "rough": 0.9,
+      "seed": 27
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [486, 40],
+        [540, 26],
+        [600, 34],
+        [624, 70],
+        [610, 112],
+        [560, 124],
+        [500, 110],
+        [478, 76]
+      ],
+      "rough": 0.9,
+      "seed": 28,
+      "erase": true
     },
     {
       "shape": "rect",
-      "x": 226,
-      "y": 86,
-      "w": 188,
-      "h": 28
+      "x": 339,
+      "y": 104,
+      "w": 42,
+      "h": 28,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 339,
+      "y": 132,
+      "w": 42,
+      "h": 4
     },
     {
       "shape": "piece",
-      "piece": "pillar",
-      "x": 213,
-      "y": 66,
-      "w": 10,
-      "h": 26
-    },
-    {
-      "shape": "piece",
-      "piece": "pillar",
-      "x": 417,
-      "y": 66,
-      "w": 10,
-      "h": 26
-    },
-    {
-      "shape": "piece",
-      "piece": "rock",
-      "x": 150,
-      "y": 120,
-      "w": 30,
-      "h": 18,
+      "piece": "stalactite",
+      "x": 24,
+      "y": 8,
+      "w": 12,
+      "h": 26,
       "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 292,
+      "y": 6,
+      "w": 12,
+      "h": 24,
+      "seed": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 262,
+      "y": 8,
+      "w": 8,
+      "h": 14,
+      "seed": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 372,
+      "y": 90,
+      "w": 10,
+      "h": 14,
+      "seed": 9
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 600,
+      "y": 120,
+      "w": 14,
+      "h": 20,
+      "seed": 2
     },
     {
       "shape": "piece",
       "piece": "tuft",
       "x": 186,
-      "y": 129,
+      "y": 74,
+      "w": 16,
+      "h": 8,
       "seed": 1
     },
     {
       "shape": "piece",
-      "piece": "rock",
-      "x": 464,
-      "y": 118,
-      "w": 34,
-      "h": 20,
-      "seed": 8
-    },
-    {
-      "shape": "piece",
       "piece": "tuft",
-      "x": 446,
-      "y": 129,
+      "x": 262,
+      "y": 73,
       "w": 14,
       "h": 8,
       "seed": 2
     },
     {
       "shape": "piece",
-      "piece": "crystal",
-      "x": 20,
-      "y": 14,
-      "w": 22,
-      "h": 22,
-      "seed": 1
+      "piece": "tuft",
+      "x": 300,
+      "y": 75,
+      "w": 14,
+      "h": 8,
+      "seed": 3
     },
     {
       "shape": "piece",
-      "piece": "stalagmite",
-      "x": 612,
-      "y": 14,
-      "w": 10,
-      "h": 26,
-      "seed": 2
+      "piece": "tuft",
+      "x": 200,
+      "y": 126,
+      "w": 16,
+      "h": 8,
+      "seed": 4
     },
     {
-      "shape": "rect",
-      "x": 310,
-      "y": 108,
-      "w": 40,
-      "h": 28,
-      "erase": true
+      "shape": "piece",
+      "piece": "tuft",
+      "x": 280,
+      "y": 128,
+      "w": 14,
+      "h": 8,
+      "seed": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 160,
+      "y": 122,
+      "w": 24,
+      "h": 14,
+      "seed": 6
     }
   ],
   "steel": [],
@@ -158,13 +276,13 @@
   "objects": [
     {
       "type": "hatch",
-      "x": 250,
-      "y": 40
+      "x": 215,
+      "y": 42
     },
     {
       "type": "exit",
-      "x": 330,
-      "y": 135
+      "x": 360,
+      "y": 131
     }
   ]
 }

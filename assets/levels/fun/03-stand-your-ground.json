@@ -2,9 +2,9 @@
   "version": 1,
   "id": "fun-03",
   "name": "level.fun-03.name",
-  "inspiredBy": "Fun 3 of the original ('Tailor-made for blockers'): three ledges above deadly water; a blocker on each turns the crowd until it reaches the exit. Geometry, name and art are ours.",
+  "inspiredBy": "Fun 3 of the original ('Tailor-made for blockers'): thin ledges zig-zag down a temple hall; three blockers must turn the crowd at the right ledge ends so that it reaches the floor beside the exit instead of the deadly drops. Geometry, name and art are ours.",
   "rating": "fun",
-  "width": 640,
+  "width": 437,
   "height": 160,
   "lemmings": 50,
   "toSave": 5,
@@ -14,65 +14,166 @@
     "climber": 0,
     "floater": 0,
     "bomber": 0,
-    "blocker": 4,
+    "blocker": 10,
     "builder": 0,
     "basher": 0,
     "miner": 0,
     "digger": 0
   },
-  "style": "dirt",
-  "startX": 0,
+  "style": "pillar",
+  "startX": 40,
   "terrain": [
     {
-      "shape": "rect",
-      "x": 80,
-      "y": 136,
-      "w": 440,
-      "h": 24
-    },
-    {
-      "shape": "rect",
-      "x": 240,
-      "y": 40,
-      "w": 180,
-      "h": 8
-    },
-    {
       "shape": "piece",
-      "piece": "log",
-      "x": 240,
-      "y": 40,
-      "w": 180,
-      "h": 8
-    },
-    {
-      "shape": "ellipse",
-      "x": 236,
-      "y": 36,
+      "piece": "pillar",
+      "x": 5,
+      "y": 0,
       "w": 20,
-      "h": 14
-    },
-    {
-      "shape": "rect",
-      "x": 60,
-      "y": 84,
-      "w": 200,
-      "h": 8
+      "h": 160
     },
     {
       "shape": "piece",
-      "piece": "log",
-      "x": 60,
-      "y": 84,
-      "w": 200,
-      "h": 8
+      "piece": "pillar",
+      "x": 335,
+      "y": 0,
+      "w": 32,
+      "h": 150
     },
     {
-      "shape": "ellipse",
-      "x": 52,
-      "y": 80,
-      "w": 24,
-      "h": 14
+      "shape": "piece",
+      "piece": "slab",
+      "x": 328,
+      "y": 150,
+      "w": 46,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 30,
+      "y": 0,
+      "w": 300,
+      "h": 6
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [40, 6],
+        [76, 6],
+        [58, 22]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [84, 6],
+        [120, 6],
+        [102, 20]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [190, 6],
+        [226, 6],
+        [208, 22]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [236, 6],
+        [272, 6],
+        [254, 20]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [282, 6],
+        [318, 6],
+        [300, 22]
+      ]
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 137,
+      "y": 38,
+      "w": 178,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 65,
+      "y": 58,
+      "w": 113,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 36,
+      "y": 78,
+      "w": 64,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 146,
+      "y": 78,
+      "w": 128,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 76,
+      "y": 98,
+      "w": 124,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 53,
+      "y": 118,
+      "w": 128,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 90,
+      "y": 153,
+      "w": 173,
+      "h": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 88,
+      "y": 143,
+      "w": 12,
+      "h": 17
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 295,
+      "y": 153,
+      "w": 142,
+      "h": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 425,
+      "y": 143,
+      "w": 12,
+      "h": 10
     }
   ],
   "steel": [],
@@ -80,27 +181,13 @@
   "objects": [
     {
       "type": "hatch",
-      "x": 300,
-      "y": 14
+      "x": 155,
+      "y": 22
     },
     {
       "type": "exit",
-      "x": 150,
-      "y": 135
-    },
-    {
-      "type": "water",
-      "x": 0,
-      "y": 140,
-      "w": 80,
-      "h": 20
-    },
-    {
-      "type": "water",
-      "x": 520,
-      "y": 140,
-      "w": 120,
-      "h": 20
+      "x": 145,
+      "y": 152
     }
   ]
 }

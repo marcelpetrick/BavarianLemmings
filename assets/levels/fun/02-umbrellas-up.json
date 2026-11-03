@@ -2,9 +2,9 @@
   "version": 1,
   "id": "fun-02",
   "name": "level.fun-02.name",
-  "inspiredBy": "Fun 2 of the original ('Only floaters can survive this'): the lemmings start on a high pillar, and only an umbrella makes the long drop to the exit survivable. Geometry, name and art are ours.",
+  "inspiredBy": "Fun 2 of the original ('Only floaters can survive this'): the lemmings land on the first of three falling column capitals; from the last one the drop to the temple floor kills without an umbrella. Geometry, name and art are ours.",
   "rating": "fun",
-  "width": 640,
+  "width": 446,
   "height": 160,
   "lemmings": 10,
   "toSave": 1,
@@ -20,82 +20,156 @@
     "miner": 0,
     "digger": 0
   },
-  "style": "marble",
-  "startX": 0,
+  "style": "pillar",
+  "startX": 40,
   "terrain": [
     {
-      "shape": "rect",
+      "shape": "piece",
+      "piece": "brickWall",
       "x": 0,
-      "y": 136,
-      "w": 640,
-      "h": 24
+      "y": 104,
+      "w": 70,
+      "h": 46,
+      "seed": 1
     },
     {
       "shape": "piece",
       "piece": "brickWall",
-      "x": 0,
-      "y": 136,
-      "w": 640,
-      "h": 24
-    },
-    {
-      "shape": "rect",
-      "x": 110,
-      "y": 46,
-      "w": 90,
-      "h": 90
+      "x": 8,
+      "y": 84,
+      "w": 50,
+      "h": 20,
+      "seed": 2
     },
     {
       "shape": "piece",
       "piece": "brickWall",
-      "x": 110,
-      "y": 46,
-      "w": 90,
-      "h": 90
+      "x": 18,
+      "y": 68,
+      "w": 28,
+      "h": 16,
+      "seed": 3
     },
     {
-      "shape": "ellipse",
-      "x": 96,
-      "y": 36,
-      "w": 118,
-      "h": 20
+      "shape": "piece",
+      "piece": "slab",
+      "x": 30,
+      "y": 148,
+      "w": 390,
+      "h": 12
     },
     {
-      "shape": "rect",
-      "x": 0,
-      "y": 96,
-      "w": 10,
-      "h": 40
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 375,
+      "y": 92,
+      "w": 45,
+      "h": 56,
+      "seed": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 368,
+      "y": 86,
+      "w": 60,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 420,
+      "y": 132,
+      "w": 26,
+      "h": 28,
+      "seed": 5
     },
     {
       "shape": "piece",
       "piece": "pillar",
-      "x": 0,
-      "y": 96,
-      "w": 10,
-      "h": 40
+      "x": 90,
+      "y": 55,
+      "w": 33,
+      "h": 95
     },
     {
-      "shape": "rect",
-      "x": 630,
-      "y": 96,
-      "w": 10,
-      "h": 40
+      "shape": "piece",
+      "piece": "slab",
+      "x": 80,
+      "y": 45,
+      "w": 53,
+      "h": 11
     },
     {
       "shape": "piece",
       "piece": "pillar",
-      "x": 630,
-      "y": 96,
-      "w": 10,
-      "h": 40
+      "x": 135,
+      "y": 68,
+      "w": 35,
+      "h": 82
     },
     {
-      "shape": "ellipse",
-      "x": 440,
-      "y": 120,
-      "w": 80,
-      "h": 30
+      "shape": "piece",
+      "piece": "slab",
+      "x": 125,
+      "y": 57,
+      "w": 55,
+      "h": 11
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 182,
+      "y": 80,
+      "w": 33,
+      "h": 70
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 172,
+      "y": 70,
+      "w": 53,
+      "h": 11
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [165, 0],
+        [390, 0],
+        [390, 30],
+        [350, 38],
+        [300, 34],
+        [262, 44],
+        [220, 36],
+        [190, 22]
+      ],
+      "rough": 0.7,
+      "seed": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 305,
+      "y": 0,
+      "w": 85,
+      "h": 60
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 236,
+      "y": 44,
+      "w": 40,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 248,
+      "y": 30,
+      "w": 16,
+      "h": 14
     }
   ],
   "steel": [],
@@ -103,13 +177,13 @@
   "objects": [
     {
       "type": "hatch",
-      "x": 150,
-      "y": 14
+      "x": 105,
+      "y": 18
     },
     {
       "type": "exit",
-      "x": 580,
-      "y": 135
+      "x": 345,
+      "y": 147
     }
   ]
 }

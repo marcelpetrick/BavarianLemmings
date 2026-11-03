@@ -161,8 +161,10 @@ simplification is listed here.
 | --- | --- |
 | all | Skill counts are ours; the text sources do not give them. |
 | all | Lemming counts above 80 are capped at 80 (vision G-15). |
-| Fun 3 | Water below the ledge ends replaces the original's deadly drops, so that each of the three blockers is needed. |
-| Fun 5 | The wire mesh in front of the exit is two solid fence posts; our lemmings cannot walk up a mesh. |
+| Fun 1 | The cave is 640 px wide instead of 510 px; the extra rock on the right is scenery. |
+| Fun 2 | The hatch hangs 6 px lower than traced, so that its sprite stays inside the level. |
+| Fun 4 | The upper beam is closed on the right by a column that reaches the ceiling, so that the miner is needed (the traced map leaves this open). |
+| Fun 5 | The wire pyramid round the exit is girders on posts: our lemmings walk under the girders, so only the two posts on the pipe need bashing. |
 | Fun 6 | Our explosion removes only 4 px below the feet, so the hatch floor is 4 px thin and the wall by the exit 5 px. |
 | Fun 7 | Our builders do not stop walkers, so a few lemmings fall into the pit before the bridge is finished; the target (50 %) allows for it. |
 | Fun 9 | The fire on the left is a pool; the pillar is thick enough that bashing alone saves too few, so a blocker is needed as in the walkthrough's fallback. |

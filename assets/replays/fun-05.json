@@ -2,37 +2,9 @@
   "version": 1,
   "levelId": "fun-05",
   "entries": [
-    {
-      "tick": 142,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 0,
-        "skill": "basher"
-      }
-    },
-    {
-      "tick": 284,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 0,
-        "skill": "basher"
-      }
-    },
-    {
-      "tick": 614,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 0,
-        "skill": "basher"
-      }
-    },
-    {
-      "tick": 668,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 0,
-        "skill": "basher"
-      }
-    }
+    { "tick": 197, "intent": { "type": "assign", "lemmingId": 0, "skill": "basher" } },
+    { "tick": 515, "intent": { "type": "assign", "lemmingId": 0, "skill": "basher" } },
+    { "tick": 576, "intent": { "type": "assign", "lemmingId": 0, "skill": "basher" } },
+    { "tick": 630, "intent": { "type": "assign", "lemmingId": 0, "skill": "basher" } }
   ]
 }
