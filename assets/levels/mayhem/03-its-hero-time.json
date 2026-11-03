@@ -1,0 +1,378 @@
+{
+  "version": 1,
+  "id": "mayhem-03",
+  "name": "level.mayhem-03.name",
+  "inspiredBy": "Mayhem 3 of the original ('It's hero time!'): one of every skill and one minute; open the brick block above the long bridge and steer thirty lemmings past the acid to the exit before time runs out. Geometry, name and art are ours.",
+  "rating": "mayhem",
+  "width": 596,
+  "height": 160,
+  "lemmings": 30,
+  "toSave": 30,
+  "releaseRate": 99,
+  "timeSeconds": 60,
+  "skills": {
+    "climber": 1,
+    "floater": 1,
+    "bomber": 1,
+    "blocker": 1,
+    "builder": 1,
+    "basher": 1,
+    "miner": 1,
+    "digger": 1
+  },
+  "style": "marble",
+  "startX": 140,
+  "terrain": [
+    {
+      "shape": "blob",
+      "x": -20,
+      "y": 96,
+      "w": 150,
+      "h": 90,
+      "rough": 0.4,
+      "seed": 31
+    },
+    {
+      "shape": "rect",
+      "x": 25,
+      "y": 0,
+      "w": 17,
+      "h": 112
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 25,
+      "y": 0,
+      "w": 17,
+      "h": 112
+    },
+    {
+      "shape": "rect",
+      "x": 140,
+      "y": 33,
+      "w": 190,
+      "h": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 140,
+      "y": 33,
+      "w": 190,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 190,
+      "y": 59,
+      "w": 70,
+      "h": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 190,
+      "y": 59,
+      "w": 70,
+      "h": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "ramp",
+      "x": 222,
+      "y": 50,
+      "w": 15,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 237,
+      "y": 46,
+      "w": 28,
+      "h": 14
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 237,
+      "y": 46,
+      "w": 28,
+      "h": 14
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [255, 59],
+        [395, 59],
+        [395, 97],
+        [295, 97]
+      ]
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 265,
+      "y": 59,
+      "w": 130,
+      "h": 38
+    },
+    {
+      "shape": "rect",
+      "x": 330,
+      "y": 59,
+      "w": 55,
+      "h": 25,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 320,
+      "y": 55,
+      "w": 65,
+      "h": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 320,
+      "y": 55,
+      "w": 65,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 385,
+      "y": 41,
+      "w": 15,
+      "h": 56
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 385,
+      "y": 41,
+      "w": 15,
+      "h": 56
+    },
+    {
+      "shape": "rect",
+      "x": 122,
+      "y": 87,
+      "w": 5,
+      "h": 21
+    },
+    {
+      "shape": "rect",
+      "x": 122,
+      "y": 108,
+      "w": 398,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 122,
+      "y": 108,
+      "w": 398,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 145,
+      "y": 118,
+      "w": 15,
+      "h": 42
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 145,
+      "y": 118,
+      "w": 15,
+      "h": 42
+    },
+    {
+      "shape": "rect",
+      "x": 193,
+      "y": 118,
+      "w": 15,
+      "h": 42
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 193,
+      "y": 118,
+      "w": 15,
+      "h": 42
+    },
+    {
+      "shape": "rect",
+      "x": 240,
+      "y": 118,
+      "w": 15,
+      "h": 42
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 240,
+      "y": 118,
+      "w": 15,
+      "h": 42
+    },
+    {
+      "shape": "rect",
+      "x": 288,
+      "y": 118,
+      "w": 15,
+      "h": 42
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 288,
+      "y": 118,
+      "w": 15,
+      "h": 42
+    },
+    {
+      "shape": "rect",
+      "x": 335,
+      "y": 118,
+      "w": 15,
+      "h": 42
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 335,
+      "y": 118,
+      "w": 15,
+      "h": 42
+    },
+    {
+      "shape": "rect",
+      "x": 383,
+      "y": 118,
+      "w": 15,
+      "h": 42
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 383,
+      "y": 118,
+      "w": 15,
+      "h": 42
+    },
+    {
+      "shape": "rect",
+      "x": 446,
+      "y": 0,
+      "w": 16,
+      "h": 80
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 446,
+      "y": 0,
+      "w": 16,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 435,
+      "y": 80,
+      "w": 35,
+      "h": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 435,
+      "y": 80,
+      "w": 35,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 405,
+      "y": 148,
+      "w": 165,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 405,
+      "y": 148,
+      "w": 165,
+      "h": 5
+    },
+    {
+      "shape": "blob",
+      "x": 520,
+      "y": 115,
+      "w": 60,
+      "h": 70,
+      "rough": 0.4,
+      "seed": 32
+    },
+    {
+      "shape": "rect",
+      "x": 570,
+      "y": 0,
+      "w": 16,
+      "h": 160
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 570,
+      "y": 0,
+      "w": 16,
+      "h": 160
+    },
+    {
+      "shape": "blob",
+      "x": 150,
+      "y": 150,
+      "w": 260,
+      "h": 20,
+      "rough": 0.6,
+      "seed": 33
+    }
+  ],
+  "steel": [],
+  "oneWay": [
+    {
+      "x": 237,
+      "y": 46,
+      "w": 28,
+      "h": 14,
+      "dir": "right"
+    }
+  ],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 152,
+      "y": 23
+    },
+    {
+      "type": "exit",
+      "x": 440,
+      "y": 147
+    },
+    {
+      "type": "water",
+      "x": 330,
+      "y": 67,
+      "w": 55,
+      "h": 17
+    }
+  ]
+}

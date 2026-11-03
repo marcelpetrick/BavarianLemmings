@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "levelId": "mayhem-03",
+  "entries": [
+    {
+      "tick": 275,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    }
+  ]
+}

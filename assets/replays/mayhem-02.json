@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "levelId": "mayhem-02",
+  "entries": [
+    {
+      "tick": 187,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "blocker"
+      }
+    },
+    {
+      "tick": 187,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 379,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 571,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 763,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 993,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1185,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1377,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1569,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1649,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "bomber"
+      }
+    },
+    {
+      "tick": 1749,
+      "intent": {
+        "type": "releaseRate",
+        "delta": 10
+      }
+    },
+    {
+      "tick": 1750,
+      "intent": {
+        "type": "releaseRate",
+        "delta": 10
+      }
+    },
+    {
+      "tick": 1751,
+      "intent": {
+        "type": "releaseRate",
+        "delta": 10
+      }
+    },
+    {
+      "tick": 1752,
+      "intent": {
+        "type": "releaseRate",
+        "delta": 10
+      }
+    },
+    {
+      "tick": 1753,
+      "intent": {
+        "type": "releaseRate",
+        "delta": 10
+      }
+    },
+    {
+      "tick": 1754,
+      "intent": {
+        "type": "releaseRate",
+        "delta": 10
+      }
+    },
+    {
+      "tick": 1755,
+      "intent": {
+        "type": "releaseRate",
+        "delta": 10
+      }
+    }
+  ]
+}

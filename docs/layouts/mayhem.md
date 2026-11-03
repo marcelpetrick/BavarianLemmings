@@ -1,6 +1,6 @@
 # Layout notes: Mayhem 01-30 (plan M6.132)
 
-> Living document. Last update: 2026-10-12.
+> Living document. Last update: 2026-11-03.
 > Purpose: one traced layout per original Mayhem level, so that the round 2 rebuild
 > (`assets/levels/mayhem/`) follows the original puzzle with our own shapes (vision L-01a, Q-C1).
 
@@ -1124,15 +1124,37 @@ Confidence: medium (image clear; trap positions and the left route are partly gu
 | 29 | low | MayhemLevel29 |
 | 30 | medium | MayhemLevel30 |
 
+## Phase B simplifications
+
+Phase B builds each level from the notes above. Where our engine forces a change, the
+change is listed here. Our builder lays 12 bricks of 1 px rise and 2 px advance (12 px up
+per builder), the splat height is 60 px, and the exit picture needs 28 px of air above its
+floor. These three numbers cause most of the changes.
+
+| No. | Simplification | Why |
+| --- | --- | --- |
+| 01 | The hatch-to-ledge drop (51 px) is survivable, so no step is built under the hatch. The floaters carry the leader into the steel pit instead. | Splat height 60 px; lowering the ledge would make the pit drop safe. |
+| 01 | The hanging steel post at x 300 reaches down to y 104 (notes: y 72). | The pyramid zig-zag needs a wall to turn on above step 3. |
+| 01 | The protruding block merges into the fortress base (x 678-760, y 96-150); the fortress top is at y 56 (notes: y 25), exit (838, 55). | Exit picture clearance and 12 px per builder: the climb must fit 30 builders. |
+| 01 | The right steel floor starts at x 590 (notes: x 600). | The stair from the floating block must end over the floor. |
+| 02 | The steel wall ends at y 66 (notes: y 88); the stub under the crossbar is left out. | The stair to the crossbar passes under the wall; the stub would stop the builder. |
+| 02 | A steel plate (x 472-510) sits in the hatch platform under the blocker; one long stair replaces the block-and-bomb at the flame thrower. | A bomber crater in a plain platform would trap the crowd. |
+| 03 | The route is a basher through the right brick wall onto the long bridge; the lower bridge sits at y 148 and the hatch at y 23. | Exit and hatch pictures need air; the one-minute timing is kept with about 7 s to spare. |
+| 04 | The see-through mesh is a stepped solid base plus thin rungs every 6 px; one upright web strand on the floor needs a second basher. | Our lemmings cannot climb a mesh; rungs with 6 px steps are walkable. |
+| 05 | The slab tower has five slabs 12 px apart in two columns (x 292-315 and x 322-345); the exit is at (304, 83) instead of (283, 64). | Each builder rises 12 px; five builders must reach the exit. |
+| 05 | The fire traps on the floating island are left out. | Decoration; the trap pictures would overlap the island slabs. |
+
 ## Resume here
 
-- State: phase A done. Every Mayhem level has a traced layout, numbers and a solution idea. No
-  level JSON was written yet.
-- Check: `npx markdownlint-cli2 docs/layouts/mayhem.md`.
+- State: phase A done. Phase B: Mayhem 01-05 are built in `assets/levels/mayhem/`, with
+  winning replays in `assets/replays/` and names in `src/i18n/locales/levels/mayhem.*.json`.
+  The other Mayhem levels are not built yet.
+- Check: `npx vitest run tests/levels` and `npx markdownlint-cli2 docs/layouts/mayhem.md`.
+  `BL_LEVEL=mayhem npm run levels:preview` renders the built levels to `.tools/level-previews/`.
 - Next (phase B, plan M6.132):
-  1. Build each level in `assets/levels/mayhem/` with the toolkit pieces named above.
+  1. Build each remaining level in `assets/levels/mayhem/` with the toolkit pieces named above.
   2. Render it with the level preview tool (plan M6.127) and compare by eye with the reference.
   3. Write a replay for each level that proves the solution idea in our engine.
-  4. Record every simplification in `docs/levels-reference.md`.
+  4. Record every simplification in the table above.
 - Restart: to look at a reference again, open the "Reference" link of the level; download the image
   to a scratch directory outside the repository only.

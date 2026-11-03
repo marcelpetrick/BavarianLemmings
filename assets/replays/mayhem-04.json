@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "levelId": "mayhem-04",
+  "entries": [
+    {
+      "tick": 147,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 364,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "basher"
+      }
+    }
+  ]
+}

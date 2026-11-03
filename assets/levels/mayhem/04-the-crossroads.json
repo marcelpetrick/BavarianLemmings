@@ -1,0 +1,452 @@
+{
+  "version": 1,
+  "id": "mayhem-04",
+  "name": "level.mayhem-04.name",
+  "inspiredBy": "Mayhem 4 of the original ('The Crossroads'): the crowd climbs a crystal lattice; bashers must cut a level path through its rungs and through the web strands so the drop to the exit is survivable, all in one minute. Geometry, name and art are ours.",
+  "rating": "mayhem",
+  "width": 560,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 40,
+  "releaseRate": 99,
+  "timeSeconds": 60,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 10,
+    "blocker": 0,
+    "builder": 0,
+    "basher": 20,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "crystal",
+  "startX": 100,
+  "terrain": [
+    {
+      "shape": "piece",
+      "piece": "crystal",
+      "x": 0,
+      "y": 100,
+      "w": 50,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 140,
+      "w": 50,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 48,
+      "y": 140,
+      "w": 100,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 48,
+      "y": 140,
+      "w": 100,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 48,
+      "y": 152,
+      "w": 100,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 48,
+      "y": 152,
+      "w": 100,
+      "h": 6
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [148, 160],
+        [148, 140],
+        [152, 140],
+        [152, 135],
+        [156, 135],
+        [156, 130],
+        [160, 130],
+        [160, 125],
+        [164, 125],
+        [164, 120],
+        [168, 120],
+        [168, 115],
+        [172, 115],
+        [172, 110],
+        [176, 110],
+        [176, 105],
+        [180, 105],
+        [180, 100],
+        [370, 100],
+        [370, 160]
+      ]
+    },
+    {
+      "shape": "rect",
+      "x": 185,
+      "y": 94,
+      "w": 185,
+      "h": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 185,
+      "y": 94,
+      "w": 185,
+      "h": 2
+    },
+    {
+      "shape": "rect",
+      "x": 185,
+      "y": 94,
+      "w": 5,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 190,
+      "y": 88,
+      "w": 180,
+      "h": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 190,
+      "y": 88,
+      "w": 180,
+      "h": 2
+    },
+    {
+      "shape": "rect",
+      "x": 190,
+      "y": 88,
+      "w": 5,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 195,
+      "y": 82,
+      "w": 175,
+      "h": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 195,
+      "y": 82,
+      "w": 175,
+      "h": 2
+    },
+    {
+      "shape": "rect",
+      "x": 195,
+      "y": 82,
+      "w": 5,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 200,
+      "y": 76,
+      "w": 170,
+      "h": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 200,
+      "y": 76,
+      "w": 170,
+      "h": 2
+    },
+    {
+      "shape": "rect",
+      "x": 200,
+      "y": 76,
+      "w": 5,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 205,
+      "y": 70,
+      "w": 165,
+      "h": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 205,
+      "y": 70,
+      "w": 165,
+      "h": 2
+    },
+    {
+      "shape": "rect",
+      "x": 205,
+      "y": 70,
+      "w": 5,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 210,
+      "y": 64,
+      "w": 160,
+      "h": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 210,
+      "y": 64,
+      "w": 160,
+      "h": 2
+    },
+    {
+      "shape": "rect",
+      "x": 210,
+      "y": 64,
+      "w": 5,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 215,
+      "y": 58,
+      "w": 155,
+      "h": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 215,
+      "y": 58,
+      "w": 155,
+      "h": 2
+    },
+    {
+      "shape": "rect",
+      "x": 215,
+      "y": 58,
+      "w": 5,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 220,
+      "y": 52,
+      "w": 150,
+      "h": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 220,
+      "y": 52,
+      "w": 150,
+      "h": 2
+    },
+    {
+      "shape": "rect",
+      "x": 220,
+      "y": 52,
+      "w": 5,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 225,
+      "y": 46,
+      "w": 145,
+      "h": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 225,
+      "y": 46,
+      "w": 145,
+      "h": 2
+    },
+    {
+      "shape": "rect",
+      "x": 225,
+      "y": 46,
+      "w": 5,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 230,
+      "y": 40,
+      "w": 140,
+      "h": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 230,
+      "y": 40,
+      "w": 140,
+      "h": 2
+    },
+    {
+      "shape": "rect",
+      "x": 230,
+      "y": 40,
+      "w": 5,
+      "h": 6
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [105, 70],
+        [140, 40],
+        [141, 42],
+        [106, 72]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [210, 38],
+        [240, 8],
+        [241, 9],
+        [211, 39]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [450, 85],
+        [380, 20],
+        [381, 19],
+        [451, 84]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [450, 85],
+        [440, 0],
+        [442, 0],
+        [452, 85]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [450, 85],
+        [520, 0],
+        [522, 1],
+        [452, 86]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [450, 85],
+        [560, 50],
+        [561, 52],
+        [451, 87]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [450, 85],
+        [560, 125],
+        [559, 127],
+        [449, 87]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [450, 85],
+        [380, 60],
+        [381, 58],
+        [451, 83]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [450, 85],
+        [500, 150],
+        [498, 151],
+        [448, 86]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [365, 104],
+        [400, 139],
+        [398, 141],
+        [363, 106]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [400, 139],
+        [416, 155],
+        [414, 157],
+        [398, 141]
+      ]
+    },
+    {
+      "shape": "rect",
+      "x": 412,
+      "y": 118,
+      "w": 2,
+      "h": 37
+    },
+    {
+      "shape": "rect",
+      "x": 380,
+      "y": 155,
+      "w": 100,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 380,
+      "y": 155,
+      "w": 100,
+      "h": 3
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 100,
+      "y": 118
+    },
+    {
+      "type": "exit",
+      "x": 440,
+      "y": 154
+    }
+  ]
+}

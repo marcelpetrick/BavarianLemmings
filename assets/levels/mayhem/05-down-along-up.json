@@ -1,0 +1,449 @@
+{
+  "version": 1,
+  "id": "mayhem-05",
+  "name": "level.mayhem-05.name",
+  "inspiredBy": "Mayhem 5 of the original ('Down, along, up. In that order'): an athlete escapes the shelf boxes, diggers drop the crowd shelf by shelf, then builders and blockers zig-zag up a tower of floating slabs to the exit. Geometry, name and art are ours.",
+  "rating": "mayhem",
+  "width": 1001,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 60,
+  "releaseRate": 80,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 2,
+    "floater": 2,
+    "bomber": 10,
+    "blocker": 10,
+    "builder": 5,
+    "basher": 1,
+    "miner": 0,
+    "digger": 5
+  },
+  "style": "fire",
+  "startX": 380,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [-1, -1],
+        [262, -1],
+        [110, 125]
+      ],
+      "rough": 0.7,
+      "seed": 51
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 180,
+      "y": 40,
+      "w": 12,
+      "h": 50
+    },
+    {
+      "shape": "rect",
+      "x": 200,
+      "y": 0,
+      "w": 25,
+      "h": 115
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 200,
+      "y": 0,
+      "w": 25,
+      "h": 115
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 55,
+      "y": 140,
+      "w": 25,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 190,
+      "y": 140,
+      "w": 22,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 272,
+      "y": 144,
+      "w": 338,
+      "h": 16
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 272,
+      "y": 144,
+      "w": 338,
+      "h": 16
+    },
+    {
+      "shape": "rect",
+      "x": 292,
+      "y": 132,
+      "w": 24,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 292,
+      "y": 132,
+      "w": 24,
+      "h": 3
+    },
+    {
+      "shape": "rect",
+      "x": 322,
+      "y": 120,
+      "w": 24,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 322,
+      "y": 120,
+      "w": 24,
+      "h": 3
+    },
+    {
+      "shape": "rect",
+      "x": 292,
+      "y": 108,
+      "w": 24,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 292,
+      "y": 108,
+      "w": 24,
+      "h": 3
+    },
+    {
+      "shape": "rect",
+      "x": 322,
+      "y": 96,
+      "w": 24,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 322,
+      "y": 96,
+      "w": 24,
+      "h": 3
+    },
+    {
+      "shape": "rect",
+      "x": 292,
+      "y": 84,
+      "w": 24,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 292,
+      "y": 84,
+      "w": 24,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 320,
+      "y": 0,
+      "w": 10,
+      "h": 30
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 340,
+      "y": 0,
+      "w": 10,
+      "h": 40
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 470,
+      "y": 0,
+      "w": 20,
+      "h": 35
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 500,
+      "y": 0,
+      "w": 10,
+      "h": 45
+    },
+    {
+      "shape": "rect",
+      "x": 375,
+      "y": 0,
+      "w": 15,
+      "h": 35
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 375,
+      "y": 0,
+      "w": 15,
+      "h": 35
+    },
+    {
+      "shape": "rect",
+      "x": 430,
+      "y": 0,
+      "w": 20,
+      "h": 52
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 430,
+      "y": 0,
+      "w": 20,
+      "h": 52
+    },
+    {
+      "shape": "rect",
+      "x": 415,
+      "y": 52,
+      "w": 45,
+      "h": 23
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 415,
+      "y": 52,
+      "w": 45,
+      "h": 23
+    },
+    {
+      "shape": "rect",
+      "x": 395,
+      "y": 75,
+      "w": 85,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 395,
+      "y": 75,
+      "w": 85,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 395,
+      "y": 98,
+      "w": 85,
+      "h": 17
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 395,
+      "y": 98,
+      "w": 85,
+      "h": 17
+    },
+    {
+      "shape": "rect",
+      "x": 555,
+      "y": 47,
+      "w": 50,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 555,
+      "y": 47,
+      "w": 50,
+      "h": 5
+    },
+    {
+      "shape": "rect",
+      "x": 555,
+      "y": 67,
+      "w": 50,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 555,
+      "y": 67,
+      "w": 50,
+      "h": 5
+    },
+    {
+      "shape": "rect",
+      "x": 555,
+      "y": 87,
+      "w": 50,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 555,
+      "y": 87,
+      "w": 50,
+      "h": 5
+    },
+    {
+      "shape": "rect",
+      "x": 555,
+      "y": 107,
+      "w": 50,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 555,
+      "y": 107,
+      "w": 50,
+      "h": 5
+    },
+    {
+      "shape": "rect",
+      "x": 557,
+      "y": 37,
+      "w": 4,
+      "h": 83
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 557,
+      "y": 37,
+      "w": 4,
+      "h": 83
+    },
+    {
+      "shape": "rect",
+      "x": 600,
+      "y": 37,
+      "w": 4,
+      "h": 83
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 600,
+      "y": 37,
+      "w": 4,
+      "h": 83
+    },
+    {
+      "shape": "rect",
+      "x": 635,
+      "y": 0,
+      "w": 20,
+      "h": 90
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 635,
+      "y": 0,
+      "w": 20,
+      "h": 90
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 685,
+      "y": 140,
+      "w": 25,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 815,
+      "y": 140,
+      "w": 25,
+      "h": 20
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [655, -1],
+        [1002, -1],
+        [1002, 140],
+        [960, 135],
+        [700, 135],
+        [660, 90]
+      ],
+      "rough": 0.6,
+      "seed": 52
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 575,
+      "y": 26
+    },
+    {
+      "type": "exit",
+      "x": 304,
+      "y": 83
+    },
+    {
+      "type": "water",
+      "x": 212,
+      "y": 147,
+      "w": 60,
+      "h": 13
+    },
+    {
+      "type": "water",
+      "x": 620,
+      "y": 147,
+      "w": 60,
+      "h": 13
+    },
+    {
+      "type": "water",
+      "x": 710,
+      "y": 150,
+      "w": 105,
+      "h": 10
+    },
+    {
+      "type": "water",
+      "x": 840,
+      "y": 150,
+      "w": 161,
+      "h": 10
+    }
+  ]
+}
