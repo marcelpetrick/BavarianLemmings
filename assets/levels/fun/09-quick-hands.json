@@ -2,55 +2,117 @@
   "version": 1,
   "id": "fun-09",
   "name": "level.fun-09.name",
-  "inspiredBy": "Fun 9 of the original ('As long as you try your best'): the crowd pours out fast against a thick pillar; bash through it quickly before too many walk back into the fire. Geometry, name and art are ours.",
+  "inspiredBy": "Fun 9 of the original ('As long as you try your best'): one short girder floor with open ends and a column between hatch and exit; the column turns the crowd back to the left end, so a blocker holds it while a basher opens the column. Geometry, name and art are ours.",
   "rating": "fun",
-  "width": 640,
+  "width": 320,
   "height": 160,
   "lemmings": 80,
   "toSave": 72,
   "releaseRate": 99,
   "timeSeconds": 300,
   "skills": {
-    "climber": 0,
-    "floater": 0,
-    "bomber": 0,
-    "blocker": 1,
-    "builder": 0,
-    "basher": 5,
-    "miner": 0,
-    "digger": 0
+    "climber": 20,
+    "floater": 20,
+    "bomber": 20,
+    "blocker": 20,
+    "builder": 20,
+    "basher": 20,
+    "miner": 20,
+    "digger": 20
   },
-  "style": "fire",
+  "style": "marble",
   "startX": 0,
   "terrain": [
     {
-      "shape": "rect",
-      "x": 100,
-      "y": 120,
-      "w": 540,
-      "h": 40
-    },
-    {
-      "shape": "rect",
-      "x": 230,
+      "shape": "piece",
+      "piece": "slab",
+      "x": 0,
       "y": 0,
-      "w": 50,
-      "h": 120
+      "w": 320,
+      "h": 4
     },
     {
-      "shape": "rect",
-      "x": 630,
-      "y": 60,
-      "w": 10,
-      "h": 60
+      "shape": "polygon",
+      "points": [
+        [0, 4],
+        [35, 4],
+        [0, 35]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [285, 4],
+        [320, 4],
+        [320, 35]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 125],
+        [0, 160],
+        [35, 160]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [320, 125],
+        [320, 160],
+        [285, 160]
+      ]
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 4,
+      "y": 134,
+      "w": 14,
+      "h": 12,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 302,
+      "y": 134,
+      "w": 14,
+      "h": 12,
+      "seed": 2
     },
     {
       "shape": "piece",
       "piece": "girder",
-      "x": 630,
-      "y": 60,
-      "w": 10,
-      "h": 60
+      "x": 50,
+      "y": 123,
+      "w": 230,
+      "h": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 150,
+      "y": 70,
+      "w": 17,
+      "h": 53
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 135,
+      "y": 63,
+      "w": 48,
+      "h": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 151,
+      "y": 52,
+      "w": 16,
+      "h": 11,
+      "seed": 3
     }
   ],
   "steel": [],
@@ -58,20 +120,13 @@
   "objects": [
     {
       "type": "hatch",
-      "x": 200,
-      "y": 90
+      "x": 80,
+      "y": 88
     },
     {
       "type": "exit",
-      "x": 560,
-      "y": 119
-    },
-    {
-      "type": "water",
-      "x": 0,
-      "y": 130,
-      "w": 100,
-      "h": 30
+      "x": 233,
+      "y": 122
     }
   ]
 }

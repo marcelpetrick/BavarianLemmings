@@ -2,99 +2,269 @@
   "version": 1,
   "id": "fun-10",
   "name": "level.fun-10.name",
-  "inspiredBy": "Fun 10 of the original ('Smile if you love lemmings'): the lemmings land on a floating block; dig in, mine out through its underside, and turn the crowd towards the exit with a blocker. Geometry, name and art are ours.",
+  "inspiredBy": "Fun 10 of the original ('Smile if you love lemmings'): a face of stone blocks in a field of ruins; the crowd lands on the tall nose stack, floats down to the mouth-wide exit floor, and one blocker keeps the others from walking off its right end. Geometry, name and art are ours.",
   "rating": "fun",
-  "width": 640,
+  "width": 1448,
   "height": 160,
   "lemmings": 20,
   "toSave": 10,
   "releaseRate": 50,
   "timeSeconds": 300,
   "skills": {
-    "climber": 0,
-    "floater": 1,
-    "bomber": 0,
-    "blocker": 1,
-    "builder": 0,
-    "basher": 0,
-    "miner": 1,
-    "digger": 1
+    "climber": 20,
+    "floater": 20,
+    "bomber": 20,
+    "blocker": 20,
+    "builder": 20,
+    "basher": 20,
+    "miner": 20,
+    "digger": 20
   },
-  "style": "marble",
-  "startX": 0,
+  "style": "pillar",
+  "startX": 620,
   "terrain": [
-    {
-      "shape": "rect",
-      "x": 0,
-      "y": 136,
-      "w": 540,
-      "h": 24
-    },
-    {
-      "shape": "piece",
-      "piece": "brickWall",
-      "x": 0,
-      "y": 136,
-      "w": 540,
-      "h": 24
-    },
-    {
-      "shape": "ellipse",
-      "x": 190,
-      "y": 44,
-      "w": 180,
-      "h": 72
-    },
-    {
-      "shape": "rect",
-      "x": 205,
-      "y": 54,
-      "w": 150,
-      "h": 50
-    },
-    {
-      "shape": "piece",
-      "piece": "brickWall",
-      "x": 205,
-      "y": 54,
-      "w": 150,
-      "h": 50
-    },
-    {
-      "shape": "rect",
-      "x": 0,
-      "y": 90,
-      "w": 10,
-      "h": 46
-    },
     {
       "shape": "piece",
       "piece": "pillar",
       "x": 0,
+      "y": 70,
+      "w": 35,
+      "h": 90
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 55,
+      "y": 100,
+      "w": 35,
+      "h": 60
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 92,
+      "y": 138,
+      "w": 38,
+      "h": 22,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 225,
+      "y": 84,
+      "w": 35,
+      "h": 76
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 320,
       "y": 90,
-      "w": 10,
-      "h": 46
+      "w": 70,
+      "h": 55
+    },
+    {
+      "shape": "rect",
+      "x": 316,
+      "y": 145,
+      "w": 78,
+      "h": 15
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 435,
+      "y": 105,
+      "w": 95,
+      "h": 55
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 518,
+      "y": 20,
+      "w": 102,
+      "h": 8,
+      "seed": 2
+    },
+    {
+      "shape": "rect",
+      "x": 530,
+      "y": 0,
+      "w": 6,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 600,
+      "y": 0,
+      "w": 6,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 763,
+      "y": 45,
+      "w": 42,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 763,
+      "y": 65,
+      "w": 42,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 763,
+      "y": 85,
+      "w": 42,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 763,
+      "y": 105,
+      "w": 42,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 700,
+      "y": 45,
+      "w": 20,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 700,
+      "y": 65,
+      "w": 43,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 838,
+      "y": 85,
+      "w": 19,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 815,
+      "y": 105,
+      "w": 42,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 680,
+      "y": 150,
+      "w": 163,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 880,
+      "y": 40,
+      "w": 80,
+      "h": 8,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 900,
+      "y": 48,
+      "w": 40,
+      "h": 112,
+      "seed": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 1030,
+      "y": 90,
+      "w": 50,
+      "h": 70,
+      "seed": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 1020,
+      "y": 82,
+      "w": 80,
+      "h": 8,
+      "seed": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 1220,
+      "y": 82,
+      "w": 114,
+      "h": 78
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 1334,
+      "y": 82,
+      "w": 114,
+      "h": 78,
+      "flip": true
     }
   ],
-  "steel": [],
+  "steel": [
+    {
+      "x": 512,
+      "y": 143,
+      "w": 23,
+      "h": 17
+    },
+    {
+      "x": 655,
+      "y": 150,
+      "w": 25,
+      "h": 10
+    },
+    {
+      "x": 843,
+      "y": 150,
+      "w": 23,
+      "h": 10
+    },
+    {
+      "x": 985,
+      "y": 143,
+      "w": 23,
+      "h": 17
+    }
+  ],
   "oneWay": [],
   "objects": [
     {
       "type": "hatch",
-      "x": 230,
-      "y": 20
+      "x": 784,
+      "y": 25
     },
     {
       "type": "exit",
-      "x": 80,
-      "y": 135
-    },
-    {
-      "type": "water",
-      "x": 540,
-      "y": 146,
-      "w": 100,
-      "h": 14
+      "x": 720,
+      "y": 149
     }
   ]
 }

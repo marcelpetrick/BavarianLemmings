@@ -2,9 +2,9 @@
   "version": 1,
   "id": "fun-07",
   "name": "level.fun-07.name",
-  "inspiredBy": "Fun 7 of the original ('Builders will help you here'): a builder climbs onto a raised step, and more builders bridge the pit in front of the exit. Geometry, name and art are ours.",
+  "inspiredBy": "Fun 7 of the original ('Builders will help you here'): between two columns a floor, a raised step, stairs, a plateau and a pit lead to the exit; one builder climbs the step and another bridges the pit. Geometry, name and art are ours.",
   "rating": "fun",
-  "width": 640,
+  "width": 1054,
   "height": 160,
   "lemmings": 50,
   "toSave": 25,
@@ -15,56 +15,182 @@
     "floater": 0,
     "bomber": 0,
     "blocker": 0,
-    "builder": 8,
+    "builder": 20,
     "basher": 0,
     "miner": 0,
     "digger": 0
   },
-  "style": "dirt",
-  "startX": 0,
+  "style": "marble",
+  "startX": 170,
   "terrain": [
     {
-      "shape": "rect",
+      "shape": "blob",
       "x": 0,
-      "y": 136,
-      "w": 300,
-      "h": 24
+      "y": 125,
+      "w": 64,
+      "h": 50,
+      "rough": 0.6,
+      "seed": 71
+    },
+    {
+      "shape": "blob",
+      "x": 972,
+      "y": 115,
+      "w": 82,
+      "h": 60,
+      "rough": 0.6,
+      "seed": 72
     },
     {
       "shape": "rect",
-      "x": 300,
-      "y": 126,
-      "w": 200,
-      "h": 34
-    },
-    {
-      "shape": "rect",
-      "x": 520,
-      "y": 126,
+      "x": 56,
+      "y": 156,
       "w": 120,
-      "h": 34
-    },
-    {
-      "shape": "ellipse",
-      "x": 380,
-      "y": 90,
-      "w": 60,
-      "h": 30
+      "h": 4
     },
     {
       "shape": "rect",
-      "x": 630,
-      "y": 80,
-      "w": 10,
-      "h": 46
+      "x": 860,
+      "y": 156,
+      "w": 118,
+      "h": 4
     },
     {
       "shape": "piece",
-      "piece": "girder",
-      "x": 630,
-      "y": 80,
-      "w": 10,
-      "h": 46
+      "piece": "pillar",
+      "x": 173,
+      "y": 30,
+      "w": 17,
+      "h": 130
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [156, 0],
+        [207, 0],
+        [194, 30],
+        [182, 38],
+        [169, 30]
+      ]
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 845,
+      "y": 30,
+      "w": 17,
+      "h": 130
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [828, 0],
+        [879, 0],
+        [866, 30],
+        [854, 38],
+        [841, 30]
+      ]
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 152,
+      "y": 30,
+      "w": 6,
+      "h": 40
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 205,
+      "y": 30,
+      "w": 6,
+      "h": 32
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 826,
+      "y": 30,
+      "w": 6,
+      "h": 32
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 878,
+      "y": 30,
+      "w": 6,
+      "h": 40
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 190,
+      "y": 128,
+      "w": 232,
+      "h": 32,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 422,
+      "y": 116,
+      "w": 103,
+      "h": 44,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 525,
+      "y": 96,
+      "w": 50,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 525,
+      "y": 116,
+      "w": 50,
+      "h": 44
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 525,
+      "y": 116,
+      "w": 50,
+      "h": 44,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 575,
+      "y": 96,
+      "w": 99,
+      "h": 64,
+      "seed": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 674,
+      "y": 128,
+      "w": 16,
+      "h": 32,
+      "seed": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 690,
+      "y": 96,
+      "w": 155,
+      "h": 64,
+      "seed": 6
     }
   ],
   "steel": [],
@@ -72,20 +198,27 @@
   "objects": [
     {
       "type": "hatch",
-      "x": 60,
-      "y": 104
+      "x": 235,
+      "y": 88
     },
     {
       "type": "exit",
-      "x": 590,
-      "y": 125
+      "x": 782,
+      "y": 95
     },
     {
       "type": "water",
-      "x": 500,
-      "y": 146,
-      "w": 20,
-      "h": 14
+      "x": 60,
+      "y": 140,
+      "w": 113,
+      "h": 20
+    },
+    {
+      "type": "water",
+      "x": 862,
+      "y": 140,
+      "w": 113,
+      "h": 20
     }
   ]
 }

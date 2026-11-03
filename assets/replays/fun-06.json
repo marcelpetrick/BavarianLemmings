@@ -2,29 +2,8 @@
   "version": 1,
   "levelId": "fun-06",
   "entries": [
-    {
-      "tick": 44,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 0,
-        "skill": "bomber"
-      }
-    },
-    {
-      "tick": 377,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 1,
-        "skill": "blocker"
-      }
-    },
-    {
-      "tick": 378,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 1,
-        "skill": "bomber"
-      }
-    }
+    { "tick": 72, "intent": { "type": "assign", "lemmingId": 0, "skill": "bomber" } },
+    { "tick": 302, "intent": { "type": "assign", "lemmingId": 2, "skill": "blocker" } },
+    { "tick": 303, "intent": { "type": "assign", "lemmingId": 2, "skill": "bomber" } }
   ]
 }

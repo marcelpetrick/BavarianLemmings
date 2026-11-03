@@ -2,9 +2,9 @@
   "version": 1,
   "id": "fun-06",
   "name": "level.fun-06.name",
-  "inspiredBy": "Fun 6 of the original ('A task for blockers and bombers'): a bomber blasts through the thin floor, then a blocker by the thin wall is bombed to open the way to the exit. Geometry, name and art are ours.",
+  "inspiredBy": "Fun 6 of the original ('A task for blockers and bombers'): the lemmings land on a thin rail between two brick blocks; a bomber blasts a hole to the floor below, and a blocker at the thin post beside the exit is bombed to open the way. Geometry, name and art are ours.",
   "rating": "fun",
-  "width": 640,
+  "width": 770,
   "height": 160,
   "lemmings": 50,
   "toSave": 10,
@@ -13,104 +13,193 @@
   "skills": {
     "climber": 0,
     "floater": 0,
-    "bomber": 4,
-    "blocker": 2,
+    "bomber": 5,
+    "blocker": 5,
     "builder": 0,
     "basher": 0,
     "miner": 0,
     "digger": 0
   },
   "style": "fire",
-  "startX": 0,
+  "startX": 160,
   "terrain": [
     {
-      "shape": "rect",
-      "x": 100,
-      "y": 60,
-      "w": 200,
+      "shape": "blob",
+      "x": 0,
+      "y": 95,
+      "w": 110,
+      "h": 80,
+      "rough": 0.6,
+      "seed": 61
+    },
+    {
+      "shape": "blob",
+      "x": 660,
+      "y": 100,
+      "w": 90,
+      "h": 80,
+      "rough": 0.6,
+      "seed": 62
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [175, 0],
+        [570, 0],
+        [570, 12],
+        [520, 15],
+        [470, 11],
+        [420, 14],
+        [330, 12],
+        [280, 13],
+        [230, 11],
+        [175, 14]
+      ],
+      "rough": 0.8,
+      "seed": 63
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 300,
+      "y": 12,
+      "w": 10,
+      "h": 18,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 420,
+      "y": 12,
+      "w": 10,
+      "h": 22,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 500,
+      "y": 12,
+      "w": 8,
+      "h": 14,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 175,
+      "y": 56,
+      "w": 50,
+      "h": 72,
+      "seed": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 193,
+      "y": 12,
+      "w": 17,
+      "h": 44
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 225,
+      "y": 69,
+      "w": 125,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 350,
+      "y": 56,
+      "w": 50,
+      "h": 24,
+      "seed": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 368,
+      "y": 12,
+      "w": 17,
+      "h": 44
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 352,
+      "y": 22,
+      "w": 43,
       "h": 4
     },
     {
       "shape": "piece",
-      "piece": "slab",
-      "x": 100,
-      "y": 60,
-      "w": 200,
+      "piece": "girder",
+      "x": 352,
+      "y": 42,
+      "w": 43,
       "h": 4
     },
     {
-      "shape": "rect",
-      "x": 90,
-      "y": 10,
-      "w": 10,
-      "h": 54
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 225,
+      "y": 92,
+      "w": 225,
+      "h": 36,
+      "seed": 6
     },
     {
       "shape": "piece",
-      "piece": "girder",
-      "x": 90,
-      "y": 10,
-      "w": 10,
-      "h": 54
-    },
-    {
-      "shape": "rect",
-      "x": 300,
-      "y": 10,
-      "w": 10,
-      "h": 54
-    },
-    {
-      "shape": "piece",
-      "piece": "girder",
-      "x": 300,
-      "y": 10,
-      "w": 10,
-      "h": 54
-    },
-    {
-      "shape": "rect",
-      "x": 40,
-      "y": 110,
-      "w": 600,
-      "h": 50
-    },
-    {
-      "shape": "rect",
-      "x": 40,
-      "y": 40,
-      "w": 10,
-      "h": 70
-    },
-    {
-      "shape": "piece",
-      "piece": "girder",
-      "x": 40,
-      "y": 40,
-      "w": 10,
-      "h": 70
-    },
-    {
-      "shape": "rect",
+      "piece": "brickWall",
       "x": 450,
-      "y": 30,
-      "w": 5,
-      "h": 80
+      "y": 104,
+      "w": 100,
+      "h": 24,
+      "seed": 7
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [225, 128],
+        [550, 128],
+        [540, 134],
+        [500, 131],
+        [470, 138],
+        [430, 132],
+        [380, 136],
+        [330, 131],
+        [280, 137],
+        [240, 132]
+      ],
+      "rough": 0.6,
+      "seed": 64
     },
     {
       "shape": "rect",
-      "x": 620,
-      "y": 60,
-      "w": 20,
-      "h": 50
+      "x": 448,
+      "y": 40,
+      "w": 4,
+      "h": 52
     },
     {
       "shape": "piece",
-      "piece": "girder",
-      "x": 620,
-      "y": 60,
+      "piece": "pillar",
+      "x": 440,
+      "y": 12,
       "w": 20,
-      "h": 50
+      "h": 28
+    },
+    {
+      "shape": "rect",
+      "x": 235,
+      "y": 18,
+      "w": 40,
+      "h": 24,
+      "erase": true
     }
   ],
   "steel": [],
@@ -118,13 +207,13 @@
   "objects": [
     {
       "type": "hatch",
-      "x": 160,
-      "y": 30
+      "x": 255,
+      "y": 32
     },
     {
       "type": "exit",
-      "x": 540,
-      "y": 109
+      "x": 495,
+      "y": 103
     }
   ]
 }

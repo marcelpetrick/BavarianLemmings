@@ -3,7 +3,7 @@
 > Living document. Last update: 2026-10-12.
 > Purpose: one traced layout per original Fun level, so that phase B can rebuild each level with
 > our own terrain toolkit (vision L-01a, owner decision Q-C1).
-> Status: phase A done (research and notes). Phase B (level JSON) in progress: Fun 01-05 rebuilt.
+> Status: phase A done (research and notes). Phase B (level JSON) in progress: Fun 01-10 rebuilt.
 
 ## How to read this document
 
@@ -949,7 +949,7 @@ or builder. The exact purpose of cell 3 is not visible on the map: low confidenc
 ## Resume here
 
 - State: phase A done. All 30 Fun levels have a traced layout, numbers, skills and a solution
-  idea. Phase B (level JSON in `assets/levels/fun/`, replays): Fun 01-05 rebuilt from these
+  idea. Phase B (level JSON in `assets/levels/fun/`, replays): Fun 01-10 rebuilt from these
   notes. Where a level departs from its notes, `docs/levels-reference.md` ("Our recreations and
   their simplifications") says how and why.
 - Open `[verify]` items: Fun 04 (upper beam length decides whether the miner is needed),

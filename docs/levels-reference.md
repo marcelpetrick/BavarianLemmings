@@ -165,10 +165,10 @@ simplification is listed here.
 | Fun 2 | The hatch hangs 6 px lower than traced, so that its sprite stays inside the level. |
 | Fun 4 | The upper beam is closed on the right by a column that reaches the ceiling, so that the miner is needed (the traced map leaves this open). |
 | Fun 5 | The wire pyramid round the exit is girders on posts: our lemmings walk under the girders, so only the two posts on the pipe need bashing. |
-| Fun 6 | Our explosion removes only 4 px below the feet, so the hatch floor is 4 px thin and the wall by the exit 5 px. |
+| Fun 6 | The hatch hangs 5 px lower than traced, so that its sprite clears the ceiling. |
 | Fun 7 | Our builders do not stop walkers, so a few lemmings fall into the pit before the bridge is finished; the target (50 %) allows for it. |
-| Fun 9 | The fire on the left is a pool; the pillar is thick enough that bashing alone saves too few, so a blocker is needed as in the walkthrough's fallback. |
-| Fun 10 | The floater of the original is optional here: the first lemming out of the miner's tunnel can become the blocker. |
+| Fun 9 | The column is as thin as traced, so a quick basher saves almost everyone; the blocker of the walkthrough is a safety net, not a must. |
+| Fun 10 | The steel blocks at both ends of the exit floor are flush with it (traced 7 px higher), so that walkers can walk off its right end and the blocker is needed. |
 | Fun 13 | Each lemming digs its own hole; our diggers fall as soon as they break through, so holes cannot be shared. |
 | Fun 14 | Stats are `[verify]` (50 lemmings, 60 %, RR 50 chosen). Steel at each pillar foot makes the "build, then bash from the top" idea compulsory. |
 | Fun 15 | Stats are `[verify]` (50 lemmings, 80 %, RR 50 chosen). Our blockers cannot be undermined by a miner, so a bomber removes the blocker. |

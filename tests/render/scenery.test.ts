@@ -33,11 +33,14 @@ describe('exit scenery placement', () => {
   });
 
   it('retains clear maypoles in shipped grounded levels', () => {
-    const retained = ALL_LEVELS.filter((item) => item.rating === 'fun').filter((item) => {
+    // The traced layouts (M6.129) put many exits in tight corners where a maypole would cover
+    // terrain and is left out (M6.136). The guard is a share, so it still catches placement breaking.
+    const fun = ALL_LEVELS.filter((item) => item.rating === 'fun');
+    const retained = fun.filter((item) => {
       const terrain = buildTerrain(item);
       return item.objects.some((object) => findExitSceneryPosition(item, terrain, object, BAVARIAN_THEME) !== null);
     });
-    expect(retained.length).toBeGreaterThanOrEqual(20);
+    expect(retained.length).toBeGreaterThanOrEqual(Math.ceil(fun.length / 3));
   });
 
   it('moves left if a single opaque pixel would be buried; omits if both sides are blocked', () => {
