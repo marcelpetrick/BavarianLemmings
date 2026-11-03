@@ -2,53 +2,15 @@
   "version": 1,
   "levelId": "fun-18",
   "entries": [
-    {
-      "tick": 393,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 0,
-        "skill": "blocker"
-      }
-    },
-    {
-      "tick": 394,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 0,
-        "skill": "bomber"
-      }
-    },
-    {
-      "tick": 579,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 8,
-        "skill": "blocker"
-      }
-    },
-    {
-      "tick": 580,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 8,
-        "skill": "bomber"
-      }
-    },
-    {
-      "tick": 700,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 16,
-        "skill": "blocker"
-      }
-    },
-    {
-      "tick": 701,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 16,
-        "skill": "bomber"
-      }
-    }
+    { "tick": 168, "intent": { "type": "assign", "lemmingId": 0, "skill": "blocker" } },
+    { "tick": 169, "intent": { "type": "assign", "lemmingId": 0, "skill": "bomber" } },
+    { "tick": 338, "intent": { "type": "assign", "lemmingId": 7, "skill": "blocker" } },
+    { "tick": 339, "intent": { "type": "assign", "lemmingId": 7, "skill": "bomber" } },
+    { "tick": 599, "intent": { "type": "assign", "lemmingId": 15, "skill": "blocker" } },
+    { "tick": 600, "intent": { "type": "assign", "lemmingId": 15, "skill": "bomber" } },
+    { "tick": 866, "intent": { "type": "assign", "lemmingId": 23, "skill": "blocker" } },
+    { "tick": 867, "intent": { "type": "assign", "lemmingId": 23, "skill": "bomber" } },
+    { "tick": 1057, "intent": { "type": "assign", "lemmingId": 6, "skill": "blocker" } },
+    { "tick": 1058, "intent": { "type": "assign", "lemmingId": 6, "skill": "bomber" } }
   ]
 }

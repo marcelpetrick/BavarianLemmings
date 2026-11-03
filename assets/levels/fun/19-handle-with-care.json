@@ -2,78 +2,310 @@
   "version": 1,
   "id": "fun-19",
   "name": "level.fun-19.name",
-  "inspiredBy": "Fun 19 of the original ('Take good care of my Lemmings'): two blockers hold the crowd at the hatch while the first lemming walks over the humps and bridges the chasm to the exit. Geometry, name and art are ours.",
+  "inspiredBy": "Fun 19 of the original ('Take good care of my Lemmings'): five round humps with deadly gaps between them lead to a high exit platform; two blockers hold the crowd on the first hump while the scout bridges each gap and builds up to the platform. Geometry, name and art are ours.",
   "rating": "fun",
-  "width": 800,
+  "width": 1473,
   "height": 160,
-  "lemmings": 50,
-  "toSave": 40,
-  "releaseRate": 50,
+  "lemmings": 80,
+  "toSave": 56,
+  "releaseRate": 20,
   "timeSeconds": 300,
   "skills": {
-    "climber": 0,
-    "floater": 0,
-    "bomber": 1,
-    "blocker": 3,
-    "builder": 6,
-    "basher": 0,
-    "miner": 0,
-    "digger": 0
+    "climber": 20,
+    "floater": 20,
+    "bomber": 20,
+    "blocker": 20,
+    "builder": 20,
+    "basher": 20,
+    "miner": 20,
+    "digger": 20
   },
-  "style": "dirt",
-  "startX": 0,
+  "style": "marble",
+  "startX": 280,
   "terrain": [
     {
-      "shape": "rect",
-      "x": 40,
-      "y": 120,
-      "w": 160,
-      "h": 40
+      "shape": "blob",
+      "x": 0,
+      "y": 115,
+      "w": 100,
+      "h": 60,
+      "rough": 0.6,
+      "seed": 191
     },
     {
-      "shape": "rect",
-      "x": 200,
-      "y": 136,
-      "w": 240,
-      "h": 24
+      "shape": "piece",
+      "piece": "girder",
+      "x": 100,
+      "y": 20,
+      "w": 145,
+      "h": 6
     },
     {
-      "shape": "ellipse",
-      "x": 210,
-      "y": 116,
-      "w": 80,
-      "h": 40
+      "shape": "piece",
+      "piece": "girder",
+      "x": 100,
+      "y": 60,
+      "w": 145,
+      "h": 6
     },
     {
-      "shape": "ellipse",
-      "x": 300,
-      "y": 114,
-      "w": 80,
-      "h": 44
+      "shape": "piece",
+      "piece": "girder",
+      "x": 100,
+      "y": 100,
+      "w": 145,
+      "h": 6
     },
     {
       "shape": "polygon",
       "points": [
-        [400, 136],
-        [440, 100],
-        [520, 100],
-        [520, 160],
-        [400, 160]
+        [100, 26],
+        [103, 26],
+        [143, 60],
+        [140, 60]
       ]
     },
     {
-      "shape": "rect",
-      "x": 590,
-      "y": 100,
-      "w": 210,
-      "h": 60
+      "shape": "polygon",
+      "points": [
+        [180, 26],
+        [183, 26],
+        [143, 60],
+        [140, 60]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [180, 26],
+        [183, 26],
+        [223, 60],
+        [220, 60]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [140, 66],
+        [143, 66],
+        [183, 100],
+        [180, 100]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [220, 66],
+        [223, 66],
+        [183, 100],
+        [180, 100]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [100, 106],
+        [103, 106],
+        [123, 160],
+        [120, 160]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [240, 106],
+        [243, 106],
+        [223, 160],
+        [220, 160]
+      ]
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 245,
+      "y": 0,
+      "w": 65,
+      "h": 160,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 310,
+      "y": 0,
+      "w": 650,
+      "h": 8
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [340, 8],
+        [400, 8],
+        [370, 44]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [480, 8],
+        [540, 8],
+        [510, 40]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [600, 8],
+        [660, 8],
+        [630, 44]
+      ]
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 640,
+      "y": 15,
+      "w": 80,
+      "h": 15
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [760, 8],
+        [820, 8],
+        [790, 40]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [880, 8],
+        [940, 8],
+        [910, 44]
+      ]
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 960,
+      "y": 0,
+      "w": 120,
+      "h": 15
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 1080,
+      "y": 0,
+      "w": 120,
+      "h": 10
+    },
+    {
+      "shape": "blob",
+      "x": 1220,
+      "y": -20,
+      "w": 80,
+      "h": 68,
+      "rough": 0.6,
+      "seed": 192
     },
     {
       "shape": "ellipse",
-      "x": 650,
-      "y": 20,
-      "w": 80,
-      "h": 24
+      "x": 320,
+      "y": 122,
+      "w": 230,
+      "h": 136
+    },
+    {
+      "shape": "ellipse",
+      "x": 530,
+      "y": 122,
+      "w": 205,
+      "h": 136
+    },
+    {
+      "shape": "ellipse",
+      "x": 542,
+      "y": 134,
+      "w": 181,
+      "h": 112,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 715,
+      "y": 122,
+      "w": 205,
+      "h": 136
+    },
+    {
+      "shape": "ellipse",
+      "x": 727,
+      "y": 134,
+      "w": 181,
+      "h": 112,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 900,
+      "y": 122,
+      "w": 205,
+      "h": 136
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 960,
+      "y": 135,
+      "w": 85,
+      "h": 25,
+      "seed": 2
+    },
+    {
+      "shape": "ellipse",
+      "x": 1085,
+      "y": 122,
+      "w": 210,
+      "h": 136
+    },
+    {
+      "shape": "ellipse",
+      "x": 1097,
+      "y": 134,
+      "w": 186,
+      "h": 112,
+      "erase": true
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 1290,
+      "y": 83,
+      "w": 145,
+      "h": 17
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1355,
+      "y": 100,
+      "w": 20,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 1302,
+      "y": 100,
+      "w": 5,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 1418,
+      "y": 100,
+      "w": 5,
+      "h": 60
     }
   ],
   "steel": [],
@@ -81,27 +313,13 @@
   "objects": [
     {
       "type": "hatch",
-      "x": 100,
-      "y": 90
+      "x": 435,
+      "y": 85
     },
     {
       "type": "exit",
-      "x": 700,
-      "y": 99
-    },
-    {
-      "type": "water",
-      "x": 0,
-      "y": 146,
-      "w": 40,
-      "h": 14
-    },
-    {
-      "type": "water",
-      "x": 520,
-      "y": 146,
-      "w": 70,
-      "h": 14
+      "x": 1365,
+      "y": 82
     }
   ]
 }

@@ -2,9 +2,9 @@
   "version": 1,
   "id": "fun-18",
   "name": "level.fun-18.name",
-  "inspiredBy": "Fun 18 of the original ('Let's block and blow'): floor by floor down through closed rooms: a bombed blocker opens the floor above each room without fire. Geometry, name and art are ours.",
+  "inspiredBy": "Fun 18 of the original ('Let's block and blow'): a tower of thin floors between two brick towers, each floor split by posts into rooms, some with fire; a blocker over a safe room is bombed to drop the crowd one floor, again and again, until the bottom floor leads to the exit. Geometry, name and art are ours.",
   "rating": "fun",
-  "width": 640,
+  "width": 517,
   "height": 160,
   "lemmings": 70,
   "toSave": 50,
@@ -13,8 +13,8 @@
   "skills": {
     "climber": 0,
     "floater": 0,
-    "bomber": 5,
-    "blocker": 5,
+    "bomber": 20,
+    "blocker": 20,
     "builder": 0,
     "basher": 0,
     "miner": 0,
@@ -24,161 +24,154 @@
   "startX": 0,
   "terrain": [
     {
-      "shape": "rect",
-      "x": 30,
-      "y": 0,
-      "w": 10,
-      "h": 160
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 0,
+      "y": 41,
+      "w": 95,
+      "h": 9,
+      "seed": 1
     },
     {
       "shape": "piece",
-      "piece": "girder",
-      "x": 30,
-      "y": 0,
-      "w": 10,
-      "h": 160
+      "piece": "steps",
+      "x": 18,
+      "y": 37,
+      "w": 25,
+      "h": 4
     },
     {
       "shape": "rect",
-      "x": 600,
-      "y": 0,
-      "w": 10,
-      "h": 160
+      "x": 43,
+      "y": 31,
+      "w": 25,
+      "h": 10
     },
     {
       "shape": "piece",
-      "piece": "girder",
-      "x": 600,
-      "y": 0,
-      "w": 10,
-      "h": 160
+      "piece": "brickWall",
+      "x": 43,
+      "y": 31,
+      "w": 25,
+      "h": 10,
+      "seed": 2
     },
     {
       "shape": "rect",
-      "x": 40,
-      "y": 36,
-      "w": 560,
-      "h": 4
-    },
-    {
-      "shape": "piece",
-      "piece": "slab",
-      "x": 40,
-      "y": 36,
-      "w": 560,
-      "h": 4
-    },
-    {
-      "shape": "rect",
-      "x": 40,
-      "y": 72,
-      "w": 560,
-      "h": 4
-    },
-    {
-      "shape": "piece",
-      "piece": "slab",
-      "x": 40,
-      "y": 72,
-      "w": 560,
-      "h": 4
-    },
-    {
-      "shape": "rect",
-      "x": 40,
-      "y": 108,
-      "w": 560,
-      "h": 4
-    },
-    {
-      "shape": "piece",
-      "piece": "slab",
-      "x": 40,
-      "y": 108,
-      "w": 560,
-      "h": 4
-    },
-    {
-      "shape": "rect",
-      "x": 40,
-      "y": 144,
-      "w": 560,
+      "x": 68,
+      "y": 25,
+      "w": 27,
       "h": 16
     },
     {
-      "shape": "rect",
-      "x": 296,
-      "y": 40,
-      "w": 8,
-      "h": 32
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 68,
+      "y": 25,
+      "w": 27,
+      "h": 16,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 95,
+      "y": 25,
+      "w": 23,
+      "h": 120,
+      "seed": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 352,
+      "y": 18,
+      "w": 25,
+      "h": 107,
+      "seed": 5
     },
     {
       "shape": "piece",
       "piece": "girder",
-      "x": 296,
-      "y": 40,
-      "w": 8,
-      "h": 32
+      "x": 118,
+      "y": 28,
+      "w": 234,
+      "h": 3
     },
     {
-      "shape": "rect",
-      "x": 446,
+      "shape": "piece",
+      "piece": "girder",
+      "x": 118,
+      "y": 52,
+      "w": 234,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 118,
       "y": 76,
-      "w": 8,
-      "h": 32
+      "w": 234,
+      "h": 3
     },
     {
       "shape": "piece",
       "piece": "girder",
-      "x": 446,
-      "y": 76,
-      "w": 8,
-      "h": 32
+      "x": 118,
+      "y": 100,
+      "w": 234,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 118,
+      "y": 124,
+      "w": 234,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 118,
+      "y": 148,
+      "w": 389,
+      "h": 3
     },
     {
       "shape": "rect",
-      "x": 296,
-      "y": 76,
-      "w": 8,
-      "h": 32
-    },
-    {
-      "shape": "piece",
-      "piece": "girder",
-      "x": 296,
-      "y": 76,
-      "w": 8,
-      "h": 32
+      "x": 260,
+      "y": 31,
+      "w": 2,
+      "h": 21
     },
     {
       "shape": "rect",
-      "x": 446,
-      "y": 112,
-      "w": 8,
-      "h": 32
-    },
-    {
-      "shape": "piece",
-      "piece": "girder",
-      "x": 446,
-      "y": 112,
-      "w": 8,
-      "h": 32
+      "x": 270,
+      "y": 55,
+      "w": 2,
+      "h": 21
     },
     {
       "shape": "rect",
-      "x": 196,
-      "y": 112,
-      "w": 8,
-      "h": 32
+      "x": 262,
+      "y": 79,
+      "w": 2,
+      "h": 21
     },
     {
-      "shape": "piece",
-      "piece": "girder",
-      "x": 196,
-      "y": 112,
-      "w": 8,
-      "h": 32
+      "shape": "rect",
+      "x": 190,
+      "y": 103,
+      "w": 2,
+      "h": 21
+    },
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 127,
+      "w": 2,
+      "h": 21
     }
   ],
   "steel": [],
@@ -186,51 +179,51 @@
   "objects": [
     {
       "type": "hatch",
-      "x": 100,
-      "y": 14
+      "x": 30,
+      "y": 20
     },
     {
       "type": "exit",
-      "x": 560,
-      "y": 143
+      "x": 490,
+      "y": 147
     },
     {
       "type": "trap",
       "kind": "fire",
-      "x": 120,
-      "y": 62,
+      "x": 296,
+      "y": 42,
       "w": 12,
       "h": 10
     },
     {
       "type": "trap",
       "kind": "fire",
-      "x": 360,
-      "y": 98,
+      "x": 304,
+      "y": 66,
       "w": 12,
       "h": 10
     },
     {
       "type": "trap",
       "kind": "fire",
-      "x": 160,
-      "y": 98,
+      "x": 296,
+      "y": 90,
       "w": 12,
       "h": 10
     },
     {
       "type": "trap",
       "kind": "fire",
-      "x": 330,
-      "y": 134,
+      "x": 148,
+      "y": 114,
       "w": 12,
       "h": 10
     },
     {
       "type": "trap",
       "kind": "fire",
-      "x": 100,
-      "y": 134,
+      "x": 258,
+      "y": 138,
       "w": 12,
       "h": 10
     }

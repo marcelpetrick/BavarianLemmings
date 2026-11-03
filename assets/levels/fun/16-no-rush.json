@@ -2,55 +2,175 @@
   "version": 1,
   "id": "fun-16",
   "name": "level.fun-16.name",
-  "inspiredBy": "Fun 16 of the original ('Don't do anything too hasty'): one builder stairs all the way up to a high exit while two blockers keep the crowd at the hatch; then the right blocker is blown up. Geometry, name and art are ours.",
+  "inspiredBy": "Fun 16 of the original ('Don't do anything too hasty'): the lemmings land on a brick slab over a field of spikes; the exit stands high on a perch to the right, so blockers hold the crowd at both slab ends while one builder lays a long staircase up to it. Geometry, name and art are ours.",
   "rating": "fun",
-  "width": 640,
+  "width": 741,
   "height": 160,
-  "lemmings": 50,
-  "toSave": 40,
+  "lemmings": 80,
+  "toSave": 50,
   "releaseRate": 50,
-  "timeSeconds": 300,
+  "timeSeconds": 480,
   "skills": {
-    "climber": 0,
-    "floater": 0,
-    "bomber": 1,
-    "blocker": 3,
-    "builder": 9,
-    "basher": 0,
-    "miner": 0,
-    "digger": 0
+    "climber": 20,
+    "floater": 20,
+    "bomber": 20,
+    "blocker": 20,
+    "builder": 20,
+    "basher": 20,
+    "miner": 20,
+    "digger": 20
   },
   "style": "fire",
-  "startX": 0,
+  "startX": 120,
   "terrain": [
     {
-      "shape": "rect",
-      "x": 40,
-      "y": 136,
-      "w": 600,
-      "h": 24
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 0,
+      "y": 122,
+      "w": 12,
+      "h": 38,
+      "seed": 1
     },
     {
-      "shape": "rect",
-      "x": 480,
-      "y": 52,
-      "w": 160,
-      "h": 84
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 12,
+      "y": 134,
+      "w": 13,
+      "h": 26,
+      "seed": 2
     },
     {
-      "shape": "polygon",
-      "points": [
-        [480, 52],
-        [520, 40],
-        [560, 52]
-      ]
-    },
-    {
-      "shape": "ellipse",
-      "x": 30,
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 370,
       "y": 132,
+      "w": 15,
+      "h": 28,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 410,
+      "y": 136,
       "w": 20,
-      "h": 12
+      "h": 24,
+      "seed": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 445,
+      "y": 132,
+      "w": 15,
+      "h": 28,
+      "seed": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 475,
+      "y": 140,
+      "w": 15,
+      "h": 20,
+      "seed": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 600,
+      "y": 136,
+      "w": 14,
+      "h": 24,
+      "seed": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 715,
+      "y": 120,
+      "w": 13,
+      "h": 40,
+      "seed": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 728,
+      "y": 132,
+      "w": 13,
+      "h": 28,
+      "seed": 9
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 150,
+      "y": 140,
+      "w": 26,
+      "h": 20,
+      "seed": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 236,
+      "y": 140,
+      "w": 26,
+      "h": 20,
+      "seed": 11
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 310,
+      "y": 140,
+      "w": 26,
+      "h": 20,
+      "seed": 12
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 147,
+      "y": 130,
+      "w": 196,
+      "h": 18,
+      "seed": 13
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 485,
+      "y": 130,
+      "w": 100,
+      "h": 30,
+      "seed": 14
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 523,
+      "y": 73,
+      "w": 22,
+      "h": 57
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 497,
+      "y": 68,
+      "w": 73,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 520,
+      "y": 74,
+      "w": 28,
+      "h": 4
     }
   ],
   "steel": [],
@@ -58,20 +178,13 @@
   "objects": [
     {
       "type": "hatch",
-      "x": 150,
-      "y": 106
+      "x": 200,
+      "y": 105
     },
     {
       "type": "exit",
-      "x": 590,
-      "y": 51
-    },
-    {
-      "type": "water",
-      "x": 0,
-      "y": 146,
-      "w": 40,
-      "h": 14
+      "x": 535,
+      "y": 67
     }
   ]
 }

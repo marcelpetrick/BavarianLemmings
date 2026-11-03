@@ -2,137 +2,216 @@
   "version": 1,
   "id": "fun-17",
   "name": "level.fun-17.name",
-  "inspiredBy": "Fun 17 of the original ('Easy when you know how'): four hatches over walled-in rooms; the lower passage is full of traps, so block it, bash the walls and float down to the exit. Geometry, name and art are ours.",
+  "inspiredBy": "Fun 17 of the original ('Easy when you know how'): four hatches drop the lemmings into four compartments between column bases on a long block; the way out is off the block's right end, a drop that needs an umbrella, and a short stair up to the exit mound. Geometry, name and art are ours.",
   "rating": "fun",
-  "width": 960,
+  "width": 520,
   "height": 160,
   "lemmings": 50,
   "toSave": 20,
   "releaseRate": 99,
   "timeSeconds": 300,
   "skills": {
-    "climber": 0,
+    "climber": 20,
     "floater": 20,
-    "bomber": 0,
-    "blocker": 2,
-    "builder": 0,
-    "basher": 6,
-    "miner": 0,
-    "digger": 0
+    "bomber": 20,
+    "blocker": 20,
+    "builder": 20,
+    "basher": 20,
+    "miner": 20,
+    "digger": 20
   },
-  "style": "pillar",
-  "startX": 0,
+  "style": "marble",
+  "startX": 60,
   "terrain": [
     {
-      "shape": "rect",
-      "x": 60,
-      "y": 60,
-      "w": 580,
-      "h": 10
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 40,
+      "y": 0,
+      "w": 15,
+      "h": 145
     },
     {
       "shape": "piece",
       "piece": "slab",
-      "x": 60,
-      "y": 60,
-      "w": 580,
-      "h": 10
-    },
-    {
-      "shape": "rect",
-      "x": 180,
-      "y": 0,
-      "w": 16,
-      "h": 60
+      "x": 24,
+      "y": 46,
+      "w": 48,
+      "h": 16
     },
     {
       "shape": "piece",
       "piece": "pillar",
-      "x": 180,
+      "x": 455,
       "y": 0,
-      "w": 16,
-      "h": 60
-    },
-    {
-      "shape": "rect",
-      "x": 300,
-      "y": 0,
-      "w": 16,
-      "h": 60
+      "w": 17,
+      "h": 140
     },
     {
       "shape": "piece",
-      "piece": "pillar",
-      "x": 300,
-      "y": 0,
-      "w": 16,
-      "h": 60
-    },
-    {
-      "shape": "rect",
-      "x": 420,
-      "y": 0,
-      "w": 16,
-      "h": 60
+      "piece": "slab",
+      "x": 440,
+      "y": 46,
+      "w": 48,
+      "h": 16
     },
     {
       "shape": "piece",
-      "piece": "pillar",
-      "x": 420,
-      "y": 0,
-      "w": 16,
-      "h": 60
-    },
-    {
-      "shape": "rect",
-      "x": 540,
-      "y": 0,
-      "w": 16,
-      "h": 60
-    },
-    {
-      "shape": "piece",
-      "piece": "pillar",
-      "x": 540,
-      "y": 0,
-      "w": 16,
-      "h": 60
-    },
-    {
-      "shape": "rect",
+      "piece": "slab",
       "x": 0,
-      "y": 110,
-      "w": 600,
-      "h": 50
+      "y": 155,
+      "w": 520,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 8,
+      "y": 140,
+      "w": 92,
+      "h": 20,
+      "seed": 1
     },
     {
       "shape": "rect",
-      "x": 600,
-      "y": 136,
-      "w": 360,
-      "h": 24
+      "x": 418,
+      "y": 140,
+      "w": 87,
+      "h": 16
     },
     {
-      "shape": "rect",
-      "x": 950,
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 418,
+      "y": 140,
+      "w": 87,
+      "h": 16,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 82,
       "y": 90,
-      "w": 10,
-      "h": 46
+      "w": 230,
+      "h": 35,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 312,
+      "y": 88,
+      "w": 48,
+      "h": 37
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 82,
+      "y": 75,
+      "w": 18,
+      "h": 15
     },
     {
       "shape": "piece",
       "piece": "pillar",
-      "x": 950,
-      "y": 90,
-      "w": 10,
-      "h": 46
+      "x": 135,
+      "y": 0,
+      "w": 17,
+      "h": 82
     },
     {
-      "shape": "ellipse",
-      "x": 760,
-      "y": 126,
-      "w": 60,
-      "h": 20
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 127,
+      "y": 80,
+      "w": 33,
+      "h": 10,
+      "seed": 135
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 125,
+      "y": 75,
+      "w": 37,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 200,
+      "y": 0,
+      "w": 17,
+      "h": 82
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 192,
+      "y": 80,
+      "w": 33,
+      "h": 10,
+      "seed": 200
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 190,
+      "y": 75,
+      "w": 37,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 265,
+      "y": 0,
+      "w": 17,
+      "h": 82
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 257,
+      "y": 80,
+      "w": 33,
+      "h": 10,
+      "seed": 265
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 255,
+      "y": 75,
+      "w": 37,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 330,
+      "y": 0,
+      "w": 17,
+      "h": 82
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 322,
+      "y": 80,
+      "w": 33,
+      "h": 10,
+      "seed": 330
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 320,
+      "y": 75,
+      "w": 37,
+      "h": 5
     }
   ],
   "steel": [],
@@ -140,58 +219,50 @@
   "objects": [
     {
       "type": "hatch",
-      "x": 100,
-      "y": 20
+      "x": 115,
+      "y": 42
     },
     {
       "type": "hatch",
-      "x": 240,
-      "y": 20
+      "x": 176,
+      "y": 42
     },
     {
       "type": "hatch",
-      "x": 360,
-      "y": 20
+      "x": 241,
+      "y": 42
     },
     {
       "type": "hatch",
-      "x": 480,
-      "y": 20
+      "x": 306,
+      "y": 42
     },
     {
       "type": "exit",
-      "x": 860,
-      "y": 135
+      "x": 435,
+      "y": 139
     },
     {
       "type": "trap",
       "kind": "squasher",
-      "x": 150,
-      "y": 100,
+      "x": 140,
+      "y": 145,
       "w": 8,
       "h": 10
     },
     {
       "type": "trap",
       "kind": "squasher",
-      "x": 270,
-      "y": 100,
+      "x": 210,
+      "y": 145,
       "w": 8,
       "h": 10
     },
     {
       "type": "trap",
       "kind": "squasher",
-      "x": 390,
-      "y": 100,
-      "w": 8,
-      "h": 10
-    },
-    {
-      "type": "trap",
-      "kind": "squasher",
-      "x": 510,
-      "y": 100,
+      "x": 280,
+      "y": 145,
       "w": 8,
       "h": 10
     }

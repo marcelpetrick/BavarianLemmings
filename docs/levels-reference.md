@@ -174,11 +174,11 @@ simplification is listed here.
 | Fun 13 | Each lemming digs its own hole; our diggers fall as soon as they break through, so holes cannot be shared. The lower girder is 4 px higher than traced (top at y 116), so that walking off the upper girder kills (63 px) and a dug fall survives (58 px). The hatch hangs 4 px lower, so that its sprite clears the ceiling. |
 | Fun 14 | Numbers from the wiki (80 lemmings, 75 %, RR 20, 6 minutes). No steel is needed: a column bashed from a low beam leads under the next high beam and into the water. |
 | Fun 15 | Numbers from the wiki (80 lemmings, 80 %, RR 40, 8 minutes). A bomber removes the blocker. The gap in the broken stairway is 24 px instead of 33 px, so that one builder bridges it. |
-| Fun 16 | Stats are `[verify]` (50 lemmings, 80 %, RR 50 chosen). The right blocker is bombed instead of released. |
-| Fun 17 | The blocker of the walkthrough is optional; the 20 floaters are exactly the target, as in the original. |
-| Fun 18 | Fire rooms are closed rooms with fire traps; lemmings that fall in cross the traps until all are gone. |
-| Fun 19 | Stats are `[verify]` (50 lemmings, 80 %, RR 50 chosen). |
-| Fun 20 | Target raised from 60 % to 90 %: our crowd waits safely between the poles, so only the raised target makes the blockers necessary. |
+| Fun 16 | Numbers from the wiki (80 lemmings, 62 %, 8 minutes; RR 50 `[verify]`). The right blocker is bombed instead of released. Our stairs are shallower than the original's, so they take seven builders and end above the perch; the lemmings drop 20 px onto it. The spikes are scenery: a lemming that walks off the slab falls out of the level. |
+| Fun 17 | The 20 floaters are exactly the target, as in the original. The squashers in the passage under the block are our reading of the text source (`[verify]`); the block is 35 px thick instead of 50 px, so that they fit under it. The exit stands on the right base mound, so one builder makes a short stair up to it while a blocker holds the crowd. |
+| Fun 18 | Fire rooms are closed rooms with fire traps; lemmings that fall in cross the traps until all are gone. The floors are 24 px apart (traced 20 to 30 px) and each floor has one post, so that a blast never opens the floor above and the safe holes alternate left and right; otherwise our crowd would fall through several holes at once. The left tower is flush with the entry path. |
+| Fun 19 | Numbers from the wiki (80 lemmings, 70 %, RR 20). The gaps between the humps open to the bottom of the level. The exit platform stands 30 px further left than traced, so that four builders on the last hump reach it with our shallower stairs. |
+| Fun 20 | Target raised from 80 % to 90 % (45 of 50): our crowd waits safely between the poles and the slow release rate lets only a few fall before the first bridge stands, so only the raised target makes the blockers necessary. |
 | Fun 21 | Stats are `[verify]` (50 lemmings, 94 %, RR 50 chosen); the high target makes the blocker necessary. |
 | Fun 22 | 80 lemmings instead of 100 (DOS cap). The tribute graphics and music of the original are not recreated; the level is a plain forest. |
 | Fun 23 | Stats are `[verify]` (50 lemmings, 80 %, RR 50 chosen). The hidden third exit of the original is left out. |
