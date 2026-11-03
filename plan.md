@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (56/160) :active, m6, after m5, 32h
+    M6 content, all four ratings (57/160) :active, m6, after m5, 31h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -460,7 +460,7 @@ a release at the end. Order:
 - [x] M6.152 (G-07) A builder falls when the ground under it is removed.
 - [x] M6.153 (G-07) A digger next to the level's left or right edge digs; pixels outside the
       level no longer count as steel for its dig row.
-- [ ] M6.154 (G-07, G-08) A miner stopped by steel or a wrong-way one-way area turns round, as
+- [x] M6.154 (G-07, G-08) A miner stopped by steel or a wrong-way one-way area turns round, as
       the basher does.
 - [x] M6.157 (C-06) A release-rate button held while the browser draws no frame still counts every
       repeat that came due when the finger is lifted (the touch e2e test was flaky under load).

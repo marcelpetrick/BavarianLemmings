@@ -35,7 +35,7 @@
       }
     },
     {
-      "tick": 983,
+      "tick": 782,
       "intent": {
         "type": "assign",
         "lemmingId": 0,
@@ -43,7 +43,7 @@
       }
     },
     {
-      "tick": 1175,
+      "tick": 1160,
       "intent": {
         "type": "assign",
         "lemmingId": 0,
@@ -51,7 +51,7 @@
       }
     },
     {
-      "tick": 1367,
+      "tick": 1352,
       "intent": {
         "type": "assign",
         "lemmingId": 0,
@@ -59,7 +59,7 @@
       }
     },
     {
-      "tick": 1559,
+      "tick": 1544,
       "intent": {
         "type": "assign",
         "lemmingId": 0,
@@ -67,7 +67,7 @@
       }
     },
     {
-      "tick": 1883,
+      "tick": 1736,
       "intent": {
         "type": "assign",
         "lemmingId": 0,
@@ -75,7 +75,15 @@
       }
     },
     {
-      "tick": 2106,
+      "tick": 2060,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 2096,
       "intent": {
         "type": "assign",
         "lemmingId": 1,

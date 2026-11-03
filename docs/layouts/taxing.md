@@ -949,7 +949,7 @@ traced layout could not be built one to one, the level changes as listed here.
 | Level | Change | Why |
 | --- | --- | --- |
 | 01 | Save 79 of 80 (98 %) instead of 80. | The blocker that holds the crowd must be blown up; our blocker cannot be freed otherwise. |
-| 01 | The third column has no stairs on its right; a steel plate lies in the ground under it. | Our miner digs on through the floor; the steel stops it at floor level so the crowd walks out. |
+| 01 | The third column has no stairs on its right; a steel plate lies in the ground under it. The scout's miner is stopped by a builder as it reaches the floor. | Our miner digs on through the floor; since M6.154 it turns round at steel as in the original, so a builder interrupts it there and the crowd walks out over the short stair. |
 | 02 | The plant and the coils on the ground are left out; the hidden traps are squashers. | Solid decoration on the ground would turn the crowd on its way to the exit. |
 | 03 | The holding pit is dug by one digger, stopped by a builder at 10 px depth; one builder inside lets the crowd out. The sign reads "HIMMEL ->". | Our miners dig on through the platform; the pit and the stairs out of it work with our builder. |
 | 04 | The exit room is reached by a builder zigzag in a 30 px shaft right of the block. A short steel lip hangs under the block's right edge. The rungs are left out. | Our builder turns only at walls; the lip gives the zigzag its left wall below the block. |

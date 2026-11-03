@@ -80,7 +80,7 @@ export function bash(state: GameState, lemming: Lemming): void {
 
 /**
  * Miner (vision G-07): digs diagonally downwards, one pixel forward and one down every
- * MINE_TICKS_PER_STEP ticks; stops at steel and at one-way areas pointing against it.
+ * MINE_TICKS_PER_STEP ticks; turns round at steel and at one-way areas pointing against it.
  */
 export function mine(state: GameState, lemming: Lemming): void {
   lemming.frame += 1;
@@ -88,7 +88,9 @@ export function mine(state: GameState, lemming: Lemming): void {
   const nextY = lemming.y + 1;
   const area = { ...columns(lemming, 1, BASH_REACH), y0: nextY - LEMMING_HEIGHT + 1, y1: nextY };
   if (!allRemovable(state, area, lemming.dir)) {
+    // Like the basher, a miner that hits steel or a one-way area against it turns round and walks back.
     emit(state, 'steel', lemming.x, lemming.y);
+    turn(lemming);
     setAction(lemming, 'walking');
     return;
   }

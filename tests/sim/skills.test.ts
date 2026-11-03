@@ -255,13 +255,14 @@ describe('miner (G-07)', () => {
     expect(isSolid(state.terrain, 15, 25)).toBe(true);
   });
 
-  it('stops at steel', () => {
+  it('turns round at steel, as the basher does (M6.154)', () => {
     const art = ground(60, 40, 20);
     art[20] = '#'.repeat(11) + 'S' + '#'.repeat(48);
     const miner = lemmingAt(10, 19, 'mining');
     const state = stateWith(terrainFromArt(art), [miner]);
     run(state, MINE_TICKS_PER_STEP);
-    expect(miner.action).toBe('walking');
+    expect(miner).toMatchObject({ action: 'walking', dir: -1 });
+    expect(state.events.map((e) => e.type)).toContain('steel');
   });
 
   it('falls when it mines out of the bottom of a thin floor', () => {
