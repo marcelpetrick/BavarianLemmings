@@ -167,6 +167,7 @@ GitHub workflows:
 | [`scripts/gantt.mjs`](scripts/gantt.mjs) | Generate the roadmap Gantt chart in plan.md from the task list (`--write`, `--check`) |
 | [`scripts/check-plan.mjs`](scripts/check-plan.mjs) | Fail if a vision.md ID has no plan.md task; `--summary` prints done/open per milestone |
 | [`tests/tools/render-levels.test.ts`](tests/tools/render-levels.test.ts) | Render levels to PNG in node (real colours and sprites) into `.tools/level-previews/`; `npm run levels:preview`, filter with `BL_LEVEL=fun-05`, options `BL_SCALE=3`, `BL_GRID=40`, `BL_THEME=bavarian` |
+| [`tests/tools/retime-replays.test.ts`](tests/tools/retime-replays.test.ts) | After a rule change in `src/sim`, move each replay click to the tick where its lemming stands where it stood under the old rules; `BL_RETIME=fun-05 BL_OLD_SRC=/tmp/old-rules/src npm run replays:retime` (steps in the file header) |
 | same file, `npm run pieces:gallery` | Render every terrain shape and piece in every style to `docs/terrain-pieces.png` ([docs/terrain-pieces.md](docs/terrain-pieces.md)) |
 
 ## Development

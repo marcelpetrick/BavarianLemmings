@@ -346,17 +346,15 @@ No open questions remain. New ones go into a round E table here.
 
 ## 9. Resume here
 
-- **State (v0.1.59):** second owner play-test follow-up is complete: all eight skills checked by
-  mouse in the browser, a blocker refuses tool skills as in the original (so no sound), every
-  replay uses only accepted clicks, the version shows on title and credits, clicks forgive small
-  children's aim, and frames stepped while paused sound.
-- **Verified:** 737 tests, 25 desktop/tablet browser checks, all 30 Fun winning replays,
-  both-theme object clearance, collision masks, independent review and Docker startup.
-- **Remaining:** 90 unimplemented Tricky/Taxing/Mayhem levels, original-layout fidelity,
-  original-game constant/key verification, milestone versions, final vision audit and manual
-  Firefox/Chrome rating checks. These requirements are open, not waived. 1.0 needs owner approval.
-- **Language follow-up:** unsupported Bavarian apostrophes are fixed; settings labels and
-  all language/theme combinations are under browser regression review (M6.140–M6.141).
+- **State (v0.1.84, 2026-11-03):** the skills match the original more closely (idle basher
+  swings once; oh-no lemmings and builders fall; edge digging; miner turns at steel; water drowns
+  on its surface). The original does not keep a skill for later: digging and building skills
+  start at once, only climber and floater wait until needed (Lemmings Forums msg 36209).
+- **Levels:** 65 of 120 built: Fun 01-30, Tricky 01-15, Taxing 01-10, Mayhem 01-05. Every
+  replay wins with only accepted clicks.
+- **Remaining:** 55 levels, Fun 21-30 rebuild, constant/key verification, milestone versions,
+  final vision audit, release, manual Firefox/Chrome checks. 1.0 needs owner approval.
+- **The plan to continue:** `plan.md`, section "Resume here" (ordered next steps).
 - **Check:** `node scripts/check-plan.mjs --summary`, `node scripts/check-constants.mjs`,
   `git status --short`, `gh run list -L 3`.
 - **Restart:** `npm ci && npm run dev`; capture with `npm run screenshots`;

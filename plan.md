@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (60/160) :active, m6, after m5, 30h
+    M6 content, all four ratings (90/160) :active, m6, after m5, 21h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -269,21 +269,23 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
 - [x] M6.030 (L-01) Fun 28: "Wings would help" (`fun-28`), after the original's Fun 28.
 - [x] M6.031 (L-01) Fun 29: "Up the pyramid" (`fun-29`), after the original's Fun 29.
 - [x] M6.032 (L-01) Fun 30: "Three locks" (`fun-30`), after the original's Fun 30.
-- [ ] M6.033 (L-01) Tricky 01: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.034 (L-01) Tricky 02: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.035 (L-01) Tricky 03: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.036 (L-01) Tricky 04: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.037 (L-01) Tricky 05: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.038 (L-01) Tricky 06: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.039 (L-01) Tricky 07: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.040 (L-01) Tricky 08: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.041 (L-01) Tricky 09: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.042 (L-01) Tricky 10: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.043 (L-01) Tricky 11: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.044 (L-01) Tricky 12: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.045 (L-01) Tricky 13: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.046 (L-01) Tricky 14: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.047 (L-01) Tricky 15: placeholder, name and `inspiredBy` filled in when built.
+- [x] M6.033 (L-01) Tricky 01: "A Walk in the Park" (`tricky-01`), after the original's Tricky 1.
+- [x] M6.034 (L-01) Tricky 02: "One Hole Each" (`tricky-02`), after the original's Tricky 2.
+- [x] M6.035 (L-01) Tricky 03: "Stairway to the Meadow" (`tricky-03`), after the original's Tricky
+      3.
+- [x] M6.036 (L-01) Tricky 04: "Something I Made Earlier" (`tricky-04`), after the original's
+      Tricky 4.
+- [x] M6.037 (L-01) Tricky 05: "Mind the Mouse" (`tricky-05`), after the original's Tricky 5.
+- [x] M6.038 (L-01) Tricky 06: "All-Rounders" (`tricky-06`), after the original's Tricky 6.
+- [x] M6.039 (L-01) Tricky 07: "Up the Colonnade" (`tricky-07`), after the original's Tricky 7.
+- [x] M6.040 (L-01) Tricky 08: "Zigzag to Safety" (`tricky-08`), after the original's Tricky 8.
+- [x] M6.041 (L-01) Tricky 09: "The Long Way Down" (`tricky-09`), after the original's Tricky 9.
+- [x] M6.042 (L-01) Tricky 10: "From Both Sides" (`tricky-10`), after the original's Tricky 10.
+- [x] M6.043 (L-01) Tricky 11: "Up to the Attic" (`tricky-11`), after the original's Tricky 11.
+- [x] M6.044 (L-01) Tricky 12: "Athletes Only" (`tricky-12`), after the original's Tricky 12.
+- [x] M6.045 (L-01) Tricky 13: "Steel and Timber" (`tricky-13`), after the original's Tricky 13.
+- [x] M6.046 (L-01) Tricky 14: "The Scary Cave" (`tricky-14`), after the original's Tricky 14.
+- [x] M6.047 (L-01) Tricky 15: "One Crater Deeper" (`tricky-15`), after the original's Tricky 15.
 - [ ] M6.048 (L-01) Tricky 16: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.049 (L-01) Tricky 17: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.050 (L-01) Tricky 18: placeholder, name and `inspiredBy` filled in when built.
@@ -299,16 +301,16 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
 - [ ] M6.060 (L-01) Tricky 28: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.061 (L-01) Tricky 29: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.062 (L-01) Tricky 30: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.063 (L-01) Taxing 01: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.064 (L-01) Taxing 02: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.065 (L-01) Taxing 03: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.066 (L-01) Taxing 04: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.067 (L-01) Taxing 05: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.068 (L-01) Taxing 06: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.069 (L-01) Taxing 07: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.070 (L-01) Taxing 08: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.071 (L-01) Taxing 09: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.072 (L-01) Taxing 10: placeholder, name and `inspiredBy` filled in when built.
+- [x] M6.063 (L-01) Taxing 01: "Third Time Lucky" (`taxing-01`), after the original's Taxing 1.
+- [x] M6.064 (L-01) Taxing 02: "Traps Everywhere" (`taxing-02`), after the original's Taxing 2.
+- [x] M6.065 (L-01) Taxing 03: "A Stairway Up" (`taxing-03`), after the original's Taxing 3.
+- [x] M6.066 (L-01) Taxing 04: "Up the Shaft" (`taxing-04`), after the original's Taxing 4.
+- [x] M6.067 (L-01) Taxing 05: "Behind Bars" (`taxing-05`), after the original's Taxing 5.
+- [x] M6.068 (L-01) Taxing 06: "Squeeze Through" (`taxing-06`), after the original's Taxing 6.
+- [x] M6.069 (L-01) Taxing 07: "One for All" (`taxing-07`), after the original's Taxing 7.
+- [x] M6.070 (L-01) Taxing 08: "The Glass Gallery" (`taxing-08`), after the original's Taxing 8.
+- [x] M6.071 (L-01) Taxing 09: "Keep at It" (`taxing-09`), after the original's Taxing 9.
+- [x] M6.072 (L-01) Taxing 10: "Busy Little Hands" (`taxing-10`), after the original's Taxing 10.
 - [ ] M6.073 (L-01) Taxing 11: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.074 (L-01) Taxing 12: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.075 (L-01) Taxing 13: placeholder, name and `inspiredBy` filled in when built.
@@ -329,11 +331,11 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
 - [ ] M6.090 (L-01) Taxing 28: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.091 (L-01) Taxing 29: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.092 (L-01) Taxing 30: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.093 (L-01) Mayhem 01: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.094 (L-01) Mayhem 02: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.095 (L-01) Mayhem 03: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.096 (L-01) Mayhem 04: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.097 (L-01) Mayhem 05: placeholder, name and `inspiredBy` filled in when built.
+- [x] M6.093 (L-01) Mayhem 01: "Forged in Steel" (`mayhem-01`), after the original's Mayhem 1.
+- [x] M6.094 (L-01) Mayhem 02: "Stoke the Furnace" (`mayhem-02`), after the original's Mayhem 2.
+- [x] M6.095 (L-01) Mayhem 03: "Sixty Seconds of Fame" (`mayhem-03`), after the original's Mayhem 3.
+- [x] M6.096 (L-01) Mayhem 04: "Lattice Lane" (`mayhem-04`), after the original's Mayhem 4.
+- [x] M6.097 (L-01) Mayhem 05: "Down, Across, Up" (`mayhem-05`), after the original's Mayhem 5.
 - [ ] M6.098 (L-01) Mayhem 06: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.099 (L-01) Mayhem 07: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.100 (L-01) Mayhem 08: placeholder, name and `inspiredBy` filled in when built.
@@ -505,12 +507,22 @@ a release at the end. Order:
 
 ## Resume here
 
-- State: v0.1.59; M6.142–M6.148 are complete and released (skills end to end, replay audit,
-  version display, child-friendly clicks, frame-step sounds). There are 30 playable Fun levels.
-  The 90 levels in Tricky, Taxing and Mayhem and original-layout reconstruction remain open.
-- Results: 737 unit/integration tests, 25 desktop/tablet browser tests, line/function coverage
-  100%, branch coverage 97.84%. Every replay wins with only accepted assignments.
+- State (v0.1.84, 2026-11-03): skill fidelity run M6.149–M6.154 and M6.157–M6.160 done: idle
+  basher swings once, oh-no lemmings and builders fall, digger digs at the level edges, miner
+  turns at steel, water drowns on its surface, buried water is rejected, dependencies updated.
+- Levels: Fun 01-30 playable (01-20 rebuilt to the traced layouts, 21-30 still the first
+  version); Tricky 01-15, Taxing 01-10, Mayhem 01-05 built. 65 levels missing (M6.155).
+- Owner decision (2026-11-03): work sequentially, no subagents. Finish with a tagged release
+  (M6.156).
+- Next, in this order:
+  1. M6.155 Tricky 16-30, Taxing 11-30, Mayhem 06-30 from `docs/layouts/<rating>.md`, five
+     levels per commit; then Fun 21-30 rebuilt. Left-over agent drafts (unverified, may need
+     re-timing): `.claude/worktrees/agent-ae9def8e05ffe0549` (Tricky 16-17),
+     `.claude/worktrees/agent-a2a808ce8d63801ef` (Mayhem 06-08).
+  2. M6.123, M6.124 fidelity sources; M3.11, M4.08, M5.06, M6.125 milestone bumps.
+  3. M7.09 final vision audit; M6.156 release. M7.10 (1.0) and M7.12 (manual play-test) are the
+     owner's.
+- A rule change in `src/sim` breaks replays: re-time them with `npm run replays:retime`
+  (steps in `tests/tools/retime-replays.test.ts`).
 - Check: `node scripts/check-plan.mjs --summary`, `git status --short`, `gh run list -L 3`.
 - Restart: `npm ci && npm run dev`; `npm run screenshots`; `npm run levels:preview`.
-- Next: M6.129–M6.132 original-layout content; M6.123–M6.124 fidelity sources;
-  milestone versions and final vision audit/manual browser tests remain open. No 1.0 release yet.

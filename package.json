@@ -1,6 +1,6 @@
 {
   "name": "bavarian-lemmings",
-  "version": "0.1.83",
+  "version": "0.1.84",
   "private": true,
   "description": "An homage to the 1991 DOS game Lemmings, running natively in the browser, with a Bavarian mode.",
   "license": "GPL-3.0-or-later",
@@ -22,6 +22,7 @@
     "e2e": "playwright test",
     "screenshots": "vite build --logLevel warn && node scripts/screenshot.mjs",
     "levels:preview": "BL_RENDER_LEVELS=1 vitest run tests/tools/render-levels.test.ts",
+    "replays:retime": "vitest run tests/tools/retime-replays.test.ts",
     "pieces:gallery": "BL_RENDER_PIECES=1 BL_SCALE=2 vitest run tests/tools/render-levels.test.ts"
   },
   "devDependencies": {
