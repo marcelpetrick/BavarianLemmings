@@ -1,0 +1,370 @@
+{
+  "version": 1,
+  "id": "taxing-11",
+  "name": "level.taxing-11.name",
+  "inspiredBy": "Taxing 11 of the original ('The ascending pillar scenario'), on the map of Tricky 7 without blockers: diggers hold the crowd in a pit while a climber builds up the pillars and opens the way to the exit. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 1086,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 47,
+  "releaseRate": 20,
+  "timeSeconds": 240,
+  "skills": {
+    "climber": 2,
+    "floater": 1,
+    "bomber": 0,
+    "blocker": 1,
+    "builder": 20,
+    "basher": 5,
+    "miner": 5,
+    "digger": 5
+  },
+  "style": "pillar",
+  "startX": 330,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 40,
+      "w": 35,
+      "h": 120
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 0,
+      "y": 40,
+      "w": 35,
+      "h": 120,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 0,
+      "y": 30,
+      "w": 105,
+      "h": 70,
+      "seed": 1
+    },
+    {
+      "shape": "rect",
+      "x": 72,
+      "y": 0,
+      "w": 33,
+      "h": 75
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 72,
+      "y": 0,
+      "w": 33,
+      "h": 75,
+      "seed": 2
+    },
+    {
+      "shape": "rect",
+      "x": 112,
+      "y": 0,
+      "w": 728,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 112,
+      "y": 0,
+      "w": 728,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 65,
+      "y": 142,
+      "w": 170,
+      "h": 18
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 65,
+      "y": 142,
+      "w": 170,
+      "h": 18
+    },
+    {
+      "shape": "rect",
+      "x": 235,
+      "y": 60,
+      "w": 50,
+      "h": 100
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 235,
+      "y": 60,
+      "w": 50,
+      "h": 100,
+      "seed": 3
+    },
+    {
+      "shape": "rect",
+      "x": 227,
+      "y": 50,
+      "w": 66,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 227,
+      "y": 50,
+      "w": 66,
+      "h": 10,
+      "seed": 1
+    },
+    {
+      "shape": "rect",
+      "x": 295,
+      "y": 72,
+      "w": 50,
+      "h": 88
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 295,
+      "y": 72,
+      "w": 50,
+      "h": 88,
+      "seed": 4
+    },
+    {
+      "shape": "rect",
+      "x": 285,
+      "y": 62,
+      "w": 68,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 285,
+      "y": 62,
+      "w": 68,
+      "h": 10,
+      "seed": 2
+    },
+    {
+      "shape": "rect",
+      "x": 355,
+      "y": 85,
+      "w": 50,
+      "h": 75
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 355,
+      "y": 85,
+      "w": 50,
+      "h": 75,
+      "seed": 5
+    },
+    {
+      "shape": "rect",
+      "x": 345,
+      "y": 75,
+      "w": 68,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 345,
+      "y": 75,
+      "w": 68,
+      "h": 10,
+      "seed": 3
+    },
+    {
+      "shape": "rect",
+      "x": 413,
+      "y": 95,
+      "w": 50,
+      "h": 65
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 413,
+      "y": 95,
+      "w": 50,
+      "h": 65,
+      "seed": 6
+    },
+    {
+      "shape": "rect",
+      "x": 405,
+      "y": 85,
+      "w": 66,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 405,
+      "y": 85,
+      "w": 66,
+      "h": 10,
+      "seed": 4
+    },
+    {
+      "shape": "rect",
+      "x": 472,
+      "y": 110,
+      "w": 50,
+      "h": 50
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 472,
+      "y": 110,
+      "w": 50,
+      "h": 50,
+      "seed": 7
+    },
+    {
+      "shape": "rect",
+      "x": 463,
+      "y": 100,
+      "w": 67,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 463,
+      "y": 100,
+      "w": 67,
+      "h": 10,
+      "seed": 5
+    },
+    {
+      "shape": "rect",
+      "x": 533,
+      "y": 123,
+      "w": 50,
+      "h": 37
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 533,
+      "y": 123,
+      "w": 50,
+      "h": 37,
+      "seed": 8
+    },
+    {
+      "shape": "rect",
+      "x": 522,
+      "y": 113,
+      "w": 69,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 522,
+      "y": 113,
+      "w": 69,
+      "h": 10,
+      "seed": 6
+    },
+    {
+      "shape": "rect",
+      "x": 590,
+      "y": 138,
+      "w": 50,
+      "h": 22
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 590,
+      "y": 138,
+      "w": 50,
+      "h": 22,
+      "seed": 9
+    },
+    {
+      "shape": "rect",
+      "x": 583,
+      "y": 128,
+      "w": 65,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 583,
+      "y": 128,
+      "w": 65,
+      "h": 10,
+      "seed": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 735,
+      "y": 10,
+      "w": 45,
+      "h": 32,
+      "seed": 11
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 795,
+      "y": 37,
+      "w": 35,
+      "h": 123,
+      "seed": 12
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1050,
+      "y": 83,
+      "w": 36,
+      "h": 77,
+      "seed": 13
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 615,
+      "y": 95
+    },
+    {
+      "type": "exit",
+      "x": 135,
+      "y": 141
+    },
+    {
+      "type": "water",
+      "x": 648,
+      "y": 148,
+      "w": 438,
+      "h": 12
+    }
+  ]
+}

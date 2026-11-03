@@ -963,6 +963,8 @@ traced layout could not be built one to one, the level changes as listed here.
 | 30 | Same map as Fun 13. 40 lemmings instead of 60, all to be saved, release rate raised at once. | Each lemming digs its own hole 12 px left of the last; the walkway left of the hatch has room for only 40 holes. |
 | 17 | Same map as Fun 23 with the original's numbers; two blockers (instead of none) hold the crowd while the scout bashes and builds. | Our miners cannot dig the original's turn-round pits: a walker steps out of any pit a miner leaves. |
 | 22 | Same map and solution as Fun 27 with one blocker. | Matches the original's remark that Taxing 22 is the Fun 27 layout with one blocker. |
+| 11 | Same map as Tricky 7. One blocker (instead of none) holds the crowd; save 47 of 50 (94 %) instead of 100 %. | Our diggers cannot be stopped by a builder to leave a holding pit, so the Tricky 7 route with its blocker is used. |
+| 12 | The brick column starts 4 px further left and has a 6 px lip on its right face; the right blocker is bombed at the end instead of mined free. | Our builder stairs stop 2-3 px short of a wall and cannot start inside a basher tunnel; our blocker cannot be undermined. |
 
 ## Resume here
 

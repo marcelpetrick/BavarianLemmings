@@ -1,0 +1,315 @@
+{
+  "version": 1,
+  "id": "taxing-12",
+  "name": "level.taxing-12.name",
+  "inspiredBy": "Taxing 12 of the original ('Livin\u2019 On The Edge'): ten lemmings on a tiny block; blockers hold both edges while one lemming builds, bashes a brick column and builds from pillar to pillar up to the exit. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 952,
+  "height": 160,
+  "lemmings": 10,
+  "toSave": 8,
+  "releaseRate": 1,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 10,
+    "floater": 10,
+    "bomber": 10,
+    "blocker": 2,
+    "builder": 10,
+    "basher": 10,
+    "miner": 10,
+    "digger": 10
+  },
+  "style": "fire",
+  "startX": 200,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [110, 0],
+        [860, 0],
+        [860, 12],
+        [640, 14],
+        [480, 30],
+        [370, 40],
+        [260, 40],
+        [110, 22]
+      ],
+      "rough": 0.6,
+      "seed": 4
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 20,
+      "w": 70,
+      "h": 30
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 0,
+      "y": 20,
+      "w": 70,
+      "h": 30
+    },
+    {
+      "shape": "rect",
+      "x": 20,
+      "y": 60,
+      "w": 70,
+      "h": 30
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 20,
+      "y": 60,
+      "w": 70,
+      "h": 30
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 100,
+      "w": 70,
+      "h": 30
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 0,
+      "y": 100,
+      "w": 70,
+      "h": 30
+    },
+    {
+      "shape": "rect",
+      "x": 20,
+      "y": 130,
+      "w": 70,
+      "h": 30
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 20,
+      "y": 130,
+      "w": 70,
+      "h": 30
+    },
+    {
+      "shape": "rect",
+      "x": 143,
+      "y": 28,
+      "w": 50,
+      "h": 132
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 143,
+      "y": 28,
+      "w": 50,
+      "h": 132
+    },
+    {
+      "shape": "rect",
+      "x": 157,
+      "y": 52,
+      "w": 88,
+      "h": 13
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 157,
+      "y": 52,
+      "w": 88,
+      "h": 13
+    },
+    {
+      "shape": "rect",
+      "x": 207,
+      "y": 10,
+      "w": 25,
+      "h": 55
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 207,
+      "y": 10,
+      "w": 25,
+      "h": 55
+    },
+    {
+      "shape": "rect",
+      "x": 262,
+      "y": 128,
+      "w": 50,
+      "h": 32
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 262,
+      "y": 128,
+      "w": 50,
+      "h": 32
+    },
+    {
+      "shape": "rect",
+      "x": 336,
+      "y": 35,
+      "w": 27,
+      "h": 125
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 336,
+      "y": 35,
+      "w": 27,
+      "h": 125
+    },
+    {
+      "shape": "rect",
+      "x": 390,
+      "y": 102,
+      "w": 25,
+      "h": 58
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 390,
+      "y": 102,
+      "w": 25,
+      "h": 58
+    },
+    {
+      "shape": "rect",
+      "x": 440,
+      "y": 92,
+      "w": 25,
+      "h": 68
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 440,
+      "y": 92,
+      "w": 25,
+      "h": 68
+    },
+    {
+      "shape": "rect",
+      "x": 489,
+      "y": 80,
+      "w": 25,
+      "h": 80
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 489,
+      "y": 80,
+      "w": 25,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 537,
+      "y": 68,
+      "w": 25,
+      "h": 92
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 537,
+      "y": 68,
+      "w": 25,
+      "h": 92
+    },
+    {
+      "shape": "rect",
+      "x": 584,
+      "y": 56,
+      "w": 51,
+      "h": 34
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 584,
+      "y": 56,
+      "w": 51,
+      "h": 34
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [585, 90],
+        [640, 56],
+        [720, 160],
+        [610, 160]
+      ],
+      "rough": 0.5,
+      "seed": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 660,
+      "y": 42,
+      "w": 20,
+      "h": 33
+    },
+    {
+      "shape": "rect",
+      "x": 900,
+      "y": 100,
+      "w": 52,
+      "h": 60
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 900,
+      "y": 100,
+      "w": 52,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 363,
+      "y": 114,
+      "w": 6,
+      "h": 5
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 285,
+      "y": 100
+    },
+    {
+      "type": "exit",
+      "x": 610,
+      "y": 55
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 256,
+      "y": 54,
+      "w": 12,
+      "h": 10
+    }
+  ]
+}
