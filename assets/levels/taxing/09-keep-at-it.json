@@ -1,0 +1,382 @@
+{
+  "version": 1,
+  "id": "taxing-09",
+  "name": "level.taxing-09.name",
+  "inspiredBy": "Taxing 9 of the original ('Perseverance'): twenty lemmings land on a tall block high above the exit; a digger sinks a shaft that the whole crowd follows down before the drop grows too deep, and a floater goes ahead to mine a dip against the steel that turns the right-walkers back to the exit. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 1448,
+  "height": 160,
+  "lemmings": 20,
+  "toSave": 20,
+  "releaseRate": 50,
+  "timeSeconds": 240,
+  "skills": {
+    "climber": 2,
+    "floater": 1,
+    "bomber": 1,
+    "blocker": 2,
+    "builder": 2,
+    "basher": 1,
+    "miner": 1,
+    "digger": 2
+  },
+  "style": "pillar",
+  "startX": 560,
+  "terrain": [
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 0,
+      "y": 0,
+      "w": 30,
+      "h": 160
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 35,
+      "y": 0,
+      "w": 30,
+      "h": 160
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 225,
+      "y": 95,
+      "w": 30,
+      "h": 65
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 320,
+      "y": 90,
+      "w": 70,
+      "h": 70
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [437, 160],
+        [490, 105],
+        [490, 0],
+        [530, 0],
+        [530, 160]
+      ],
+      "rough": 0.5,
+      "seed": 4
+    },
+    {
+      "shape": "rect",
+      "x": 553,
+      "y": 40,
+      "w": 32,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 553,
+      "y": 40,
+      "w": 32,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 553,
+      "y": 80,
+      "w": 32,
+      "h": 80
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 553,
+      "y": 80,
+      "w": 32,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 520,
+      "y": 5,
+      "w": 140,
+      "h": 35
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 520,
+      "y": 5,
+      "w": 140,
+      "h": 35
+    },
+    {
+      "shape": "rect",
+      "x": 625,
+      "y": 40,
+      "w": 35,
+      "h": 75
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 625,
+      "y": 40,
+      "w": 35,
+      "h": 75
+    },
+    {
+      "shape": "rect",
+      "x": 660,
+      "y": 0,
+      "w": 230,
+      "h": 12
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 660,
+      "y": 0,
+      "w": 230,
+      "h": 12
+    },
+    {
+      "shape": "rect",
+      "x": 678,
+      "y": 145,
+      "w": 165,
+      "h": 15
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 678,
+      "y": 145,
+      "w": 165,
+      "h": 15
+    },
+    {
+      "shape": "rect",
+      "x": 700,
+      "y": 45,
+      "w": 20,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 700,
+      "y": 45,
+      "w": 20,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 700,
+      "y": 65,
+      "w": 43,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 700,
+      "y": 65,
+      "w": 43,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 763,
+      "y": 45,
+      "w": 42,
+      "h": 80
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 763,
+      "y": 45,
+      "w": 42,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 838,
+      "y": 85,
+      "w": 19,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 838,
+      "y": 85,
+      "w": 19,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 816,
+      "y": 105,
+      "w": 41,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 816,
+      "y": 105,
+      "w": 41,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 890,
+      "y": 20,
+      "w": 35,
+      "h": 50
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 890,
+      "y": 20,
+      "w": 35,
+      "h": 50
+    },
+    {
+      "shape": "rect",
+      "x": 925,
+      "y": 5,
+      "w": 130,
+      "h": 35
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 925,
+      "y": 5,
+      "w": 130,
+      "h": 35
+    },
+    {
+      "shape": "rect",
+      "x": 930,
+      "y": 82,
+      "w": 30,
+      "h": 78
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 930,
+      "y": 82,
+      "w": 30,
+      "h": 78
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 965,
+      "y": 40,
+      "w": 35,
+      "h": 45,
+      "flip": true
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 1000,
+      "y": 40,
+      "w": 35,
+      "h": 45
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [985, 160],
+        [985, 100],
+        [1015, 100],
+        [1015, 70],
+        [1045, 70],
+        [1045, 40],
+        [1083, 40],
+        [1083, 160]
+      ],
+      "seed": 0
+    },
+    {
+      "shape": "rect",
+      "x": 1083,
+      "y": 0,
+      "w": 17,
+      "h": 160
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1083,
+      "y": 0,
+      "w": 17,
+      "h": 160
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [1220, 160],
+        [1220, 140],
+        [1260, 140],
+        [1260, 120],
+        [1300, 120],
+        [1300, 100],
+        [1340, 100],
+        [1340, 80],
+        [1448, 80],
+        [1448, 160]
+      ],
+      "seed": 0
+    }
+  ],
+  "steel": [
+    {
+      "x": 512,
+      "y": 145,
+      "w": 23,
+      "h": 15
+    },
+    {
+      "x": 655,
+      "y": 142,
+      "w": 23,
+      "h": 18
+    },
+    {
+      "x": 843,
+      "y": 142,
+      "w": 23,
+      "h": 18
+    },
+    {
+      "x": 983,
+      "y": 142,
+      "w": 23,
+      "h": 18
+    }
+  ],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 785,
+      "y": 30
+    },
+    {
+      "type": "exit",
+      "x": 722,
+      "y": 144
+    }
+  ]
+}

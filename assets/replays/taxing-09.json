@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "levelId": "taxing-09",
+  "entries": [
+    {
+      "tick": 36,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 72,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 72,
+      "intent": {
+        "type": "releaseRate",
+        "delta": 49
+      }
+    },
+    {
+      "tick": 133,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "miner"
+      }
+    }
+  ]
+}

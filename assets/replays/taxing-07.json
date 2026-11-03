@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "levelId": "taxing-07",
+  "entries": [
+    {
+      "tick": 42,
+      "intent": {
+        "type": "releaseRate",
+        "delta": 44
+      }
+    },
+    {
+      "tick": 42,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 626,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 673,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "blocker"
+      }
+    },
+    {
+      "tick": 740,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 836,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1089,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1345,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1606,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 2020,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "builder"
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "levelId": "taxing-06",
+  "entries": [
+    {
+      "tick": 109,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 113,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 121,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 199,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "blocker"
+      }
+    },
+    {
+      "tick": 702,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "bomber"
+      }
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+{
+  "version": 1,
+  "id": "taxing-08",
+  "name": "level.taxing-08.name",
+  "inspiredBy": "Taxing 8 of the original ('The Art Gallery'): the crowd lands in a pen beside a lattice floor; one climber leaves it, bashes through four hanging globes and bridges from the end of the lattice to the crystals and on to the exit pillar; then two builders let the whole crowd out of the pen. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 1165,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 80,
+  "releaseRate": 20,
+  "timeSeconds": 240,
+  "skills": {
+    "climber": 10,
+    "floater": 10,
+    "bomber": 10,
+    "blocker": 0,
+    "builder": 10,
+    "basher": 10,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "crystal",
+  "startX": 380,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 160],
+        [0, 70],
+        [60, 50],
+        [120, 60],
+        [200, 20],
+        [260, 8],
+        [330, 25],
+        [375, 90],
+        [375, 160]
+      ],
+      "rough": 0.6,
+      "seed": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "crystal",
+      "x": 40,
+      "y": 60,
+      "w": 50,
+      "h": 50,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "crystal",
+      "x": 150,
+      "y": 40,
+      "w": 60,
+      "h": 60,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "crystal",
+      "x": 240,
+      "y": 20,
+      "w": 70,
+      "h": 70,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "crystal",
+      "x": 300,
+      "y": 70,
+      "w": 50,
+      "h": 60,
+      "seed": 4
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [390, 160],
+        [566, 0],
+        [574, 0],
+        [398, 160]
+      ],
+      "seed": 0
+    },
+    {
+      "shape": "ellipse",
+      "x": 395,
+      "y": 50,
+      "w": 88,
+      "h": 88
+    },
+    {
+      "shape": "ellipse",
+      "x": 405,
+      "y": 60,
+      "w": 68,
+      "h": 68,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 485,
+      "y": 100,
+      "w": 20,
+      "h": 60
+    },
+    {
+      "shape": "piece",
+      "piece": "crystal",
+      "x": 485,
+      "y": 100,
+      "w": 20,
+      "h": 60,
+      "seed": 6
+    },
+    {
+      "shape": "rect",
+      "x": 485,
+      "y": 140,
+      "w": 60,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 485,
+      "y": 140,
+      "w": 60,
+      "h": 20
+    },
+    {
+      "shape": "rect",
+      "x": 545,
+      "y": 125,
+      "w": 440,
+      "h": 25
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 545,
+      "y": 125,
+      "w": 440,
+      "h": 25
+    },
+    {
+      "shape": "rect",
+      "x": 545,
+      "y": 150,
+      "w": 440,
+      "h": 10
+    },
+    {
+      "shape": "ellipse",
+      "x": 662,
+      "y": 30,
+      "w": 123,
+      "h": 80
+    },
+    {
+      "shape": "ellipse",
+      "x": 672,
+      "y": 40,
+      "w": 103,
+      "h": 60,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 810,
+      "y": 0,
+      "w": 175,
+      "h": 25
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 810,
+      "y": 0,
+      "w": 175,
+      "h": 25
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 837,
+      "y": 25,
+      "w": 6,
+      "h": 75
+    },
+    {
+      "shape": "ellipse",
+      "x": 827,
+      "y": 99,
+      "w": 26,
+      "h": 26
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 875,
+      "y": 25,
+      "w": 6,
+      "h": 75
+    },
+    {
+      "shape": "ellipse",
+      "x": 865,
+      "y": 99,
+      "w": 26,
+      "h": 26
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 912,
+      "y": 25,
+      "w": 6,
+      "h": 75
+    },
+    {
+      "shape": "ellipse",
+      "x": 902,
+      "y": 99,
+      "w": 26,
+      "h": 26
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 949,
+      "y": 25,
+      "w": 6,
+      "h": 75
+    },
+    {
+      "shape": "ellipse",
+      "x": 939,
+      "y": 99,
+      "w": 26,
+      "h": 26
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [1006, 160],
+        [1006, 117],
+        [1020, 112],
+        [1050, 104],
+        [1080, 96],
+        [1100, 92],
+        [1100, 160]
+      ],
+      "seed": 0
+    },
+    {
+      "shape": "piece",
+      "piece": "crystal",
+      "x": 1020,
+      "y": 118,
+      "w": 34,
+      "h": 40,
+      "seed": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "crystal",
+      "x": 1058,
+      "y": 108,
+      "w": 36,
+      "h": 50,
+      "seed": 8
+    },
+    {
+      "shape": "rect",
+      "x": 1110,
+      "y": 100,
+      "w": 55,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 1110,
+      "y": 100,
+      "w": 55,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 1128,
+      "y": 106,
+      "w": 20,
+      "h": 54
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1128,
+      "y": 106,
+      "w": 20,
+      "h": 54
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 525,
+      "y": 100
+    },
+    {
+      "type": "exit",
+      "x": 1138,
+      "y": 99
+    }
+  ]
+}

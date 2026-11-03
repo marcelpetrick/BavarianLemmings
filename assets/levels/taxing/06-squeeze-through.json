@@ -1,0 +1,335 @@
+{
+  "version": 1,
+  "id": "taxing-06",
+  "name": "level.taxing-06.name",
+  "inspiredBy": "Taxing 6 of the original ('Compression Method 1'): four hatches fill four pens on a block; bashers open the columns between them, a blocker squeezes the crowd together at the foot of the block, and when it is blown up the tight crowd runs the trap corridor, where each trap catches only one lemming per stroke. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 520,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 30,
+  "releaseRate": 99,
+  "timeSeconds": 180,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 3,
+    "blocker": 3,
+    "builder": 0,
+    "basher": 5,
+    "miner": 0,
+    "digger": 1
+  },
+  "style": "marble",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 152,
+      "w": 520,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 0,
+      "y": 152,
+      "w": 520,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 40,
+      "y": 0,
+      "w": 15,
+      "h": 152
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 40,
+      "y": 0,
+      "w": 15,
+      "h": 152
+    },
+    {
+      "shape": "rect",
+      "x": 25,
+      "y": 46,
+      "w": 45,
+      "h": 16
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 25,
+      "y": 46,
+      "w": 45,
+      "h": 16
+    },
+    {
+      "shape": "rect",
+      "x": 95,
+      "y": 90,
+      "w": 265,
+      "h": 36
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 95,
+      "y": 90,
+      "w": 265,
+      "h": 36
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 82,
+      "y": 90,
+      "w": 14,
+      "h": 36
+    },
+    {
+      "shape": "rect",
+      "x": 135,
+      "y": 0,
+      "w": 17,
+      "h": 90
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 135,
+      "y": 0,
+      "w": 17,
+      "h": 90
+    },
+    {
+      "shape": "rect",
+      "x": 131,
+      "y": 80,
+      "w": 25,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 131,
+      "y": 80,
+      "w": 25,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 200,
+      "y": 0,
+      "w": 17,
+      "h": 90
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 200,
+      "y": 0,
+      "w": 17,
+      "h": 90
+    },
+    {
+      "shape": "rect",
+      "x": 196,
+      "y": 80,
+      "w": 25,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 196,
+      "y": 80,
+      "w": 25,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 265,
+      "y": 0,
+      "w": 15,
+      "h": 90
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 265,
+      "y": 0,
+      "w": 15,
+      "h": 90
+    },
+    {
+      "shape": "rect",
+      "x": 261,
+      "y": 80,
+      "w": 23,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 261,
+      "y": 80,
+      "w": 23,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 330,
+      "y": 0,
+      "w": 15,
+      "h": 90
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 330,
+      "y": 0,
+      "w": 15,
+      "h": 90
+    },
+    {
+      "shape": "rect",
+      "x": 326,
+      "y": 80,
+      "w": 23,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 326,
+      "y": 80,
+      "w": 23,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 405,
+      "y": 146,
+      "w": 75,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 405,
+      "y": 146,
+      "w": 75,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 455,
+      "y": 0,
+      "w": 15,
+      "h": 116
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 455,
+      "y": 0,
+      "w": 15,
+      "h": 116
+    },
+    {
+      "shape": "rect",
+      "x": 440,
+      "y": 46,
+      "w": 48,
+      "h": 16
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 440,
+      "y": 46,
+      "w": 48,
+      "h": 16
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 480,
+      "y": 146,
+      "w": 40,
+      "h": 6,
+      "flip": true
+    }
+  ],
+  "steel": [
+    {
+      "x": 313,
+      "y": 88,
+      "w": 47,
+      "h": 38
+    },
+    {
+      "x": 60,
+      "y": 152,
+      "w": 60,
+      "h": 8
+    }
+  ],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 112,
+      "y": 58
+    },
+    {
+      "type": "hatch",
+      "x": 175,
+      "y": 58
+    },
+    {
+      "type": "hatch",
+      "x": 240,
+      "y": 58
+    },
+    {
+      "type": "hatch",
+      "x": 303,
+      "y": 58
+    },
+    {
+      "type": "exit",
+      "x": 435,
+      "y": 145
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 170,
+      "y": 142,
+      "w": 8,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 235,
+      "y": 142,
+      "w": 8,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 300,
+      "y": 142,
+      "w": 8,
+      "h": 10
+    }
+  ]
+}

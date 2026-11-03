@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "id": "taxing-07",
+  "name": "level.taxing-07.name",
+  "inspiredBy": "Taxing 7 of the original ('Every Lemming for himself!!!'): one climber scales the one-way mound, turns at the slime pile with a builder, bashes the mound from the far side, then climbs the pile and bridges the stepping rocks to the exit hill while the crowd waits at the pile; nearly every lemming must come home. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 1486,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 79,
+  "releaseRate": 55,
+  "timeSeconds": 240,
+  "skills": {
+    "climber": 1,
+    "floater": 0,
+    "bomber": 5,
+    "blocker": 1,
+    "builder": 6,
+    "basher": 1,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "dirt",
+  "startX": 280,
+  "terrain": [
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 0,
+      "y": 100,
+      "w": 48,
+      "h": 60,
+      "seed": 2
+    },
+    {
+      "shape": "blob",
+      "x": 195,
+      "y": 40,
+      "w": 175,
+      "h": 140,
+      "rough": 0.35,
+      "seed": 7
+    },
+    {
+      "shape": "rect",
+      "x": 90,
+      "y": 88,
+      "w": 280,
+      "h": 72
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 90,
+      "y": 88,
+      "w": 280,
+      "h": 72
+    },
+    {
+      "shape": "rect",
+      "x": 100,
+      "y": 15,
+      "w": 62,
+      "h": 73
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 100,
+      "y": 15,
+      "w": 62,
+      "h": 73
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [398, 88],
+        [860, 88],
+        [885, 88],
+        [885, 110],
+        [860, 150],
+        [398, 150]
+      ],
+      "seed": 0
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 620,
+      "y": 105,
+      "w": 35,
+      "h": 45,
+      "seed": 9
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [462, 88],
+        [500, 50],
+        [540, 16],
+        [560, 30],
+        [588, 88]
+      ],
+      "rough": 0.5,
+      "seed": 3
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [712, 88],
+        [712, 18],
+        [724, 16],
+        [740, 40],
+        [758, 88]
+      ],
+      "seed": 0
+    },
+    {
+      "shape": "blob",
+      "x": 860,
+      "y": 76,
+      "w": 22,
+      "h": 16,
+      "rough": 0.3,
+      "seed": 4
+    },
+    {
+      "shape": "rect",
+      "x": 862,
+      "y": 78,
+      "w": 18,
+      "h": 10
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [884, 88],
+        [904, 118],
+        [904, 124],
+        [880, 96]
+      ],
+      "seed": 0
+    },
+    {
+      "shape": "rect",
+      "x": 898,
+      "y": 105,
+      "w": 37,
+      "h": 55
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 898,
+      "y": 105,
+      "w": 37,
+      "h": 55,
+      "seed": 5
+    },
+    {
+      "shape": "rect",
+      "x": 958,
+      "y": 120,
+      "w": 47,
+      "h": 40
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 958,
+      "y": 120,
+      "w": 47,
+      "h": 40,
+      "seed": 6
+    },
+    {
+      "shape": "rect",
+      "x": 1028,
+      "y": 128,
+      "w": 55,
+      "h": 32
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 1028,
+      "y": 128,
+      "w": 55,
+      "h": 32,
+      "seed": 8
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [1096, 160],
+        [1100, 132],
+        [1130, 116],
+        [1150, 111],
+        [1250, 111],
+        [1300, 130],
+        [1320, 160]
+      ],
+      "seed": 0
+    },
+    {
+      "shape": "blob",
+      "x": 1110,
+      "y": 125,
+      "w": 200,
+      "h": 40,
+      "rough": 0.5,
+      "seed": 13
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 1430,
+      "y": 82,
+      "w": 56,
+      "h": 78,
+      "seed": 3
+    }
+  ],
+  "steel": [],
+  "oneWay": [
+    {
+      "x": 712,
+      "y": 16,
+      "w": 47,
+      "h": 72,
+      "dir": "left"
+    }
+  ],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 428,
+      "y": 40
+    },
+    {
+      "type": "exit",
+      "x": 1200,
+      "y": 110
+    }
+  ]
+}

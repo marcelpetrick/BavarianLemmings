@@ -954,11 +954,16 @@ traced layout could not be built one to one, the level changes as listed here.
 | 03 | The holding pit is dug by one digger, stopped by a builder at 10 px depth; one builder inside lets the crowd out. The sign reads "HIMMEL ->". | Our miners dig on through the platform; the pit and the stairs out of it work with our builder. |
 | 04 | The exit room is reached by a builder zigzag in a 30 px shaft right of the block. A short steel lip hangs under the block's right edge. The rungs are left out. | Our builder turns only at walls; the lip gives the zigzag its left wall below the block. |
 | 05 | The flame-thrower block reaches 15 px past the bars as a ledge. The crowd waits in a digger pit under the hatch; two builders open it. | A builder cannot start inside a basher tunnel; the ledge gives room to start the bridge. The pit keeps the crowd off the unfinished stairs. |
+| 06 | The block stands 26 px above the corridor floor (block y 90-126), and the corridor traps are squashers. The blocker stands on the floor left of the corridor, on a steel plate. | A squasher needs 24 px of free height. The steel keeps the blast from opening a hole through the thin floor. |
+| 07 | The peak above the hatch has walkable slopes. The time is 4 minutes instead of 3. | Our crowd walks the whole slab between the blocker and the slime pile as one group; it needs one more cycle to reach the exit. |
+| 08 | The crowd lands in a pen between a crystal pillar and the lattice floor; a climber leaves it, two builders open it. The rings hang free; the globes touch the lattice. | Without blockers the pen keeps every lemming off the unfinished bridges; 100 % must be saved. |
+| 09 | Beam 1 and beam 2 are slabs (the pillar piece cannot lie down). | Toolkit limit. |
+| 10 | The floor of the third trough reaches under its right wall. | So the basher walks out onto the wall of the fourth trough instead of falling past it. |
 
 ## Resume here
 
-- State: phase B in progress. Taxing 01-05 are built (level JSON, winning replay, names in three
-  languages). Taxing 06-30 are next.
+- State: phase B in progress. Taxing 01-10 are built (level JSON, winning replay, names in three
+  languages). Taxing 11-30 are next.
 - Check: `npx vitest run tests/levels` and `npx markdownlint-cli2 docs/layouts/taxing.md`.
 - Preview: `BL_LEVEL=taxing npm run levels:preview`, then open `.tools/level-previews/taxing-NN.png`.
 - Next (phase B):
