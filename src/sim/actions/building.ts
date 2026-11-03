@@ -5,6 +5,7 @@ import { BRICK_WIDTH, BUILDER_TICKS_PER_BRICK, BUILDER_WARN_BRICKS, LEMMING_HEIG
 import { setAction, turn, type Lemming } from '../lemming';
 import { emit, type GameState } from '../state';
 import { addBrickPixel, isSolid } from '../terrain';
+import { hasGround } from './common';
 
 /**
  * Builder (vision G-07): lays a brick of BRICK_WIDTH pixels every BUILDER_TICKS_PER_BRICK ticks, then
@@ -12,6 +13,11 @@ import { addBrickPixel, isSolid } from '../terrain';
  * turns it round. After the last brick it shrugs.
  */
 export function build(state: GameState, lemming: Lemming): void {
+  // As in the original, a builder whose ground is taken away (a blast, a digger below) falls.
+  if (!hasGround(state, lemming)) {
+    setAction(lemming, 'falling');
+    return;
+  }
   lemming.frame += 1;
   if (lemming.frame % BUILDER_TICKS_PER_BRICK !== 0) return;
   for (let i = 0; i < BRICK_WIDTH; i += 1) addBrickPixel(state.terrain, lemming.x + lemming.dir * i, lemming.y);

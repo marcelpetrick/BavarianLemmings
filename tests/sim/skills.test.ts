@@ -129,6 +129,16 @@ describe('bomber (G-05)', () => {
 });
 
 describe('builder (G-07)', () => {
+  it('falls when the ground under it is taken away, and lays no brick in the air (M6.152)', () => {
+    const builder = lemmingAt(10, 19, 'building');
+    builder.bricksLeft = BUILDER_BRICKS;
+    const state = stateWith(terrainFromArt(ground(80, 40, 30)), [builder]);
+    run(state, 1);
+    expect(builder.action).toBe('falling');
+    run(state, BUILDER_TICKS_PER_BRICK);
+    expect(isSolid(state.terrain, 10, 19)).toBe(false);
+  });
+
   it('lays twelve bricks as a staircase, then shrugs and walks on', () => {
     const builder = lemmingAt(10, 29, 'building');
     builder.bricksLeft = BUILDER_BRICKS;
