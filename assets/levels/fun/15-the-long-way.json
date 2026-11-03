@@ -2,152 +2,251 @@
   "version": 1,
   "id": "fun-15",
   "name": "level.fun-15.name",
-  "inspiredBy": "Fun 15 of the original ('Don't let your eyes deceive you'): a blocker holds the crowd while one scout bashes three pillars, bridges a wide pit and patches a hole in the stairs; then the blocker is blown away. Geometry, name and art are ours.",
+  "inspiredBy": "Fun 15 of the original ('Don't let your eyes deceive you'): a hall of columns, a pit and a broken stairway with a trap under its gap lie between the hatch and a high scaffold; one scout bashes the columns and bridges both gaps while a blocker holds the crowd. Geometry, name and art are ours.",
   "rating": "fun",
-  "width": 1040,
+  "width": 1227,
   "height": 160,
-  "lemmings": 50,
-  "toSave": 40,
-  "releaseRate": 50,
-  "timeSeconds": 300,
+  "lemmings": 80,
+  "toSave": 64,
+  "releaseRate": 40,
+  "timeSeconds": 480,
   "skills": {
-    "climber": 0,
-    "floater": 0,
-    "bomber": 1,
-    "blocker": 1,
-    "builder": 7,
-    "basher": 4,
-    "miner": 0,
-    "digger": 0
+    "climber": 20,
+    "floater": 20,
+    "bomber": 20,
+    "blocker": 20,
+    "builder": 20,
+    "basher": 20,
+    "miner": 20,
+    "digger": 20
   },
-  "style": "crystal",
+  "style": "pillar",
   "startX": 0,
   "terrain": [
     {
-      "shape": "rect",
+      "shape": "piece",
+      "piece": "slab",
       "x": 0,
-      "y": 136,
-      "w": 500,
-      "h": 24
-    },
-    {
-      "shape": "rect",
-      "x": 200,
-      "y": 20,
-      "w": 20,
-      "h": 116
-    },
-    {
-      "shape": "piece",
-      "piece": "girder",
-      "x": 200,
-      "y": 20,
-      "w": 20,
-      "h": 116
-    },
-    {
-      "shape": "rect",
-      "x": 300,
-      "y": 10,
-      "w": 25,
-      "h": 126
-    },
-    {
-      "shape": "piece",
-      "piece": "girder",
-      "x": 300,
-      "y": 10,
-      "w": 25,
-      "h": 126
-    },
-    {
-      "shape": "rect",
-      "x": 400,
-      "y": 20,
-      "w": 20,
-      "h": 116
-    },
-    {
-      "shape": "piece",
-      "piece": "girder",
-      "x": 400,
-      "y": 20,
-      "w": 20,
-      "h": 116
-    },
-    {
-      "shape": "rect",
-      "x": 590,
-      "y": 136,
-      "w": 210,
-      "h": 24
+      "y": 0,
+      "w": 1210,
+      "h": 7
     },
     {
       "shape": "polygon",
       "points": [
-        [640, 160],
-        [640, 131],
-        [655, 131],
-        [655, 126],
-        [670, 126],
-        [670, 121],
-        [685, 121],
-        [685, 116],
-        [700, 116],
-        [700, 111],
-        [715, 111],
-        [715, 106],
-        [730, 106],
-        [730, 101],
-        [745, 101],
-        [745, 96],
-        [760, 96],
-        [760, 160]
-      ]
+        [15, 160],
+        [40, 143],
+        [300, 144],
+        [560, 142],
+        [815, 144],
+        [815, 160]
+      ],
+      "rough": 0.6,
+      "seed": 151
     },
     {
-      "shape": "rect",
-      "x": 760,
-      "y": 96,
-      "w": 60,
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 45,
+      "y": 80,
+      "w": 35,
+      "h": 60
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 37,
+      "y": 72,
+      "w": 53,
       "h": 8
     },
     {
       "shape": "piece",
       "piece": "slab",
-      "x": 760,
-      "y": 96,
-      "w": 60,
-      "h": 8
+      "x": 37,
+      "y": 136,
+      "w": 53,
+      "h": 9
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 82,
+      "y": 100,
+      "w": 32,
+      "h": 45,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 106,
+      "y": 122,
+      "w": 28,
+      "h": 23,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 335,
+      "y": 108,
+      "w": 32,
+      "h": 35
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 363,
+      "y": 45,
+      "w": 37,
+      "h": 98
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 440,
+      "y": 108,
+      "w": 32,
+      "h": 35
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 499,
+      "y": 108,
+      "w": 36,
+      "h": 35,
+      "flip": true
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 468,
+      "y": 33,
+      "w": 35,
+      "h": 110
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 548,
+      "y": 108,
+      "w": 32,
+      "h": 35
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 607,
+      "y": 108,
+      "w": 36,
+      "h": 35,
+      "flip": true
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 576,
+      "y": 25,
+      "w": 35,
+      "h": 118
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [905, 160],
+        [905, 143],
+        [1000, 144],
+        [1100, 142],
+        [1227, 143],
+        [1227, 160]
+      ],
+      "rough": 0.6,
+      "seed": 152
     },
     {
       "shape": "rect",
-      "x": 836,
-      "y": 96,
-      "w": 204,
-      "h": 8
+      "x": 968,
+      "y": 141,
+      "w": 42,
+      "h": 9
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 968,
+      "y": 105,
+      "w": 42,
+      "h": 39
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 1034,
+      "y": 64,
+      "w": 49,
+      "h": 36
+    },
+    {
+      "shape": "rect",
+      "x": 1060,
+      "y": 100,
+      "w": 23,
+      "h": 43
     },
     {
       "shape": "piece",
       "piece": "slab",
-      "x": 836,
-      "y": 96,
-      "w": 204,
-      "h": 8
+      "x": 1083,
+      "y": 63,
+      "w": 97,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 1092,
+      "y": 85,
+      "w": 81,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 1092,
+      "y": 105,
+      "w": 81,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 1092,
+      "y": 130,
+      "w": 81,
+      "h": 5
     },
     {
       "shape": "rect",
-      "x": 860,
-      "y": 104,
-      "w": 180,
-      "h": 56
+      "x": 1085,
+      "y": 68,
+      "w": 7,
+      "h": 75
     },
     {
-      "shape": "ellipse",
-      "x": 880,
-      "y": 30,
-      "w": 100,
-      "h": 30
+      "shape": "rect",
+      "x": 1120,
+      "y": 68,
+      "w": 7,
+      "h": 17
+    },
+    {
+      "shape": "rect",
+      "x": 1173,
+      "y": 68,
+      "w": 7,
+      "h": 75
     }
   ],
   "steel": [],
@@ -155,27 +254,21 @@
   "objects": [
     {
       "type": "hatch",
-      "x": 60,
-      "y": 100
+      "x": 50,
+      "y": 30
     },
     {
       "type": "exit",
-      "x": 960,
-      "y": 95
+      "x": 1150,
+      "y": 62
     },
     {
-      "type": "water",
-      "x": 500,
-      "y": 146,
-      "w": 90,
-      "h": 14
-    },
-    {
-      "type": "water",
-      "x": 800,
-      "y": 146,
-      "w": 60,
-      "h": 14
+      "type": "trap",
+      "kind": "squasher",
+      "x": 1019,
+      "y": 133,
+      "w": 8,
+      "h": 10
     }
   ]
 }

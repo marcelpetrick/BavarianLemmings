@@ -2,61 +2,12 @@
   "version": 1,
   "levelId": "fun-11",
   "entries": [
-    {
-      "tick": 206,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 0,
-        "skill": "climber"
-      }
-    },
-    {
-      "tick": 206,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 0,
-        "skill": "floater"
-      }
-    },
-    {
-      "tick": 234,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 1,
-        "skill": "climber"
-      }
-    },
-    {
-      "tick": 234,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 1,
-        "skill": "floater"
-      }
-    },
-    {
-      "tick": 670,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 0,
-        "skill": "blocker"
-      }
-    },
-    {
-      "tick": 801,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 1,
-        "skill": "basher"
-      }
-    },
-    {
-      "tick": 921,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 0,
-        "skill": "bomber"
-      }
-    }
+    { "tick": 35, "intent": { "type": "assign", "lemmingId": 0, "skill": "climber" } },
+    { "tick": 36, "intent": { "type": "assign", "lemmingId": 0, "skill": "floater" } },
+    { "tick": 63, "intent": { "type": "assign", "lemmingId": 1, "skill": "climber" } },
+    { "tick": 64, "intent": { "type": "assign", "lemmingId": 1, "skill": "floater" } },
+    { "tick": 414, "intent": { "type": "assign", "lemmingId": 0, "skill": "blocker" } },
+    { "tick": 462, "intent": { "type": "assign", "lemmingId": 1, "skill": "basher" } },
+    { "tick": 648, "intent": { "type": "assign", "lemmingId": 0, "skill": "bomber" } }
   ]
 }

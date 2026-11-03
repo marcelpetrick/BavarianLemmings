@@ -169,9 +169,11 @@ simplification is listed here.
 | Fun 7 | Our builders do not stop walkers, so a few lemmings fall into the pit before the bridge is finished; the target (50 %) allows for it. |
 | Fun 9 | The column is as thin as traced, so a quick basher saves almost everyone; the blocker of the walkthrough is a safety net, not a must. |
 | Fun 10 | The steel blocks at both ends of the exit floor are flush with it (traced 7 px higher), so that walkers can walk off its right end and the blocker is needed. |
-| Fun 13 | Each lemming digs its own hole; our diggers fall as soon as they break through, so holes cannot be shared. |
-| Fun 14 | Stats are `[verify]` (50 lemmings, 60 %, RR 50 chosen). Steel at each pillar foot makes the "build, then bash from the top" idea compulsory. |
-| Fun 15 | Stats are `[verify]` (50 lemmings, 80 %, RR 50 chosen). Our blockers cannot be undermined by a miner, so a bomber removes the blocker. |
+| Fun 11 | 320 px wide instead of 312 px (our narrowest level). |
+| Fun 12 | Target raised from 50 % to 62 % (50 of 80): without the blocker about 45 get through, so the target makes patience necessary. The wall has a lower step at its right end, so that the scout can build from the tunnel mouth (a builder bumps its head inside a bashed tunnel), and the pit is 6 px narrower. |
+| Fun 13 | Each lemming digs its own hole; our diggers fall as soon as they break through, so holes cannot be shared. The lower girder is 4 px higher than traced (top at y 116), so that walking off the upper girder kills (63 px) and a dug fall survives (58 px). The hatch hangs 4 px lower, so that its sprite clears the ceiling. |
+| Fun 14 | Numbers from the wiki (80 lemmings, 75 %, RR 20, 6 minutes). No steel is needed: a column bashed from a low beam leads under the next high beam and into the water. |
+| Fun 15 | Numbers from the wiki (80 lemmings, 80 %, RR 40, 8 minutes). A bomber removes the blocker. The gap in the broken stairway is 24 px instead of 33 px, so that one builder bridges it. |
 | Fun 16 | Stats are `[verify]` (50 lemmings, 80 %, RR 50 chosen). The right blocker is bombed instead of released. |
 | Fun 17 | The blocker of the walkthrough is optional; the 20 floaters are exactly the target, as in the original. |
 | Fun 18 | Fire rooms are closed rooms with fire traps; lemmings that fall in cross the traps until all are gone. |

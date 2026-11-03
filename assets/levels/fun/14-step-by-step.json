@@ -2,186 +2,222 @@
   "version": 1,
   "id": "fun-14",
   "name": "level.fun-14.name",
-  "inspiredBy": "Fun 14 of the original ('Origins and Lemmings'): bash the first pillar, then for each higher pillar build a short stair and bash from its top, because the pillar foot is steel. Geometry, name and art are ours.",
+  "inspiredBy": "Fun 14 of the original ('Origins and Lemmings'): five columns stand in the water, joined by beams that are alternately high and low; bash each column from a high beam, and build back up from each low beam before bashing the next. Geometry, name and art are ours.",
   "rating": "fun",
-  "width": 800,
+  "width": 950,
   "height": 160,
-  "lemmings": 50,
-  "toSave": 30,
-  "releaseRate": 50,
-  "timeSeconds": 300,
+  "lemmings": 80,
+  "toSave": 60,
+  "releaseRate": 20,
+  "timeSeconds": 360,
   "skills": {
-    "climber": 0,
-    "floater": 0,
-    "bomber": 0,
-    "blocker": 0,
-    "builder": 5,
-    "basher": 6,
-    "miner": 0,
-    "digger": 0
+    "climber": 20,
+    "floater": 20,
+    "bomber": 20,
+    "blocker": 20,
+    "builder": 20,
+    "basher": 20,
+    "miner": 20,
+    "digger": 20
   },
-  "style": "marble",
+  "style": "pillar",
   "startX": 0,
   "terrain": [
     {
-      "shape": "rect",
-      "x": 0,
-      "y": 136,
-      "w": 260,
-      "h": 24
+      "shape": "blob",
+      "x": -20,
+      "y": 120,
+      "w": 110,
+      "h": 55,
+      "rough": 0.5,
+      "seed": 141
+    },
+    {
+      "shape": "blob",
+      "x": 880,
+      "y": 125,
+      "w": 90,
+      "h": 50,
+      "rough": 0.5,
+      "seed": 142
     },
     {
       "shape": "piece",
-      "piece": "brickWall",
-      "x": 0,
-      "y": 136,
-      "w": 260,
-      "h": 24
-    },
-    {
-      "shape": "rect",
-      "x": 260,
-      "y": 124,
-      "w": 160,
-      "h": 36
+      "piece": "rock",
+      "x": 62,
+      "y": 50,
+      "w": 18,
+      "h": 55,
+      "seed": 1
     },
     {
       "shape": "piece",
-      "piece": "brickWall",
-      "x": 260,
-      "y": 124,
-      "w": 160,
-      "h": 36
+      "piece": "log",
+      "x": 64,
+      "y": 60,
+      "w": 147,
+      "h": 35,
+      "seed": 1
     },
     {
-      "shape": "rect",
-      "x": 420,
-      "y": 112,
-      "w": 160,
-      "h": 48
-    },
-    {
-      "shape": "piece",
-      "piece": "brickWall",
-      "x": 420,
-      "y": 112,
-      "w": 160,
-      "h": 48
-    },
-    {
-      "shape": "rect",
-      "x": 580,
-      "y": 100,
-      "w": 220,
-      "h": 60
-    },
-    {
-      "shape": "piece",
-      "piece": "brickWall",
-      "x": 580,
-      "y": 100,
-      "w": 220,
-      "h": 60
-    },
-    {
-      "shape": "rect",
-      "x": 140,
-      "y": 0,
-      "w": 30,
-      "h": 136
+      "shape": "blob",
+      "x": 195,
+      "y": 140,
+      "w": 53,
+      "h": 32,
+      "rough": 0.5,
+      "seed": 205
     },
     {
       "shape": "piece",
       "piece": "pillar",
-      "x": 140,
-      "y": 0,
-      "w": 30,
-      "h": 136
+      "x": 205,
+      "y": 25,
+      "w": 33,
+      "h": 125
     },
     {
-      "shape": "rect",
-      "x": 260,
-      "y": 0,
-      "w": 30,
-      "h": 124
+      "shape": "piece",
+      "piece": "log",
+      "x": 232,
+      "y": 103,
+      "w": 119,
+      "h": 32,
+      "seed": 2
+    },
+    {
+      "shape": "blob",
+      "x": 333,
+      "y": 140,
+      "w": 54,
+      "h": 32,
+      "rough": 0.5,
+      "seed": 343
     },
     {
       "shape": "piece",
       "piece": "pillar",
-      "x": 260,
-      "y": 0,
-      "w": 30,
-      "h": 124
+      "x": 343,
+      "y": 25,
+      "w": 34,
+      "h": 125
     },
     {
-      "shape": "rect",
-      "x": 420,
-      "y": 0,
-      "w": 30,
-      "h": 112
+      "shape": "piece",
+      "piece": "log",
+      "x": 371,
+      "y": 60,
+      "w": 103,
+      "h": 35,
+      "seed": 3
+    },
+    {
+      "shape": "blob",
+      "x": 457,
+      "y": 140,
+      "w": 53,
+      "h": 32,
+      "rough": 0.5,
+      "seed": 467
     },
     {
       "shape": "piece",
       "piece": "pillar",
-      "x": 420,
-      "y": 0,
-      "w": 30,
-      "h": 112
+      "x": 467,
+      "y": 25,
+      "w": 33,
+      "h": 125
     },
     {
-      "shape": "rect",
-      "x": 580,
-      "y": 0,
-      "w": 30,
-      "h": 100
+      "shape": "piece",
+      "piece": "log",
+      "x": 494,
+      "y": 103,
+      "w": 112,
+      "h": 32,
+      "seed": 4
+    },
+    {
+      "shape": "blob",
+      "x": 589,
+      "y": 140,
+      "w": 53,
+      "h": 32,
+      "rough": 0.5,
+      "seed": 599
     },
     {
       "shape": "piece",
       "piece": "pillar",
-      "x": 580,
-      "y": 0,
-      "w": 30,
-      "h": 100
+      "x": 599,
+      "y": 25,
+      "w": 33,
+      "h": 125
     },
     {
-      "shape": "ellipse",
-      "x": 700,
-      "y": 20,
-      "w": 80,
-      "h": 30
+      "shape": "piece",
+      "piece": "log",
+      "x": 626,
+      "y": 60,
+      "w": 102,
+      "h": 35,
+      "seed": 5
+    },
+    {
+      "shape": "blob",
+      "x": 712,
+      "y": 140,
+      "w": 53,
+      "h": 32,
+      "rough": 0.5,
+      "seed": 722
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 722,
+      "y": 25,
+      "w": 33,
+      "h": 125
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 749,
+      "y": 103,
+      "w": 149,
+      "h": 32,
+      "seed": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 890,
+      "y": 95,
+      "w": 17,
+      "h": 55,
+      "seed": 2
     }
   ],
-  "steel": [
-    {
-      "x": 260,
-      "y": 124,
-      "w": 20,
-      "h": 12
-    },
-    {
-      "x": 420,
-      "y": 112,
-      "w": 20,
-      "h": 12
-    },
-    {
-      "x": 580,
-      "y": 100,
-      "w": 20,
-      "h": 12
-    }
-  ],
+  "steel": [],
   "oneWay": [],
   "objects": [
     {
       "type": "hatch",
-      "x": 60,
-      "y": 100
+      "x": 100,
+      "y": 22
     },
     {
       "type": "exit",
-      "x": 720,
-      "y": 99
+      "x": 865,
+      "y": 102
+    },
+    {
+      "type": "water",
+      "x": 0,
+      "y": 145,
+      "w": 950,
+      "h": 15
     }
   ]
 }

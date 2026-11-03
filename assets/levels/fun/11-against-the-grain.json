@@ -2,84 +2,120 @@
   "version": 1,
   "id": "fun-11",
   "name": "level.fun-11.name",
-  "inspiredBy": "Fun 11 of the original ('Keep your hair on Mr. Lemming'): a one-way wall can only be bashed from the far side; a climber-floater gets over, a blocker turns the next one, and it bashes back towards the crowd. Geometry, name and art are ours.",
+  "inspiredBy": "Fun 11 of the original ('Keep your hair on Mr. Lemming'): a stepped mound with one-way arrows pointing left stands between the hatch and the exit; two climbing floaters go over, one blocks, the other bashes back through the mound in the allowed direction, and the blocker is bombed. Geometry, name and art are ours.",
   "rating": "fun",
-  "width": 640,
+  "width": 320,
   "height": 160,
-  "lemmings": 50,
-  "toSave": 42,
+  "lemmings": 60,
+  "toSave": 50,
   "releaseRate": 50,
   "timeSeconds": 300,
   "skills": {
-    "climber": 4,
-    "floater": 4,
-    "bomber": 2,
-    "blocker": 2,
-    "builder": 0,
-    "basher": 2,
-    "miner": 0,
-    "digger": 0
+    "climber": 20,
+    "floater": 20,
+    "bomber": 20,
+    "blocker": 20,
+    "builder": 20,
+    "basher": 20,
+    "miner": 20,
+    "digger": 20
   },
-  "style": "pillar",
+  "style": "marble",
   "startX": 0,
   "terrain": [
     {
-      "shape": "rect",
+      "shape": "piece",
+      "piece": "slab",
       "x": 0,
-      "y": 136,
-      "w": 640,
-      "h": 24
+      "y": 0,
+      "w": 320,
+      "h": 5
     },
     {
       "shape": "rect",
-      "x": 300,
-      "y": 30,
-      "w": 60,
-      "h": 106
+      "x": 0,
+      "y": 0,
+      "w": 5,
+      "h": 160
+    },
+    {
+      "shape": "rect",
+      "x": 313,
+      "y": 0,
+      "w": 7,
+      "h": 160
     },
     {
       "shape": "polygon",
       "points": [
-        [300, 30],
-        [330, 20],
-        [360, 30]
+        [5, 5],
+        [30, 5],
+        [5, 30]
       ]
     },
     {
-      "shape": "rect",
-      "x": 630,
-      "y": 60,
-      "w": 10,
-      "h": 76
+      "shape": "polygon",
+      "points": [
+        [290, 5],
+        [315, 5],
+        [315, 30]
+      ]
     },
     {
       "shape": "piece",
-      "piece": "pillar",
-      "x": 630,
-      "y": 60,
-      "w": 10,
-      "h": 76
+      "piece": "slab",
+      "x": 0,
+      "y": 136,
+      "w": 320,
+      "h": 24
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 96,
+      "y": 55,
+      "w": 48,
+      "h": 7,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 80,
+      "y": 62,
+      "w": 80,
+      "h": 8,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 72,
+      "y": 70,
+      "w": 96,
+      "h": 66,
+      "seed": 3
     }
   ],
   "steel": [],
   "oneWay": [
     {
-      "x": 300,
-      "y": 30,
-      "w": 60,
-      "h": 106,
+      "x": 72,
+      "y": 55,
+      "w": 96,
+      "h": 81,
       "dir": "left"
     }
   ],
   "objects": [
     {
       "type": "hatch",
-      "x": 120,
-      "y": 100
+      "x": 40,
+      "y": 92
     },
     {
       "type": "exit",
-      "x": 540,
+      "x": 290,
       "y": 135
     }
   ]

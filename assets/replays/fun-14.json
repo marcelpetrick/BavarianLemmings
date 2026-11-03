@@ -2,61 +2,18 @@
   "version": 1,
   "levelId": "fun-14",
   "entries": [
-    {
-      "tick": 125,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 0,
-        "skill": "basher"
-      }
-    },
-    {
-      "tick": 250,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 0,
-        "skill": "builder"
-      }
-    },
-    {
-      "tick": 450,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 0,
-        "skill": "basher"
-      }
-    },
-    {
-      "tick": 615,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 0,
-        "skill": "builder"
-      }
-    },
-    {
-      "tick": 815,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 0,
-        "skill": "basher"
-      }
-    },
-    {
-      "tick": 980,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 0,
-        "skill": "builder"
-      }
-    },
-    {
-      "tick": 1179,
-      "intent": {
-        "type": "assign",
-        "lemmingId": 22,
-        "skill": "basher"
-      }
-    }
+    { "tick": 154, "intent": { "type": "assign", "lemmingId": 0, "skill": "basher" } },
+    { "tick": 246, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
+    { "tick": 438, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
+    { "tick": 630, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
+    { "tick": 822, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
+    { "tick": 934, "intent": { "type": "assign", "lemmingId": 0, "skill": "basher" } },
+    { "tick": 1084, "intent": { "type": "assign", "lemmingId": 0, "skill": "basher" } },
+    { "tick": 1169, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
+    { "tick": 1361, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
+    { "tick": 1553, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
+    { "tick": 1745, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
+    { "tick": 1857, "intent": { "type": "assign", "lemmingId": 0, "skill": "basher" } },
+    { "tick": 2007, "intent": { "type": "assign", "lemmingId": 0, "skill": "basher" } }
   ]
 }
