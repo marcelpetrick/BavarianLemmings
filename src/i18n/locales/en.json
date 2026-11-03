@@ -8,6 +8,7 @@
   "menu.bayern": "Bayern",
   "menu.back": "Back",
   "menu.continue": "Continue: {level}",
+  "menu.page": "Page {page}/{pages}",
   "rating.fun": "Fun",
   "rating.tricky": "Tricky",
   "rating.taxing": "Taxing",

@@ -54,7 +54,19 @@ import {
   type TouchButton,
   type TouchLayout,
 } from './layout';
-import { cycle, itemAt, layoutMenu, moveFocus, resultCommentKey, type MenuEntry, type MenuItem, type ScreenId } from './screens';
+import {
+  LEVELS_PER_PAGE,
+  cycle,
+  itemAt,
+  layoutMenu,
+  moveFocus,
+  pageCount,
+  pageOfLevel,
+  resultCommentKey,
+  type MenuEntry,
+  type MenuItem,
+  type ScreenId,
+} from './screens';
 import { Session } from './session';
 import { statusParts } from './status';
 
@@ -93,6 +105,8 @@ export class App {
   private items: MenuItem[] = [];
   private focus = 0;
   private rating = 'fun';
+  /** The page of the level list on show (0-based). */
+  private levelPage = 0;
   private level: LevelData | null = null;
   private session: Session | null = null;
   private playfield: PlayfieldRenderer | null = null;
@@ -286,13 +300,16 @@ export class App {
       }
       case 'levels': {
         const list = levelsOf(this.rating);
+        const pages = pageCount(list.length);
+        const first = Math.min(this.levelPage, pages - 1) * LEVELS_PER_PAGE;
         const entries: MenuEntry[] = [
           { id: 'rating', label: `< ${this.ratingName(this.rating)} >` },
-          ...list.map((level, index) => ({
+          ...list.slice(first, first + LEVELS_PER_PAGE).map((level, offset) => ({
             id: `level:${level.id}`,
-            label: `${String(index + 1).padStart(2, '0')} ${this.t(level.name)}`,
-            enabled: isUnlocked(this.progress, this.rating, index),
+            label: `${String(first + offset + 1).padStart(2, '0')} ${this.t(level.name)}`,
+            enabled: isUnlocked(this.progress, this.rating, first + offset),
           })),
+          ...(pages > 1 ? [{ id: 'page', label: `< ${this.t('menu.page', { page: first / LEVELS_PER_PAGE + 1, pages })} >` }] : []),
           { id: 'back', label: this.t('menu.back') },
         ];
         return layoutMenu(entries, 40, 12);
@@ -345,6 +362,9 @@ export class App {
         return;
       }
       case 'levels':
+        this.levelPage = this.pageOfNextLevel();
+        this.show(id);
+        return;
       case 'settings':
       case 'credits':
         this.show(id);
@@ -356,7 +376,11 @@ export class App {
         return;
       case 'rating':
         this.rating = cycle(RATINGS, this.rating as (typeof RATINGS)[number]);
+        this.levelPage = this.pageOfNextLevel();
         this.show('levels');
+        return;
+      case 'page':
+        this.turnLevelPage(1);
         return;
       case 'back':
       case 'menu':
@@ -389,6 +413,21 @@ export class App {
     const focus = this.focus;
     this.show('settings');
     this.focus = focus;
+  }
+
+  /** The level list opens on the page with the first level of the rating not yet won. */
+  private pageOfNextLevel(): number {
+    return pageOfLevel(this.progress[this.rating] ?? 0, levelsOf(this.rating).length);
+  }
+
+  /** Turn the level list by `delta` pages, wrapping around, and keep the focus where it was. */
+  private turnLevelPage(delta: number): void {
+    const pages = pageCount(levelsOf(this.rating).length);
+    const focused = this.items[this.focus]?.id;
+    this.levelPage = (((this.levelPage + delta) % pages) + pages) % pages;
+    this.show('levels');
+    const index = this.items.findIndex((item) => item.id === focused);
+    if (index >= 0) this.focus = index;
   }
 
   private openPreview(level: LevelData): void {
@@ -664,6 +703,10 @@ export class App {
     if (this.screen === 'preview') {
       if (event.key === 'Enter' || event.key === ' ') this.startLevel();
       if (event.key === 'Escape') this.show('title');
+      return;
+    }
+    if (this.screen === 'levels' && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
+      this.turnLevelPage(event.key === 'ArrowRight' ? 1 : -1);
       return;
     }
     if (event.key === 'ArrowDown') this.focus = moveFocus(this.items, this.focus, 1);

@@ -8,6 +8,7 @@
   "menu.bayern": "Bayern",
   "menu.back": "Zruck",
   "menu.continue": "Weida: {level}",
+  "menu.page": "Seitn {page}/{pages}",
   "rating.fun": "Fun",
   "rating.tricky": "Tricky",
   "rating.taxing": "Taxing",

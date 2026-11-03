@@ -33,6 +33,23 @@ export const MENU_LINE_HEIGHT = 13;
  */
 export const MENU_HIT_SLACK = 24;
 
+/**
+ * Levels shown on one page of the level list (design value, plan M6.140). The list starts at
+ * y = 40 px with 12 px lines: the rating line, ten levels, the page line and "back" end at
+ * y = 196 px, inside the 200-pixel screen. Thirty levels in one column ran off the bottom.
+ */
+export const LEVELS_PER_PAGE = 10;
+
+/** The number of pages a list of `count` levels needs; an empty rating still has one page. */
+export function pageCount(count: number, perPage = LEVELS_PER_PAGE): number {
+  return Math.max(1, Math.ceil(count / perPage));
+}
+
+/** The page that shows the level at `index`, clamped to the pages that exist. */
+export function pageOfLevel(index: number, count: number, perPage = LEVELS_PER_PAGE): number {
+  return Math.min(Math.max(0, Math.floor(index / perPage)), pageCount(count, perPage) - 1);
+}
+
 /** Centre the entries on the screen, one per line, from `top` downwards. */
 export function layoutMenu(entries: readonly MenuEntry[], top: number, lineHeight = MENU_LINE_HEIGHT): MenuItem[] {
   return entries.map((entry, index) => {

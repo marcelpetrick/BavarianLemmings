@@ -2,7 +2,18 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 import { describe, expect, it } from 'vitest';
-import { MENU_HIT_SLACK, cycle, itemAt, layoutMenu, moveFocus, resultCommentKey } from '../../src/ui/screens';
+import { SCREEN_HEIGHT } from '../../src/sim/constants';
+import {
+  LEVELS_PER_PAGE,
+  MENU_HIT_SLACK,
+  cycle,
+  itemAt,
+  layoutMenu,
+  moveFocus,
+  pageCount,
+  pageOfLevel,
+  resultCommentKey,
+} from '../../src/ui/screens';
 
 describe('menus (V-08)', () => {
   const items = layoutMenu(
@@ -46,5 +57,21 @@ describe('menus (V-08)', () => {
     expect(resultCommentKey(10, 50)).toBe('result.comment.lost');
     expect(cycle(['en', 'de', 'bar'], 'bar')).toBe('en');
     expect(cycle([1, 2], 3)).toBe(1);
+  });
+
+  it('pages the level list so every level fits on the 200-pixel screen (M6.140)', () => {
+    expect(pageCount(0)).toBe(1);
+    expect(pageCount(LEVELS_PER_PAGE)).toBe(1);
+    expect(pageCount(30)).toBe(3);
+    expect(pageCount(31)).toBe(4);
+    expect(pageOfLevel(0, 30)).toBe(0);
+    expect(pageOfLevel(LEVELS_PER_PAGE, 30)).toBe(1);
+    // Every level won: the index is past the end, and the last page stays on show.
+    expect(pageOfLevel(30, 30)).toBe(2);
+    expect(pageOfLevel(5, 0)).toBe(0);
+    // The level list as the app lays it out: rating, a full page, page line, back.
+    const entries = Array.from({ length: LEVELS_PER_PAGE + 3 }, (_, index) => ({ id: String(index), label: 'x' }));
+    const last = layoutMenu(entries, 40, 12).at(-1)!;
+    expect(last.y + last.h).toBeLessThanOrEqual(SCREEN_HEIGHT);
   });
 });
