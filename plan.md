@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (59/160) :active, m6, after m5, 31h
+    M6 content, all four ratings (60/160) :active, m6, after m5, 30h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -468,7 +468,7 @@ a release at the end. Order:
       are inside the water area (owner play-test 2026-11-03: lemmings walked over a moat).
 - [x] M6.159 (G-09, L-01a) Level check: no water area lies buried under walkable terrain; fix
       Taxing 02, whose pool sat 7 px under the floor, and every other level the check finds.
-- [ ] M6.160 (Q) `/updateDependencies`: pin, check upstream, update, pipeline green.
+- [x] M6.160 (Q) `/updateDependencies`: pin, check upstream, update, pipeline green.
 - [ ] M6.155 (L-01a) Remaining levels built sequentially: Fun 21-30 rebuilt, Tricky 16-30,
       Taxing 11-30, Mayhem 06-30.
 - [ ] M6.156 (Q) Release the result as a tagged GitHub release.
