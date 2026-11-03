@@ -106,6 +106,9 @@ export function levelPicture(level: LevelData, terrain: Terrain, theme: Theme, g
   for (const object of level.objects) {
     if (object.type !== 'water') continue;
     for (let x = object.x; x < object.x + object.w; x += theme.water.width) drawSprite(picture, theme.water, x, palette, x, object.y);
+    // As in render/playfield.ts: deep water below the surface tile is filled with the deep colour.
+    const below = object.h - theme.water.height;
+    if (below > 0 && palette.D) picture.fill(object.x, object.y + theme.water.height, object.w, below, palette.D);
   }
   return picture;
 }

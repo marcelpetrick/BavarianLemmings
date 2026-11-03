@@ -120,6 +120,14 @@ export class PlayfieldRenderer {
             for (let x = object.x; x < object.x + object.w; x += this.theme.water.width) {
               this.sprites.draw(ctx, this.theme.water, Math.floor(state.tick / 3) + x, x, object.y);
             }
+            // Water deeper than the surface tile is filled with the deep-water colour, so a pool or
+            // tub looks full down to its bottom instead of showing black below the waves.
+            const below = object.h - this.theme.water.height;
+            const deep = this.theme.spritePalette.D;
+            if (below > 0 && deep) {
+              ctx.fillStyle = deep;
+              ctx.fillRect(object.x, object.y + this.theme.water.height, object.w, below);
+            }
           }
           break;
         case 'trap': {

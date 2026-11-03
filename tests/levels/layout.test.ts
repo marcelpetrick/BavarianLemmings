@@ -11,6 +11,19 @@ import { themeById, trapAnimation } from '../../src/theme/themes';
 
 for (const level of ALL_LEVELS.filter((item) => item.rating !== 'test')) {
   describe(`${level.id} object clearance`, () => {
+    it('keeps every water area open, not buried under walkable terrain (M6.159)', () => {
+      // A pool drawn under the floor lets lemmings walk across visible water (owner play-test
+      // 2026-11-03). A lake may have pillars standing in it, so up to half its width may be covered.
+      const terrain = buildTerrain(level);
+      const solid = (x: number, y: number): boolean => (flagsAt(terrain, x, y) & SOLID) !== 0;
+      for (const object of level.objects) {
+        if (object.type !== 'water') continue;
+        let buried = 0;
+        for (let x = object.x; x < object.x + object.w; x += 1) if (solid(x, object.y - 1) && solid(x, object.y)) buried += 1;
+        expect(buried, `water at (${object.x}, ${object.y})`).toBeLessThanOrEqual(object.w / 2);
+      }
+    });
+
     it('uses the visible trap trigger geometry for every authored danger zone', () => {
       for (const object of level.objects) {
         if (object.type !== 'trap') continue;
