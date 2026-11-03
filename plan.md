@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (48/148) :active, m6, after m5, 30h
+    M6 content, all four ratings (50/148) :active, m6, after m5, 30h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -418,9 +418,9 @@ verifies them. Preserve the owner's untracked recording in `media/`.
 
 ### Language and settings follow-up (2026-10-12)
 
-- [ ] M6.140 (I-01, I-02, L-06, R-05) Audit language/theme switching and level-name selection
+- [x] M6.140 (I-01, I-02, L-06, R-05) Audit language/theme switching and level-name selection
       across menus, previews and reloads; fix confirmed mismatches and cover with browser tests.
-- [ ] M6.141 (I-01, V-08, C-06) Audit every settings label/value and localized glyph;
+- [x] M6.141 (I-01, V-08, C-06) Audit every settings label/value and localized glyph;
       remove untranslated boolean values and invalid glyph fallbacks; verify all languages.
 
 ### Owner play-test follow-up, skills and kids (2026-10-12)

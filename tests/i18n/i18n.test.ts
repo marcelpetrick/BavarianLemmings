@@ -4,6 +4,8 @@
 import { describe, expect, it } from 'vitest';
 import { FONT } from '../../src/render/font';
 import { LANGUAGES, isLanguage, keysOf, preferredLanguage, translate } from '../../src/i18n';
+import { ALL_LEVELS } from '../../src/levels';
+import { BAVARIAN_THEME, CLASSIC_THEME } from '../../src/theme/themes';
 
 describe('i18n (I-01, I-02)', () => {
   it('has every key in every language', () => {
@@ -37,6 +39,16 @@ describe('i18n (I-01, I-02)', () => {
     expect(translate('de', 'settings.off')).toBe('AUS');
     expect(translate('bar', 'settings.on')).toBe('O');
     expect(translate('bar', 'settings.off')).toBe('AUS');
+  });
+
+  it('names every level rating in both themes, so no preview shows a raw key (M6.140)', () => {
+    const ratings = new Set(ALL_LEVELS.map((level) => level.rating));
+    for (const theme of [CLASSIC_THEME, BAVARIAN_THEME]) {
+      for (const rating of ratings) {
+        const key = `${theme.ratingPrefix}${rating}`;
+        for (const language of LANGUAGES) expect(keysOf(language), `${theme.id} ${language}`).toContain(key);
+      }
+    }
   });
 
   it('translates with parameters and keeps unknown placeholders', () => {
