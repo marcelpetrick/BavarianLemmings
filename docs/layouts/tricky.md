@@ -1043,6 +1043,8 @@ built level departs from the notes above, the reason is listed here.
 | 24 | Save 64 of 80 (80 %) instead of 94 %. One blocker stands under the ramp near the rope's end; walkers on the ramp pass above it. | Our blocker cannot be bypassed by building over it, so the walkers that climb the unfinished ramp fall beyond the rope. |
 | 25 | Simplified decor; the exit platform touches column 2. Column 2 is mined, not bashed, and the hanging stumps and spiral are plain shapes. | The level has one basher; our miner exits column 2 just above the platform, so the platform must start at the column. |
 | 20 | Graffiti letters are four rock blobs; a second bomber clears the left blocker at the end. | Decoration only; ends the level once the crowd is through. |
+| 28 | The exit stands in a pocket cut into the rock above the steel slab. Two blockers hold the crowd on the bridge and the mound; three builders ramp up to the rock. | The pocket keeps the exit sprite clear of terrain; blockers replace the original's miner turns, which our miner cannot do. |
+| 27 | The spires have straight faces and spire 2 is 18 px lower; the exit stands on a low steel step instead of the tall stand, so no ramp is needed. The second climber bashes each of the three spires separately. | Our climbers turn at overhangs and splat after 60 px; our basher stops at gaps wider than 8 px. |
 
 ## Resume here
 

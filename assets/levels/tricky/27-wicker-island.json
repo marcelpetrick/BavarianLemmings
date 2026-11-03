@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "id": "tricky-27",
+  "name": "level.tricky-27.name",
+  "inspiredBy": "Tricky 27 of the original ('The Island of the Wicker people'): dig and mine out of the hatch island, send climbers over one-way spires, and let one of them bash back through towards the crowd. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 1584,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 72,
+  "releaseRate": 60,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 5,
+    "floater": 0,
+    "bomber": 5,
+    "blocker": 5,
+    "builder": 5,
+    "basher": 5,
+    "miner": 5,
+    "digger": 5
+  },
+  "style": "dirt",
+  "startX": 550,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [570, 46],
+        [600, 26],
+        [700, 26],
+        [702, 74],
+        [640, 78],
+        [580, 64]
+      ],
+      "rough": 0.5,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 590,
+      "y": 62,
+      "w": 35,
+      "h": 48
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [578, 160],
+        [600, 140],
+        [640, 123],
+        [700, 120],
+        [750, 100],
+        [800, 90],
+        [860, 88],
+        [1030, 75],
+        [1070, 75],
+        [1110, 100],
+        [1115, 160]
+      ],
+      "rough": 0.4,
+      "seed": 5
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [840, 102],
+        [840, 54],
+        [844, 48],
+        [856, 48],
+        [860, 54],
+        [860, 102]
+      ],
+      "rough": 0,
+      "seed": 840
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [800, 102],
+        [800, 36],
+        [804, 30],
+        [826, 30],
+        [830, 36],
+        [830, 102]
+      ],
+      "rough": 0,
+      "seed": 800
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [760, 102],
+        [760, 66],
+        [764, 60],
+        [786, 60],
+        [790, 66],
+        [790, 102]
+      ],
+      "rough": 0,
+      "seed": 760
+    },
+    {
+      "shape": "rect",
+      "x": 945,
+      "y": 76,
+      "w": 45,
+      "h": 8
+    },
+    {
+      "shape": "blob",
+      "x": 0,
+      "y": 138,
+      "w": 85,
+      "h": 22,
+      "seed": 7
+    },
+    {
+      "shape": "blob",
+      "x": 220,
+      "y": 128,
+      "w": 175,
+      "h": 32,
+      "seed": 9
+    },
+    {
+      "shape": "blob",
+      "x": 1515,
+      "y": 115,
+      "w": 69,
+      "h": 45,
+      "seed": 11
+    }
+  ],
+  "steel": [
+    {
+      "x": 945,
+      "y": 76,
+      "w": 45,
+      "h": 8
+    }
+  ],
+  "oneWay": [
+    {
+      "x": 755,
+      "y": 28,
+      "w": 120,
+      "h": 74,
+      "dir": "left"
+    }
+  ],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 640,
+      "y": 15
+    },
+    {
+      "type": "exit",
+      "x": 966,
+      "y": 75
+    },
+    {
+      "type": "water",
+      "x": 0,
+      "y": 150,
+      "w": 578,
+      "h": 10
+    },
+    {
+      "type": "water",
+      "x": 1115,
+      "y": 150,
+      "w": 469,
+      "h": 10
+    }
+  ]
+}

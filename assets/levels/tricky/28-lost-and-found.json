@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "id": "tricky-28",
+  "name": "level.tricky-28.name",
+  "inspiredBy": "Tricky 28 of the original ('Lost something?'): the exit hides inside a rock on a steel slab; a builder ramps up to the slab and a basher breaks into the rock while the crowd is kept away from the water. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 1584,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 72,
+  "releaseRate": 70,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 10,
+    "floater": 10,
+    "bomber": 10,
+    "blocker": 10,
+    "builder": 10,
+    "basher": 10,
+    "miner": 10,
+    "digger": 10
+  },
+  "style": "dirt",
+  "startX": 600,
+  "terrain": [
+    {
+      "shape": "blob",
+      "x": 0,
+      "y": 36,
+      "w": 130,
+      "h": 124,
+      "rough": 0.6,
+      "seed": 2
+    },
+    {
+      "shape": "blob",
+      "x": 180,
+      "y": 105,
+      "w": 42,
+      "h": 55,
+      "seed": 4
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [445, 160],
+        [500, 118],
+        [540, 85],
+        [560, 82],
+        [640, 90],
+        [670, 100],
+        [670, 160]
+      ],
+      "rough": 0.5,
+      "seed": 6
+    },
+    {
+      "shape": "rect",
+      "x": 670,
+      "y": 117,
+      "w": 65,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 670,
+      "y": 117,
+      "w": 65,
+      "h": 6
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [712, 160],
+        [712, 108],
+        [760, 104],
+        [800, 100],
+        [900, 104],
+        [970, 110],
+        [1000, 160]
+      ],
+      "rough": 0.4,
+      "seed": 8
+    },
+    {
+      "shape": "blob",
+      "x": 805,
+      "y": 0,
+      "w": 75,
+      "h": 76,
+      "rough": 0.5,
+      "seed": 10
+    },
+    {
+      "shape": "rect",
+      "x": 805,
+      "y": 75,
+      "w": 73,
+      "h": 13
+    },
+    {
+      "shape": "blob",
+      "x": 940,
+      "y": 3,
+      "w": 70,
+      "h": 73,
+      "rough": 0.5,
+      "seed": 12
+    },
+    {
+      "shape": "rect",
+      "x": 943,
+      "y": 72,
+      "w": 72,
+      "h": 13
+    },
+    {
+      "shape": "rect",
+      "x": 822,
+      "y": 42,
+      "w": 42,
+      "h": 33,
+      "erase": true
+    },
+    {
+      "shape": "blob",
+      "x": 1310,
+      "y": 100,
+      "w": 50,
+      "h": 60,
+      "seed": 14
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [1370, 160],
+        [1584, 20],
+        [1584, 160]
+      ],
+      "rough": 0.4,
+      "seed": 16
+    }
+  ],
+  "steel": [
+    {
+      "x": 805,
+      "y": 75,
+      "w": 73,
+      "h": 13
+    },
+    {
+      "x": 943,
+      "y": 72,
+      "w": 72,
+      "h": 13
+    }
+  ],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 690,
+      "y": 98
+    },
+    {
+      "type": "exit",
+      "x": 843,
+      "y": 74
+    },
+    {
+      "type": "water",
+      "x": 675,
+      "y": 145,
+      "w": 40,
+      "h": 15
+    }
+  ]
+}
