@@ -220,8 +220,14 @@ export class RepeatButton {
     return count;
   }
 
-  release(): void {
+  /**
+   * Let go. Returns the repeats that came due before `time` but were not yet counted, so a hold
+   * still counts in full when the browser drew no frame while the finger was down.
+   */
+  release(time: number): number {
+    const due = this.update(time);
     this.nextAt = null;
+    return due;
   }
 
   get held(): boolean {

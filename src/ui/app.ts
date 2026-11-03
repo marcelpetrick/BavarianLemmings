@@ -686,7 +686,10 @@ export class App {
   }
 
   private releaseTouchButton(button: TouchButton, time: number): void {
-    if (button === 'releaseMinus' || button === 'releasePlus') this.releaseButtons[button].release();
+    if (button === 'releaseMinus' || button === 'releasePlus') {
+      const delta = button === 'releasePlus' ? 1 : -1;
+      for (let n = this.releaseButtons[button].release(time); n > 0; n -= 1) this.session?.command({ type: 'releaseRate', delta });
+    }
     if (button === 'nuke') this.nukeButton.release(time);
   }
 

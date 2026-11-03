@@ -153,8 +153,16 @@ describe('release rate buttons repeat while held (vision 3.4.1)', () => {
     expect(b.update(REPEAT_DELAY_MS - 1)).toBe(0);
     expect(b.update(REPEAT_DELAY_MS)).toBe(1);
     expect(b.update(REPEAT_DELAY_MS + 3 * REPEAT_INTERVAL_MS)).toBe(3);
-    b.release();
+    expect(b.release(REPEAT_DELAY_MS + 3 * REPEAT_INTERVAL_MS)).toBe(0);
     expect(b.update(10_000)).toBe(0);
+  });
+
+  it('counts the repeats that came due without a frame when the finger is lifted', () => {
+    // Under load the browser may draw no frame during a hold; the release must not lose its repeats.
+    const b = new RepeatButton();
+    b.press(0);
+    expect(b.release(REPEAT_DELAY_MS + 5 * REPEAT_INTERVAL_MS)).toBe(6);
+    expect(b.held).toBe(false);
   });
 });
 

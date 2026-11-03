@@ -78,7 +78,17 @@ export async function tapIntoFirstLevel(page: Page): Promise<void> {
 
 /** The centre of a touch panel button in client coordinates. */
 export async function buttonCentre(page: Page, button: string): Promise<Point> {
-  const box = await page.locator(`[data-touch-button="${button}"]`).boundingBox();
+  // Wait until the panel has finished its layout: under load the first box can still move, and a
+  // raw finger (CDP touch) put down at the old place misses the button.
+  const locator = page.locator(`[data-touch-button="${button}"]`);
+  await locator.waitFor({ state: 'visible' });
+  let box = await locator.boundingBox();
+  for (let tries = 0; tries < 50; tries += 1) {
+    await page.waitForTimeout(50);
+    const next = await locator.boundingBox();
+    if (next && box?.x === next.x && next.y === box.y && next.width === box.width && next.height === box.height) break;
+    box = next;
+  }
   if (!box) throw new Error(`touch button ${button} is not visible`);
   return { x: box.x + box.width / 2, y: box.y + box.height / 2 };
 }

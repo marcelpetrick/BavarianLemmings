@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (54/156) :active, m6, after m5, 31h
+    M6 content, all four ratings (55/157) :active, m6, after m5, 31h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -462,6 +462,8 @@ a release at the end. Order:
       level no longer count as steel for its dig row.
 - [ ] M6.154 (G-07, G-08) A miner stopped by steel or a wrong-way one-way area turns round, as
       the basher does.
+- [x] M6.157 (C-06) A release-rate button held while the browser draws no frame still counts every
+      repeat that came due when the finger is lifted (the touch e2e test was flaky under load).
 - [ ] M6.155 (L-01a) Remaining levels built sequentially: Fun 21-30 rebuilt, Tricky 16-30,
       Taxing 11-30, Mayhem 06-30.
 - [ ] M6.156 (Q) Release the result as a tagged GitHub release.

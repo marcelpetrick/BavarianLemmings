@@ -143,6 +143,8 @@ test.describe('touch play (C-06, P-06)', () => {
     await tapIntoFirstLevel(page);
     const start = (await gameState(page)).releaseRate;
     await touch.down(await buttonCentre(page, 'releasePlus'));
+    // The press itself counts at once; then the hold repeats.
+    await expect.poll(async () => (await gameState(page)).releaseRate).toBeGreaterThan(start);
     await page.waitForTimeout(1000);
     await touch.up();
     await advance(page, 120);
