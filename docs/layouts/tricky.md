@@ -1040,6 +1040,9 @@ built level departs from the notes above, the reason is listed here.
 | 30 | Same map as Fun 14, pillars 2 and 4 widened to their traced boxes. Miners cut down through pillars 1, 3 and 5; two bashers (instead of none) open pillars 2 and 4 from the top of the builder stairs. | Our miner cannot turn round inside its own tunnel, so the original's turn-and-mine step up onto the high logs is replaced by a basher. |
 | 23 | Same map as Fun 12. The basher's tunnel and one builder ramp carry the crowd over the pit; climbers lift the lemmings that fell into the pit. | Our miner cannot turn inside its tunnel, so the original's climber-turn-and-mine opening of the pit is replaced by climbers. |
 | 21 | The right sides of bowls 1 and 2 are squared off with a 5 px lip under each tunnel exit; the hatch and exit holes are widened. No blocker is needed; 54 of 66 are saved. | Our builder bumps its head inside a basher tunnel, so the bridges start on the lips; the sprites must not overlap the rings. |
+| 24 | Save 64 of 80 (80 %) instead of 94 %. One blocker stands under the ramp near the rope's end; walkers on the ramp pass above it. | Our blocker cannot be bypassed by building over it, so the walkers that climb the unfinished ramp fall beyond the rope. |
+| 25 | Simplified decor; the exit platform touches column 2. Column 2 is mined, not bashed, and the hanging stumps and spiral are plain shapes. | The level has one basher; our miner exits column 2 just above the platform, so the platform must start at the column. |
+| 20 | Graffiti letters are four rock blobs; a second bomber clears the left blocker at the end. | Decoration only; ends the level once the crowd is through. |
 
 ## Resume here
 

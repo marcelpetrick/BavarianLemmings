@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "id": "tricky-24",
+  "name": "level.tricky-24.name",
+  "inspiredBy": "Tricky 24 of the original ('Tightrope City'): one thin rope over the void; blockers hold both ends while builders ramp up to the exit ledge, and the rope is too thin for bombs. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 824,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 64,
+  "releaseRate": 85,
+  "timeSeconds": 120,
+  "skills": {
+    "climber": 5,
+    "floater": 5,
+    "bomber": 5,
+    "blocker": 5,
+    "builder": 3,
+    "basher": 5,
+    "miner": 5,
+    "digger": 5
+  },
+  "style": "marble",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 108,
+      "y": 94,
+      "w": 528,
+      "h": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 108,
+      "y": 94,
+      "w": 528,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 649,
+      "y": 75,
+      "w": 34,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 649,
+      "y": 75,
+      "w": 34,
+      "h": 5
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 135,
+      "y": 55
+    },
+    {
+      "type": "exit",
+      "x": 666,
+      "y": 74
+    }
+  ]
+}

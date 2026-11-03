@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "levelId": "tricky-20",
+  "entries": [
+    {
+      "tick": 69,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 69,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 92,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 92,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 171,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 607,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "blocker"
+      }
+    },
+    {
+      "tick": 656,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 687,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "blocker"
+      }
+    },
+    {
+      "tick": 716,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "bomber"
+      }
+    },
+    {
+      "tick": 1800,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "bomber"
+      }
+    }
+  ]
+}

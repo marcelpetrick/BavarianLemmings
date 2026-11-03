@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "levelId": "tricky-25",
+  "entries": [
+    {
+      "tick": 42,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 326,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 71,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 330,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 72,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 334,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 73,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 338,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 74,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 342,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 75,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 346,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 76,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 346,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 350,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 77,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 354,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 78,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 358,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 79,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 432,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 624,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 640,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "miner"
+      }
+    }
+  ]
+}

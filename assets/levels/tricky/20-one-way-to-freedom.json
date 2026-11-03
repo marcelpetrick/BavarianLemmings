@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "id": "tricky-20",
+  "name": "level.tricky-20.name",
+  "inspiredBy": "Tricky 20 of the original ('One way digging to freedom'): bash a twisted column, send two athletes over a one-way wall, and let the second bash back through it towards the crowd. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 785,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 76,
+  "releaseRate": 60,
+  "timeSeconds": 240,
+  "skills": {
+    "climber": 3,
+    "floater": 3,
+    "bomber": 6,
+    "blocker": 2,
+    "builder": 2,
+    "basher": 4,
+    "miner": 2,
+    "digger": 2
+  },
+  "style": "fire",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 0],
+        [785, 0],
+        [785, 10],
+        [600, 13],
+        [300, 9],
+        [0, 12]
+      ],
+      "rough": 0.6,
+      "seed": 20
+    },
+    {
+      "shape": "blob",
+      "x": 195,
+      "y": 36,
+      "w": 30,
+      "h": 32,
+      "rough": 0.5,
+      "seed": 195
+    },
+    {
+      "shape": "blob",
+      "x": 235,
+      "y": 36,
+      "w": 22,
+      "h": 32,
+      "rough": 0.5,
+      "seed": 235
+    },
+    {
+      "shape": "blob",
+      "x": 265,
+      "y": 36,
+      "w": 30,
+      "h": 32,
+      "rough": 0.5,
+      "seed": 265
+    },
+    {
+      "shape": "blob",
+      "x": 305,
+      "y": 36,
+      "w": 35,
+      "h": 32,
+      "rough": 0.5,
+      "seed": 305
+    },
+    {
+      "shape": "rect",
+      "x": 92,
+      "y": 124,
+      "w": 648,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 92,
+      "y": 124,
+      "w": 648,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 115,
+      "y": 130,
+      "w": 40,
+      "h": 30
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 180,
+      "y": 130,
+      "w": 50,
+      "h": 30
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 255,
+      "y": 130,
+      "w": 50,
+      "h": 30
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 330,
+      "y": 130,
+      "w": 50,
+      "h": 30
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 405,
+      "y": 130,
+      "w": 50,
+      "h": 30
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 480,
+      "y": 130,
+      "w": 50,
+      "h": 30
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 555,
+      "y": 130,
+      "w": 50,
+      "h": 30
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 630,
+      "y": 130,
+      "w": 50,
+      "h": 30
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 705,
+      "y": 130,
+      "w": 35,
+      "h": 30
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 265,
+      "y": 80,
+      "w": 25,
+      "h": 44
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 405,
+      "y": 53,
+      "w": 48,
+      "h": 71
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 20,
+      "y": 108,
+      "w": 30,
+      "h": 52
+    }
+  ],
+  "steel": [],
+  "oneWay": [
+    {
+      "x": 405,
+      "y": 53,
+      "w": 48,
+      "h": 71,
+      "dir": "left"
+    }
+  ],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 133,
+      "y": 88
+    },
+    {
+      "type": "exit",
+      "x": 725,
+      "y": 123
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 70,
+      "y": 140,
+      "w": 12,
+      "h": 10
+    }
+  ]
+}
