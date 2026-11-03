@@ -28,11 +28,12 @@ Dirndl outfits and Weißwurst traps. Classic mode remains available in settings;
 Open **<https://marcelpetrick.github.io/BavarianLemmings/>** in a desktop browser. No install, no
 account. Progress and settings stay in your browser.
 
-> **Status:** playable prototype, v0.1.59. All 30 Fun levels have winning replays that use only
-> accepted clicks. All eight skills are checked end to end in the browser. Desktop and tablet
-> controls (with forgiving clicks for small children), three languages, both themes, audio and
-> offline play work. The title and credits screens show the running version.
-> Tricky, Taxing, Mayhem and original-layout reconstruction remain open in [plan.md](plan.md).
+> **Status:** playable prototype, v0.1.87. 72 of 120 levels play: Fun 1-30 (1-20 rebuilt to
+> follow the original layouts), Tricky 1-19, Taxing 1-10 and Mayhem 1-8. Every level has a winning
+> replay that uses only accepted clicks. The skills follow the original more closely: an idle
+> basher swings once, lemmings fall when their ground goes, and water drowns on its surface.
+> Desktop and tablet controls, three languages, both themes, audio and offline play work.
+> The remaining levels are open in [plan.md](plan.md).
 >
 > | Document | Answers |
 > | --- | --- |
