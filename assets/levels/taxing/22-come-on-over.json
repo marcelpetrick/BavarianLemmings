@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "id": "taxing-22",
+  "name": "level.taxing-22.name",
+  "inspiredBy": "Taxing 22 of the original ('Come on over to my place'), on the map of Fun 27 with a single blocker: build the long way round past the acid and keep the crowd from the deadly drop. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 640,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 40,
+  "releaseRate": 1,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 2,
+    "bomber": 0,
+    "blocker": 1,
+    "builder": 10,
+    "basher": 1,
+    "miner": 1,
+    "digger": 2
+  },
+  "style": "dirt",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 60,
+      "w": 140,
+      "h": 100
+    },
+    {
+      "shape": "rect",
+      "x": 150,
+      "y": 60,
+      "w": 128,
+      "h": 100
+    },
+    {
+      "shape": "rect",
+      "x": 70,
+      "y": 48,
+      "w": 80,
+      "h": 112
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 48,
+      "w": 48,
+      "h": 112
+    },
+    {
+      "shape": "rect",
+      "x": 440,
+      "y": 136,
+      "w": 200,
+      "h": 24
+    },
+    {
+      "shape": "ellipse",
+      "x": 500,
+      "y": 100,
+      "w": 70,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 512,
+      "y": 88,
+      "w": 24,
+      "h": 16,
+      "erase": true
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 380,
+      "y": 30
+    },
+    {
+      "type": "exit",
+      "x": 20,
+      "y": 47
+    },
+    {
+      "type": "water",
+      "x": 48,
+      "y": 150,
+      "w": 22,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 520,
+      "y": 94,
+      "w": 12,
+      "h": 10
+    }
+  ]
+}

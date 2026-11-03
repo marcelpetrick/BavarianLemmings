@@ -1,5 +1,4 @@
 {
-  "level.taxing-10.name": "Fleißige Pratzn",
   "level.taxing-01.name": "Aller guadn Ding san drei",
   "level.taxing-02.name": "Lauter Fall’n",
   "level.taxing-03.name": "A Stiang nauf",
@@ -8,5 +7,9 @@
   "level.taxing-06.name": "Zammdruckt",
   "level.taxing-07.name": "Oana für olle",
   "level.taxing-08.name": "D’ Glasgalerie",
-  "level.taxing-09.name": "Dro bleim"
+  "level.taxing-09.name": "Dro bleim",
+  "level.taxing-10.name": "Fleißige Pratzn",
+  "level.taxing-17.name": "X zoagt d’Lava",
+  "level.taxing-22.name": "Kimm doch umma",
+  "level.taxing-30.name": "Olle obi, scho wieder"
 }

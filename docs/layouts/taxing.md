@@ -960,6 +960,9 @@ traced layout could not be built one to one, the level changes as listed here.
 | 08 | The crowd lands in a pen between a crystal pillar and the lattice floor; a climber leaves it, two builders open it. The rings hang free; the globes touch the lattice. | Without blockers the pen keeps every lemming off the unfinished bridges; 100 % must be saved. |
 | 09 | Beam 1 and beam 2 are slabs (the pillar piece cannot lie down). | Toolkit limit. |
 | 10 | The floor of the third trough reaches under its right wall. | So the basher walks out onto the wall of the fourth trough instead of falling past it. |
+| 30 | Same map as Fun 13. 40 lemmings instead of 60, all to be saved, release rate raised at once. | Each lemming digs its own hole 12 px left of the last; the walkway left of the hatch has room for only 40 holes. |
+| 17 | Same map as Fun 23 with the original's numbers; two blockers (instead of none) hold the crowd while the scout bashes and builds. | Our miners cannot dig the original's turn-round pits: a walker steps out of any pit a miner leaves. |
+| 22 | Same map and solution as Fun 27 with one blocker. | Matches the original's remark that Taxing 22 is the Fun 27 layout with one blocker. |
 
 ## Resume here
 

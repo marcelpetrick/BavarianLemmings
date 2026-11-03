@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "id": "taxing-30",
+  "name": "level.taxing-30.name",
+  "inspiredBy": "Taxing 30 of the original ('We all fall down'), on the map of Fun 13 with sixty lemmings and only diggers: every lemming digs its own short drop, and the clock is tight. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 1525,
+  "height": 160,
+  "lemmings": 40,
+  "toSave": 40,
+  "releaseRate": 1,
+  "timeSeconds": 180,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 0,
+    "builder": 0,
+    "basher": 0,
+    "miner": 0,
+    "digger": 40
+  },
+  "style": "fire",
+  "startX": 280,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 150],
+        [75, 0],
+        [230, 0],
+        [234, 160],
+        [0, 160]
+      ],
+      "rough": 0.8,
+      "seed": 131
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 225,
+      "y": 106,
+      "w": 90,
+      "h": 8
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [225, 114],
+        [315, 114],
+        [300, 118],
+        [270, 121],
+        [240, 118]
+      ],
+      "rough": 0.6,
+      "seed": 132
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [230, 0],
+        [1525, 0],
+        [1525, 8],
+        [1300, 10],
+        [1100, 7],
+        [900, 10],
+        [700, 8],
+        [500, 10],
+        [380, 7],
+        [230, 10]
+      ],
+      "rough": 0.8,
+      "seed": 133
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 274,
+      "y": 8,
+      "w": 12,
+      "h": 32,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 464,
+      "y": 8,
+      "w": 12,
+      "h": 36,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 619,
+      "y": 8,
+      "w": 12,
+      "h": 26,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 714,
+      "y": 8,
+      "w": 12,
+      "h": 32,
+      "seed": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 944,
+      "y": 8,
+      "w": 12,
+      "h": 36,
+      "seed": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 340,
+      "y": 72,
+      "w": 18,
+      "h": 88
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 335,
+      "y": 58,
+      "w": 30,
+      "h": 14
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 325,
+      "y": 53,
+      "w": 575,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 390,
+      "y": 116,
+      "w": 575,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 938,
+      "y": 124,
+      "w": 8,
+      "h": 36
+    },
+    {
+      "shape": "blob",
+      "x": 1020,
+      "y": -20,
+      "w": 80,
+      "h": 110,
+      "rough": 0.5,
+      "seed": 134
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1065,
+      "y": 86,
+      "w": 15,
+      "h": 74
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [1080, 160],
+        [1080, 142],
+        [1200, 140],
+        [1340, 143],
+        [1525, 139],
+        [1525, 160]
+      ],
+      "rough": 0.7,
+      "seed": 135
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1200,
+      "y": 20,
+      "w": 12,
+      "h": 121
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1330,
+      "y": 20,
+      "w": 15,
+      "h": 122
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 345,
+      "y": 26
+    },
+    {
+      "type": "exit",
+      "x": 955,
+      "y": 115
+    }
+  ]
+}

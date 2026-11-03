@@ -1,5 +1,4 @@
 {
-  "level.taxing-10.name": "Busy Little Hands",
   "level.taxing-01.name": "Third Time Lucky",
   "level.taxing-02.name": "Traps Everywhere",
   "level.taxing-03.name": "A Stairway Up",
@@ -8,5 +7,9 @@
   "level.taxing-06.name": "Squeeze Through",
   "level.taxing-07.name": "One for All",
   "level.taxing-08.name": "The Glass Gallery",
-  "level.taxing-09.name": "Keep at It"
+  "level.taxing-09.name": "Keep at It",
+  "level.taxing-10.name": "Busy Little Hands",
+  "level.taxing-17.name": "X Marks the Lava",
+  "level.taxing-22.name": "Come On Over",
+  "level.taxing-30.name": "Everybody Down, Again"
 }

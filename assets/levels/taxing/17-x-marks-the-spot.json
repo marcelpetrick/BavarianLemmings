@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "id": "taxing-17",
+  "name": "level.taxing-17.name",
+  "inspiredBy": "Taxing 17 of the original ('X marks the spot'), on the map of Fun 23 without blockers: miner pits turn the crowd away from the lava while a scout bashes and builds the way to the exit. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 960,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 72,
+  "releaseRate": 50,
+  "timeSeconds": 420,
+  "skills": {
+    "climber": 5,
+    "floater": 0,
+    "bomber": 5,
+    "blocker": 2,
+    "builder": 20,
+    "basher": 5,
+    "miner": 6,
+    "digger": 0
+  },
+  "style": "fire",
+  "startX": 300,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 136,
+      "w": 380,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 420,
+      "y": 136,
+      "w": 340,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 800,
+      "y": 136,
+      "w": 160,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 30,
+      "w": 80,
+      "h": 106
+    },
+    {
+      "shape": "rect",
+      "x": 420,
+      "y": 30,
+      "w": 180,
+      "h": 106
+    },
+    {
+      "shape": "rect",
+      "x": 330,
+      "y": 60,
+      "w": 50,
+      "h": 76,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 480,
+      "y": 120,
+      "w": 10,
+      "h": 16,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 380,
+      "y": 50,
+      "w": 60,
+      "h": 86,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 950,
+      "y": 60,
+      "w": 10,
+      "h": 76
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 950,
+      "y": 60,
+      "w": 10,
+      "h": 76
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 60,
+      "w": 10,
+      "h": 76
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 0,
+      "y": 60,
+      "w": 10,
+      "h": 76
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 700,
+      "y": 100
+    },
+    {
+      "type": "exit",
+      "x": 200,
+      "y": 135
+    },
+    {
+      "type": "water",
+      "x": 760,
+      "y": 146,
+      "w": 40,
+      "h": 14
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 390,
+      "y": 140,
+      "w": 12,
+      "h": 10
+    }
+  ]
+}

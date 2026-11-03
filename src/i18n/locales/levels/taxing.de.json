@@ -1,5 +1,4 @@
 {
-  "level.taxing-10.name": "Fleißige Hände",
   "level.taxing-01.name": "Aller guten Dinge sind drei",
   "level.taxing-02.name": "Überall Fallen",
   "level.taxing-03.name": "Eine Treppe nach oben",
@@ -8,5 +7,9 @@
   "level.taxing-06.name": "Dicht gedrängt",
   "level.taxing-07.name": "Einer für alle",
   "level.taxing-08.name": "Die Glasgalerie",
-  "level.taxing-09.name": "Dranbleiben"
+  "level.taxing-09.name": "Dranbleiben",
+  "level.taxing-10.name": "Fleißige Hände",
+  "level.taxing-17.name": "X markiert die Lava",
+  "level.taxing-22.name": "Komm doch rüber",
+  "level.taxing-30.name": "Alle runter, schon wieder"
 }

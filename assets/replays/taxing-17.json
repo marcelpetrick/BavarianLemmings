@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "levelId": "taxing-17",
+  "entries": [
+    { "tick": 86, "intent": { "type": "assign", "lemmingId": 0, "skill": "blocker" } },
+    { "tick": 221, "intent": { "type": "assign", "lemmingId": 2, "skill": "blocker" } },
+    { "tick": 242, "intent": { "type": "assign", "lemmingId": 1, "skill": "basher" } },
+    { "tick": 474, "intent": { "type": "assign", "lemmingId": 1, "skill": "basher" } },
+    { "tick": 592, "intent": { "type": "assign", "lemmingId": 1, "skill": "builder" } },
+    { "tick": 792, "intent": { "type": "assign", "lemmingId": 1, "skill": "builder" } },
+    { "tick": 1043, "intent": { "type": "assign", "lemmingId": 1, "skill": "basher" } },
+    { "tick": 1157, "intent": { "type": "assign", "lemmingId": 2, "skill": "bomber" } }
+  ]
+}
