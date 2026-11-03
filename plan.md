@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (99/160) :active, m6, after m5, 19h
+    M6 content, all four ratings (101/160) :active, m6, after m5, 18h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -293,9 +293,9 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
 - [x] M6.051 (L-01) Tricky 19: "A Tunnel to the Postcard" (`tricky-19`), after the original's
       Tricky 19.
 - [ ] M6.052 (L-01) Tricky 20: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.053 (L-01) Tricky 21: placeholder, name and `inspiredBy` filled in when built.
+- [x] M6.053 (L-01) Tricky 21: "Three Sixes" (`tricky-21`), after the original's Tricky 21.
 - [x] M6.054 (L-01) Tricky 22: "Turn Them Round" (`tricky-22`), after the original's Tricky 22.
-- [ ] M6.055 (L-01) Tricky 23: placeholder, name and `inspiredBy` filled in when built.
+- [x] M6.055 (L-01) Tricky 23: "Over the Boundary" (`tricky-23`), after the original's Tricky 23.
 - [ ] M6.056 (L-01) Tricky 24: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.057 (L-01) Tricky 25: placeholder, name and `inspiredBy` filled in when built.
 - [x] M6.058 (L-01) Tricky 26: "Ramps for Walls" (`tricky-26`), after the original's Tricky 26.

@@ -1038,6 +1038,8 @@ built level departs from the notes above, the reason is listed here.
 | 26 | Same map as Fun 9. Save 79 of 80 (99 %) instead of 100 %. | Two short builder ramps turn the crowd, but with release rate 99 one walker reaches the fire first. |
 | 22 | Same map as Fun 8. Two bombers blow the holding pit right of the hatch; one builder ramps the crowd out to the left. | Follows the traced idea; a single crater of our 16 px blast is too shallow to hold walkers. |
 | 30 | Same map as Fun 14, pillars 2 and 4 widened to their traced boxes. Miners cut down through pillars 1, 3 and 5; two bashers (instead of none) open pillars 2 and 4 from the top of the builder stairs. | Our miner cannot turn round inside its own tunnel, so the original's turn-and-mine step up onto the high logs is replaced by a basher. |
+| 23 | Same map as Fun 12. The basher's tunnel and one builder ramp carry the crowd over the pit; climbers lift the lemmings that fell into the pit. | Our miner cannot turn inside its tunnel, so the original's climber-turn-and-mine opening of the pit is replaced by climbers. |
+| 21 | The right sides of bowls 1 and 2 are squared off with a 5 px lip under each tunnel exit; the hatch and exit holes are widened. No blocker is needed; 54 of 66 are saved. | Our builder bumps its head inside a basher tunnel, so the bridges start on the lips; the sprites must not overlap the rings. |
 
 ## Resume here
 

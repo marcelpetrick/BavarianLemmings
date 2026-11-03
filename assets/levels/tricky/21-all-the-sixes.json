@@ -1,0 +1,178 @@
+{
+  "version": 1,
+  "id": "tricky-21",
+  "name": "level.tricky-21.name",
+  "inspiredBy": "Tricky 21 of the original ('All the 6\u2019s'): three giant sixes; a scout bashes out of the first bowl, bridges to the next six and bashes in and out again while a blocker holds the crowd. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 390,
+  "height": 160,
+  "lemmings": 66,
+  "toSave": 44,
+  "releaseRate": 66,
+  "timeSeconds": 360,
+  "skills": {
+    "climber": 66,
+    "floater": 66,
+    "bomber": 66,
+    "blocker": 66,
+    "builder": 66,
+    "basher": 66,
+    "miner": 66,
+    "digger": 66
+  },
+  "style": "fire",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 28],
+        [22, 6],
+        [55, 3],
+        [61, 18],
+        [38, 34],
+        [30, 60],
+        [30, 130],
+        [6, 140],
+        [0, 128]
+      ],
+      "rough": 0.4,
+      "seed": 1
+    },
+    {
+      "shape": "ellipse",
+      "x": 25,
+      "y": 55,
+      "w": 94,
+      "h": 90
+    },
+    {
+      "shape": "rect",
+      "x": 96,
+      "y": 84,
+      "w": 23,
+      "h": 52
+    },
+    {
+      "shape": "ellipse",
+      "x": 52,
+      "y": 75,
+      "w": 38,
+      "h": 37,
+      "erase": true
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [150, 28],
+        [172, 6],
+        [205, 3],
+        [211, 18],
+        [188, 34],
+        [180, 60],
+        [180, 130],
+        [156, 140],
+        [150, 128]
+      ],
+      "rough": 0.4,
+      "seed": 151
+    },
+    {
+      "shape": "ellipse",
+      "x": 152,
+      "y": 52,
+      "w": 116,
+      "h": 96
+    },
+    {
+      "shape": "rect",
+      "x": 250,
+      "y": 84,
+      "w": 18,
+      "h": 52
+    },
+    {
+      "shape": "ellipse",
+      "x": 205,
+      "y": 70,
+      "w": 40,
+      "h": 45,
+      "erase": true
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [280, 28],
+        [302, 6],
+        [335, 3],
+        [341, 18],
+        [318, 34],
+        [310, 60],
+        [310, 130],
+        [286, 140],
+        [280, 128]
+      ],
+      "rough": 0.4,
+      "seed": 281
+    },
+    {
+      "shape": "ellipse",
+      "x": 300,
+      "y": 55,
+      "w": 90,
+      "h": 90
+    },
+    {
+      "shape": "ellipse",
+      "x": 335,
+      "y": 65,
+      "w": 35,
+      "h": 50,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 119,
+      "y": 107,
+      "w": 6,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 268,
+      "y": 107,
+      "w": 5,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 37,
+      "y": 70,
+      "w": 46,
+      "h": 38,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 330,
+      "y": 92,
+      "w": 44,
+      "h": 23,
+      "erase": true
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 59,
+      "y": 96
+    },
+    {
+      "type": "exit",
+      "x": 352,
+      "y": 114
+    }
+  ]
+}
