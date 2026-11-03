@@ -1,0 +1,498 @@
+{
+  "version": 1,
+  "id": "tricky-16",
+  "name": "level.tricky-16.name",
+  "inspiredBy": "Tricky 16 of the original ('Luvly Jubly'), on the map of Fun 5 with one basher, one miner and bombers: the first lemming mines into the silver bar and bashes through the crystal mass; then bombers, one after another, blast a tunnel through a girder lattice to the exit inside it. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 848,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 40,
+  "releaseRate": 76,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 10,
+    "blocker": 0,
+    "builder": 0,
+    "basher": 1,
+    "miner": 1,
+    "digger": 0
+  },
+  "style": "crystal",
+  "startX": 60,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [15, 0],
+        [220, 0],
+        [215, 14],
+        [180, 25],
+        [120, 20],
+        [60, 26],
+        [15, 18]
+      ],
+      "rough": 0.7,
+      "seed": 1601
+    },
+    {
+      "shape": "piece",
+      "piece": "crystal",
+      "x": 62,
+      "y": 28,
+      "w": 50,
+      "h": 82,
+      "seed": 1
+    },
+    {
+      "shape": "blob",
+      "x": 40,
+      "y": 100,
+      "w": 100,
+      "h": 70,
+      "rough": 0.4,
+      "seed": 2
+    },
+    {
+      "shape": "rect",
+      "x": 140,
+      "y": 145,
+      "w": 165,
+      "h": 15
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 140,
+      "y": 145,
+      "w": 165,
+      "h": 15
+    },
+    {
+      "shape": "piece",
+      "piece": "crystal",
+      "x": 180,
+      "y": 128,
+      "w": 30,
+      "h": 18,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "crystal",
+      "x": 255,
+      "y": 123,
+      "w": 25,
+      "h": 23,
+      "seed": 3
+    },
+    {
+      "shape": "rect",
+      "x": 105,
+      "y": 76,
+      "w": 225,
+      "h": 16
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 105,
+      "y": 76,
+      "w": 225,
+      "h": 16
+    },
+    {
+      "shape": "rect",
+      "x": 250,
+      "y": 0,
+      "w": 12,
+      "h": 76
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 250,
+      "y": 0,
+      "w": 12,
+      "h": 76
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [300, 0],
+        [440, 0],
+        [440, 65],
+        [415, 70],
+        [415, 160],
+        [300, 160]
+      ],
+      "rough": 0.6,
+      "seed": 1602
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [386, 80],
+        [394, 80],
+        [434, 118],
+        [426, 118]
+      ]
+    },
+    {
+      "shape": "rect",
+      "x": 428,
+      "y": 115,
+      "w": 32,
+      "h": 32
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 428,
+      "y": 115,
+      "w": 32,
+      "h": 32
+    },
+    {
+      "shape": "rect",
+      "x": 460,
+      "y": 130,
+      "w": 315,
+      "h": 17
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 460,
+      "y": 130,
+      "w": 315,
+      "h": 17
+    },
+    {
+      "shape": "rect",
+      "x": 530,
+      "y": 122,
+      "w": 190,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 530,
+      "y": 122,
+      "w": 190,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 536,
+      "y": 114,
+      "w": 184,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 536,
+      "y": 114,
+      "w": 184,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 542,
+      "y": 106,
+      "w": 170,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 542,
+      "y": 106,
+      "w": 170,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 548,
+      "y": 98,
+      "w": 156,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 548,
+      "y": 98,
+      "w": 156,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 540,
+      "y": 90,
+      "w": 150,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 540,
+      "y": 90,
+      "w": 150,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 535,
+      "y": 82,
+      "w": 141,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 535,
+      "y": 82,
+      "w": 141,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 550,
+      "y": 74,
+      "w": 112,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 550,
+      "y": 74,
+      "w": 112,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 565,
+      "y": 66,
+      "w": 83,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 565,
+      "y": 66,
+      "w": 83,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 580,
+      "y": 58,
+      "w": 54,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 580,
+      "y": 58,
+      "w": 54,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 595,
+      "y": 50,
+      "w": 25,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 595,
+      "y": 50,
+      "w": 25,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 596,
+      "y": 96,
+      "w": 52,
+      "h": 34,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 435,
+      "y": 0,
+      "w": 155,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 435,
+      "y": 0,
+      "w": 155,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 445,
+      "y": 8,
+      "w": 135,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 445,
+      "y": 8,
+      "w": 135,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 455,
+      "y": 16,
+      "w": 115,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 455,
+      "y": 16,
+      "w": 115,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 465,
+      "y": 24,
+      "w": 95,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 465,
+      "y": 24,
+      "w": 95,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 475,
+      "y": 32,
+      "w": 75,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 475,
+      "y": 32,
+      "w": 75,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 485,
+      "y": 40,
+      "w": 55,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 485,
+      "y": 40,
+      "w": 55,
+      "h": 8
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [720, 0],
+        [730, 0],
+        [770, 45],
+        [760, 50]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [830, 0],
+        [840, 0],
+        [775, 50],
+        [768, 45]
+      ]
+    },
+    {
+      "shape": "ellipse",
+      "x": 750,
+      "y": 40,
+      "w": 30,
+      "h": 30
+    },
+    {
+      "shape": "rect",
+      "x": 760,
+      "y": 70,
+      "w": 12,
+      "h": 45
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 760,
+      "y": 70,
+      "w": 12,
+      "h": 45
+    },
+    {
+      "shape": "rect",
+      "x": 750,
+      "y": 115,
+      "w": 32,
+      "h": 15
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 750,
+      "y": 115,
+      "w": 32,
+      "h": 15
+    }
+  ],
+  "steel": [
+    {
+      "x": 460,
+      "y": 130,
+      "w": 315,
+      "h": 17
+    }
+  ],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 145,
+      "y": 40
+    },
+    {
+      "type": "exit",
+      "x": 622,
+      "y": 129
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "id": "tricky-18",
+  "name": "level.tricky-18.name",
+  "inspiredBy": "Tricky 18 of the original ('It\u2019s Lemmingentry Watson'), on the map of Fun 2 with almost no umbrellas: one digger stops short of the drop so the crowd turns round, one floater gets past, and a bomber opens the column. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 446,
+  "height": 160,
+  "lemmings": 10,
+  "toSave": 9,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 1,
+    "bomber": 1,
+    "blocker": 0,
+    "builder": 2,
+    "basher": 0,
+    "miner": 0,
+    "digger": 1
+  },
+  "style": "pillar",
+  "startX": 40,
+  "terrain": [
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 0,
+      "y": 104,
+      "w": 70,
+      "h": 46,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 8,
+      "y": 84,
+      "w": 50,
+      "h": 20,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 18,
+      "y": 68,
+      "w": 28,
+      "h": 16,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 30,
+      "y": 148,
+      "w": 390,
+      "h": 12
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 375,
+      "y": 92,
+      "w": 45,
+      "h": 56,
+      "seed": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 368,
+      "y": 86,
+      "w": 60,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 420,
+      "y": 132,
+      "w": 26,
+      "h": 28,
+      "seed": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 90,
+      "y": 55,
+      "w": 33,
+      "h": 95
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 80,
+      "y": 45,
+      "w": 53,
+      "h": 11
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 135,
+      "y": 68,
+      "w": 35,
+      "h": 82
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 125,
+      "y": 57,
+      "w": 55,
+      "h": 11
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 182,
+      "y": 80,
+      "w": 33,
+      "h": 70
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 172,
+      "y": 70,
+      "w": 53,
+      "h": 11
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [165, 0],
+        [390, 0],
+        [390, 30],
+        [350, 38],
+        [300, 34],
+        [262, 44],
+        [220, 36],
+        [190, 22]
+      ],
+      "rough": 0.7,
+      "seed": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 305,
+      "y": 0,
+      "w": 85,
+      "h": 60
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 236,
+      "y": 44,
+      "w": 40,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 248,
+      "y": 30,
+      "w": 16,
+      "h": 14
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 105,
+      "y": 18
+    },
+    {
+      "type": "exit",
+      "x": 345,
+      "y": 147
+    }
+  ]
+}

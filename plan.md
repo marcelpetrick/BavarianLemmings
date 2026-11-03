@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (93/160) :active, m6, after m5, 21h
+    M6 content, all four ratings (96/160) :active, m6, after m5, 20h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -286,10 +286,12 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
 - [x] M6.045 (L-01) Tricky 13: "Steel and Timber" (`tricky-13`), after the original's Tricky 13.
 - [x] M6.046 (L-01) Tricky 14: "The Scary Cave" (`tricky-14`), after the original's Tricky 14.
 - [x] M6.047 (L-01) Tricky 15: "One Crater Deeper" (`tricky-15`), after the original's Tricky 15.
-- [ ] M6.048 (L-01) Tricky 16: placeholder, name and `inspiredBy` filled in when built.
+- [x] M6.048 (L-01) Tricky 16: "Blast Through the Mesh" (`tricky-16`), after the original's Tricky
+      16.
 - [x] M6.049 (L-01) Tricky 17: "Just Two Bangs" (`tricky-17`), after the original's Tricky 17.
-- [ ] M6.050 (L-01) Tricky 18: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.051 (L-01) Tricky 19: placeholder, name and `inspiredBy` filled in when built.
+- [x] M6.050 (L-01) Tricky 18: "An Umbrella for One" (`tricky-18`), after the original's Tricky 18.
+- [x] M6.051 (L-01) Tricky 19: "A Tunnel to the Postcard" (`tricky-19`), after the original's
+      Tricky 19.
 - [ ] M6.052 (L-01) Tricky 20: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.053 (L-01) Tricky 21: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.054 (L-01) Tricky 22: placeholder, name and `inspiredBy` filled in when built.

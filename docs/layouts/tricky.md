@@ -1032,6 +1032,9 @@ built level departs from the notes above, the reason is listed here.
 | 13 | The puzzle area is rebuilt as a narrow steel pit (x 575-617) between a steel post and a steel wall. A climber crosses the wall first and bridges from the floating plank to the exit platform; then a builder zig-zags out of the pit, turning at both walls. The wall top lies at y 26, the plank at y 60. | The traced puzzle area is too uncertain to rebuild piece by piece; the pit keeps the steel walls, the zig-zag and the plank-to-platform bridge. |
 | 14 | The snake floors are rough terrain. One continuous ramp of seven builders spans the chasm and climbs over the floating island. The island has a flat top. The second blocker is freed by a ramp over it. | Below the island our builders bump their heads, so the island is reached from above. |
 | 15 | The shelf is 25 px thick, so three bombers at the same spot break through. | Our explosion radius is 16 px. |
+| 16 | Same map as Fun 5; five bombers carve the tunnel through the mesh, so 45 of 50 are saved (target 40). | Our blast radius is 16 px; each bomb is timed at the mesh face. |
+| 18 | Same map as Fun 2. The digger digs down inside column 3 and is bombed near the floor; the one lemming that walks past the shaft gets the floater. | Our digger cannot stop one pixel short of the edge, so the shaft holds the crowd instead. |
+| 19 | Same map as Fun 7, with the pillar slots closed. Save 49 of 50 (98 %) instead of 100 %. | One lemming is lost while the climber turns round with digger and builder and mines down to the basher's tunnel; the original's single-builder turn does not exist in our rules. |
 
 ## Resume here
 

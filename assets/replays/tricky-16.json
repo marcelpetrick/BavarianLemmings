@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "levelId": "tricky-16",
+  "entries": [
+    {
+      "tick": 137,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "miner"
+      }
+    },
+    {
+      "tick": 176,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 569,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 14,
+        "skill": "bomber"
+      }
+    },
+    {
+      "tick": 671,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 20,
+        "skill": "bomber"
+      }
+    },
+    {
+      "tick": 776,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 26,
+        "skill": "bomber"
+      }
+    },
+    {
+      "tick": 882,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 32,
+        "skill": "bomber"
+      }
+    },
+    {
+      "tick": 984,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 7,
+        "skill": "bomber"
+      }
+    }
+  ]
+}

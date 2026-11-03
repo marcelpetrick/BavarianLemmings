@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "levelId": "tricky-18",
+  "entries": [
+    {
+      "tick": 90,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 160,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 180,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "bomber"
+      }
+    }
+  ]
+}
