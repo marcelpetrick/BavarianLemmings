@@ -70,6 +70,9 @@ export class SpriteCache {
 export class TextRenderer {
   private readonly glyphs = new Map<string, HTMLCanvasElement>();
 
+  /** `onDraw` sees every string drawn; the test hook uses it to check what reaches the canvas. */
+  constructor(private readonly onDraw?: (text: string) => void) {}
+
   private glyph(char: string, color: string): HTMLCanvasElement {
     const key = `${color}${char}`;
     const cached = this.glyphs.get(key);
@@ -86,6 +89,7 @@ export class TextRenderer {
   }
 
   draw(ctx: Context, text: string, x: number, y: number, color: string): void {
+    this.onDraw?.(text);
     let cursor = Math.round(x);
     for (const char of text) {
       ctx.drawImage(this.glyph(char, color), cursor, Math.round(y));

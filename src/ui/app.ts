@@ -98,7 +98,9 @@ export interface AppDeps {
 export class App {
   private readonly canvas: HTMLCanvasElement;
   private readonly ctx: Context;
-  private readonly text = new TextRenderer();
+  private readonly text: TextRenderer;
+  /** Every string drawn in the latest frame, for the test hook (filled only with `?test`). */
+  private readonly renderedTexts: string[] = [];
   private readonly settings: Settings;
   private progress: Progress;
   private screen: ScreenId = 'title';
@@ -134,6 +136,8 @@ export class App {
 
   constructor(private readonly deps: AppDeps) {
     this.settings = { ...deps.settings };
+    this.text = new TextRenderer(deps.testHook ? (text) => this.renderedTexts.push(text) : undefined);
+    this.applyDocumentLanguage();
     this.progress = loadProgress(deps.store);
     this.canvas = document.createElement('canvas');
     this.canvas.id = 'game';
@@ -249,8 +253,14 @@ export class App {
     audio.setVoiceLanguage(this.settings.language);
   }
 
+  /** The page language follows the game language, so screen readers and the browser agree (vision I-01). */
+  private applyDocumentLanguage(): void {
+    document.documentElement.lang = this.settings.language;
+  }
+
   private saveSettings(): void {
     saveSettings(this.deps.store, this.settings);
+    this.applyDocumentLanguage();
     this.applyAudioSettings();
     this.resize();
   }
@@ -326,7 +336,7 @@ export class App {
       case 'settings': {
         const s = this.settings;
         const percentOf = (v: number): string => `${Math.round(v * 100)}%`;
-        const onOff = (v: boolean): string => (v ? 'ON' : 'OFF');
+        const onOff = (v: boolean): string => this.t(v ? 'settings.on' : 'settings.off');
         const entries: MenuEntry[] = [
           { id: 'language', label: `${this.t('settings.language')}: ${this.t(`language.${s.language}`)}` },
           { id: 'theme', label: `${this.t('settings.theme')}: ${this.t(`settings.theme.${s.theme}`)}` },
@@ -733,6 +743,7 @@ export class App {
   }
 
   private render(): void {
+    this.renderedTexts.length = 0;
     const ctx = this.ctx;
     const ui = this.theme.ui;
     ctx.setTransform(1, 0, 0, 1, 0, 0);
@@ -926,6 +937,10 @@ export class App {
     };
     const hook = {
       screen: (): ScreenId => this.screen,
+      /** The strings drawn on the canvas in the latest frame, panel and playfield included. */
+      renderedTexts: () => [...this.renderedTexts],
+      /** The visible menu items: id, label, enabled and logical bounds. */
+      menuItems: () => this.items.map((item) => ({ ...item })),
       /** Client coordinates of a menu item's centre, for real mouse clicks. */
       menuItem: (id: string) => {
         const item = this.items.find((i) => i.id === id);

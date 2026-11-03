@@ -35,6 +35,17 @@ export interface GameView {
   lemmings: LemmingView[];
 }
 
+/** A visible menu item as the app lays it out, in logical 320×200 pixels. */
+export interface MenuItemView {
+  id: string;
+  label: string;
+  enabled: boolean;
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+}
+
 interface Point {
   x: number;
   y: number;
@@ -56,6 +67,9 @@ function hook<T>(page: Page, expression: string): Promise<T> {
 }
 
 export const screen = (page: Page): Promise<string> => hook(page, 'screen()');
+/** The strings the app drew on the canvas in its latest frame. */
+export const renderedTexts = (page: Page): Promise<string[]> => hook(page, 'renderedTexts()');
+export const menuItems = (page: Page): Promise<MenuItemView[]> => hook(page, 'menuItems()');
 export const gameState = async (page: Page): Promise<GameView> => {
   const state = await hook<GameView | null>(page, 'state()');
   if (!state) throw new Error('no game running');
