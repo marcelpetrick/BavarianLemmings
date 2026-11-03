@@ -11,7 +11,7 @@
       }
     },
     {
-      "tick": 278,
+      "tick": 286,
       "intent": {
         "type": "assign",
         "lemmingId": 0,
@@ -19,10 +19,10 @@
       }
     },
     {
-      "tick": 527,
+      "tick": 540,
       "intent": {
         "type": "assign",
-        "lemmingId": 0,
+        "lemmingId": 3,
         "skill": "basher"
       }
     },
@@ -35,42 +35,42 @@
       }
     },
     {
-      "tick": 605,
+      "tick": 618,
       "intent": {
         "type": "assign",
-        "lemmingId": 0,
+        "lemmingId": 4,
         "skill": "builder"
       }
     },
     {
-      "tick": 805,
+      "tick": 811,
       "intent": {
         "type": "assign",
-        "lemmingId": 0,
+        "lemmingId": 17,
         "skill": "builder"
       }
     },
     {
-      "tick": 1007,
+      "tick": 1006,
       "intent": {
         "type": "assign",
-        "lemmingId": 0,
+        "lemmingId": 30,
         "skill": "builder"
       }
     },
     {
-      "tick": 1207,
+      "tick": 1199,
       "intent": {
         "type": "assign",
-        "lemmingId": 0,
+        "lemmingId": 35,
         "skill": "builder"
       }
     },
     {
-      "tick": 1463,
+      "tick": 1454,
       "intent": {
         "type": "assign",
-        "lemmingId": 31,
+        "lemmingId": 38,
         "skill": "basher"
       }
     }

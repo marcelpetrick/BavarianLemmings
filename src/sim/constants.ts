@@ -73,6 +73,12 @@ export const BUILDER_WARN_BRICKS = constant('BUILDER_WARN_BRICKS', 3, { unit: 'b
 export const SHRUG_TICKS = constant('SHRUG_TICKS', 8, { unit: 'ticks', status: 'unverified', source: COMMUNITY });
 export const BASH_REACH = constant('BASH_REACH', 4, { unit: 'px', status: 'unverified', source: COMMUNITY });
 export const BASH_LOOKAHEAD = constant('BASH_LOOKAHEAD', 8, { unit: 'px', status: 'unverified', source: COMMUNITY });
+export const BASH_SWING_TICKS = constant('BASH_SWING_TICKS', 16, {
+  unit: 'ticks',
+  status: 'unverified',
+  source:
+    'Lemmings Forums msg 36209 (ccexplore): a basher with nothing ahead ends after a whole stroke; our 32-frame bash animation holds two strokes',
+});
 export const BASH_TICKS_PER_PIXEL = constant('BASH_TICKS_PER_PIXEL', 2, { unit: 'ticks', status: 'unverified', source: COMMUNITY });
 export const MINE_TICKS_PER_STEP = constant('MINE_TICKS_PER_STEP', 3, { unit: 'ticks', status: 'unverified', source: COMMUNITY });
 export const DIG_HALF_WIDTH = constant('DIG_HALF_WIDTH', 4, { unit: 'px', status: 'unverified', source: COMMUNITY });

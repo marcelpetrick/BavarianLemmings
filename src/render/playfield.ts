@@ -137,7 +137,8 @@ export class PlayfieldRenderer {
 
   private drawLemming(ctx: Context, state: GameState, lemming: Lemming): void {
     const animation = lemmingAnimation(this.theme, lemming.action, lemming.id);
-    const tick = animation.loop ? state.tick + lemming.id : lemming.frame;
+    // A basher's swing starts when it is assigned, so the drawn stroke matches the simulated one (M6.150).
+    const tick = animation.loop && lemming.action !== 'bashing' ? state.tick + lemming.id : lemming.frame;
     this.sprites.draw(ctx, animation, tick, lemming.x, lemming.y, lemming.dir < 0);
     const digit = bomberDigit(lemming);
     if (digit > 0) this.text.draw(ctx, String(digit), lemming.x - 2, lemming.y - LEMMING_HEIGHT - 9, '#ffffff');

@@ -4,6 +4,7 @@
 import {
   BASH_LOOKAHEAD,
   BASH_REACH,
+  BASH_SWING_TICKS,
   BASH_TICKS_PER_PIXEL,
   DIG_HALF_WIDTH,
   DIG_TICKS_PER_ROW,
@@ -46,7 +47,7 @@ function clear(state: GameState, area: Area, dir: -1 | 0 | 1): void {
 
 /**
  * Basher (vision G-07): tunnels horizontally, one pixel every BASH_TICKS_PER_PIXEL ticks. It stops
- * when nothing is left to bash within BASH_LOOKAHEAD pixels, and turns round at steel or at a
+ * at the end of a swing (BASH_SWING_TICKS) when nothing is left to bash within BASH_LOOKAHEAD pixels, and turns round at steel or at a
  * one-way area pointing against it (G-08).
  */
 export function bash(state: GameState, lemming: Lemming): void {
@@ -59,6 +60,9 @@ export function bash(state: GameState, lemming: Lemming): void {
   }
   const rows = { y0: lemming.y - LEMMING_HEIGHT + 1, y1: lemming.y };
   if (!anySolid(state, { ...columns(lemming, 1, BASH_LOOKAHEAD), ...rows })) {
+    // As in the original, a basher with nothing ahead finishes its stroke before it walks on, so a
+    // basher assigned in the open visibly swings once at the air; the skill is spent either way.
+    if (lemming.frame % BASH_SWING_TICKS !== 0) return;
     setAction(lemming, 'walking');
     return;
   }

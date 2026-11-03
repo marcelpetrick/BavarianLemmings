@@ -27,7 +27,7 @@
       }
     },
     {
-      "tick": 468,
+      "tick": 474,
       "intent": {
         "type": "assign",
         "lemmingId": 1,
@@ -35,7 +35,7 @@
       }
     },
     {
-      "tick": 576,
+      "tick": 592,
       "intent": {
         "type": "assign",
         "lemmingId": 1,
@@ -43,7 +43,7 @@
       }
     },
     {
-      "tick": 776,
+      "tick": 792,
       "intent": {
         "type": "assign",
         "lemmingId": 1,
@@ -51,7 +51,7 @@
       }
     },
     {
-      "tick": 1027,
+      "tick": 1043,
       "intent": {
         "type": "assign",
         "lemmingId": 1,
@@ -59,7 +59,7 @@
       }
     },
     {
-      "tick": 1147,
+      "tick": 1157,
       "intent": {
         "type": "assign",
         "lemmingId": 2,

@@ -2,32 +2,221 @@
   "version": 1,
   "levelId": "fun-17",
   "entries": [
-    { "tick": 47, "intent": { "type": "assign", "lemmingId": 3, "skill": "floater" } },
-    { "tick": 50, "intent": { "type": "assign", "lemmingId": 0, "skill": "floater" } },
-    { "tick": 54, "intent": { "type": "assign", "lemmingId": 1, "skill": "floater" } },
-    { "tick": 58, "intent": { "type": "assign", "lemmingId": 2, "skill": "floater" } },
-    { "tick": 60, "intent": { "type": "assign", "lemmingId": 0, "skill": "basher" } },
-    { "tick": 66, "intent": { "type": "assign", "lemmingId": 4, "skill": "floater" } },
-    { "tick": 68, "intent": { "type": "assign", "lemmingId": 1, "skill": "basher" } },
-    { "tick": 70, "intent": { "type": "assign", "lemmingId": 5, "skill": "floater" } },
-    { "tick": 72, "intent": { "type": "assign", "lemmingId": 2, "skill": "basher" } },
-    { "tick": 74, "intent": { "type": "assign", "lemmingId": 6, "skill": "floater" } },
-    { "tick": 82, "intent": { "type": "assign", "lemmingId": 3, "skill": "basher" } },
-    { "tick": 82, "intent": { "type": "assign", "lemmingId": 8, "skill": "floater" } },
-    { "tick": 84, "intent": { "type": "assign", "lemmingId": 7, "skill": "blocker" } },
-    { "tick": 86, "intent": { "type": "assign", "lemmingId": 9, "skill": "floater" } },
-    { "tick": 90, "intent": { "type": "assign", "lemmingId": 10, "skill": "floater" } },
-    { "tick": 94, "intent": { "type": "assign", "lemmingId": 11, "skill": "floater" } },
-    { "tick": 98, "intent": { "type": "assign", "lemmingId": 12, "skill": "floater" } },
-    { "tick": 102, "intent": { "type": "assign", "lemmingId": 13, "skill": "floater" } },
-    { "tick": 106, "intent": { "type": "assign", "lemmingId": 14, "skill": "floater" } },
-    { "tick": 110, "intent": { "type": "assign", "lemmingId": 15, "skill": "floater" } },
-    { "tick": 114, "intent": { "type": "assign", "lemmingId": 16, "skill": "floater" } },
-    { "tick": 118, "intent": { "type": "assign", "lemmingId": 17, "skill": "floater" } },
-    { "tick": 122, "intent": { "type": "assign", "lemmingId": 18, "skill": "floater" } },
-    { "tick": 126, "intent": { "type": "assign", "lemmingId": 19, "skill": "floater" } },
-    { "tick": 130, "intent": { "type": "assign", "lemmingId": 20, "skill": "floater" } },
-    { "tick": 221, "intent": { "type": "assign", "lemmingId": 3, "skill": "builder" } },
-    { "tick": 426, "intent": { "type": "assign", "lemmingId": 7, "skill": "bomber" } }
+    {
+      "tick": 47,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 50,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 54,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 58,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 60,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 66,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 4,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 68,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 70,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 5,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 72,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 74,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 6,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 82,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 83,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 8,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 84,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 7,
+        "skill": "blocker"
+      }
+    },
+    {
+      "tick": 86,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 9,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 90,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 10,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 94,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 11,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 98,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 12,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 102,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 13,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 106,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 14,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 110,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 15,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 114,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 16,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 118,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 17,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 122,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 18,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 126,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 19,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 130,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 20,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 233,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 432,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 7,
+        "skill": "bomber"
+      }
+    }
   ]
 }

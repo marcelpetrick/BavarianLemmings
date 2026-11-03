@@ -19,7 +19,7 @@
       }
     },
     {
-      "tick": 359,
+      "tick": 373,
       "intent": {
         "type": "assign",
         "lemmingId": 0,
@@ -27,7 +27,7 @@
       }
     },
     {
-      "tick": 421,
+      "tick": 449,
       "intent": {
         "type": "assign",
         "lemmingId": 0,
@@ -35,7 +35,7 @@
       }
     },
     {
-      "tick": 484,
+      "tick": 526,
       "intent": {
         "type": "assign",
         "lemmingId": 0,
@@ -43,7 +43,7 @@
       }
     },
     {
-      "tick": 563,
+      "tick": 619,
       "intent": {
         "type": "assign",
         "lemmingId": 0,
@@ -51,7 +51,7 @@
       }
     },
     {
-      "tick": 765,
+      "tick": 821,
       "intent": {
         "type": "assign",
         "lemmingId": 0,
@@ -59,7 +59,7 @@
       }
     },
     {
-      "tick": 1031,
+      "tick": 1087,
       "intent": {
         "type": "assign",
         "lemmingId": 0,
@@ -67,7 +67,7 @@
       }
     },
     {
-      "tick": 1175,
+      "tick": 1225,
       "intent": {
         "type": "assign",
         "lemmingId": 1,

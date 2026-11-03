@@ -3,6 +3,7 @@
 
 import { describe, expect, it } from 'vitest';
 import {
+  BASH_SWING_TICKS,
   BASH_TICKS_PER_PIXEL,
   BOMBER_COUNTDOWN_SECONDS,
   BUILDER_BRICKS,
@@ -179,11 +180,14 @@ describe('basher (G-07, G-08)', () => {
     expect(basher.x).toBeGreaterThan(30);
   });
 
-  it('stops with nothing to bash', () => {
+  it('with nothing to bash, swings once in place and then walks on (M6.150)', () => {
+    // The original's basher does not keep the skill for the next wall: it swings once at the air.
     const basher = lemmingAt(5, 19, 'bashing');
     const state = stateWith(terrainFromArt(ground(60, 30, 20)), [basher]);
-    run(state, BASH_TICKS_PER_PIXEL);
-    expect(basher.action).toBe('walking');
+    run(state, BASH_SWING_TICKS - 1);
+    expect(basher).toMatchObject({ action: 'bashing', x: 5 });
+    run(state, 1);
+    expect(basher).toMatchObject({ action: 'walking', x: 5 });
   });
 
   it('turns round at steel and at a one-way wall pointing against it', () => {

@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (50/156) :active, m6, after m5, 32h
+    M6 content, all four ratings (52/156) :active, m6, after m5, 32h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -452,9 +452,9 @@ skill is spent (Lemmings Forums msg 36209, ccexplore's mechanics notes). A revie
 skills found four confirmed logic bugs. The owner asked for sequential work without subagents and
 a release at the end. Order:
 
-- [ ] M6.149 (L-01a) Integrate the finished level batches: Fun 01-20 rebuilt, Tricky 01-15,
+- [x] M6.149 (L-01a) Integrate the finished level batches: Fun 01-20 rebuilt, Tricky 01-15,
       Taxing 01-10, Mayhem 01-05; every replay wins.
-- [ ] M6.150 (G-07, V-06) A basher with nothing ahead finishes one full swing before it walks on,
+- [x] M6.150 (G-07, V-06) A basher with nothing ahead finishes one full swing before it walks on,
       as in the original; the swing length is a `constant()` with source; regression test.
 - [ ] M6.151 (G-05, G-11) A lemming in its "Oh no!" countdown falls when its ground is gone.
 - [ ] M6.152 (G-07) A builder falls when the ground under it is removed.

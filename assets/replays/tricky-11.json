@@ -83,7 +83,7 @@
       }
     },
     {
-      "tick": 1849,
+      "tick": 1863,
       "intent": {
         "type": "assign",
         "lemmingId": 1,
@@ -91,7 +91,7 @@
       }
     },
     {
-      "tick": 1921,
+      "tick": 1983,
       "intent": {
         "type": "assign",
         "lemmingId": 28,
@@ -99,7 +99,7 @@
       }
     },
     {
-      "tick": 2113,
+      "tick": 2175,
       "intent": {
         "type": "assign",
         "lemmingId": 28,

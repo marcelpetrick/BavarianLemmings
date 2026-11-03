@@ -2,18 +2,107 @@
   "version": 1,
   "levelId": "fun-20",
   "entries": [
-    { "tick": 77, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
-    { "tick": 107, "intent": { "type": "assign", "lemmingId": 1, "skill": "blocker" } },
-    { "tick": 166, "intent": { "type": "assign", "lemmingId": 2, "skill": "blocker" } },
-    { "tick": 371, "intent": { "type": "assign", "lemmingId": 0, "skill": "basher" } },
-    { "tick": 406, "intent": { "type": "assign", "lemmingId": 0, "skill": "basher" } },
-    { "tick": 431, "intent": { "type": "assign", "lemmingId": 0, "skill": "basher" } },
-    { "tick": 464, "intent": { "type": "assign", "lemmingId": 0, "skill": "basher" } },
-    { "tick": 489, "intent": { "type": "assign", "lemmingId": 0, "skill": "basher" } },
-    { "tick": 521, "intent": { "type": "assign", "lemmingId": 0, "skill": "basher" } },
-    { "tick": 546, "intent": { "type": "assign", "lemmingId": 0, "skill": "basher" } },
-    { "tick": 565, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
-    { "tick": 781, "intent": { "type": "assign", "lemmingId": 1, "skill": "bomber" } },
-    { "tick": 2775, "intent": { "type": "nuke" } }
+    {
+      "tick": 77,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 107,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "blocker"
+      }
+    },
+    {
+      "tick": 166,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "blocker"
+      }
+    },
+    {
+      "tick": 371,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 414,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 447,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 488,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 521,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 561,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 594,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 621,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 831,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "bomber"
+      }
+    },
+    {
+      "tick": 2825,
+      "intent": {
+        "type": "nuke"
+      }
+    }
   ]
 }

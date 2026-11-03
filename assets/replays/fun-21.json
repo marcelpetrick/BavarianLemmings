@@ -19,7 +19,7 @@
       }
     },
     {
-      "tick": 546,
+      "tick": 554,
       "intent": {
         "type": "assign",
         "lemmingId": 0,
@@ -27,7 +27,7 @@
       }
     },
     {
-      "tick": 682,
+      "tick": 698,
       "intent": {
         "type": "assign",
         "lemmingId": 0,
@@ -35,7 +35,7 @@
       }
     },
     {
-      "tick": 902,
+      "tick": 912,
       "intent": {
         "type": "assign",
         "lemmingId": 1,
