@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (55/157) :active, m6, after m5, 31h
+    M6 content, all four ratings (56/160) :active, m6, after m5, 32h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -458,12 +458,17 @@ a release at the end. Order:
       as in the original; the swing length is a `constant()` with source; regression test.
 - [x] M6.151 (G-05, G-11) A lemming in its "Oh no!" countdown falls when its ground is gone.
 - [x] M6.152 (G-07) A builder falls when the ground under it is removed.
-- [ ] M6.153 (G-07) A digger next to the level's left or right edge digs; pixels outside the
+- [x] M6.153 (G-07) A digger next to the level's left or right edge digs; pixels outside the
       level no longer count as steel for its dig row.
 - [ ] M6.154 (G-07, G-08) A miner stopped by steel or a wrong-way one-way area turns round, as
       the basher does.
 - [x] M6.157 (C-06) A release-rate button held while the browser draws no frame still counts every
       repeat that came due when the finger is lifted (the touch e2e test was flaky under load).
+- [ ] M6.158 (G-09) Water drowns a lemming that stands on its surface, not only one whose feet
+      are inside the water area (owner play-test 2026-11-03: lemmings walked over a moat).
+- [ ] M6.159 (G-09, L-01a) Level check: no water area lies buried under walkable terrain; fix
+      Taxing 02, whose pool sat 7 px under the floor, and every other level the check finds.
+- [ ] M6.160 (Q) `/updateDependencies`: pin, check upstream, update, pipeline green.
 - [ ] M6.155 (L-01a) Remaining levels built sequentially: Fun 21-30 rebuilt, Tricky 16-30,
       Taxing 11-30, Mayhem 06-30.
 - [ ] M6.156 (Q) Release the result as a tagged GitHub release.

@@ -105,7 +105,15 @@ export function mine(state: GameState, lemming: Lemming): void {
 export function dig(state: GameState, lemming: Lemming): void {
   lemming.frame += 1;
   if (lemming.frame % DIG_TICKS_PER_ROW !== 0) return;
-  const row = { x0: lemming.x - DIG_HALF_WIDTH, x1: lemming.x + DIG_HALF_WIDTH, y0: lemming.y + 1, y1: lemming.y + 1 };
+  // The hole stops at the level's side edges: pixels outside the level count as steel for walkers
+  // (they turn there), but a digger next to the edge must still dig its row inside the level.
+  const width = state.terrain.width;
+  const row = {
+    x0: Math.max(0, lemming.x - DIG_HALF_WIDTH),
+    x1: Math.min(width - 1, lemming.x + DIG_HALF_WIDTH),
+    y0: lemming.y + 1,
+    y1: lemming.y + 1,
+  };
   if (!anySolid(state, row)) {
     setAction(lemming, 'falling');
     return;

@@ -275,6 +275,16 @@ describe('miner (G-07)', () => {
 });
 
 describe('digger (G-07)', () => {
+  it('digs next to the left and right level edges (M6.153)', () => {
+    for (const x of [1, 38]) {
+      const digger = lemmingAt(x, 19, 'digging');
+      const state = stateWith(terrainFromArt(ground(40, 60, 20)), [digger]);
+      run(state, DIG_TICKS_PER_ROW * 3);
+      expect(digger, `x ${x}`).toMatchObject({ action: 'digging', y: 22 });
+      expect(isSolid(state.terrain, x, 20)).toBe(false);
+    }
+  });
+
   it('digs straight down and falls through the bottom of the layer', () => {
     const art = ground(40, 60, 20);
     for (let y = 30; y < 60; y += 1) art[y] = '.'.repeat(40);
