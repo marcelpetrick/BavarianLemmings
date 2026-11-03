@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "levelId": "tricky-10",
+  "entries": [
+    {
+      "tick": 96,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "blocker"
+      }
+    },
+    {
+      "tick": 99,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 205,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 289,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 289,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "blocker"
+      }
+    },
+    {
+      "tick": 396,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 396,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 5,
+        "skill": "blocker"
+      }
+    },
+    {
+      "tick": 481,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 553,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 4,
+        "skill": "blocker"
+      }
+    },
+    {
+      "tick": 588,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 724,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 836,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 950,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 32,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1057,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 35,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1142,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 32,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1249,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 35,
+        "skill": "builder"
+      }
+    }
+  ]
+}

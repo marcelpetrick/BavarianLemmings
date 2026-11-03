@@ -1,0 +1,432 @@
+{
+  "version": 1,
+  "id": "tricky-06",
+  "name": "level.tricky-06.name",
+  "inspiredBy": "Tricky 6 of the original ('Lemmingology'): only five lemmings, and every one must become an all-rounder, climbing the lips of four hanging troughs, floating down a deep drop and building two short bridges. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 1224,
+  "height": 160,
+  "lemmings": 5,
+  "toSave": 4,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 20,
+    "floater": 20,
+    "bomber": 20,
+    "blocker": 20,
+    "builder": 20,
+    "basher": 20,
+    "miner": 20,
+    "digger": 20
+  },
+  "style": "fire",
+  "startX": 330,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 0],
+        [1224, 0],
+        [1224, 8],
+        [900, 10],
+        [600, 7],
+        [300, 10],
+        [0, 8]
+      ],
+      "rough": 0.7,
+      "seed": 601
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 240,
+      "y": 6,
+      "w": 12,
+      "h": 24,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 560,
+      "y": 6,
+      "w": 10,
+      "h": 18,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 980,
+      "y": 6,
+      "w": 12,
+      "h": 26,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 109,
+      "y": 0,
+      "w": 6,
+      "h": 96,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 299,
+      "y": 0,
+      "w": 6,
+      "h": 96,
+      "seed": 2
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [80, 95],
+        [335, 95],
+        [330, 110],
+        [300, 118],
+        [120, 120],
+        [86, 108]
+      ],
+      "rough": 0.7,
+      "seed": 602
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 350,
+      "y": 6,
+      "w": 50,
+      "h": 62,
+      "seed": 4
+    },
+    {
+      "shape": "rect",
+      "x": 370,
+      "y": 60,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 345,
+      "y": 95,
+      "w": 65,
+      "h": 65,
+      "seed": 5
+    },
+    {
+      "shape": "rect",
+      "x": 400,
+      "y": 112,
+      "w": 60,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 400,
+      "y": 112,
+      "w": 60,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 410,
+      "y": 74,
+      "w": 25,
+      "h": 12
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 410,
+      "y": 74,
+      "w": 25,
+      "h": 12,
+      "seed": 1
+    },
+    {
+      "shape": "rect",
+      "x": 462,
+      "y": 74,
+      "w": 25,
+      "h": 12
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 462,
+      "y": 74,
+      "w": 25,
+      "h": 12,
+      "seed": 2
+    },
+    {
+      "shape": "rect",
+      "x": 422,
+      "y": 86,
+      "w": 53,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 422,
+      "y": 86,
+      "w": 53,
+      "h": 6,
+      "seed": 3
+    },
+    {
+      "shape": "rect",
+      "x": 483,
+      "y": 90,
+      "w": 25,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 483,
+      "y": 90,
+      "w": 25,
+      "h": 10,
+      "seed": 4
+    },
+    {
+      "shape": "rect",
+      "x": 535,
+      "y": 90,
+      "w": 25,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 535,
+      "y": 90,
+      "w": 25,
+      "h": 10,
+      "seed": 5
+    },
+    {
+      "shape": "rect",
+      "x": 495,
+      "y": 100,
+      "w": 53,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 495,
+      "y": 100,
+      "w": 53,
+      "h": 6,
+      "seed": 6
+    },
+    {
+      "shape": "rect",
+      "x": 575,
+      "y": 84,
+      "w": 25,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 575,
+      "y": 84,
+      "w": 25,
+      "h": 6,
+      "seed": 7
+    },
+    {
+      "shape": "rect",
+      "x": 625,
+      "y": 84,
+      "w": 25,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 625,
+      "y": 84,
+      "w": 25,
+      "h": 6,
+      "seed": 8
+    },
+    {
+      "shape": "rect",
+      "x": 587,
+      "y": 90,
+      "w": 51,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 587,
+      "y": 90,
+      "w": 51,
+      "h": 6,
+      "seed": 9
+    },
+    {
+      "shape": "rect",
+      "x": 640,
+      "y": 148,
+      "w": 25,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 640,
+      "y": 148,
+      "w": 25,
+      "h": 10,
+      "seed": 10
+    },
+    {
+      "shape": "rect",
+      "x": 690,
+      "y": 148,
+      "w": 25,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 690,
+      "y": 148,
+      "w": 25,
+      "h": 10,
+      "seed": 11
+    },
+    {
+      "shape": "rect",
+      "x": 652,
+      "y": 158,
+      "w": 51,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 652,
+      "y": 158,
+      "w": 51,
+      "h": 6,
+      "seed": 12
+    },
+    {
+      "shape": "rect",
+      "x": 728,
+      "y": 141,
+      "w": 74,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 728,
+      "y": 141,
+      "w": 74,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 758,
+      "y": 147,
+      "w": 12,
+      "h": 13
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 758,
+      "y": 147,
+      "w": 12,
+      "h": 13
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 815,
+      "y": 6,
+      "w": 55,
+      "h": 66,
+      "seed": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 800,
+      "y": 85,
+      "w": 85,
+      "h": 75,
+      "seed": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 922,
+      "y": 0,
+      "w": 6,
+      "h": 96,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 1107,
+      "y": 0,
+      "w": 6,
+      "h": 96,
+      "seed": 4
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [895, 95],
+        [1145, 95],
+        [1140, 108],
+        [1110, 117],
+        [930, 118],
+        [900, 108]
+      ],
+      "rough": 0.7,
+      "seed": 603
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 447,
+      "y": 50
+    },
+    {
+      "type": "exit",
+      "x": 765,
+      "y": 140
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 416,
+      "y": 102,
+      "w": 12,
+      "h": 10
+    }
+  ]
+}

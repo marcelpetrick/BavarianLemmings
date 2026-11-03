@@ -1,0 +1,316 @@
+{
+  "version": 1,
+  "id": "tricky-09",
+  "name": "level.tricky-09.name",
+  "inspiredBy": "Tricky 9 of the original ('They just keep on coming'): the crowd lands on a steel floor right above the exit, but the only way down leads far to the left; two blockers hold the crowd while a scout bridges the steel gap, drops to the ground, bashes a one-way rock and bridges a chasm back to the exit. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 949,
+  "height": 160,
+  "lemmings": 75,
+  "toSave": 70,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 20,
+    "floater": 20,
+    "bomber": 20,
+    "blocker": 20,
+    "builder": 20,
+    "basher": 20,
+    "miner": 20,
+    "digger": 20
+  },
+  "style": "dirt",
+  "startX": 330,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [90, 0],
+        [910, 0],
+        [910, 10],
+        [700, 13],
+        [500, 9],
+        [300, 12],
+        [90, 10]
+      ],
+      "rough": 0.8,
+      "seed": 901
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 160,
+      "y": 8,
+      "w": 10,
+      "h": 22,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 620,
+      "y": 8,
+      "w": 12,
+      "h": 20,
+      "seed": 2
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [45, 0],
+        [90, 0],
+        [92, 60],
+        [90, 110],
+        [100, 160],
+        [15, 160],
+        [40, 110],
+        [42, 60]
+      ],
+      "rough": 0.7,
+      "seed": 902
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 66,
+      "y": 20,
+      "w": 6,
+      "h": 80,
+      "seed": 1
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [88, 160],
+        [92, 134],
+        [120, 127],
+        [140, 127],
+        [180, 132],
+        [230, 130],
+        [270, 138],
+        [300, 136],
+        [300, 160]
+      ],
+      "rough": 0.6,
+      "seed": 903
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 183,
+      "y": 103,
+      "w": 32,
+      "h": 34,
+      "seed": 3
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [318, 160],
+        [318, 134],
+        [400, 136],
+        [470, 131],
+        [490, 128],
+        [520, 128],
+        [540, 132],
+        [620, 136],
+        [670, 134],
+        [670, 160]
+      ],
+      "rough": 0.6,
+      "seed": 904
+    },
+    {
+      "shape": "rect",
+      "x": 483,
+      "y": 93,
+      "w": 44,
+      "h": 35,
+      "erase": true
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [700, 160],
+        [700, 145],
+        [835, 145],
+        [835, 160]
+      ],
+      "rough": 0.6,
+      "seed": 905
+    },
+    {
+      "shape": "rect",
+      "x": 140,
+      "y": 68,
+      "w": 143,
+      "h": 24
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 140,
+      "y": 68,
+      "w": 143,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 308,
+      "y": 68,
+      "w": 432,
+      "h": 24
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 308,
+      "y": 68,
+      "w": 432,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 715,
+      "y": 92,
+      "w": 115,
+      "h": 24
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 715,
+      "y": 92,
+      "w": 115,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 788,
+      "y": 68,
+      "w": 47,
+      "h": 24
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 788,
+      "y": 68,
+      "w": 47,
+      "h": 24
+    },
+    {
+      "shape": "rect",
+      "x": 812,
+      "y": 44,
+      "w": 48,
+      "h": 24
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 812,
+      "y": 44,
+      "w": 48,
+      "h": 24
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 735,
+      "y": 10,
+      "w": 35,
+      "h": 55,
+      "seed": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 860,
+      "y": 62,
+      "w": 60,
+      "h": 98,
+      "seed": 5
+    },
+    {
+      "shape": "rect",
+      "x": 870,
+      "y": 90,
+      "w": 40,
+      "h": 70
+    }
+  ],
+  "steel": [
+    {
+      "x": 0,
+      "y": 138,
+      "w": 20,
+      "h": 22
+    },
+    {
+      "x": 140,
+      "y": 68,
+      "w": 143,
+      "h": 24
+    },
+    {
+      "x": 308,
+      "y": 68,
+      "w": 432,
+      "h": 24
+    },
+    {
+      "x": 715,
+      "y": 92,
+      "w": 115,
+      "h": 24
+    },
+    {
+      "x": 788,
+      "y": 68,
+      "w": 47,
+      "h": 24
+    },
+    {
+      "x": 812,
+      "y": 44,
+      "w": 48,
+      "h": 24
+    },
+    {
+      "x": 900,
+      "y": 140,
+      "w": 49,
+      "h": 20
+    }
+  ],
+  "oneWay": [
+    {
+      "x": 183,
+      "y": 100,
+      "w": 32,
+      "h": 37,
+      "dir": "right"
+    },
+    {
+      "x": 735,
+      "y": 10,
+      "w": 35,
+      "h": 55,
+      "dir": "left"
+    }
+  ],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 502,
+      "y": 40
+    },
+    {
+      "type": "exit",
+      "x": 505,
+      "y": 127
+    }
+  ]
+}

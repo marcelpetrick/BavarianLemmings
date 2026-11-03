@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "id": "tricky-10",
+  "name": "level.tricky-10.name",
+  "inspiredBy": "Tricky 10 of the original ('There's a lot of them about'): two hatches drop two crowds onto two platforms, each with a rock in the way; on each side blockers hold the crowd, a basher cuts through the rock and builders climb two pillars to the exit pillar in the middle. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 882,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 74,
+  "releaseRate": 60,
+  "timeSeconds": 480,
+  "skills": {
+    "climber": 20,
+    "floater": 20,
+    "bomber": 20,
+    "blocker": 20,
+    "builder": 20,
+    "basher": 20,
+    "miner": 20,
+    "digger": 20
+  },
+  "style": "fire",
+  "startX": 280,
+  "terrain": [
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 9,
+      "y": 0,
+      "w": 6,
+      "h": 135,
+      "seed": 1
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 135,
+      "w": 25,
+      "h": 25
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 0,
+      "y": 135,
+      "w": 25,
+      "h": 25
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 867,
+      "y": 0,
+      "w": 6,
+      "h": 135,
+      "seed": 2
+    },
+    {
+      "shape": "rect",
+      "x": 857,
+      "y": 135,
+      "w": 25,
+      "h": 25
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 857,
+      "y": 135,
+      "w": 25,
+      "h": 25
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [97, 108],
+        [352, 108],
+        [348, 118],
+        [320, 125],
+        [130, 125],
+        [100, 118]
+      ],
+      "rough": 0.3,
+      "seed": 1001
+    },
+    {
+      "shape": "blob",
+      "x": 183,
+      "y": 58,
+      "w": 58,
+      "h": 54,
+      "rough": 0.3,
+      "seed": 2
+    },
+    {
+      "shape": "rect",
+      "x": 377,
+      "y": 84,
+      "w": 24,
+      "h": 76
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 377,
+      "y": 84,
+      "w": 24,
+      "h": 76
+    },
+    {
+      "shape": "rect",
+      "x": 427,
+      "y": 67,
+      "w": 24,
+      "h": 93
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 427,
+      "y": 67,
+      "w": 24,
+      "h": 93
+    },
+    {
+      "shape": "rect",
+      "x": 477,
+      "y": 84,
+      "w": 24,
+      "h": 76
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 477,
+      "y": 84,
+      "w": 24,
+      "h": 76
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [527, 108],
+        [765, 108],
+        [762, 118],
+        [735, 125],
+        [560, 125],
+        [530, 118]
+      ],
+      "rough": 0.3,
+      "seed": 1002
+    },
+    {
+      "shape": "blob",
+      "x": 628,
+      "y": 62,
+      "w": 62,
+      "h": 50,
+      "rough": 0.3,
+      "seed": 3
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 137,
+      "y": 70
+    },
+    {
+      "type": "hatch",
+      "x": 729,
+      "y": 80
+    },
+    {
+      "type": "exit",
+      "x": 439,
+      "y": 66
+    }
+  ]
+}

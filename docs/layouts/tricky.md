@@ -1022,10 +1022,15 @@ built level departs from the notes above, the reason is listed here.
 | 03 | The ribcage arches form the pit floor. One long builder ramp starts at the left end of the logs and crosses the gap. The plateau top is at y 46, the exit at x 615. Two blockers hold the crowd on the hill; a miner frees the left one. | A fall from the hill face to the pit bottom would be fatal. Our ramps are flat, so one straight ramp is the readable way up. |
 | 04 | The diagonal end of steel block B is normal terrain. The right side of the one-way rock is a walkable slope. The island and the stub stand closer together. A second climber opens the one-way rock after the islands are bridged. | Steel areas are rectangles. A drop from the rock top would be fatal. Our ramps cover only 24 px per builder. |
 | 05 | The hanging balls rest on the walkway. Ball arch 2 is a low hump. A small crystal block closes the walkway on the left. The blocker is freed by a bomber. | The traced ball height lay below the walkway. Our basher turns at a blocker. |
+| 06 | Trough 3 lies only 6 px above trough 2; trough 4 and the exit ledge lie lower (y 148 and y 141). The flame jet is a fire trap on a ledge left of trough 1. Skill counts stay at 20 each. | A builder ramp from trough 2 passes over the lip of trough 3 instead of bumping into it; the drop from trough 3 still needs a floater. |
+| 07 | Each capital reaches left to the shaft of the next higher column. The plinth reaches column 1. Two lemmings may be lost while the dig starts. | Our walkers would fall into the 3 px slit between capital and shaft. The bash exits at the foot of column 1. |
+| 08 | The floors lie at y 140, 112, 88, 64 and 40, and their open ends are moved so that a ramp started at a side wall meets them. The hatch hangs at y 129. A ramp over the holding blocker frees the crowd. | Our ramps rise 1 px per 2 px. The hatch sprite must fit between two floors. A bomb would hole the thin floor above the lava. |
+| 09 | The left ground below the end of steel floor 1 rises to y 127; no short ramp is needed. The right blocker stays. | The drop of 59 px is just survivable under our 60 px limit. |
+| 10 | The outer pillars end at y 84. On each side a ramp of two builders over the holding blocker frees the crowd. The save target is 74 (92 %). | One ramp of two builders then reaches each pillar. A bomb would leave a crater in the platform. |
 
 ## Resume here
 
-- State: phase A done. Phase B in progress: Tricky 01 to 05 are built in
+- State: phase A done. Phase B in progress: Tricky 01 to 10 are built in
   `assets/levels/tricky/`, with replays in `assets/replays/` and names in
   `src/i18n/locales/levels/tricky.*.json`.
 - Open `[verify]` items: Tricky 06 (release rate, skill counts, flame trap), 07 and 08 and 13 and
