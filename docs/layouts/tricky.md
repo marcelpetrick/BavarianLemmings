@@ -1035,6 +1035,9 @@ built level departs from the notes above, the reason is listed here.
 | 16 | Same map as Fun 5; five bombers carve the tunnel through the mesh, so 45 of 50 are saved (target 40). | Our blast radius is 16 px; each bomb is timed at the mesh face. |
 | 18 | Same map as Fun 2. The digger digs down inside column 3 and is bombed near the floor; the one lemming that walks past the shaft gets the floater. | Our digger cannot stop one pixel short of the edge, so the shaft holds the crowd instead. |
 | 19 | Same map as Fun 7, with the pillar slots closed. Save 49 of 50 (98 %) instead of 100 %. | One lemming is lost while the climber turns round with digger and builder and mines down to the basher's tunnel; the original's single-builder turn does not exist in our rules. |
+| 26 | Same map as Fun 9. Save 79 of 80 (99 %) instead of 100 %. | Two short builder ramps turn the crowd, but with release rate 99 one walker reaches the fire first. |
+| 22 | Same map as Fun 8. Two bombers blow the holding pit right of the hatch; one builder ramps the crowd out to the left. | Follows the traced idea; a single crater of our 16 px blast is too shallow to hold walkers. |
+| 30 | Same map as Fun 14, pillars 2 and 4 widened to their traced boxes. Miners cut down through pillars 1, 3 and 5; two bashers (instead of none) open pillars 2 and 4 from the top of the builder stairs. | Our miner cannot turn round inside its own tunnel, so the original's turn-and-mine step up onto the high logs is replaced by a basher. |
 
 ## Resume here
 

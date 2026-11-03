@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "levelId": "tricky-26",
+  "entries": [
+    {
+      "tick": 110,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 116,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 140,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "builder"
+      }
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "id": "tricky-26",
+  "name": "level.tricky-26.name",
+  "inspiredBy": "Tricky 26 of the original ('I have a cunning plan'), on the map of Fun 9: every lemming must be saved, so blockers or short ramps hold the crowd while two bashers open the column. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 320,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 79,
+  "releaseRate": 99,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 2,
+    "floater": 2,
+    "bomber": 5,
+    "blocker": 10,
+    "builder": 20,
+    "basher": 2,
+    "miner": 2,
+    "digger": 2
+  },
+  "style": "marble",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 4
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 4],
+        [35, 4],
+        [0, 35]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [285, 4],
+        [320, 4],
+        [320, 35]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 125],
+        [0, 160],
+        [35, 160]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [320, 125],
+        [320, 160],
+        [285, 160]
+      ]
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 4,
+      "y": 134,
+      "w": 14,
+      "h": 12,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 302,
+      "y": 134,
+      "w": 14,
+      "h": 12,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 50,
+      "y": 123,
+      "w": 230,
+      "h": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 150,
+      "y": 70,
+      "w": 17,
+      "h": 53
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 135,
+      "y": 63,
+      "w": 48,
+      "h": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 151,
+      "y": 52,
+      "w": 16,
+      "h": 11,
+      "seed": 3
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 80,
+      "y": 88
+    },
+    {
+      "type": "exit",
+      "x": 233,
+      "y": 122
+    }
+  ]
+}

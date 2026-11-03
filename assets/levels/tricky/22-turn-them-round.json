@@ -1,0 +1,488 @@
+{
+  "version": 1,
+  "id": "tricky-22",
+  "name": "level.tricky-22.name",
+  "inspiredBy": "Tricky 22 of the original ('Turn around young lemmings!'), on the map of Fun 8 without blockers: two bombers blow a pit next to the hatch to catch the crowd, and a builder ramps it out the other way. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 1571,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 72,
+  "releaseRate": 88,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 1,
+    "bomber": 15,
+    "blocker": 0,
+    "builder": 20,
+    "basher": 1,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "pillar",
+  "startX": 440,
+  "terrain": [
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 0,
+      "y": 0,
+      "w": 120,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 120,
+      "y": 0,
+      "w": 120,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 240,
+      "y": 0,
+      "w": 120,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 360,
+      "y": 0,
+      "w": 120,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 480,
+      "y": 0,
+      "w": 120,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 600,
+      "y": 0,
+      "w": 120,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 720,
+      "y": 0,
+      "w": 120,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 840,
+      "y": 0,
+      "w": 120,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 960,
+      "y": 0,
+      "w": 120,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 1080,
+      "y": 0,
+      "w": 120,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 1200,
+      "y": 0,
+      "w": 120,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 1320,
+      "y": 0,
+      "w": 120,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 1440,
+      "y": 0,
+      "w": 120,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 1560,
+      "y": 0,
+      "w": 120,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 60,
+      "y": 10,
+      "w": 60,
+      "h": 14,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 330,
+      "y": 10,
+      "w": 70,
+      "h": 20,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 640,
+      "y": 10,
+      "w": 80,
+      "h": 16,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 940,
+      "y": 10,
+      "w": 70,
+      "h": 20,
+      "seed": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 1380,
+      "y": 10,
+      "w": 80,
+      "h": 12,
+      "seed": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 26,
+      "y": 112,
+      "w": 78,
+      "h": 6,
+      "seed": 6
+    },
+    {
+      "shape": "rect",
+      "x": 32,
+      "y": 118,
+      "w": 4,
+      "h": 42
+    },
+    {
+      "shape": "rect",
+      "x": 94,
+      "y": 118,
+      "w": 4,
+      "h": 42
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 30,
+      "y": 36,
+      "w": 70,
+      "h": 76,
+      "seed": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 26,
+      "y": 30,
+      "w": 78,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 171,
+      "y": 112,
+      "w": 58,
+      "h": 6,
+      "seed": 7
+    },
+    {
+      "shape": "rect",
+      "x": 177,
+      "y": 118,
+      "w": 4,
+      "h": 42
+    },
+    {
+      "shape": "rect",
+      "x": 219,
+      "y": 118,
+      "w": 4,
+      "h": 42
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 175,
+      "y": 46,
+      "w": 50,
+      "h": 66,
+      "seed": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 171,
+      "y": 40,
+      "w": 58,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 341,
+      "y": 112,
+      "w": 48,
+      "h": 6,
+      "seed": 8
+    },
+    {
+      "shape": "rect",
+      "x": 347,
+      "y": 118,
+      "w": 4,
+      "h": 42
+    },
+    {
+      "shape": "rect",
+      "x": 379,
+      "y": 118,
+      "w": 4,
+      "h": 42
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 345,
+      "y": 56,
+      "w": 40,
+      "h": 56,
+      "seed": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 341,
+      "y": 50,
+      "w": 48,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 135,
+      "y": 10,
+      "w": 25,
+      "h": 150
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 250,
+      "y": 10,
+      "w": 25,
+      "h": 150
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 300,
+      "y": 10,
+      "w": 20,
+      "h": 150
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 410,
+      "y": 10,
+      "w": 20,
+      "h": 150
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 495,
+      "y": 10,
+      "w": 25,
+      "h": 150
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1050,
+      "y": 10,
+      "w": 20,
+      "h": 150
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1100,
+      "y": 10,
+      "w": 20,
+      "h": 150
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1300,
+      "y": 10,
+      "w": 20,
+      "h": 150
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 500,
+      "y": 100,
+      "w": 335,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 600,
+      "y": 120,
+      "w": 20,
+      "h": 40
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 720,
+      "y": 120,
+      "w": 20,
+      "h": 40
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 815,
+      "y": 120,
+      "w": 20,
+      "h": 40
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 860,
+      "y": 100,
+      "w": 40,
+      "h": 20
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 882,
+      "y": 82,
+      "w": 18,
+      "h": 18,
+      "seed": 9
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 870,
+      "y": 120,
+      "w": 20,
+      "h": 40
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 1200,
+      "y": 70,
+      "w": 90,
+      "h": 90
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 1192,
+      "y": 62,
+      "w": 106,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 1330,
+      "y": 90,
+      "w": 90,
+      "h": 70
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 1440,
+      "y": 40,
+      "w": 131,
+      "h": 120
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 1330,
+      "y": 84,
+      "w": 90,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 1150,
+      "y": 136,
+      "w": 40,
+      "h": 24,
+      "seed": 3
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 575,
+      "y": 45
+    },
+    {
+      "type": "exit",
+      "x": 540,
+      "y": 99
+    }
+  ]
+}

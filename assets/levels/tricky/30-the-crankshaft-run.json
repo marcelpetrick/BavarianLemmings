@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "id": "tricky-30",
+  "name": "level.tricky-30.name",
+  "inspiredBy": "Tricky 30 of the original ('The Crankshaft'), on the map of Fun 14 without bashers: miners cut through the columns, builders climb the logs, and the clock is short. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 950,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 72,
+  "releaseRate": 20,
+  "timeSeconds": 240,
+  "skills": {
+    "climber": 10,
+    "floater": 10,
+    "bomber": 10,
+    "blocker": 10,
+    "builder": 10,
+    "basher": 2,
+    "miner": 10,
+    "digger": 10
+  },
+  "style": "pillar",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "blob",
+      "x": -20,
+      "y": 120,
+      "w": 110,
+      "h": 55,
+      "rough": 0.5,
+      "seed": 141
+    },
+    {
+      "shape": "blob",
+      "x": 880,
+      "y": 125,
+      "w": 90,
+      "h": 50,
+      "rough": 0.5,
+      "seed": 142
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 62,
+      "y": 50,
+      "w": 18,
+      "h": 55,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 64,
+      "y": 60,
+      "w": 147,
+      "h": 35,
+      "seed": 1
+    },
+    {
+      "shape": "blob",
+      "x": 195,
+      "y": 140,
+      "w": 53,
+      "h": 32,
+      "rough": 0.5,
+      "seed": 205
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 205,
+      "y": 25,
+      "w": 33,
+      "h": 125
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 232,
+      "y": 103,
+      "w": 119,
+      "h": 32,
+      "seed": 2
+    },
+    {
+      "shape": "blob",
+      "x": 333,
+      "y": 140,
+      "w": 54,
+      "h": 32,
+      "rough": 0.5,
+      "seed": 343
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 343,
+      "y": 25,
+      "w": 34,
+      "h": 125
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 371,
+      "y": 60,
+      "w": 103,
+      "h": 35,
+      "seed": 3
+    },
+    {
+      "shape": "blob",
+      "x": 457,
+      "y": 140,
+      "w": 53,
+      "h": 32,
+      "rough": 0.5,
+      "seed": 467
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 467,
+      "y": 25,
+      "w": 33,
+      "h": 125
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 494,
+      "y": 103,
+      "w": 112,
+      "h": 32,
+      "seed": 4
+    },
+    {
+      "shape": "blob",
+      "x": 589,
+      "y": 140,
+      "w": 53,
+      "h": 32,
+      "rough": 0.5,
+      "seed": 599
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 599,
+      "y": 25,
+      "w": 33,
+      "h": 125
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 626,
+      "y": 60,
+      "w": 102,
+      "h": 35,
+      "seed": 5
+    },
+    {
+      "shape": "blob",
+      "x": 712,
+      "y": 140,
+      "w": 53,
+      "h": 32,
+      "rough": 0.5,
+      "seed": 722
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 722,
+      "y": 25,
+      "w": 33,
+      "h": 125
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 749,
+      "y": 103,
+      "w": 149,
+      "h": 32,
+      "seed": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 890,
+      "y": 95,
+      "w": 17,
+      "h": 55,
+      "seed": 2
+    },
+    {
+      "shape": "rect",
+      "x": 343,
+      "y": 25,
+      "w": 6,
+      "h": 125
+    },
+    {
+      "shape": "rect",
+      "x": 599,
+      "y": 25,
+      "w": 6,
+      "h": 125
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 100,
+      "y": 22
+    },
+    {
+      "type": "exit",
+      "x": 865,
+      "y": 102
+    },
+    {
+      "type": "water",
+      "x": 0,
+      "y": 145,
+      "w": 950,
+      "h": 15
+    }
+  ]
+}

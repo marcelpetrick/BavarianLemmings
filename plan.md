@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (96/160) :active, m6, after m5, 20h
+    M6 content, all four ratings (99/160) :active, m6, after m5, 19h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -294,15 +294,15 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
       Tricky 19.
 - [ ] M6.052 (L-01) Tricky 20: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.053 (L-01) Tricky 21: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.054 (L-01) Tricky 22: placeholder, name and `inspiredBy` filled in when built.
+- [x] M6.054 (L-01) Tricky 22: "Turn Them Round" (`tricky-22`), after the original's Tricky 22.
 - [ ] M6.055 (L-01) Tricky 23: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.056 (L-01) Tricky 24: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.057 (L-01) Tricky 25: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.058 (L-01) Tricky 26: placeholder, name and `inspiredBy` filled in when built.
+- [x] M6.058 (L-01) Tricky 26: "Ramps for Walls" (`tricky-26`), after the original's Tricky 26.
 - [ ] M6.059 (L-01) Tricky 27: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.060 (L-01) Tricky 28: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.061 (L-01) Tricky 29: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.062 (L-01) Tricky 30: placeholder, name and `inspiredBy` filled in when built.
+- [x] M6.062 (L-01) Tricky 30: "Down, Up, Down Again" (`tricky-30`), after the original's Tricky 30.
 - [x] M6.063 (L-01) Taxing 01: "Third Time Lucky" (`taxing-01`), after the original's Taxing 1.
 - [x] M6.064 (L-01) Taxing 02: "Traps Everywhere" (`taxing-02`), after the original's Taxing 2.
 - [x] M6.065 (L-01) Taxing 03: "A Stairway Up" (`taxing-03`), after the original's Taxing 3.
