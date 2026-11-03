@@ -102,6 +102,15 @@ describe('bomber (G-05)', () => {
     expect(isSolid(state.terrain, 15, 16)).toBe(true);
   });
 
+  it('drops while saying oh no when its ground is gone, and lands on the floor (M6.151)', () => {
+    const lemming = lemmingAt(15, 14, 'ohNo');
+    const state = stateWith(terrainFromArt(ground(40, 30, 20)), [lemming]);
+    run(state, 1);
+    expect(lemming.y).toBeGreaterThan(14);
+    run(state, OH_NO_TICKS - 2);
+    expect(lemming).toMatchObject({ action: 'ohNo', y: 19, removed: false });
+  });
+
   it('explodes at once while falling', () => {
     const bomber = lemmingAt(15, 2, 'falling');
     bomber.bombTicks = 1;

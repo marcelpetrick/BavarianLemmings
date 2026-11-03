@@ -1,11 +1,11 @@
 // SPDX-FileCopyrightText: 2026 Marcel Petrick <mail@marcelpetrick.it>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-import { EXPLOSION_RADIUS, LEMMING_HEIGHT, OH_NO_TICKS } from '../constants';
+import { EXPLOSION_RADIUS, FALL_SPEED, LEMMING_HEIGHT, OH_NO_TICKS } from '../constants';
 import { setAction, type Lemming } from '../lemming';
 import { emit, type GameState } from '../state';
 import { removePixel } from '../terrain';
-import { removeLemming } from './common';
+import { hasGround, removeLemming } from './common';
 
 const AIRBORNE = new Set(['falling', 'floating', 'climbing']);
 
@@ -29,8 +29,13 @@ export function countDown(state: GameState, lemming: Lemming): boolean {
   return false;
 }
 
+/**
+ * "Oh no!" before the blast. As in the original, the lemming drops when the ground under it goes
+ * (for example when a neighbour's blast takes its floor during a nuke) instead of hanging in the air.
+ */
 export function ohNo(state: GameState, lemming: Lemming): void {
   lemming.frame += 1;
+  for (let pixel = 0; pixel < FALL_SPEED && !hasGround(state, lemming); pixel += 1) lemming.y += 1;
   if (lemming.frame >= OH_NO_TICKS) explode(state, lemming);
 }
 
