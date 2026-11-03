@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (50/148) :active, m6, after m5, 30h
+    M6 content, all four ratings (50/156) :active, m6, after m5, 32h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -443,6 +443,28 @@ hit with the mouse.
 - [x] M6.147 (Q) Release the result as a tagged GitHub release (v0.1.59).
 - [x] M6.148 (A-01, C-05) A frame stepped while paused (`.`) hands its events to the sound layer,
       so a skill assigned during pause still sounds; regression test in Vitest.
+
+### Skill fidelity and content run (2026-11-03)
+
+The owner asked whether a basher keeps its skill until it meets a wall. In the original it does
+not: an assigned basher starts at once, swings once at air when nothing is ahead, walks on, and the
+skill is spent (Lemmings Forums msg 36209, ccexplore's mechanics notes). A review of all eight
+skills found four confirmed logic bugs. The owner asked for sequential work without subagents and
+a release at the end. Order:
+
+- [ ] M6.149 (L-01a) Integrate the finished level batches: Fun 01-20 rebuilt, Tricky 01-15,
+      Taxing 01-10, Mayhem 01-05; every replay wins.
+- [ ] M6.150 (G-07, V-06) A basher with nothing ahead finishes one full swing before it walks on,
+      as in the original; the swing length is a `constant()` with source; regression test.
+- [ ] M6.151 (G-05, G-11) A lemming in its "Oh no!" countdown falls when its ground is gone.
+- [ ] M6.152 (G-07) A builder falls when the ground under it is removed.
+- [ ] M6.153 (G-07) A digger next to the level's left or right edge digs; pixels outside the
+      level no longer count as steel for its dig row.
+- [ ] M6.154 (G-07, G-08) A miner stopped by steel or a wrong-way one-way area turns round, as
+      the basher does.
+- [ ] M6.155 (L-01a) Remaining levels built sequentially: Fun 21-30 rebuilt, Tricky 16-30,
+      Taxing 11-30, Mayhem 06-30.
+- [ ] M6.156 (Q) Release the result as a tagged GitHub release.
 
 ## M7: delivery
 
