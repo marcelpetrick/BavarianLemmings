@@ -1027,10 +1027,15 @@ built level departs from the notes above, the reason is listed here.
 | 08 | The floors lie at y 140, 112, 88, 64 and 40, and their open ends are moved so that a ramp started at a side wall meets them. The hatch hangs at y 129. A ramp over the holding blocker frees the crowd. | Our ramps rise 1 px per 2 px. The hatch sprite must fit between two floors. A bomb would hole the thin floor above the lava. |
 | 09 | The left ground below the end of steel floor 1 rises to y 127; no short ramp is needed. The right blocker stays. | The drop of 59 px is just survivable under our 60 px limit. |
 | 10 | The outer pillars end at y 84. On each side a ramp of two builders over the holding blocker frees the crowd. The save target is 74 (92 %). | One ramp of two builders then reaches each pillar. A bomb would leave a crater in the platform. |
+| 11 | The attic floor lies at y 152. The ramp starts at x 116, so seven builders end level with the floor of window 1. A second blocker holds the crowd; a ramp over it frees the crowd. | Seven builders rise exactly 84 px. A bomb would break the thin floor or the ramp. |
+| 12 | The shaft is open down to its floor at y 145; the crossbar is only a band on the two pillars. The brick block ends at x 340, so the floaters land on pillar 2. One builder bridges to the exit pillar; no miner or basher is needed. | The drop into the shaft then needs an umbrella, as in the original. The solution order in the notes is uncertain (`[verify]`); this is our reading of it. |
+| 13 | The puzzle area is rebuilt as a narrow steel pit (x 575-617) between a steel post and a steel wall. A climber crosses the wall first and bridges from the floating plank to the exit platform; then a builder zig-zags out of the pit, turning at both walls. The wall top lies at y 26, the plank at y 60. | The traced puzzle area is too uncertain to rebuild piece by piece; the pit keeps the steel walls, the zig-zag and the plank-to-platform bridge. |
+| 14 | The snake floors are rough terrain. One continuous ramp of seven builders spans the chasm and climbs over the floating island. The island has a flat top. The second blocker is freed by a ramp over it. | Below the island our builders bump their heads, so the island is reached from above. |
+| 15 | The shelf is 25 px thick, so three bombers at the same spot break through. | Our explosion radius is 16 px. |
 
 ## Resume here
 
-- State: phase A done. Phase B in progress: Tricky 01 to 10 are built in
+- State: phase A done. Phase B in progress: Tricky 01 to 15 are built in
   `assets/levels/tricky/`, with replays in `assets/replays/` and names in
   `src/i18n/locales/levels/tricky.*.json`.
 - Open `[verify]` items: Tricky 06 (release rate, skill counts, flame trap), 07 and 08 and 13 and

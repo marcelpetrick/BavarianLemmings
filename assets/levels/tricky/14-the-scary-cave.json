@@ -1,0 +1,316 @@
+{
+  "version": 1,
+  "id": "tricky-14",
+  "name": "level.tricky-14.name",
+  "inspiredBy": "Tricky 14 of the original ('MENACING !!'): a grisly cave of a stone hand, a skull and a ribcage; one basher clears the way, blockers hold the crowd at both ends, and one long builder ramp spans the chasm and climbs over the floating island with the exit, with barely enough bricks. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 960,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 70,
+  "releaseRate": 50,
+  "timeSeconds": 360,
+  "skills": {
+    "climber": 10,
+    "floater": 10,
+    "bomber": 15,
+    "blocker": 10,
+    "builder": 15,
+    "basher": 15,
+    "miner": 15,
+    "digger": 15
+  },
+  "style": "fire",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 0],
+        [960, 0],
+        [960, 22],
+        [880, 25],
+        [800, 20],
+        [700, 26],
+        [600, 21],
+        [500, 25],
+        [400, 20],
+        [300, 25],
+        [200, 21],
+        [100, 25],
+        [0, 22]
+      ],
+      "rough": 0.8,
+      "seed": 1401
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 60,
+      "y": 18,
+      "w": 10,
+      "h": 40,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 350,
+      "y": 18,
+      "w": 8,
+      "h": 34,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 640,
+      "y": 18,
+      "w": 10,
+      "h": 42,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 900,
+      "y": 18,
+      "w": 8,
+      "h": 30,
+      "seed": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 100,
+      "y": 15,
+      "w": 6,
+      "h": 50,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 125,
+      "y": 15,
+      "w": 6,
+      "h": 40,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 845,
+      "y": 15,
+      "w": 6,
+      "h": 55,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 870,
+      "y": 15,
+      "w": 6,
+      "h": 45,
+      "seed": 4
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [215, 15],
+        [275, 15],
+        [268, 40],
+        [262, 55],
+        [255, 40],
+        [248, 55],
+        [240, 40],
+        [232, 52],
+        [225, 38]
+      ],
+      "rough": 0.4,
+      "seed": 1402
+    },
+    {
+      "shape": "blob",
+      "x": 297,
+      "y": 30,
+      "w": 28,
+      "h": 42,
+      "rough": 0.4,
+      "seed": 5
+    },
+    {
+      "shape": "blob",
+      "x": 495,
+      "y": 40,
+      "w": 15,
+      "h": 28,
+      "rough": 0.4,
+      "seed": 6
+    },
+    {
+      "shape": "blob",
+      "x": 592,
+      "y": 45,
+      "w": 63,
+      "h": 35,
+      "rough": 0.4,
+      "seed": 7
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [5, 160],
+        [8, 145],
+        [80, 143],
+        [200, 144],
+        [350, 142],
+        [480, 144],
+        [570, 143],
+        [570, 160]
+      ],
+      "rough": 0.7,
+      "seed": 1403
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [138, 150],
+        [140, 120],
+        [135, 100],
+        [145, 92],
+        [152, 112],
+        [158, 94],
+        [166, 112],
+        [174, 94],
+        [182, 112],
+        [190, 98],
+        [196, 120],
+        [194, 150]
+      ],
+      "rough": 0.4,
+      "seed": 1404
+    },
+    {
+      "shape": "ellipse",
+      "x": 210,
+      "y": 108,
+      "w": 90,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 226,
+      "y": 118,
+      "w": 20,
+      "h": 14,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 264,
+      "y": 118,
+      "w": 20,
+      "h": 14,
+      "erase": true
+    },
+    {
+      "shape": "rect",
+      "x": 250,
+      "y": 134,
+      "w": 8,
+      "h": 6,
+      "erase": true
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 285,
+      "y": 110,
+      "w": 6,
+      "h": 35,
+      "seed": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 455,
+      "y": 108,
+      "w": 55,
+      "h": 42,
+      "seed": 1
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [662, 160],
+        [664, 144],
+        [760, 143],
+        [880, 145],
+        [955, 143],
+        [955, 160]
+      ],
+      "rough": 0.7,
+      "seed": 1405
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 815,
+      "y": 107,
+      "w": 6,
+      "h": 38,
+      "seed": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 840,
+      "y": 112,
+      "w": 6,
+      "h": 33,
+      "seed": 7
+    },
+    {
+      "shape": "blob",
+      "x": 728,
+      "y": 82,
+      "w": 70,
+      "h": 30,
+      "rough": 0.3,
+      "seed": 8
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [735, 84],
+        [790, 84],
+        [790, 95],
+        [735, 95]
+      ]
+    },
+    {
+      "shape": "rect",
+      "x": 735,
+      "y": 50,
+      "w": 55,
+      "h": 34,
+      "erase": true
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 55,
+      "y": 100
+    },
+    {
+      "type": "exit",
+      "x": 765,
+      "y": 83
+    }
+  ]
+}

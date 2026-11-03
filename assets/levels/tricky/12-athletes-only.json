@@ -1,0 +1,306 @@
+{
+  "version": 1,
+  "id": "tricky-12",
+  "name": "level.tricky-12.name",
+  "inspiredBy": "Tricky 12 of the original ('Bitter Lemming'): the crowd drops into a deep shaft, so every lemming needs an umbrella, then climbs out over a brick block, floats down onto a pillar and crosses to the exit pillar on one builder's bridge. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 541,
+  "height": 160,
+  "lemmings": 50,
+  "toSave": 40,
+  "releaseRate": 1,
+  "timeSeconds": 480,
+  "skills": {
+    "climber": 50,
+    "floater": 50,
+    "bomber": 20,
+    "blocker": 20,
+    "builder": 20,
+    "basher": 20,
+    "miner": 20,
+    "digger": 20
+  },
+  "style": "marble",
+  "startX": 60,
+  "terrain": [
+    {
+      "shape": "blob",
+      "x": 0,
+      "y": -30,
+      "w": 95,
+      "h": 75,
+      "rough": 0.3,
+      "seed": 1
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [165, 0],
+        [541, 0],
+        [541, 8],
+        [420, 10],
+        [300, 7],
+        [165, 9]
+      ],
+      "rough": 0.6,
+      "seed": 1201
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 410,
+      "y": 4,
+      "w": 110,
+      "h": 74,
+      "seed": 3
+    },
+    {
+      "shape": "blob",
+      "x": 10,
+      "y": 50,
+      "w": 98,
+      "h": 120,
+      "rough": 0.3,
+      "seed": 2
+    },
+    {
+      "shape": "blob",
+      "x": 415,
+      "y": 92,
+      "w": 140,
+      "h": 80,
+      "rough": 0.3,
+      "seed": 3
+    },
+    {
+      "shape": "rect",
+      "x": 108,
+      "y": 30,
+      "w": 17,
+      "h": 130
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 108,
+      "y": 30,
+      "w": 17,
+      "h": 130
+    },
+    {
+      "shape": "rect",
+      "x": 140,
+      "y": 33,
+      "w": 17,
+      "h": 127
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 140,
+      "y": 33,
+      "w": 17,
+      "h": 127
+    },
+    {
+      "shape": "rect",
+      "x": 108,
+      "y": 80,
+      "w": 17,
+      "h": 16
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 108,
+      "y": 80,
+      "w": 17,
+      "h": 16
+    },
+    {
+      "shape": "rect",
+      "x": 140,
+      "y": 80,
+      "w": 17,
+      "h": 16
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 140,
+      "y": 80,
+      "w": 17,
+      "h": 16
+    },
+    {
+      "shape": "rect",
+      "x": 108,
+      "y": 145,
+      "w": 49,
+      "h": 15
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 108,
+      "y": 145,
+      "w": 49,
+      "h": 15
+    },
+    {
+      "shape": "rect",
+      "x": 157,
+      "y": 33,
+      "w": 183,
+      "h": 62
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 157,
+      "y": 33,
+      "w": 183,
+      "h": 62
+    },
+    {
+      "shape": "rect",
+      "x": 157,
+      "y": 95,
+      "w": 63,
+      "h": 33
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 157,
+      "y": 95,
+      "w": 63,
+      "h": 33
+    },
+    {
+      "shape": "rect",
+      "x": 220,
+      "y": 45,
+      "w": 16,
+      "h": 50,
+      "erase": true
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [155, 160],
+        [160, 146],
+        [250, 145],
+        [330, 147],
+        [400, 145],
+        [400, 160]
+      ],
+      "rough": 0.7,
+      "seed": 1202
+    },
+    {
+      "shape": "rect",
+      "x": 255,
+      "y": 120,
+      "w": 17,
+      "h": 40
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 255,
+      "y": 120,
+      "w": 17,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 240,
+      "y": 113,
+      "w": 47,
+      "h": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 240,
+      "y": 113,
+      "w": 47,
+      "h": 7
+    },
+    {
+      "shape": "rect",
+      "x": 312,
+      "y": 128,
+      "w": 18,
+      "h": 32
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 312,
+      "y": 128,
+      "w": 18,
+      "h": 32
+    },
+    {
+      "shape": "rect",
+      "x": 297,
+      "y": 121,
+      "w": 48,
+      "h": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 297,
+      "y": 121,
+      "w": 48,
+      "h": 7
+    },
+    {
+      "shape": "rect",
+      "x": 383,
+      "y": 120,
+      "w": 17,
+      "h": 40
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 383,
+      "y": 120,
+      "w": 17,
+      "h": 40
+    },
+    {
+      "shape": "rect",
+      "x": 367,
+      "y": 112,
+      "w": 45,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 367,
+      "y": 112,
+      "w": 45,
+      "h": 8
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 132,
+      "y": 20
+    },
+    {
+      "type": "exit",
+      "x": 390,
+      "y": 111
+    }
+  ]
+}

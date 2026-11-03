@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "id": "tricky-15",
+  "name": "level.tricky-15.name",
+  "inspiredBy": "Tricky 15 of the original ('Ozone friendly Lemmings'), on the map of Fun 1 with only bombers: the lemmings pace to and fro on a thick shelf; bombers exploding at the same spot deepen one crater until it breaks through, and the survivors drop to the exit below. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 510,
+  "height": 160,
+  "lemmings": 10,
+  "toSave": 6,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 5,
+    "blocker": 0,
+    "builder": 0,
+    "basher": 0,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "dirt",
+  "startX": 100,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [20, 0],
+        [470, 0],
+        [470, 13],
+        [380, 16],
+        [300, 12],
+        [200, 16],
+        [100, 12],
+        [20, 14]
+      ],
+      "rough": 0.8,
+      "seed": 1501
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 270,
+      "y": 12,
+      "w": 10,
+      "h": 18,
+      "seed": 1
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [20, 0],
+        [150, 0],
+        [158, 40],
+        [155, 80],
+        [132, 100],
+        [128, 110],
+        [60, 110],
+        [58, 100],
+        [30, 70]
+      ],
+      "rough": 0.7,
+      "seed": 1502
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 160],
+        [0, 115],
+        [40, 108],
+        [135, 110],
+        [137, 160]
+      ],
+      "rough": 0.7,
+      "seed": 1503
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [150, 75],
+        [400, 75],
+        [404, 86],
+        [396, 98],
+        [380, 100],
+        [160, 100],
+        [150, 95]
+      ],
+      "rough": 0.4,
+      "seed": 1504
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [330, 0],
+        [400, 0],
+        [402, 40],
+        [398, 78],
+        [330, 78]
+      ],
+      "rough": 0.6,
+      "seed": 1505
+    },
+    {
+      "shape": "rect",
+      "x": 150,
+      "y": 75,
+      "w": 250,
+      "h": 20
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [420, 0],
+        [465, 0],
+        [466, 100],
+        [470, 130],
+        [510, 132],
+        [510, 160],
+        [400, 160],
+        [400, 132],
+        [418, 128],
+        [419, 100]
+      ],
+      "rough": 0.7,
+      "seed": 1506
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [133, 160],
+        [133, 125],
+        [250, 125],
+        [400, 125],
+        [400, 140],
+        [500, 140],
+        [500, 160]
+      ],
+      "rough": 0.5,
+      "seed": 1507
+    },
+    {
+      "shape": "rect",
+      "x": 342,
+      "y": 95,
+      "w": 40,
+      "h": 30,
+      "erase": true
+    },
+    {
+      "shape": "piece",
+      "piece": "tuft",
+      "x": 180,
+      "y": 117,
+      "w": 16,
+      "h": 8,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 452,
+      "y": 128,
+      "w": 26,
+      "h": 14,
+      "seed": 2
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 217,
+      "y": 50
+    },
+    {
+      "type": "exit",
+      "x": 362,
+      "y": 124
+    }
+  ]
+}

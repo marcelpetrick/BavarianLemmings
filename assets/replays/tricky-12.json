@@ -1,0 +1,814 @@
+{
+  "version": 1,
+  "levelId": "tricky-12",
+  "entries": [
+    {
+      "tick": 35,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 36,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 88,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 89,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 141,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 142,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 194,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 195,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 247,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 4,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 248,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 4,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 300,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 5,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 301,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 5,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 353,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 6,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 354,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 6,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 406,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 7,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 407,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 7,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 459,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 8,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 460,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 8,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 512,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 9,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 513,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 9,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 565,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 10,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 566,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 10,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 574,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 618,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 11,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 619,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 11,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 671,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 12,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 672,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 12,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 724,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 13,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 725,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 13,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 777,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 14,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 778,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 14,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 830,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 15,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 831,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 15,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 883,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 16,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 884,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 16,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 936,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 17,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 937,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 17,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 989,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 18,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 990,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 18,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1042,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 19,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1043,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 19,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1095,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 20,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1096,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 20,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1148,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 21,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1149,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 21,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1201,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 22,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1202,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 22,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1254,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 23,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1255,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 23,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1307,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 24,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1308,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 24,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1360,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 25,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1361,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 25,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1413,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 26,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1414,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 26,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1466,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 27,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1467,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 27,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1519,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 28,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1520,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 28,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1572,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 29,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1573,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 29,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1625,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 30,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1626,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 30,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1678,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 31,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1679,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 31,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1731,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 32,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1732,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 32,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1784,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 33,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1785,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 33,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1837,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 34,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1838,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 34,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1890,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 35,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1891,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 35,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1943,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 36,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1944,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 36,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1996,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 37,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 1997,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 37,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 2049,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 38,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 2050,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 38,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 2102,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 39,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 2103,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 39,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 2155,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 40,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 2156,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 40,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 2208,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 41,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 2209,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 41,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 2261,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 42,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 2262,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 42,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 2314,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 43,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 2315,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 43,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 2367,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 44,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 2368,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 44,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 2420,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 45,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 2421,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 45,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 2473,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 46,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 2474,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 46,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 2526,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 47,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 2527,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 47,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 2579,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 48,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 2580,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 48,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 2632,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 49,
+        "skill": "floater"
+      }
+    },
+    {
+      "tick": 2633,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 49,
+        "skill": "climber"
+      }
+    }
+  ]
+}

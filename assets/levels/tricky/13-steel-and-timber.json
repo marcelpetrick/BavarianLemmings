@@ -1,0 +1,772 @@
+{
+  "version": 1,
+  "id": "tricky-13",
+  "name": "level.tricky-13.name",
+  "inspiredBy": "Tricky 13 of the original ('Lemming Drops'): the crowd drops into a narrow pit between steel posts in a forest of golden pipes; one builder zig-zags up between the two walls, turning at each, and bridges from a floating plank to the exit platform over the water. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 1572,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 56,
+  "releaseRate": 1,
+  "timeSeconds": 480,
+  "skills": {
+    "climber": 20,
+    "floater": 20,
+    "bomber": 20,
+    "blocker": 20,
+    "builder": 50,
+    "basher": 20,
+    "miner": 20,
+    "digger": 20
+  },
+  "style": "pillar",
+  "startX": 440,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 20,
+      "y": 30,
+      "w": 20,
+      "h": 130
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 20,
+      "y": 30,
+      "w": 20,
+      "h": 130,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 20,
+      "y": 10,
+      "w": 90,
+      "h": 40,
+      "seed": 1
+    },
+    {
+      "shape": "rect",
+      "x": 90,
+      "y": 30,
+      "w": 20,
+      "h": 130
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 90,
+      "y": 30,
+      "w": 20,
+      "h": 130,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 40,
+      "y": 120,
+      "w": 50,
+      "h": 40,
+      "seed": 1
+    },
+    {
+      "shape": "rect",
+      "x": 150,
+      "y": 30,
+      "w": 20,
+      "h": 130
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 150,
+      "y": 30,
+      "w": 20,
+      "h": 130,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 150,
+      "y": 10,
+      "w": 90,
+      "h": 40,
+      "seed": 3
+    },
+    {
+      "shape": "rect",
+      "x": 220,
+      "y": 30,
+      "w": 20,
+      "h": 130
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 220,
+      "y": 30,
+      "w": 20,
+      "h": 130,
+      "seed": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 170,
+      "y": 120,
+      "w": 50,
+      "h": 40,
+      "seed": 3
+    },
+    {
+      "shape": "rect",
+      "x": 280,
+      "y": 30,
+      "w": 20,
+      "h": 130
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 280,
+      "y": 30,
+      "w": 20,
+      "h": 130,
+      "seed": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 280,
+      "y": 10,
+      "w": 90,
+      "h": 40,
+      "seed": 5
+    },
+    {
+      "shape": "rect",
+      "x": 350,
+      "y": 30,
+      "w": 20,
+      "h": 130
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 350,
+      "y": 30,
+      "w": 20,
+      "h": 130,
+      "seed": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 300,
+      "y": 120,
+      "w": 50,
+      "h": 40,
+      "seed": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "ramp",
+      "x": 400,
+      "y": 112,
+      "w": 60,
+      "h": 48,
+      "seed": 1
+    },
+    {
+      "shape": "rect",
+      "x": 940,
+      "y": 30,
+      "w": 20,
+      "h": 130
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 940,
+      "y": 30,
+      "w": 20,
+      "h": 130,
+      "seed": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 940,
+      "y": 10,
+      "w": 90,
+      "h": 40,
+      "seed": 7
+    },
+    {
+      "shape": "rect",
+      "x": 1010,
+      "y": 30,
+      "w": 20,
+      "h": 130
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1010,
+      "y": 30,
+      "w": 20,
+      "h": 130,
+      "seed": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 960,
+      "y": 120,
+      "w": 50,
+      "h": 40,
+      "seed": 7
+    },
+    {
+      "shape": "rect",
+      "x": 1080,
+      "y": 30,
+      "w": 20,
+      "h": 130
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1080,
+      "y": 30,
+      "w": 20,
+      "h": 130,
+      "seed": 9
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 1080,
+      "y": 10,
+      "w": 90,
+      "h": 40,
+      "seed": 9
+    },
+    {
+      "shape": "rect",
+      "x": 1150,
+      "y": 30,
+      "w": 20,
+      "h": 130
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1150,
+      "y": 30,
+      "w": 20,
+      "h": 130,
+      "seed": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 1100,
+      "y": 120,
+      "w": 50,
+      "h": 40,
+      "seed": 9
+    },
+    {
+      "shape": "rect",
+      "x": 1220,
+      "y": 30,
+      "w": 20,
+      "h": 130
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1220,
+      "y": 30,
+      "w": 20,
+      "h": 130,
+      "seed": 11
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 1220,
+      "y": 10,
+      "w": 90,
+      "h": 40,
+      "seed": 11
+    },
+    {
+      "shape": "rect",
+      "x": 1290,
+      "y": 30,
+      "w": 20,
+      "h": 130
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1290,
+      "y": 30,
+      "w": 20,
+      "h": 130,
+      "seed": 12
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 1240,
+      "y": 120,
+      "w": 50,
+      "h": 40,
+      "seed": 11
+    },
+    {
+      "shape": "rect",
+      "x": 1360,
+      "y": 30,
+      "w": 20,
+      "h": 130
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1360,
+      "y": 30,
+      "w": 20,
+      "h": 130,
+      "seed": 13
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 1360,
+      "y": 10,
+      "w": 90,
+      "h": 40,
+      "seed": 13
+    },
+    {
+      "shape": "rect",
+      "x": 1430,
+      "y": 30,
+      "w": 20,
+      "h": 130
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1430,
+      "y": 30,
+      "w": 20,
+      "h": 130,
+      "seed": 14
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 1380,
+      "y": 120,
+      "w": 50,
+      "h": 40,
+      "seed": 13
+    },
+    {
+      "shape": "rect",
+      "x": 1500,
+      "y": 30,
+      "w": 20,
+      "h": 130
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1500,
+      "y": 30,
+      "w": 20,
+      "h": 130
+    },
+    {
+      "shape": "blob",
+      "x": 505,
+      "y": -6,
+      "w": 55,
+      "h": 16,
+      "rough": 0.4,
+      "seed": 1
+    },
+    {
+      "shape": "blob",
+      "x": 645,
+      "y": -6,
+      "w": 45,
+      "h": 14,
+      "rough": 0.4,
+      "seed": 2
+    },
+    {
+      "shape": "blob",
+      "x": 710,
+      "y": -8,
+      "w": 120,
+      "h": 23,
+      "rough": 0.4,
+      "seed": 3
+    },
+    {
+      "shape": "rect",
+      "x": 528,
+      "y": 68,
+      "w": 7,
+      "h": 47
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 528,
+      "y": 68,
+      "w": 7,
+      "h": 47
+    },
+    {
+      "shape": "rect",
+      "x": 528,
+      "y": 108,
+      "w": 32,
+      "h": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 528,
+      "y": 108,
+      "w": 32,
+      "h": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 535,
+      "y": 115,
+      "w": 25,
+      "h": 45,
+      "seed": 2
+    },
+    {
+      "shape": "rect",
+      "x": 560,
+      "y": 20,
+      "w": 15,
+      "h": 88
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 560,
+      "y": 20,
+      "w": 15,
+      "h": 88
+    },
+    {
+      "shape": "rect",
+      "x": 575,
+      "y": 84,
+      "w": 42,
+      "h": 24
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 575,
+      "y": 84,
+      "w": 42,
+      "h": 24
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 580,
+      "y": 108,
+      "w": 25,
+      "h": 52,
+      "seed": 3,
+      "flip": true
+    },
+    {
+      "shape": "rect",
+      "x": 617,
+      "y": 26,
+      "w": 13,
+      "h": 82
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 617,
+      "y": 26,
+      "w": 13,
+      "h": 82
+    },
+    {
+      "shape": "rect",
+      "x": 630,
+      "y": 26,
+      "w": 30,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 630,
+      "y": 26,
+      "w": 30,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 655,
+      "y": 60,
+      "w": 152,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 655,
+      "y": 60,
+      "w": 152,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 628,
+      "y": 108,
+      "w": 13,
+      "h": 52
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 628,
+      "y": 108,
+      "w": 13,
+      "h": 52
+    },
+    {
+      "shape": "rect",
+      "x": 668,
+      "y": 104,
+      "w": 14,
+      "h": 56
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 668,
+      "y": 104,
+      "w": 14,
+      "h": 56
+    },
+    {
+      "shape": "rect",
+      "x": 668,
+      "y": 104,
+      "w": 58,
+      "h": 14
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 668,
+      "y": 104,
+      "w": 58,
+      "h": 14
+    },
+    {
+      "shape": "rect",
+      "x": 744,
+      "y": 104,
+      "w": 13,
+      "h": 14
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 744,
+      "y": 104,
+      "w": 13,
+      "h": 14
+    },
+    {
+      "shape": "rect",
+      "x": 748,
+      "y": 118,
+      "w": 8,
+      "h": 37
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 748,
+      "y": 118,
+      "w": 8,
+      "h": 37
+    },
+    {
+      "shape": "rect",
+      "x": 695,
+      "y": 155,
+      "w": 62,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 695,
+      "y": 155,
+      "w": 62,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 785,
+      "y": 105,
+      "w": 35,
+      "h": 45,
+      "seed": 4
+    },
+    {
+      "shape": "rect",
+      "x": 772,
+      "y": 150,
+      "w": 38,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 772,
+      "y": 150,
+      "w": 38,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 812,
+      "y": 138,
+      "w": 24,
+      "h": 22
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 812,
+      "y": 138,
+      "w": 24,
+      "h": 22
+    },
+    {
+      "shape": "rect",
+      "x": 817,
+      "y": 88,
+      "w": 80,
+      "h": 15
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 817,
+      "y": 88,
+      "w": 80,
+      "h": 15
+    }
+  ],
+  "steel": [
+    {
+      "x": 560,
+      "y": 20,
+      "w": 15,
+      "h": 88
+    },
+    {
+      "x": 575,
+      "y": 84,
+      "w": 42,
+      "h": 24
+    },
+    {
+      "x": 617,
+      "y": 26,
+      "w": 13,
+      "h": 82
+    },
+    {
+      "x": 628,
+      "y": 108,
+      "w": 13,
+      "h": 52
+    },
+    {
+      "x": 668,
+      "y": 104,
+      "w": 14,
+      "h": 56
+    },
+    {
+      "x": 668,
+      "y": 104,
+      "w": 58,
+      "h": 14
+    },
+    {
+      "x": 744,
+      "y": 104,
+      "w": 13,
+      "h": 14
+    },
+    {
+      "x": 772,
+      "y": 150,
+      "w": 38,
+      "h": 10
+    },
+    {
+      "x": 812,
+      "y": 138,
+      "w": 24,
+      "h": 22
+    }
+  ],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 596,
+      "y": 25
+    },
+    {
+      "type": "exit",
+      "x": 857,
+      "y": 87
+    },
+    {
+      "type": "water",
+      "x": 520,
+      "y": 150,
+      "w": 380,
+      "h": 10
+    }
+  ]
+}
