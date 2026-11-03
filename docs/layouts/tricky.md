@@ -1,9 +1,10 @@
 # Layout notes: Tricky 01-30 (plan M6.130)
 
-> Living document. Last update: 2026-10-12.
+> Living document. Last update: 2026-11-03.
 > Purpose: one traced layout per original Tricky level, so that phase B can rebuild each level
 > with our own terrain toolkit (vision L-01a, owner decision Q-C1).
-> Status: phase A done (research and notes). Phase B (level JSON) has not started.
+> Status: phase A done (research and notes). Phase B (level JSON, replays, names) is in progress;
+> see "Phase B simplifications" for every place where a built level departs from these notes.
 
 ## How to read this document
 
@@ -1008,16 +1009,33 @@ sixth mines down while walking left and builds when the tunnel is deep enough, w
 turning point. Athletes mine through each further column; the next athlete turns at the hole and
 mines a step down so the crowd can follow. Raise the release rate; the clock is short.
 
+## Phase B simplifications
+
+Our simulation differs from the original in a few rules: a builder ramp rises 1 px per 2 px, a
+fall of more than 60 px kills, a basher turns at a blocker, and steel areas are rectangles. Where a
+built level departs from the notes above, the reason is listed here.
+
+| Level | Departure from the notes | Reason |
+| --- | --- | --- |
+| 01 | The hanging moss is drawn as small stalactites. The mound under the exit is a flat top at y 118. | A tuft cannot hang. The exit needs a flat floor. |
+| 02 | Both girders are 8 px thick; the upper girder lies at y 56. | With our 60 px fall limit, walking off is fatal and a dug hole makes the fall just survivable. |
+| 03 | The ribcage arches form the pit floor. One long builder ramp starts at the left end of the logs and crosses the gap. The plateau top is at y 46, the exit at x 615. Two blockers hold the crowd on the hill; a miner frees the left one. | A fall from the hill face to the pit bottom would be fatal. Our ramps are flat, so one straight ramp is the readable way up. |
+| 04 | The diagonal end of steel block B is normal terrain. The right side of the one-way rock is a walkable slope. The island and the stub stand closer together. A second climber opens the one-way rock after the islands are bridged. | Steel areas are rectangles. A drop from the rock top would be fatal. Our ramps cover only 24 px per builder. |
+| 05 | The hanging balls rest on the walkway. Ball arch 2 is a low hump. A small crystal block closes the walkway on the left. The blocker is freed by a bomber. | The traced ball height lay below the walkway. Our basher turns at a blocker. |
+
 ## Resume here
 
-- State: phase A done. All 30 Tricky levels have a traced layout, numbers, skills and a solution
-  idea. Phase B (level JSON in `assets/levels/tricky/`, replays, locale names) has not started.
+- State: phase A done. Phase B in progress: Tricky 01 to 05 are built in
+  `assets/levels/tricky/`, with replays in `assets/replays/` and names in
+  `src/i18n/locales/levels/tricky.*.json`.
 - Open `[verify]` items: Tricky 06 (release rate, skill counts, flame trap), 07 and 08 and 13 and
   27 (water and lava not drawn on the maps), 10 and 24 (save target), 12 (solution order),
   14 (whole level; the image may be another version), 28 (exact exit position).
-- Check: `npx markdownlint-cli2 docs/layouts/tricky.md`.
+- Check: `npx markdownlint-cli2 docs/layouts/tricky.md` and `npx vitest run tests/levels`.
+  `BL_LEVEL=tricky npm run levels:preview` renders the built levels to `.tools/level-previews/`.
 - Restart: fetch the wiki pages again with the MediaWiki API (`action=parse&prop=wikitext`),
   follow the `next` links from "This should be a doddle!", and download the map files named above
   into a scratch folder outside the repository. Never commit them.
-- Next: phase B builds each level with the toolkit (plan M6.126), compares it with the reference
-  side by side using the preview tool (plan M6.127), and records a solving replay per level.
+- Next: build the next Tricky level from its notes with the toolkit (plan M6.126), check it with
+  the preview tool (plan M6.127), record a solving replay, and add any departure to the table
+  above.

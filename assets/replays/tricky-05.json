@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "levelId": "tricky-05",
+  "entries": [
+    {
+      "tick": 233,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "blocker"
+      }
+    },
+    {
+      "tick": 298,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 359,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 421,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 484,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 563,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 765,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1031,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1175,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "bomber"
+      }
+    }
+  ]
+}

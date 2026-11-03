@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "id": "tricky-02",
+  "name": "level.tricky-02.name",
+  "inspiredBy": "Tricky 2 of the original ('We all fall down'), on the map of Fun 13 with stricter numbers: the drop between the two girders is a little too high, so every lemming digs its own hole through the upper girder to fall from lower down; everyone must be saved. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 1525,
+  "height": 160,
+  "lemmings": 40,
+  "toSave": 40,
+  "releaseRate": 1,
+  "timeSeconds": 180,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 0,
+    "builder": 0,
+    "basher": 0,
+    "miner": 0,
+    "digger": 40
+  },
+  "style": "fire",
+  "startX": 200,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 150],
+        [40, 70],
+        [75, 0],
+        [230, 0],
+        [230, 160],
+        [0, 160]
+      ],
+      "rough": 0.8,
+      "seed": 201
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [225, 106],
+        [315, 106],
+        [312, 114],
+        [290, 119],
+        [250, 120],
+        [228, 116]
+      ],
+      "rough": 0.6,
+      "seed": 202
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [230, 0],
+        [1525, 0],
+        [1525, 22],
+        [1100, 25],
+        [1020, 10],
+        [700, 8],
+        [400, 11],
+        [230, 9]
+      ],
+      "rough": 0.7,
+      "seed": 203
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 272,
+      "y": 8,
+      "w": 16,
+      "h": 30,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 464,
+      "y": 8,
+      "w": 12,
+      "h": 22,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 607,
+      "y": 8,
+      "w": 16,
+      "h": 30,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 944,
+      "y": 8,
+      "w": 12,
+      "h": 28,
+      "seed": 4
+    },
+    {
+      "shape": "rect",
+      "x": 325,
+      "y": 56,
+      "w": 576,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 325,
+      "y": 56,
+      "w": 576,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 340,
+      "y": 64,
+      "w": 18,
+      "h": 96,
+      "seed": 1
+    },
+    {
+      "shape": "rect",
+      "x": 390,
+      "y": 120,
+      "w": 576,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 390,
+      "y": 120,
+      "w": 576,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 410,
+      "y": 128,
+      "w": 8,
+      "h": 32
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 410,
+      "y": 128,
+      "w": 8,
+      "h": 32
+    },
+    {
+      "shape": "rect",
+      "x": 938,
+      "y": 128,
+      "w": 8,
+      "h": 32
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 938,
+      "y": 128,
+      "w": 8,
+      "h": 32
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 1020,
+      "y": 18,
+      "w": 80,
+      "h": 72,
+      "seed": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1062,
+      "y": 88,
+      "w": 24,
+      "h": 72,
+      "seed": 2
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [1085, 140],
+        [1200, 138],
+        [1350, 141],
+        [1525, 138],
+        [1525, 160],
+        [1085, 160]
+      ],
+      "rough": 0.7,
+      "seed": 204
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1188,
+      "y": 22,
+      "w": 22,
+      "h": 118,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1328,
+      "y": 22,
+      "w": 22,
+      "h": 118,
+      "seed": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "stalagmite",
+      "x": 1420,
+      "y": 112,
+      "w": 16,
+      "h": 28,
+      "seed": 6
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 348,
+      "y": 30
+    },
+    {
+      "type": "exit",
+      "x": 955,
+      "y": 119
+    }
+  ]
+}

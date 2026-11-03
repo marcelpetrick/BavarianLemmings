@@ -1,0 +1,309 @@
+{
+  "version": 1,
+  "id": "tricky-04",
+  "name": "level.tricky-04.name",
+  "inspiredBy": "Tricky 4 of the original ('Here's one I prepared earlier'): on steel blocks a blocker keeps the crowd from a deadly gap, a climber gets over a rock that can only be bashed from the right and opens it, and a second climber bridges a chain of islands to the exit hill. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 1486,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 16,
+  "releaseRate": 55,
+  "timeSeconds": 480,
+  "skills": {
+    "climber": 40,
+    "floater": 40,
+    "bomber": 40,
+    "blocker": 40,
+    "builder": 40,
+    "basher": 40,
+    "miner": 40,
+    "digger": 40
+  },
+  "style": "dirt",
+  "startX": 300,
+  "terrain": [
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 0,
+      "y": 108,
+      "w": 48,
+      "h": 52,
+      "seed": 1
+    },
+    {
+      "shape": "rect",
+      "x": 90,
+      "y": 88,
+      "w": 282,
+      "h": 72
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 90,
+      "y": 88,
+      "w": 282,
+      "h": 72
+    },
+    {
+      "shape": "rect",
+      "x": 100,
+      "y": 16,
+      "w": 62,
+      "h": 72
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 100,
+      "y": 16,
+      "w": 62,
+      "h": 72
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [195, 160],
+        [230, 110],
+        [265, 70],
+        [305, 40],
+        [330, 62],
+        [360, 100],
+        [375, 130],
+        [375, 160]
+      ],
+      "rough": 0.8,
+      "seed": 401
+    },
+    {
+      "shape": "rect",
+      "x": 400,
+      "y": 88,
+      "w": 420,
+      "h": 72
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 400,
+      "y": 88,
+      "w": 420,
+      "h": 72
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [820, 88],
+        [880, 88],
+        [820, 160]
+      ],
+      "rough": 0.3,
+      "seed": 402
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [465, 88],
+        [490, 64],
+        [515, 34],
+        [538, 8],
+        [550, 5],
+        [565, 30],
+        [575, 60],
+        [585, 88]
+      ],
+      "rough": 0.5,
+      "seed": 403
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [586, 88],
+        [596, 84],
+        [608, 85],
+        [614, 88]
+      ]
+    },
+    {
+      "shape": "piece",
+      "piece": "tuft",
+      "x": 592,
+      "y": 80,
+      "w": 16,
+      "h": 8,
+      "seed": 1
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [712, 88],
+        [712, 30],
+        [720, 16],
+        [730, 18],
+        [742, 45],
+        [756, 88]
+      ],
+      "seed": 404
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [858, 88],
+        [862, 78],
+        [872, 77],
+        [880, 79],
+        [881, 88]
+      ]
+    },
+    {
+      "shape": "piece",
+      "piece": "tuft",
+      "x": 860,
+      "y": 77,
+      "w": 20,
+      "h": 8,
+      "seed": 2
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [878, 88],
+        [880, 82],
+        [886, 90],
+        [900, 104],
+        [900, 112],
+        [880, 100]
+      ],
+      "rough": 0.2,
+      "seed": 405
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [898, 105],
+        [935, 105],
+        [932, 135],
+        [926, 160],
+        [905, 160],
+        [900, 130]
+      ],
+      "rough": 0.6,
+      "seed": 406
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [950, 142],
+        [1005, 142],
+        [1002, 160],
+        [956, 160]
+      ],
+      "rough": 0.5,
+      "seed": 407
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [1020, 134],
+        [1080, 134],
+        [1078, 160],
+        [1026, 160]
+      ],
+      "rough": 0.5,
+      "seed": 408
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [1094, 160],
+        [1130, 140],
+        [1160, 120],
+        [1180, 110],
+        [1220, 110],
+        [1250, 125],
+        [1280, 145],
+        [1305, 160]
+      ],
+      "rough": 0.6,
+      "seed": 409
+    },
+    {
+      "shape": "rect",
+      "x": 1176,
+      "y": 80,
+      "w": 48,
+      "h": 30,
+      "erase": true
+    },
+    {
+      "shape": "piece",
+      "piece": "tuft",
+      "x": 1150,
+      "y": 120,
+      "w": 16,
+      "h": 8,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 1300,
+      "y": 118,
+      "w": 30,
+      "h": 42,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 1435,
+      "y": 84,
+      "w": 51,
+      "h": 76,
+      "seed": 3
+    }
+  ],
+  "steel": [
+    {
+      "x": 90,
+      "y": 88,
+      "w": 282,
+      "h": 72
+    },
+    {
+      "x": 100,
+      "y": 16,
+      "w": 62,
+      "h": 72
+    },
+    {
+      "x": 400,
+      "y": 88,
+      "w": 420,
+      "h": 72
+    }
+  ],
+  "oneWay": [
+    {
+      "x": 712,
+      "y": 16,
+      "w": 44,
+      "h": 72,
+      "dir": "left"
+    }
+  ],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 428,
+      "y": 38
+    },
+    {
+      "type": "exit",
+      "x": 1200,
+      "y": 109
+    }
+  ]
+}

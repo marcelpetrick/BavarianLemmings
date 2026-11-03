@@ -1,0 +1,430 @@
+{
+  "version": 1,
+  "id": "tricky-05",
+  "name": "level.tricky-05.name",
+  "inspiredBy": "Tricky 5 of the original ('Careless clicking costs lives'): a blocker on the crown of a hump holds the crowd while one lemming bashes through a row of hanging crystal balls and builds over the gaps to the exit tower; one careless click wastes the crowd. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 1165,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 16,
+  "releaseRate": 20,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 20,
+    "floater": 20,
+    "bomber": 20,
+    "blocker": 20,
+    "builder": 20,
+    "basher": 20,
+    "miner": 20,
+    "digger": 20
+  },
+  "style": "crystal",
+  "startX": 420,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 160],
+        [50, 130],
+        [100, 80],
+        [160, 30],
+        [220, 4],
+        [300, 10],
+        [340, 40],
+        [375, 100],
+        [375, 160]
+      ],
+      "rough": 0.8,
+      "seed": 501
+    },
+    {
+      "shape": "piece",
+      "piece": "crystal",
+      "x": 150,
+      "y": 10,
+      "w": 40,
+      "h": 40,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "crystal",
+      "x": 250,
+      "y": 0,
+      "w": 36,
+      "h": 30,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "crystal",
+      "x": 60,
+      "y": 80,
+      "w": 36,
+      "h": 36,
+      "seed": 3
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [395, 160],
+        [565, 0],
+        [577, 0],
+        [407, 160]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [520, 70],
+        [532, 70],
+        [612, 160],
+        [600, 160]
+      ]
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 415,
+      "y": 100,
+      "w": 90,
+      "h": 60,
+      "seed": 1
+    },
+    {
+      "shape": "ellipse",
+      "x": 408,
+      "y": 88,
+      "w": 16,
+      "h": 16
+    },
+    {
+      "shape": "ellipse",
+      "x": 488,
+      "y": 88,
+      "w": 16,
+      "h": 16
+    },
+    {
+      "shape": "piece",
+      "piece": "crystal",
+      "x": 503,
+      "y": 58,
+      "w": 30,
+      "h": 34,
+      "seed": 4
+    },
+    {
+      "shape": "rect",
+      "x": 505,
+      "y": 70,
+      "w": 26,
+      "h": 30
+    },
+    {
+      "shape": "rect",
+      "x": 640,
+      "y": 98,
+      "w": 10,
+      "h": 62
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 640,
+      "y": 98,
+      "w": 10,
+      "h": 62
+    },
+    {
+      "shape": "rect",
+      "x": 800,
+      "y": 98,
+      "w": 10,
+      "h": 62
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 800,
+      "y": 98,
+      "w": 10,
+      "h": 62
+    },
+    {
+      "shape": "rect",
+      "x": 955,
+      "y": 98,
+      "w": 10,
+      "h": 62
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 955,
+      "y": 98,
+      "w": 10,
+      "h": 62
+    },
+    {
+      "shape": "rect",
+      "x": 530,
+      "y": 90,
+      "w": 460,
+      "h": 8
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 530,
+      "y": 90,
+      "w": 460,
+      "h": 8
+    },
+    {
+      "shape": "rect",
+      "x": 545,
+      "y": 104,
+      "w": 440,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 545,
+      "y": 104,
+      "w": 440,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 560,
+      "y": 120,
+      "w": 420,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 560,
+      "y": 120,
+      "w": 420,
+      "h": 6
+    },
+    {
+      "shape": "rect",
+      "x": 580,
+      "y": 136,
+      "w": 390,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 580,
+      "y": 136,
+      "w": 390,
+      "h": 6
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [655, 91],
+        [680, 84],
+        [700, 78],
+        [720, 75],
+        [740, 78],
+        [760, 84],
+        [785, 91]
+      ]
+    },
+    {
+      "shape": "ellipse",
+      "x": 676,
+      "y": 80,
+      "w": 10,
+      "h": 10
+    },
+    {
+      "shape": "ellipse",
+      "x": 696,
+      "y": 74,
+      "w": 10,
+      "h": 10
+    },
+    {
+      "shape": "ellipse",
+      "x": 715,
+      "y": 70,
+      "w": 10,
+      "h": 10
+    },
+    {
+      "shape": "ellipse",
+      "x": 734,
+      "y": 74,
+      "w": 10,
+      "h": 10
+    },
+    {
+      "shape": "ellipse",
+      "x": 754,
+      "y": 80,
+      "w": 10,
+      "h": 10
+    },
+    {
+      "shape": "rect",
+      "x": 810,
+      "y": 0,
+      "w": 170,
+      "h": 22
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 810,
+      "y": 0,
+      "w": 170,
+      "h": 22
+    },
+    {
+      "shape": "piece",
+      "piece": "crystal",
+      "x": 800,
+      "y": 18,
+      "w": 26,
+      "h": 22,
+      "seed": 5,
+      "flip": true
+    },
+    {
+      "shape": "piece",
+      "piece": "crystal",
+      "x": 966,
+      "y": 18,
+      "w": 26,
+      "h": 22,
+      "seed": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 839,
+      "y": 22,
+      "w": 6,
+      "h": 42,
+      "seed": 842
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 874,
+      "y": 22,
+      "w": 6,
+      "h": 42,
+      "seed": 877
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 910,
+      "y": 22,
+      "w": 6,
+      "h": 42,
+      "seed": 913
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 947,
+      "y": 22,
+      "w": 6,
+      "h": 42,
+      "seed": 950
+    },
+    {
+      "shape": "ellipse",
+      "x": 828,
+      "y": 62,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "shape": "ellipse",
+      "x": 863,
+      "y": 62,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "shape": "ellipse",
+      "x": 899,
+      "y": 62,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "shape": "ellipse",
+      "x": 936,
+      "y": 62,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 1040,
+      "y": 82,
+      "w": 66,
+      "h": 78,
+      "seed": 2
+    },
+    {
+      "shape": "rect",
+      "x": 1115,
+      "y": 80,
+      "w": 50,
+      "h": 22
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 1115,
+      "y": 80,
+      "w": 50,
+      "h": 22
+    },
+    {
+      "shape": "rect",
+      "x": 1130,
+      "y": 102,
+      "w": 20,
+      "h": 58
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1130,
+      "y": 102,
+      "w": 20,
+      "h": 58
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 568,
+      "y": 75
+    },
+    {
+      "type": "exit",
+      "x": 1140,
+      "y": 79
+    }
+  ]
+}

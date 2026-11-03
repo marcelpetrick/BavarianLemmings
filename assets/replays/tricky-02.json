@@ -1,0 +1,326 @@
+{
+  "version": 1,
+  "levelId": "tricky-02",
+  "entries": [
+    {
+      "tick": 595,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 636,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 677,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 718,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 759,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 4,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 800,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 5,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 841,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 6,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 882,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 7,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 923,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 8,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 964,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 9,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1005,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 10,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1046,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 11,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1087,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 12,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1128,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 13,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1169,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 14,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1210,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 15,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1251,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 16,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1292,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 17,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1333,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 18,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1374,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 19,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1415,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 20,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1456,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 21,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1497,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 22,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1538,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 23,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1579,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 24,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1620,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 25,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1661,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 26,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1702,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 27,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1743,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 28,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1784,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 29,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1825,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 30,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1866,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 31,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1907,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 32,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1948,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 33,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 1989,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 34,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 2030,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 35,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 2071,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 36,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 2112,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 37,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 2153,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 38,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 2194,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 39,
+        "skill": "digger"
+      }
+    }
+  ]
+}

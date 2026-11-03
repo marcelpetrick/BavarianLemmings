@@ -1,0 +1,234 @@
+{
+  "version": 1,
+  "id": "tricky-03",
+  "name": "level.tricky-03.name",
+  "inspiredBy": "Tricky 3 of the original ('A ladder would be handy'): the crowd is sent the other way into a pit, a basher tunnels through the foot of the hill to a log bridge over water, and one long staircase of builders climbs the high cliff to the exit. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 705,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 40,
+  "releaseRate": 50,
+  "timeSeconds": 360,
+  "skills": {
+    "climber": 20,
+    "floater": 20,
+    "bomber": 20,
+    "blocker": 20,
+    "builder": 40,
+    "basher": 20,
+    "miner": 20,
+    "digger": 20
+  },
+  "style": "dirt",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 142],
+        [40, 141],
+        [92, 143],
+        [92, 160],
+        [0, 160]
+      ],
+      "rough": 0.6,
+      "seed": 301
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 0,
+      "y": 112,
+      "w": 31,
+      "h": 38,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 31,
+      "y": 112,
+      "w": 31,
+      "h": 38,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "arch",
+      "x": 62,
+      "y": 112,
+      "w": 30,
+      "h": 38,
+      "seed": 3
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [92, 160],
+        [92, 80],
+        [120, 52],
+        [150, 35],
+        [200, 32],
+        [260, 33],
+        [295, 45],
+        [290, 75],
+        [283, 120],
+        [280, 160]
+      ],
+      "rough": 0.7,
+      "seed": 302
+    },
+    {
+      "shape": "piece",
+      "piece": "tuft",
+      "x": 200,
+      "y": 25,
+      "w": 16,
+      "h": 8,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 238,
+      "y": 22,
+      "w": 18,
+      "h": 12,
+      "seed": 4
+    },
+    {
+      "shape": "rect",
+      "x": 278,
+      "y": 136,
+      "w": 77,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 278,
+      "y": 136,
+      "w": 77,
+      "h": 5,
+      "seed": 1
+    },
+    {
+      "shape": "rect",
+      "x": 278,
+      "y": 141,
+      "w": 77,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 278,
+      "y": 141,
+      "w": 77,
+      "h": 5,
+      "seed": 2
+    },
+    {
+      "shape": "rect",
+      "x": 380,
+      "y": 136,
+      "w": 80,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 380,
+      "y": 136,
+      "w": 80,
+      "h": 5,
+      "seed": 3
+    },
+    {
+      "shape": "rect",
+      "x": 380,
+      "y": 141,
+      "w": 80,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 380,
+      "y": 141,
+      "w": 80,
+      "h": 5,
+      "seed": 4
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [460, 160],
+        [460, 46],
+        [705, 46],
+        [705, 160]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [470, 160],
+        [470, 70],
+        [520, 60],
+        [600, 80],
+        [705, 70],
+        [705, 160]
+      ],
+      "rough": 0.8,
+      "seed": 303
+    },
+    {
+      "shape": "rect",
+      "x": 588,
+      "y": 20,
+      "w": 52,
+      "h": 26,
+      "erase": true
+    },
+    {
+      "shape": "piece",
+      "piece": "tuft",
+      "x": 560,
+      "y": 38,
+      "w": 16,
+      "h": 8,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 680,
+      "y": 32,
+      "w": 22,
+      "h": 14,
+      "seed": 5
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 158,
+      "y": 20
+    },
+    {
+      "type": "exit",
+      "x": 615,
+      "y": 45
+    },
+    {
+      "type": "water",
+      "x": 278,
+      "y": 146,
+      "w": 182,
+      "h": 14
+    }
+  ]
+}

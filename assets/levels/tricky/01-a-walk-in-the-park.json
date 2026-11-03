@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "id": "tricky-01",
+  "name": "level.tricky-01.name",
+  "inspiredBy": "Tricky 1 of the original ('This should be a doddle!'): a cave floor with a gap to bridge and a boulder to bash through; one scout does the work while a blocker holds the crowd. Geometry, name and art are ours.",
+  "rating": "tricky",
+  "width": 924,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 40,
+  "releaseRate": 50,
+  "timeSeconds": 240,
+  "skills": {
+    "climber": 10,
+    "floater": 10,
+    "bomber": 10,
+    "blocker": 10,
+    "builder": 10,
+    "basher": 10,
+    "miner": 10,
+    "digger": 10
+  },
+  "style": "dirt",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 0],
+        [924, 0],
+        [924, 10],
+        [800, 14],
+        [640, 9],
+        [480, 13],
+        [300, 8],
+        [150, 13],
+        [0, 10]
+      ],
+      "rough": 0.8,
+      "seed": 101
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 180,
+      "y": 8,
+      "w": 12,
+      "h": 26,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 330,
+      "y": 6,
+      "w": 10,
+      "h": 22,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 520,
+      "y": 10,
+      "w": 14,
+      "h": 30,
+      "seed": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 700,
+      "y": 8,
+      "w": 10,
+      "h": 20,
+      "seed": 5
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 0],
+        [52, 0],
+        [55, 40],
+        [50, 90],
+        [55, 160],
+        [0, 160]
+      ],
+      "rough": 0.8,
+      "seed": 102
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [50, 124],
+        [200, 125],
+        [340, 124],
+        [360, 128],
+        [385, 160],
+        [50, 160]
+      ],
+      "rough": 0.7,
+      "seed": 103
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [410, 160],
+        [418, 140],
+        [440, 128],
+        [560, 127],
+        [700, 128],
+        [728, 118],
+        [782, 118],
+        [810, 128],
+        [850, 145],
+        [858, 160]
+      ],
+      "rough": 0.6,
+      "seed": 104
+    },
+    {
+      "shape": "rect",
+      "x": 733,
+      "y": 88,
+      "w": 46,
+      "h": 30,
+      "erase": true
+    },
+    {
+      "shape": "blob",
+      "x": 603,
+      "y": 74,
+      "w": 44,
+      "h": 58,
+      "rough": 0.25,
+      "seed": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 600,
+      "y": 70,
+      "w": 50,
+      "h": 40,
+      "seed": 9
+    },
+    {
+      "shape": "piece",
+      "piece": "tuft",
+      "x": 470,
+      "y": 120,
+      "w": 16,
+      "h": 8,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "tuft",
+      "x": 250,
+      "y": 117,
+      "w": 16,
+      "h": 8,
+      "seed": 2
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [924, 0],
+        [856, 0],
+        [852, 60],
+        [858, 120],
+        [852, 160],
+        [924, 160]
+      ],
+      "rough": 0.8,
+      "seed": 105
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 113,
+      "y": 78
+    },
+    {
+      "type": "exit",
+      "x": 755,
+      "y": 117
+    }
+  ]
+}
