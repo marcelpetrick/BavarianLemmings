@@ -1,0 +1,270 @@
+{
+  "version": 1,
+  "id": "taxing-14",
+  "name": "level.taxing-14.name",
+  "inspiredBy": "Taxing 14 of the original ('Hunt the Nessy....'): humps and spikes like a monster in the water; two blockers hold the crowd while one lemming ramps from hump to hump and bashes through the monster's neck. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 1423,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 76,
+  "releaseRate": 30,
+  "timeSeconds": 480,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 10,
+    "blocker": 10,
+    "builder": 30,
+    "basher": 2,
+    "miner": 1,
+    "digger": 1
+  },
+  "style": "dirt",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 160],
+        [0, 119],
+        [6, 113],
+        [139, 113],
+        [145, 119],
+        [145, 160]
+      ],
+      "rough": 0.3,
+      "seed": 1
+    },
+    {
+      "shape": "rect",
+      "x": 175,
+      "y": 120,
+      "w": 40,
+      "h": 40
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 175,
+      "y": 120,
+      "w": 40,
+      "h": 40
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [250, 160],
+        [250, 119],
+        [256, 113],
+        [404, 113],
+        [410, 119],
+        [410, 160]
+      ],
+      "rough": 0.3,
+      "seed": 2
+    },
+    {
+      "shape": "rect",
+      "x": 435,
+      "y": 117,
+      "w": 43,
+      "h": 43
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 435,
+      "y": 117,
+      "w": 43,
+      "h": 43
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [515, 160],
+        [515, 123],
+        [521, 117],
+        [654, 117],
+        [660, 123],
+        [660, 160]
+      ],
+      "rough": 0.3,
+      "seed": 3
+    },
+    {
+      "shape": "rect",
+      "x": 680,
+      "y": 117,
+      "w": 45,
+      "h": 43
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 680,
+      "y": 117,
+      "w": 45,
+      "h": 43
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [755, 160],
+        [755, 116],
+        [761, 110],
+        [904, 110],
+        [910, 116],
+        [910, 160]
+      ],
+      "rough": 0.3,
+      "seed": 4
+    },
+    {
+      "shape": "rect",
+      "x": 990,
+      "y": 20,
+      "w": 55,
+      "h": 140
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 990,
+      "y": 20,
+      "w": 55,
+      "h": 140
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [990, 20],
+        [1080, 22],
+        [1112, 50],
+        [1080, 75],
+        [990, 75]
+      ],
+      "rough": 0.3,
+      "seed": 5
+    },
+    {
+      "shape": "rect",
+      "x": 1076,
+      "y": 115,
+      "w": 54,
+      "h": 45
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 1076,
+      "y": 115,
+      "w": 54,
+      "h": 45
+    },
+    {
+      "shape": "rect",
+      "x": 1197,
+      "y": 95,
+      "w": 43,
+      "h": 65
+    },
+    {
+      "shape": "piece",
+      "piece": "rock",
+      "x": 1197,
+      "y": 95,
+      "w": 43,
+      "h": 65
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [1240, 160],
+        [1240, 90],
+        [1260, 85],
+        [1423, 85],
+        [1423, 160]
+      ],
+      "rough": 0,
+      "seed": 6
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 38,
+      "y": 85
+    },
+    {
+      "type": "exit",
+      "x": 1385,
+      "y": 84
+    },
+    {
+      "type": "water",
+      "x": 145,
+      "y": 150,
+      "w": 30,
+      "h": 10
+    },
+    {
+      "type": "water",
+      "x": 215,
+      "y": 150,
+      "w": 35,
+      "h": 10
+    },
+    {
+      "type": "water",
+      "x": 410,
+      "y": 150,
+      "w": 25,
+      "h": 10
+    },
+    {
+      "type": "water",
+      "x": 478,
+      "y": 150,
+      "w": 37,
+      "h": 10
+    },
+    {
+      "type": "water",
+      "x": 660,
+      "y": 150,
+      "w": 20,
+      "h": 10
+    },
+    {
+      "type": "water",
+      "x": 725,
+      "y": 150,
+      "w": 30,
+      "h": 10
+    },
+    {
+      "type": "water",
+      "x": 910,
+      "y": 150,
+      "w": 80,
+      "h": 10
+    },
+    {
+      "type": "water",
+      "x": 1045,
+      "y": 150,
+      "w": 31,
+      "h": 10
+    },
+    {
+      "type": "water",
+      "x": 1130,
+      "y": 150,
+      "w": 67,
+      "h": 10
+    }
+  ]
+}

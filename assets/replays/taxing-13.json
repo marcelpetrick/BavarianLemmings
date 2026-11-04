@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "levelId": "taxing-13",
+  "entries": [
+    {
+      "tick": 227,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "digger"
+      }
+    },
+    {
+      "tick": 247,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 434,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 666,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 775,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 1109,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 1151,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "miner"
+      }
+    },
+    {
+      "tick": 1235,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    }
+  ]
+}

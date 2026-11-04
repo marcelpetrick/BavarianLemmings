@@ -965,6 +965,8 @@ traced layout could not be built one to one, the level changes as listed here.
 | 22 | Same map and solution as Fun 27 with one blocker. | Matches the original's remark that Taxing 22 is the Fun 27 layout with one blocker. |
 | 11 | Same map as Tricky 7. One blocker (instead of none) holds the crowd; save 47 of 50 (94 %) instead of 100 %. | Our diggers cannot be stopped by a builder to leave a holding pit, so the Tricky 7 route with its blocker is used. |
 | 12 | The brick column starts 4 px further left and has a 6 px lip on its right face; the right blocker is bombed at the end instead of mined free. | Our builder stairs stop 2-3 px short of a wall and cannot start inside a basher tunnel; our blocker cannot be undermined. |
+| 13 | Straight-faced shapes; the bear trap stands on a 5 px hump that is bashed away; the one-way column is 80 px tall; a low ceiling over the exit band turns the climber's builder; four bashers instead of three; save 78 of 80. | Our climbers turn at overhangs and splat after 60 px; our builder turns only at walls or ceilings. |
+| 14 | Flat-topped humps and stepping stones; two builders per gap and four to the neck; the neck face and the fourth stone are moved so the stairs meet them; one tunnel through neck and head instead of dig-and-bash; the right blocker is bombed at the end. | Our builder stairs stop short of walls and our basher falls off a stair end. |
 
 ## Resume here
 

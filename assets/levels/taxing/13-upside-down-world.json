@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "id": "taxing-13",
+  "name": "level.taxing-13.name",
+  "inspiredBy": "Taxing 13 of the original ('Upsidedown World'): the crowd heads left through one-way rock; tunnel under the first mountain, mine under the bear trap, and let a climber bash back through the one-way column. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 757,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 78,
+  "releaseRate": 40,
+  "timeSeconds": 360,
+  "skills": {
+    "climber": 1,
+    "floater": 0,
+    "bomber": 10,
+    "blocker": 1,
+    "builder": 2,
+    "basher": 4,
+    "miner": 4,
+    "digger": 2
+  },
+  "style": "dirt",
+  "startX": 300,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [600, 145],
+        [600, 103],
+        [700, 120],
+        [757, 120],
+        [757, 145]
+      ],
+      "rough": 0.3,
+      "seed": 1
+    },
+    {
+      "shape": "rect",
+      "x": 540,
+      "y": 100,
+      "w": 60,
+      "h": 30
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [545, 100],
+        [578, 40],
+        [582, 40],
+        [595, 100]
+      ],
+      "rough": 0.3,
+      "seed": 2
+    },
+    {
+      "shape": "rect",
+      "x": 455,
+      "y": 120,
+      "w": 90,
+      "h": 5
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [400, 125],
+        [400, 110],
+        [455, 30],
+        [465, 30],
+        [495, 110],
+        [495, 125]
+      ],
+      "rough": 0.3,
+      "seed": 3
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [140, 152],
+        [140, 125],
+        [495, 125],
+        [495, 152]
+      ],
+      "rough": 0.2,
+      "seed": 4
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [0, 125],
+        [0, 95],
+        [140, 95],
+        [140, 125]
+      ],
+      "rough": 0.2,
+      "seed": 6
+    },
+    {
+      "shape": "blob",
+      "x": 345,
+      "y": 0,
+      "w": 340,
+      "h": 25,
+      "seed": 7
+    },
+    {
+      "shape": "piece",
+      "piece": "stalactite",
+      "x": 362,
+      "y": 15,
+      "w": 33,
+      "h": 55
+    },
+    {
+      "shape": "rect",
+      "x": 140,
+      "y": 60,
+      "w": 52,
+      "h": 80
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 140,
+      "y": 60,
+      "w": 52,
+      "h": 80
+    },
+    {
+      "shape": "rect",
+      "x": 330,
+      "y": 120,
+      "w": 42,
+      "h": 5
+    },
+    {
+      "shape": "rect",
+      "x": 70,
+      "y": 74,
+      "w": 66,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "log",
+      "x": 455,
+      "y": 120,
+      "w": 90,
+      "h": 5
+    }
+  ],
+  "steel": [],
+  "oneWay": [
+    {
+      "x": 545,
+      "y": 40,
+      "w": 50,
+      "h": 60,
+      "dir": "right"
+    },
+    {
+      "x": 140,
+      "y": 60,
+      "w": 52,
+      "h": 80,
+      "dir": "right"
+    }
+  ],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 720,
+      "y": 85
+    },
+    {
+      "type": "exit",
+      "x": 40,
+      "y": 94
+    },
+    {
+      "type": "trap",
+      "kind": "squasher",
+      "x": 346,
+      "y": 110,
+      "w": 8,
+      "h": 10
+    }
+  ]
+}
