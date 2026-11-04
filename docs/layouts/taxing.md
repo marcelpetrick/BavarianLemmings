@@ -972,6 +972,8 @@ traced layout could not be built one to one, the level changes as listed here.
 | 18 | Same map as Fun 11 with a steel floor and 6 px steps on the block. The scout climbs a three-flight builder zigzag, a bomber cuts its foot, and on the far side a long stair over the exit turns the scout at the wall before it bashes back; a second bomber cuts the foot of that stair. | Our builder turns only at walls; our walkers step up at most 6 px. |
 | 21 | The brick and steel blocks are 7 px lower (top y 100); the crowd climbs builder stairs onto the brick block instead of a miner's tunnel. | With the original's four builders, our 1-in-2 stairs need the lower blocks; a miner tunnel from the block top would need a lemming facing left up there. |
 | 20 | Only the spokes and the rope are solid; the rings and stars are left out. A basher at each web centre cuts the upward spoke so the crowd takes the strand down to the rope and to the exit. | Our 2 px ring strands act as walls that no skill can follow along a slope; without the cut the crowd climbs the upper spoke and falls. |
+| 23 | Same map and route as Tricky 8; one blocker (instead of none) holds the crowd. | Our builders cannot stall walkers, so the original's builder-only holding trick does not exist. |
+| 25 | Same map and route as Fun 19 with two blockers (instead of none) and eight builders (instead of seven); the release rate is raised once the crowd is held. | Our basher cannot be stopped by a builder to leave a holding pit. |
 
 ## Resume here
 

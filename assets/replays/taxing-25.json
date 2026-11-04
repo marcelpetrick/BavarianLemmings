@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "levelId": "taxing-25",
+  "entries": [
+    { "tick": 125, "intent": { "type": "assign", "lemmingId": 1, "skill": "blocker" } },
+    { "tick": 135, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
+    { "tick": 227, "intent": { "type": "assign", "lemmingId": 2, "skill": "blocker" } },
+    { "tick": 240, "intent": { "type": "releaseRate", "delta": 79 } },
+    { "tick": 504, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
+    { "tick": 869, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
+    { "tick": 1234, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
+    { "tick": 1523, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
+    { "tick": 1715, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
+    { "tick": 1907, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
+    { "tick": 2099, "intent": { "type": "assign", "lemmingId": 0, "skill": "builder" } },
+    { "tick": 2317, "intent": { "type": "assign", "lemmingId": 1, "skill": "bomber" } },
+    { "tick": 3900, "intent": { "type": "nuke" } }
+  ]
+}

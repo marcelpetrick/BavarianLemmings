@@ -1,0 +1,325 @@
+{
+  "version": 1,
+  "id": "taxing-25",
+  "name": "level.taxing-25.name",
+  "inspiredBy": "Taxing 25 of the original ('Follow the leader...'), on the map of Fun 19: hold the crowd while the leader bashes and builds over the arches up to the exit slab. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 1473,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 72,
+  "releaseRate": 20,
+  "timeSeconds": 240,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 10,
+    "blocker": 2,
+    "builder": 8,
+    "basher": 5,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "marble",
+  "startX": 280,
+  "terrain": [
+    {
+      "shape": "blob",
+      "x": 0,
+      "y": 115,
+      "w": 100,
+      "h": 60,
+      "rough": 0.6,
+      "seed": 191
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 100,
+      "y": 20,
+      "w": 145,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 100,
+      "y": 60,
+      "w": 145,
+      "h": 6
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 100,
+      "y": 100,
+      "w": 145,
+      "h": 6
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [100, 26],
+        [103, 26],
+        [143, 60],
+        [140, 60]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [180, 26],
+        [183, 26],
+        [143, 60],
+        [140, 60]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [180, 26],
+        [183, 26],
+        [223, 60],
+        [220, 60]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [140, 66],
+        [143, 66],
+        [183, 100],
+        [180, 100]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [220, 66],
+        [223, 66],
+        [183, 100],
+        [180, 100]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [100, 106],
+        [103, 106],
+        [123, 160],
+        [120, 160]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [240, 106],
+        [243, 106],
+        [223, 160],
+        [220, 160]
+      ]
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 245,
+      "y": 0,
+      "w": 65,
+      "h": 160,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 310,
+      "y": 0,
+      "w": 650,
+      "h": 8
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [340, 8],
+        [400, 8],
+        [370, 44]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [480, 8],
+        [540, 8],
+        [510, 40]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [600, 8],
+        [660, 8],
+        [630, 44]
+      ]
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 640,
+      "y": 15,
+      "w": 80,
+      "h": 15
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [760, 8],
+        [820, 8],
+        [790, 40]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [880, 8],
+        [940, 8],
+        [910, 44]
+      ]
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 960,
+      "y": 0,
+      "w": 120,
+      "h": 15
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 1080,
+      "y": 0,
+      "w": 120,
+      "h": 10
+    },
+    {
+      "shape": "blob",
+      "x": 1220,
+      "y": -20,
+      "w": 80,
+      "h": 68,
+      "rough": 0.6,
+      "seed": 192
+    },
+    {
+      "shape": "ellipse",
+      "x": 320,
+      "y": 122,
+      "w": 230,
+      "h": 136
+    },
+    {
+      "shape": "ellipse",
+      "x": 530,
+      "y": 122,
+      "w": 205,
+      "h": 136
+    },
+    {
+      "shape": "ellipse",
+      "x": 542,
+      "y": 134,
+      "w": 181,
+      "h": 112,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 715,
+      "y": 122,
+      "w": 205,
+      "h": 136
+    },
+    {
+      "shape": "ellipse",
+      "x": 727,
+      "y": 134,
+      "w": 181,
+      "h": 112,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 900,
+      "y": 122,
+      "w": 205,
+      "h": 136
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 960,
+      "y": 135,
+      "w": 85,
+      "h": 25,
+      "seed": 2
+    },
+    {
+      "shape": "ellipse",
+      "x": 1085,
+      "y": 122,
+      "w": 210,
+      "h": 136
+    },
+    {
+      "shape": "ellipse",
+      "x": 1097,
+      "y": 134,
+      "w": 186,
+      "h": 112,
+      "erase": true
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 1290,
+      "y": 83,
+      "w": 145,
+      "h": 17
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 1355,
+      "y": 100,
+      "w": 20,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 1302,
+      "y": 100,
+      "w": 5,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 1418,
+      "y": 100,
+      "w": 5,
+      "h": 60
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 435,
+      "y": 85
+    },
+    {
+      "type": "exit",
+      "x": 1365,
+      "y": 82
+    }
+  ]
+}

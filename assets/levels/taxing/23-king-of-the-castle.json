@@ -1,0 +1,268 @@
+{
+  "version": 1,
+  "id": "taxing-23",
+  "name": "level.taxing-23.name",
+  "inspiredBy": "Taxing 23 of the original ('King of the castle'), on the map of Tricky 8 with builders: seal the floor gap and stair up from floor to floor to the exit ledge. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 396,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 76,
+  "releaseRate": 40,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 0,
+    "blocker": 1,
+    "builder": 20,
+    "basher": 0,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "fire",
+  "startX": 38,
+  "terrain": [
+    {
+      "shape": "blob",
+      "x": 0,
+      "y": 133,
+      "w": 52,
+      "h": 40,
+      "rough": 0.4,
+      "seed": 1
+    },
+    {
+      "shape": "blob",
+      "x": 348,
+      "y": 133,
+      "w": 48,
+      "h": 40,
+      "rough": 0.4,
+      "seed": 2
+    },
+    {
+      "shape": "rect",
+      "x": 49,
+      "y": 52,
+      "w": 4,
+      "h": 98
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 49,
+      "y": 52,
+      "w": 4,
+      "h": 98
+    },
+    {
+      "shape": "rect",
+      "x": 346,
+      "y": 0,
+      "w": 4,
+      "h": 150
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 346,
+      "y": 0,
+      "w": 4,
+      "h": 150
+    },
+    {
+      "shape": "rect",
+      "x": 53,
+      "y": 51,
+      "w": 37,
+      "h": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 53,
+      "y": 51,
+      "w": 37,
+      "h": 2
+    },
+    {
+      "shape": "rect",
+      "x": 88,
+      "y": 40,
+      "w": 2,
+      "h": 12
+    },
+    {
+      "shape": "rect",
+      "x": 90,
+      "y": 40,
+      "w": 163,
+      "h": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 90,
+      "y": 40,
+      "w": 163,
+      "h": 2
+    },
+    {
+      "shape": "rect",
+      "x": 104,
+      "y": 64,
+      "w": 242,
+      "h": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 104,
+      "y": 64,
+      "w": 242,
+      "h": 2
+    },
+    {
+      "shape": "rect",
+      "x": 53,
+      "y": 88,
+      "w": 243,
+      "h": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 53,
+      "y": 88,
+      "w": 243,
+      "h": 2
+    },
+    {
+      "shape": "rect",
+      "x": 108,
+      "y": 112,
+      "w": 238,
+      "h": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 108,
+      "y": 112,
+      "w": 238,
+      "h": 2
+    },
+    {
+      "shape": "rect",
+      "x": 53,
+      "y": 140,
+      "w": 121,
+      "h": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 53,
+      "y": 140,
+      "w": 121,
+      "h": 2
+    },
+    {
+      "shape": "rect",
+      "x": 200,
+      "y": 140,
+      "w": 146,
+      "h": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 200,
+      "y": 140,
+      "w": 146,
+      "h": 2
+    },
+    {
+      "shape": "rect",
+      "x": 93,
+      "y": 142,
+      "w": 14,
+      "h": 18
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 93,
+      "y": 142,
+      "w": 14,
+      "h": 18
+    },
+    {
+      "shape": "rect",
+      "x": 160,
+      "y": 142,
+      "w": 14,
+      "h": 18
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 160,
+      "y": 142,
+      "w": 14,
+      "h": 18
+    },
+    {
+      "shape": "rect",
+      "x": 200,
+      "y": 142,
+      "w": 14,
+      "h": 18
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 200,
+      "y": 142,
+      "w": 14,
+      "h": 18
+    },
+    {
+      "shape": "rect",
+      "x": 273,
+      "y": 142,
+      "w": 14,
+      "h": 18
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 273,
+      "y": 142,
+      "w": 14,
+      "h": 18
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 320,
+      "y": 129
+    },
+    {
+      "type": "exit",
+      "x": 68,
+      "y": 50
+    },
+    {
+      "type": "water",
+      "x": 53,
+      "y": 150,
+      "w": 293,
+      "h": 10
+    }
+  ]
+}
