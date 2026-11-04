@@ -514,22 +514,24 @@ a release at the end. Order:
 
 ## Resume here
 
-- State (v0.1.84, 2026-11-03): skill fidelity run M6.149–M6.154 and M6.157–M6.160 done: idle
-  basher swings once, oh-no lemmings and builders fall, digger digs at the level edges, miner
-  turns at steel, water drowns on its surface, buried water is rejected, dependencies updated.
-- Levels: Fun 01-30 playable (01-20 rebuilt to the traced layouts, 21-30 still the first
-  version); Tricky 01-15, Taxing 01-10, Mayhem 01-05 built. 65 levels missing (M6.155).
-- Owner decision (2026-11-03): work sequentially, no subagents. Finish with a tagged release
-  (M6.156).
+- State (v0.1.100, 2026-11-04): 92 of 120 levels play with winning replays: Fun 01-30
+  (01-20 rebuilt to the traced layouts), Tricky 01-30 (complete), Taxing 01-23 and 25, 30,
+  Mayhem 01-06 and 08. Skill fixes M6.150-M6.154 and water fixes M6.158-M6.159 are released.
+- Owner decision (2026-11-03): work sequentially, no subagents.
 - Next, in this order:
-  1. M6.155 Tricky 16-30, Taxing 11-30, Mayhem 06-30 from `docs/layouts/<rating>.md`, five
-     levels per commit; then Fun 21-30 rebuilt. Left-over agent drafts (unverified, may need
-     re-timing): `.claude/worktrees/agent-ae9def8e05ffe0549` (Tricky 16-17),
-     `.claude/worktrees/agent-a2a808ce8d63801ef` (Mayhem 06-08).
+  1. M6.155 remaining levels: Taxing 24, 26, 27, 28, 29; Mayhem 07 and 09-30; Fun 21-30
+     rebuild (M6.129). Notes: `docs/layouts/<rating>.md`; every departure goes into its
+     "Phase B simplifications" table.
   2. M6.123, M6.124 fidelity sources; M3.11, M4.08, M5.06, M6.125 milestone bumps.
-  3. M7.09 final vision audit; M6.156 release. M7.10 (1.0) and M7.12 (manual play-test) are the
-     owner's.
-- A rule change in `src/sim` breaks replays: re-time them with `npm run replays:retime`
-  (steps in `tests/tools/retime-replays.test.ts`).
+  3. M7.09 final vision audit; M6.156 final release. M7.10 (1.0) and M7.12 (manual
+     play-test) are the owner's.
+- How levels are built (repeatable): write the level JSON from the notes, then find the replay
+  with a scripted player (rules such as "builder when lemming 0 reaches x 300 facing right";
+  scratch tools live in the ignored `.tools/probe/`). Recurring fixes for our rules: builder
+  stairs stop 2-3 px short of a wall (move the wall), a builder cannot start inside a basher
+  tunnel (add a lip outside), climbers turn at overhangs (straight faces), falls over 60 px kill,
+  bombing a blocker leaves a crater (stand it on steel or away from stairs), sprites must clear
+  terrain (`tests/levels/layout.test.ts`).
+- A rule change in `src/sim` breaks replays: re-time them with `npm run replays:retime`.
 - Check: `node scripts/check-plan.mjs --summary`, `git status --short`, `gh run list -L 3`.
 - Restart: `npm ci && npm run dev`; `npm run screenshots`; `npm run levels:preview`.

@@ -346,15 +346,15 @@ No open questions remain. New ones go into a round E table here.
 
 ## 9. Resume here
 
-- **State (v0.1.84, 2026-11-03):** the skills match the original more closely (idle basher
-  swings once; oh-no lemmings and builders fall; edge digging; miner turns at steel; water drowns
-  on its surface). The original does not keep a skill for later: digging and building skills
-  start at once, only climber and floater wait until needed (Lemmings Forums msg 36209).
-- **Levels:** 65 of 120 built: Fun 01-30, Tricky 01-15, Taxing 01-10, Mayhem 01-05. Every
-  replay wins with only accepted clicks.
-- **Remaining:** 55 levels, Fun 21-30 rebuild, constant/key verification, milestone versions,
-  final vision audit, release, manual Firefox/Chrome checks. 1.0 needs owner approval.
-- **The plan to continue:** `plan.md`, section "Resume here" (ordered next steps).
+- **State (v0.1.100, 2026-11-04):** 92 of 120 levels play: Fun 1-30, Tricky 1-30, Taxing 1-23,
+  25, 30, Mayhem 1-6, 8. The skills follow the original more closely (idle basher swings once;
+  oh-no lemmings and builders fall; edge digging; miner turns at steel; water drowns on its
+  surface). Where our rules differ, each level documents its departure in
+  `docs/layouts/<rating>.md`.
+- **Remaining:** 28 levels, the Fun 21-30 rebuild, constant/key verification, milestone
+  versions, final vision audit and release, manual Firefox/Chrome checks. 1.0 needs owner
+  approval.
+- **The plan to continue:** `plan.md`, section "Resume here" (ordered next steps and method).
 - **Check:** `node scripts/check-plan.mjs --summary`, `node scripts/check-constants.mjs`,
   `git status --short`, `gh run list -L 3`.
 - **Restart:** `npm ci && npm run dev`; capture with `npm run screenshots`;
