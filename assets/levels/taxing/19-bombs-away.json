@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "id": "taxing-19",
+  "name": "level.taxing-19.name",
+  "inspiredBy": "Taxing 19 of the original ('Bomboozal'), on the map of Fun 18 with nothing but bombers: every blast must open the floor just past a fire pit, floor by floor, and the clock is short. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 517,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 73,
+  "releaseRate": 80,
+  "timeSeconds": 120,
+  "skills": {
+    "climber": 0,
+    "floater": 0,
+    "bomber": 15,
+    "blocker": 0,
+    "builder": 0,
+    "basher": 0,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "fire",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 0,
+      "y": 41,
+      "w": 95,
+      "h": 9,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "steps",
+      "x": 18,
+      "y": 37,
+      "w": 25,
+      "h": 4
+    },
+    {
+      "shape": "rect",
+      "x": 43,
+      "y": 31,
+      "w": 25,
+      "h": 10
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 43,
+      "y": 31,
+      "w": 25,
+      "h": 10,
+      "seed": 2
+    },
+    {
+      "shape": "rect",
+      "x": 68,
+      "y": 25,
+      "w": 27,
+      "h": 16
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 68,
+      "y": 25,
+      "w": 27,
+      "h": 16,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 95,
+      "y": 25,
+      "w": 23,
+      "h": 120,
+      "seed": 4
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 352,
+      "y": 18,
+      "w": 25,
+      "h": 107,
+      "seed": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 118,
+      "y": 28,
+      "w": 234,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 118,
+      "y": 52,
+      "w": 234,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 118,
+      "y": 76,
+      "w": 234,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 118,
+      "y": 100,
+      "w": 234,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 118,
+      "y": 124,
+      "w": 234,
+      "h": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 118,
+      "y": 148,
+      "w": 389,
+      "h": 3
+    },
+    {
+      "shape": "rect",
+      "x": 260,
+      "y": 31,
+      "w": 2,
+      "h": 21
+    },
+    {
+      "shape": "rect",
+      "x": 270,
+      "y": 55,
+      "w": 2,
+      "h": 21
+    },
+    {
+      "shape": "rect",
+      "x": 262,
+      "y": 79,
+      "w": 2,
+      "h": 21
+    },
+    {
+      "shape": "rect",
+      "x": 190,
+      "y": 103,
+      "w": 2,
+      "h": 21
+    },
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 127,
+      "w": 2,
+      "h": 21
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 30,
+      "y": 20
+    },
+    {
+      "type": "exit",
+      "x": 490,
+      "y": 147
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 296,
+      "y": 42,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 304,
+      "y": 66,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 296,
+      "y": 90,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 148,
+      "y": 114,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 258,
+      "y": 138,
+      "w": 12,
+      "h": 10
+    }
+  ]
+}

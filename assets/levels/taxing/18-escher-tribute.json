@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "id": "taxing-18",
+  "name": "level.taxing-18.name",
+  "inspiredBy": "Taxing 18 of the original ('Tribute to M.C.Escher'), on the map of Fun 11: with one umbrella and no climbers, a scout builds a zigzag up the one-way block, a bomber cuts its foot, and the scout bashes back through the block. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 320,
+  "height": 160,
+  "lemmings": 75,
+  "toSave": 65,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 0,
+    "floater": 1,
+    "bomber": 15,
+    "blocker": 0,
+    "builder": 15,
+    "basher": 1,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "marble",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 5
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 0,
+      "w": 5,
+      "h": 160
+    },
+    {
+      "shape": "rect",
+      "x": 313,
+      "y": 0,
+      "w": 7,
+      "h": 160
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [5, 5],
+        [30, 5],
+        [5, 30]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [290, 5],
+        [315, 5],
+        [315, 30]
+      ]
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 0,
+      "y": 136,
+      "w": 320,
+      "h": 24
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 96,
+      "y": 58,
+      "w": 48,
+      "h": 6,
+      "seed": 1
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 80,
+      "y": 64,
+      "w": 80,
+      "h": 6,
+      "seed": 2
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 72,
+      "y": 70,
+      "w": 96,
+      "h": 66,
+      "seed": 3
+    }
+  ],
+  "steel": [
+    {
+      "x": 0,
+      "y": 136,
+      "w": 320,
+      "h": 24
+    }
+  ],
+  "oneWay": [
+    {
+      "x": 72,
+      "y": 58,
+      "w": 96,
+      "h": 78,
+      "dir": "left"
+    }
+  ],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 40,
+      "y": 92
+    },
+    {
+      "type": "exit",
+      "x": 290,
+      "y": 135
+    }
+  ]
+}

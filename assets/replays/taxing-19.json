@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "levelId": "taxing-19",
+  "entries": [
+    {
+      "tick": 81,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "bomber"
+      }
+    },
+    {
+      "tick": 173,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "bomber"
+      }
+    },
+    {
+      "tick": 344,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 2,
+        "skill": "bomber"
+      }
+    },
+    {
+      "tick": 520,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 3,
+        "skill": "bomber"
+      }
+    },
+    {
+      "tick": 631,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 4,
+        "skill": "bomber"
+      }
+    }
+  ]
+}
