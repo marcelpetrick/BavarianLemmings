@@ -967,6 +967,8 @@ traced layout could not be built one to one, the level changes as listed here.
 | 12 | The brick column starts 4 px further left and has a 6 px lip on its right face; the right blocker is bombed at the end instead of mined free. | Our builder stairs stop 2-3 px short of a wall and cannot start inside a basher tunnel; our blocker cannot be undermined. |
 | 13 | Straight-faced shapes; the bear trap stands on a 5 px hump that is bashed away; the one-way column is 80 px tall; a low ceiling over the exit band turns the climber's builder; four bashers instead of three; save 78 of 80. | Our climbers turn at overhangs and splat after 60 px; our builder turns only at walls or ceilings. |
 | 14 | Flat-topped humps and stepping stones; two builders per gap and four to the neck; the neck face and the fourth stone are moved so the stairs meet them; one tunnel through neck and head instead of dig-and-bash; the right blocker is bombed at the end. | Our builder stairs stop short of walls and our basher falls off a stair end. |
+| 15 | Our own rock creatures instead of the original's special artwork; no stars; a lip outside the first head's tunnel; one builder per gap. | The original's artwork is not ours to copy; our builder cannot start inside a basher tunnel. |
+| 16 | Our own layout: the ledge is lowered to y 80 with a steel edge, the mountain is replaced by a short steel post, and the floaters build stairs back up to the ledge and a bridge over the lava. | Our builder stairs rise only 1 px per 2 px, so the original's heights cannot be bridged; steel keeps the bombed blocker from leaving a pit. |
 
 ## Resume here
 

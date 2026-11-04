@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "id": "taxing-16",
+  "name": "level.taxing-16.name",
+  "inspiredBy": "Taxing 16 of the original ('Mary Poppins\u2019 land'): a ledge too high to jump from; floaters drift down and build the way: stairs back up to the ledge and a bridge over the lava. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 711,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 77,
+  "releaseRate": 50,
+  "timeSeconds": 180,
+  "skills": {
+    "climber": 0,
+    "floater": 4,
+    "bomber": 3,
+    "blocker": 3,
+    "builder": 20,
+    "basher": 0,
+    "miner": 0,
+    "digger": 0
+  },
+  "style": "fire",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 80,
+      "w": 95,
+      "h": 35
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 0,
+      "y": 80,
+      "w": 95,
+      "h": 35
+    },
+    {
+      "shape": "rect",
+      "x": 65,
+      "y": 115,
+      "w": 17,
+      "h": 45
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 65,
+      "y": 115,
+      "w": 17,
+      "h": 45
+    },
+    {
+      "shape": "rect",
+      "x": 82,
+      "y": 148,
+      "w": 248,
+      "h": 12
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 82,
+      "y": 148,
+      "w": 248,
+      "h": 12
+    },
+    {
+      "shape": "rect",
+      "x": 300,
+      "y": 140,
+      "w": 5,
+      "h": 8
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [387, 160],
+        [387, 120],
+        [711, 120],
+        [711, 160]
+      ],
+      "rough": 0,
+      "seed": 3
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 0,
+      "y": 0,
+      "w": 6,
+      "h": 25
+    }
+  ],
+  "steel": [
+    {
+      "x": 60,
+      "y": 80,
+      "w": 35,
+      "h": 35
+    },
+    {
+      "x": 300,
+      "y": 140,
+      "w": 5,
+      "h": 8
+    }
+  ],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 45,
+      "y": 62
+    },
+    {
+      "type": "exit",
+      "x": 562,
+      "y": 119
+    },
+    {
+      "type": "water",
+      "x": 330,
+      "y": 150,
+      "w": 57,
+      "h": 10
+    }
+  ]
+}

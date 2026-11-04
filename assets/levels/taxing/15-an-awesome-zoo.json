@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "id": "taxing-15",
+  "name": "level.taxing-15.name",
+  "inspiredBy": "Taxing 15 of the original ('What an AWESOME level'): creatures of rock; bash through the first head, leave a blocker behind, and build along the backs of the others to the exit on the last head. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 939,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 64,
+  "releaseRate": 50,
+  "timeSeconds": 360,
+  "skills": {
+    "climber": 20,
+    "floater": 20,
+    "bomber": 20,
+    "blocker": 20,
+    "builder": 20,
+    "basher": 20,
+    "miner": 20,
+    "digger": 20
+  },
+  "style": "dirt",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [5, 110],
+        [5, 72],
+        [60, 64],
+        [110, 56],
+        [150, 50],
+        [150, 110]
+      ],
+      "rough": 0.3,
+      "seed": 1
+    },
+    {
+      "shape": "blob",
+      "x": 150,
+      "y": 15,
+      "w": 120,
+      "h": 125,
+      "rough": 0.4,
+      "seed": 2
+    },
+    {
+      "shape": "rect",
+      "x": 150,
+      "y": 40,
+      "w": 120,
+      "h": 70
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [285, 105],
+        [285, 52],
+        [345, 75],
+        [345, 105]
+      ],
+      "rough": 0.3,
+      "seed": 3
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [280, 160],
+        [280, 105],
+        [345, 78],
+        [540, 80],
+        [560, 160]
+      ],
+      "rough": 0.3,
+      "seed": 4
+    },
+    {
+      "shape": "ellipse",
+      "x": 360,
+      "y": 100,
+      "w": 40,
+      "h": 30,
+      "erase": true
+    },
+    {
+      "shape": "ellipse",
+      "x": 440,
+      "y": 105,
+      "w": 50,
+      "h": 30,
+      "erase": true
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [540, 160],
+        [540, 80],
+        [600, 30],
+        [700, 30],
+        [780, 72],
+        [780, 160]
+      ],
+      "rough": 0.3,
+      "seed": 5
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [790, 160],
+        [790, 100],
+        [850, 42],
+        [939, 41],
+        [939, 160]
+      ],
+      "rough": 0,
+      "seed": 6
+    },
+    {
+      "shape": "rect",
+      "x": 268,
+      "y": 51,
+      "w": 9,
+      "h": 6
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 55,
+      "y": 35
+    },
+    {
+      "type": "exit",
+      "x": 900,
+      "y": 40
+    }
+  ]
+}

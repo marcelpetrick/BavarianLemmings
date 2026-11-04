@@ -58,7 +58,7 @@ gantt
     section M5
     M5 touch (5/6) :active, m5, after m4, 1h
     section M6
-    M6 content, all four ratings (115/160) :active, m6, after m5, 14h
+    M6 content, all four ratings (117/160) :active, m6, after m5, 13h
     section M7
     M7 delivery (9/12) :active, m7, after m6, 1h
 ```
@@ -320,8 +320,8 @@ schema, a recorded solution replay passes as a test, the texts exist in three la
 - [x] M6.074 (L-01) Taxing 12: "Living on the Edge" (`taxing-12`), after the original's Taxing 12.
 - [x] M6.075 (L-01) Taxing 13: "Upside-Down World" (`taxing-13`), after the original's Taxing 13.
 - [x] M6.076 (L-01) Taxing 14: "Hunting the Monster" (`taxing-14`), after the original's Taxing 14.
-- [ ] M6.077 (L-01) Taxing 15: placeholder, name and `inspiredBy` filled in when built.
-- [ ] M6.078 (L-01) Taxing 16: placeholder, name and `inspiredBy` filled in when built.
+- [x] M6.077 (L-01) Taxing 15: "An Awesome Zoo" (`taxing-15`), after the original's Taxing 15.
+- [x] M6.078 (L-01) Taxing 16: "Umbrella Land" (`taxing-16`), after the original's Taxing 16.
 - [x] M6.079 (L-01) Taxing 17: "X Marks the Lava" (`taxing-17`), after the original's Taxing 17.
 - [ ] M6.080 (L-01) Taxing 18: placeholder, name and `inspiredBy` filled in when built.
 - [ ] M6.081 (L-01) Taxing 19: placeholder, name and `inspiredBy` filled in when built.
