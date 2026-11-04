@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "id": "taxing-20",
+  "name": "level.taxing-20.name",
+  "inspiredBy": "Taxing 20 of the original ('Walk the web rope'): two spider webs joined by a single rope; climb the strands, break through the rings and walk the rope to the exit under the second web. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 1576,
+  "height": 160,
+  "lemmings": 80,
+  "toSave": 71,
+  "releaseRate": 50,
+  "timeSeconds": 300,
+  "skills": {
+    "climber": 20,
+    "floater": 20,
+    "bomber": 20,
+    "blocker": 20,
+    "builder": 20,
+    "basher": 20,
+    "miner": 20,
+    "digger": 20
+  },
+  "style": "crystal",
+  "startX": 150,
+  "terrain": [
+    {
+      "shape": "polygon",
+      "points": [
+        [319, 54],
+        [233, -1],
+        [231, 1],
+        [317, 56]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [319, 56],
+        [374, 4],
+        [372, 2],
+        [317, 54]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [317, 56],
+        [399, 105],
+        [401, 103],
+        [319, 54]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [317, 54],
+        [204, 159],
+        [206, 161],
+        [319, 56]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [317, 56],
+        [384, 161],
+        [386, 159],
+        [319, 54]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [319, 54],
+        [261, -1],
+        [259, 1],
+        [317, 56]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [400, 106],
+        [1103, 106],
+        [1103, 102],
+        [400, 102]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [1167, 59],
+        [1099, 103],
+        [1101, 105],
+        [1169, 61]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [1169, 61],
+        [1261, 1],
+        [1259, -1],
+        [1167, 59]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [1167, 61],
+        [1264, 156],
+        [1266, 154],
+        [1169, 59]
+      ]
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [1169, 59],
+        [1101, -1],
+        [1099, 1],
+        [1167, 61]
+      ]
+    },
+    {
+      "shape": "rect",
+      "x": 1260,
+      "y": 155,
+      "w": 65,
+      "h": 5
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 1260,
+      "y": 155,
+      "w": 65,
+      "h": 5
+    }
+  ],
+  "steel": [],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 222,
+      "y": 110
+    },
+    {
+      "type": "exit",
+      "x": 1293,
+      "y": 154
+    }
+  ]
+}

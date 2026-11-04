@@ -970,6 +970,8 @@ traced layout could not be built one to one, the level changes as listed here.
 | 15 | Our own rock creatures instead of the original's special artwork; no stars; a lip outside the first head's tunnel; one builder per gap. | The original's artwork is not ours to copy; our builder cannot start inside a basher tunnel. |
 | 16 | Our own layout: the ledge is lowered to y 80 with a steel edge, the mountain is replaced by a short steel post, and the floaters build stairs back up to the ledge and a bridge over the lava. | Our builder stairs rise only 1 px per 2 px, so the original's heights cannot be bridged; steel keeps the bombed blocker from leaving a pit. |
 | 18 | Same map as Fun 11 with a steel floor and 6 px steps on the block. The scout climbs a three-flight builder zigzag, a bomber cuts its foot, and on the far side a long stair over the exit turns the scout at the wall before it bashes back; a second bomber cuts the foot of that stair. | Our builder turns only at walls; our walkers step up at most 6 px. |
+| 21 | The brick and steel blocks are 7 px lower (top y 100); the crowd climbs builder stairs onto the brick block instead of a miner's tunnel. | With the original's four builders, our 1-in-2 stairs need the lower blocks; a miner tunnel from the block top would need a lemming facing left up there. |
+| 20 | Only the spokes and the rope are solid; the rings and stars are left out. A basher at each web centre cuts the upward spoke so the crowd takes the strand down to the rope and to the exit. | Our 2 px ring strands act as walls that no skill can follow along a slope; without the cut the crowd climbs the upper spoke and falls. |
 
 ## Resume here
 

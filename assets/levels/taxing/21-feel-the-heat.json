@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "id": "taxing-21",
+  "name": "level.taxing-21.name",
+  "inspiredBy": "Taxing 21 of the original ('Feel the heat!'): twenty lemmings between two flame throwers; one climber builds stairs that end over the exit, and a second set of stairs lifts the crowd onto the block. Geometry, name and art are ours.",
+  "rating": "taxing",
+  "width": 354,
+  "height": 160,
+  "lemmings": 20,
+  "toSave": 20,
+  "releaseRate": 70,
+  "timeSeconds": 120,
+  "skills": {
+    "climber": 3,
+    "floater": 3,
+    "bomber": 3,
+    "blocker": 3,
+    "builder": 4,
+    "basher": 3,
+    "miner": 3,
+    "digger": 3
+  },
+  "style": "fire",
+  "startX": 0,
+  "terrain": [
+    {
+      "shape": "rect",
+      "x": 5,
+      "y": 0,
+      "w": 17,
+      "h": 160
+    },
+    {
+      "shape": "piece",
+      "piece": "pillar",
+      "x": 5,
+      "y": 0,
+      "w": 17,
+      "h": 160
+    },
+    {
+      "shape": "rect",
+      "x": 0,
+      "y": 122,
+      "w": 75,
+      "h": 15
+    },
+    {
+      "shape": "piece",
+      "piece": "girder",
+      "x": 0,
+      "y": 122,
+      "w": 75,
+      "h": 15
+    },
+    {
+      "shape": "rect",
+      "x": 75,
+      "y": 100,
+      "w": 50,
+      "h": 60
+    },
+    {
+      "shape": "piece",
+      "piece": "brickWall",
+      "x": 75,
+      "y": 100,
+      "w": 50,
+      "h": 60
+    },
+    {
+      "shape": "rect",
+      "x": 125,
+      "y": 100,
+      "w": 25,
+      "h": 60
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 125,
+      "y": 100,
+      "w": 25,
+      "h": 60
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [150, 160],
+        [150, 125],
+        [295, 125],
+        [295, 160]
+      ],
+      "rough": 0,
+      "seed": 2
+    },
+    {
+      "shape": "polygon",
+      "points": [
+        [200, 125],
+        [204, 115],
+        [241, 115],
+        [245, 125]
+      ],
+      "rough": 0,
+      "seed": 3
+    },
+    {
+      "shape": "rect",
+      "x": 295,
+      "y": 95,
+      "w": 25,
+      "h": 65
+    },
+    {
+      "shape": "piece",
+      "piece": "slab",
+      "x": 295,
+      "y": 95,
+      "w": 25,
+      "h": 65
+    },
+    {
+      "shape": "piece",
+      "piece": "chain",
+      "x": 330,
+      "y": 0,
+      "w": 6,
+      "h": 160
+    }
+  ],
+  "steel": [
+    {
+      "x": 125,
+      "y": 100,
+      "w": 25,
+      "h": 60
+    },
+    {
+      "x": 295,
+      "y": 95,
+      "w": 25,
+      "h": 65
+    }
+  ],
+  "oneWay": [],
+  "objects": [
+    {
+      "type": "hatch",
+      "x": 45,
+      "y": 100
+    },
+    {
+      "type": "exit",
+      "x": 222,
+      "y": 114
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 166,
+      "y": 115,
+      "w": 12,
+      "h": 10
+    },
+    {
+      "type": "trap",
+      "kind": "fire",
+      "x": 262,
+      "y": 115,
+      "w": 12,
+      "h": 10
+    }
+  ]
+}

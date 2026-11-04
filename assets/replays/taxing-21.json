@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "levelId": "taxing-21",
+  "entries": [
+    {
+      "tick": 42,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "climber"
+      }
+    },
+    {
+      "tick": 151,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 187,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 343,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 1,
+        "skill": "builder"
+      }
+    },
+    {
+      "tick": 379,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "builder"
+      }
+    }
+  ]
+}

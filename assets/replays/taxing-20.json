@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "levelId": "taxing-20",
+  "entries": [
+    {
+      "tick": 147,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    },
+    {
+      "tick": 1006,
+      "intent": {
+        "type": "assign",
+        "lemmingId": 0,
+        "skill": "basher"
+      }
+    }
+  ]
+}
