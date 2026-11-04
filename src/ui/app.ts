@@ -326,11 +326,14 @@ export class App {
       }
       case 'result': {
         const next = this.level ? nextLevel(this.level) : undefined;
-        const entries: MenuEntry[] = [
-          { id: 'retry', label: this.t('result.retry') },
-          { id: 'next', label: this.t('result.next'), enabled: this.resultWon && next !== undefined },
-          { id: 'menu', label: this.t('result.menu') },
-        ];
+        const retry: MenuEntry = { id: 'retry', label: this.t('result.retry') };
+        const forward: MenuEntry = { id: 'next', label: this.t('result.next'), enabled: this.resultWon && next !== undefined };
+        // After a win, "next level" comes first: it takes the focus and the top slot, so a player
+        // who clicks or presses Enter out of habit moves on instead of replaying the level won.
+        const entries: MenuEntry[] =
+          forward.enabled === false
+            ? [retry, forward, { id: 'menu', label: this.t('result.menu') }]
+            : [forward, retry, { id: 'menu', label: this.t('result.menu') }];
         return layoutMenu(entries, 130);
       }
       case 'settings': {
@@ -944,6 +947,8 @@ export class App {
       renderedTexts: () => [...this.renderedTexts],
       /** The visible menu items: id, label, enabled and logical bounds. */
       menuItems: () => this.items.map((item) => ({ ...item })),
+      /** The id of the menu item with the keyboard focus, or null. */
+      focusedItem: (): string | null => this.items[this.focus]?.id ?? null,
       /** Client coordinates of a menu item's centre, for real mouse clicks. */
       menuItem: (id: string) => {
         const item = this.items.find((i) => i.id === id);

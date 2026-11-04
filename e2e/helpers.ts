@@ -79,6 +79,7 @@ export const settings = (page: Page): Promise<Record<string, unknown>> => hook(p
 export const events = (page: Page): Promise<string[]> => hook(page, 'events()');
 export const openLevel = (page: Page, id: string): Promise<void> => hook(page, `openLevel(${JSON.stringify(id)})`);
 export const appVersion = (page: Page): Promise<string> => hook(page, 'version()');
+export const focusedItem = (page: Page): Promise<string | null> => hook(page, 'focusedItem()');
 export const advance = (page: Page, ms: number): Promise<void> => hook(page, `advance(${ms})`);
 
 /** Click a menu item with the real mouse. */

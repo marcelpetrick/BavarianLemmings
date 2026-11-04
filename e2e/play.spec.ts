@@ -8,7 +8,9 @@ import {
   clickLevel,
   clickMenu,
   clickPanel,
+  focusedItem,
   gameState,
+  menuItems,
   openGame,
   playUntilEnd,
   screen,
@@ -28,7 +30,9 @@ test.describe('playing Fun 1 (P-01, C-01, C-02, G-10)', () => {
     const end = await gameState(page);
     expect(end.outcome).toBe('won');
     expect(end.saved).toBeGreaterThanOrEqual(1);
-    // The win unlocked progress; the result menu offers a retry.
+    // After a win the next level comes first and has the focus, so Enter does not replay the level.
+    expect((await menuItems(page)).map((item) => item.id)).toEqual(['next', 'retry', 'menu']);
+    expect(await focusedItem(page)).toBe('next');
     await clickMenu(page, 'menu');
     expect(await screen(page)).toBe('title');
     expect(errors).toEqual([]);
