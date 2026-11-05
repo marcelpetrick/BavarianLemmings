@@ -1,6 +1,6 @@
 {
   "name": "bavarian-lemmings",
-  "version": "0.1.101",
+  "version": "0.1.102",
   "private": true,
   "description": "An homage to the 1991 DOS game Lemmings, running natively in the browser, with a Bavarian mode.",
   "license": "GPL-3.0-or-later",
@@ -38,7 +38,7 @@
     "stylelint-config-standard": "41.0.0",
     "typescript": "6.0.3",
     "typescript-eslint": "8.72.1",
-    "vite": "8.3.5",
+    "vite": "8.3.6",
     "vitest": "5.1.0"
   },
   "overrides": {
